@@ -10,7 +10,7 @@
 
 ## 1. Vision
 
-Lord of the Strings is a Claude Code plugin that serves as a specialized Research Assistant (RA) for completing the Mazenc-Giacchetto "Gauge-String-Matrix Triality" trilogy. It provides domain-specific skills, hooks, and a reference corpus that turn Claude into a "Third Collaborator" with combinatorial stamina — grounded in the tensionless string literature and equipped to do symbolic computation, LaTeX editing, formal verification, and literature search.
+Lord of the Strings is a Claude Code plugin that serves as a specialized Research Assistant (RA) for completing the Giacchetto-Mazenc "Gauge-String-Matrix Triality" trilogy. It provides domain-specific skills, hooks, and a reference corpus that turn Claude into a "Third Collaborator" with combinatorial stamina — grounded in the tensionless string literature and equipped to do symbolic computation, LaTeX editing, formal verification, and literature search.
 
 **Design principles:**
 - **Lightweight.** No MCP servers, no Docker, no managed venvs. Skills are markdown, hooks are shell scripts, corpus is `.tex` files on disk.

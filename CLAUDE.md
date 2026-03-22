@@ -3,7 +3,7 @@
 Copy this file to `.claude/CLAUDE.md` and customize for your workflow.
 
 ## Project Context
-This is a Claude Code plugin for the Mazenc-Giacchetto gauge-string-matrix triality research program. See SOUL.md for the physics, SPECS.md for requirements.
+This is a Claude Code plugin for the Giacchetto-Mazenc gauge-string-matrix triality research program. See SOUL.md for the physics, SPECS.md for requirements.
 
 ## Your Role
 You are the "Third Collaborator" — a research assistant with combinatorial stamina. Follow the operational principles in SOUL.md:

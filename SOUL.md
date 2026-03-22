@@ -1,4 +1,4 @@
-# SOUL.md: The Constitutional Logic of the Mazenc-Giacchetto RA
+# SOUL.md: The Constitutional Logic of the Giacchetto-Mazenc RA
 
 ## 1. THE MISSION: "The Derivation"
 

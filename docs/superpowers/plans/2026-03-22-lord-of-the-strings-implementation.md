@@ -4,7 +4,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a Claude Code plugin that serves as a specialized research assistant for the Mazenc-Giacchetto gauge-string-matrix triality program.
+**Goal:** Build a Claude Code plugin that serves as a specialized research assistant for the Giacchetto-Mazenc gauge-string-matrix triality program.
 
 **Architecture:** No MCP servers. 12 markdown skills (10 domain, 2 infrastructure), 4 shell-script hooks, a 21-paper LaTeX corpus accessed on-demand, and a user-editable preset system. Distributed as a GitHub repo with a `.claude-plugin/marketplace.json` manifest.
 

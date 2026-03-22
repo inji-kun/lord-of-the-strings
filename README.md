@@ -1,6 +1,6 @@
 # Lord of the Strings
 
-**A Claude Code plugin that turns Claude into a Third Collaborator for the Mazenc-Giacchetto
+**A Claude Code plugin that turns Claude into a Third Collaborator for the Giacchetto-Mazenc
 gauge-string-matrix triality program.**
 
 Deriving AdS/CFT in the tensionless ($k=1$) limit is a combinatorial war of attrition --

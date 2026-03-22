@@ -1,3 +1,5 @@
+> **Historical note:** This is the original spec from before the DSD-II/III framing correction. See SOUL.md for the current understanding of Parts II and III.
+
 Spec: The Lord of the Strings (Plugin for Claude Code)
 
 1. Vision Statement

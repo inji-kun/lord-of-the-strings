@@ -1,3 +1,5 @@
+> **Historical note:** This is the original spec from before the DSD-II/III framing correction. See SOUL.md for the current understanding of Parts II and III.
+
 # Lord of the Strings — Plugin Design Specification
 
 **Date:** 2026-03-22

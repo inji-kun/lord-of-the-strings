@@ -8,7 +8,7 @@ ribbon graphs, Strebel differentials, topological recursion kernels, integer lat
 genus expansions -- and humans are bad at not losing signs or missing diagrams at genus one
 and beyond. LOTS gives you a research assistant grounded in 21 papers from the triality
 literature, organized around four pillars of reasoning (Combinatorialist, Geometer,
-Recursionist, Formalist), with 12 specialized skills, 4 lifecycle hooks, and a cross-pillar
+Recursionist, Formalist), with 14 specialized skills, 4 lifecycle hooks, and a cross-pillar
 mapping dictionary. The preset ships tuned for the triality program: Part I is complete
 (`2212.05999`), while DSD-II (B-model derivation via TR) and DSD-III (A-model derivation
 via Belyi/KS coset) are in progress -- the corpus includes key precursor papers
@@ -93,7 +93,7 @@ Every skill maps to one or more pillars.
 |--------|--------|-------------|--------|-------------|
 | **I. Combinatorialist** | Gauge Theory | Maps Schwinger parameters to ribbon graph edges; enumerates all diagrams; ensures none missed | `series-expand`, `fatgraph`, `check-limits` | `hep-th/0308184`--`0504229`, `2212.05999` |
 | **II. Geometer** | String Theory | Proves Strebel cells = gauge theory diagrams; verifies the Schwinger-Strebel mapping (V-type: $l = 1/\tau_{\text{eff}}$, F-type: $l = \tau$) at higher genus | `strebel-solver`, `check-limits`, `topological-recursion` | `1803.04423`, `1812.01007`, `1911.00378`, `2410.13273` |
-| **III. Recursionist** | Matrix Models | Applies TR loop equations; computes discrete volumes; bridges planar and non-planar | `topological-recursion`, `series-expand`, `discrete-volumes` | `1512.09309`, `math-ph/0702045`, `1412.3286`, `math/0111082` |
+| **III. Recursionist** | Matrix Models | Applies TR loop equations; computes discrete volumes; using TR to derive the B-model LG dual and connecting matrix model to string theory | `topological-recursion`, `series-expand`, `discrete-volumes` | `1512.09309`, `math-ph/0702045`, `1412.3286`, `math/0111082` |
 | **IV. Formalist** | Lean 4 | Translates combinatorial identities into machine-verified Lean 4 theorems | `formalize-lemma` | `math/0101147` |
 
 ---
@@ -369,7 +369,7 @@ This is the core reference table. Each row translates a concept across the three
 | Vertex of ribbon graph | Zero of Strebel diff. | Vertex of fat graph |
 | Loop constraint $\sum l_i = P_I$ | Perimeter of asymptotic closed string | Boundary of face in cell decomposition |
 | Free field ($k=1$) limit | Tensionless string / $\mathfrak{psu}(1,1\vert 2)_1$ | Covering-map localization |
-| Genus $g=1$ non-planar diagrams | Torus worldsheet | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
+| Genus $g=1$ diagrams (supporting computation for DSD-II/III) | Torus worldsheet (DSD-II supporting computation) | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
 
 ---
 

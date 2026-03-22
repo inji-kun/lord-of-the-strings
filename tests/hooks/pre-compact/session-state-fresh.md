@@ -14,7 +14,7 @@ active_preset: config/presets/triality.md
 - Euler characteristic for g=1 4-pt ribbon graphs
 
 ## Open Questions
-- Does the loop constraint hold for the non-planar case?
+- Does the loop constraint hold for the B-model (DSD-II) supporting computations at genus 1?
 
 ## Next Steps
 - Compute W^{(1)}_4 using topological-recursion skill

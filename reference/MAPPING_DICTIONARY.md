@@ -254,7 +254,7 @@ All edge lengths $l_i \in \mathbb{Z}_+$. Replace integration over $\mathcal{M}_{
 
 ## V. THE STRING DUALS: B-MODEL, A-MODEL, AND LOCALIZATION
 
-**Used in:** DSD-I, DSD-III
+**Used in:** DSD-I, DSD-II, DSD-III
 
 **Sources:** `1812.01007` (Eberhardt-Gaberdiel-Gopakumar) for the worldsheet theory and spectrum; `1911.00378` (Eberhardt-Gaberdiel-Gopakumar) for the localization/covering-map proof; `2009.11306` (Dei-Gaberdiel-Gopakumar-Knighton) for free field correlators
 
@@ -331,7 +331,7 @@ The worldsheet correlators are **delta-function-localised** in string moduli spa
 | Vertex of ribbon graph | Zero of Strebel diff. | Vertex of fat graph |
 | Loop constraint $\sum l_i = P_I$ | Perimeter of asymptotic closed string | Boundary of face in cell decomposition |
 | Free field ($k=1$) limit | Tensionless string / $\mathfrak{psu}(1,1|2)_1$ | Covering-map localization (`1911.00378`); integer Strebel identification conjectural at higher genus |
-| Genus $g=1$ non-planar diagrams | Torus worldsheet (Part II target) | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
+| Genus $g=1$ diagrams (supporting computation for DSD-II/III) | Torus worldsheet (DSD-II supporting computation) | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
 
 ---
 

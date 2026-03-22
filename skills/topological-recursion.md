@@ -24,8 +24,9 @@ description: Compute Eynard-Orantin W_{g,n} correlators for any spectral curve
 </process>
 
 <preset>
-When the triality preset is active:
-- The spectral curve is Convention A from MAPPING_DICTIONARY §III:
+When the triality preset is active, TR is being used to derive the B-model LG dual (DSD-II). The target spectral curve is x(z) = 1/z + t_2*z, y(z) = 1/z^2 - t_2. The free fermion formalism from 2412.13397 bridges the matrix model to this LG description.
+
+For the Gaussian means spectral curve (Convention A from MAPPING_DICTIONARY §III):
   xy - y^2 = 1, uniformized as x = e^lambda + e^{-lambda}, y = e^lambda.
 - Branch points are at x = +/-2 (lambda = 0 and lambda = i*pi).
 - The involution is lambda -> -lambda (so y_bar = e^{-lambda}).

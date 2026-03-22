@@ -20,9 +20,26 @@ Convention B (for resolvent, from 1512.09309 §3):
 IMPORTANT: The TR kernel K(p,q) and Bergmann kernel B(p,q) in the MAPPING_DICTIONARY use Convention A. When comparing to resolvent-based formulas, use Convention B.
 
 ## Active Research Focus
-- Part II (arXiv: 2412.13397): Strings from Feynman Diagrams, genus g=1 (torus)
-- Part III (arXiv: 2510.17728): Matrix correlators as discrete volumes, all-genus
+- DSD-II (unpublished): Derive the B-model dual — topological Landau-Ginzburg with W(z) = 1/z + t_2*z via topological recursion. Key precursor: `2412.13397` (Strings from Feynman Diagrams)
+- DSD-III (unpublished): Derive the A-model dual — Kazama-Suzuki SL(2,R)/U(1) at k=1 via Belyi maps and covering-map localization. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes)
 - The plugin must NOT be overfit to Part I (arXiv: 2212.05999) which is complete
+
+### B-Model Target (DSD-II)
+- Superpotential: W(z) = 1/z + t_2*z (deformation of the c=1 string background)
+- Spectral curve: x(z) = 1/z + t_2*z, y(z) = 1/z^2 - t_2
+- Goal: Show TR on this curve reproduces matrix model correlators as intersection numbers on M_{g,n}
+- Free fermion bridge from 2412.13397 is a key intermediate step
+- The B-model is a topological LG theory coupled to 2D topological gravity
+
+### A-Model Target (DSD-III)
+- Worldsheet: A-twisted Kazama-Suzuki SL(2,R)/U(1) at k=1
+- Belyi maps: Feynman diagrams ARE holomorphic maps branched over 3 points ({0, 1, ∞})
+  - Vertices → preimages of 1
+  - Edge midpoints → preimages of 0
+  - Face centers → preimages of ∞
+- Localization: string path integral localizes to discrete points = integer Strebel points
+- This is the LESS developed side — DSD-III is further from completion
+- Status: conjectural at higher genus, proven mechanisms exist at genus 0 (1911.00378)
 
 ## Preferred Sources by Topic
 - Strebel geometry: 2212.05999 §5, MAPPING_DICTIONARY §I

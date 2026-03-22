@@ -1,11 +1,13 @@
 # MAPPING DICTIONARY: Gauge-String-Matrix Triality
 
 This document correlates the core mapping rules across the Golden Corpus,
-organized by the three (plus one) pillars of the triality derivation.
+organized by technique for efficient lookup. Each section is tagged with its relevance to DSD-I, DSD-II, and/or DSD-III.
 
 ---
 
 ## I. FEYNMAN GRAPH TOPOLOGY → STREBEL GEOMETRY
+
+**Used in:** DSD-I, DSD-II, DSD-III (foundational)
 
 **Source:** `2212.05999` (Gopakumar-Mazenc, Part I), Sections 5–5.3
 
@@ -93,6 +95,8 @@ The perimeter of each face equals the residue parameter $L_I$ of the Strebel dif
 
 ## II. SCHWINGER ↔ STREBEL LENGTH MAPPING
 
+**Used in:** DSD-I, DSD-II
+
 **Source:** `2212.05999`, Sections 5.3–5.4
 
 ### The Schwinger Parametrization
@@ -136,6 +140,8 @@ This picks out **discrete points** on $\mathcal{M}_{g,n}$.
 ---
 
 ## III. TOPOLOGICAL RECURSION KERNELS
+
+**Used in:** DSD-II (TR is the B-model derivation engine)
 
 **Source:** `1512.09309` (Andersen-Chekhov-Norbury-Penner), Sec. 4; `1412.3286` (Eynard)
 
@@ -204,6 +210,8 @@ The $\sum'$ excludes unstable terms ($2g-2+s \leq 0$).
 
 ## IV. KONTSEVICH-PENNER MODEL & INTERSECTION THEORY
 
+**Used in:** DSD-II (Kontsevich-Penner is the matrix model side)
+
 **Source:** `1512.09309`, Sec. 3; `math/0111082` (Fiorenza-Murri)
 
 ### The Kontsevich Matrix Integral
@@ -244,9 +252,29 @@ All edge lengths $l_i \in \mathbb{Z}_+$. Replace integration over $\mathcal{M}_{
 
 ---
 
-## V. LOCALIZATION & THE k=1 WORLDSHEET
+## V. THE STRING DUALS: B-MODEL, A-MODEL, AND LOCALIZATION
+
+**Used in:** DSD-I, DSD-III
 
 **Sources:** `1812.01007` (Eberhardt-Gaberdiel-Gopakumar) for the worldsheet theory and spectrum; `1911.00378` (Eberhardt-Gaberdiel-Gopakumar) for the localization/covering-map proof; `2009.11306` (Dei-Gaberdiel-Gopakumar-Knighton) for free field correlators
+
+### The B-Model Dual (Target of DSD-II)
+
+```latex
+W(z) = \frac{1}{z} + t_2 z
+```
+
+Spectral curve: x(z) = W(z) = 1/z + t_2*z, y(z) = -W'(z) = 1/z^2 - t_2. The TR algorithm on this curve generates the B-model correlators. The free fermion formalism (2412.13397) bridges the matrix model to this LG description.
+
+### Belyi Maps (Central to DSD-III)
+
+A Belyi map is a holomorphic map P: Σ_{g,n} → CP^1 branched over only 3 points.
+For the triality program, Feynman diagrams ARE Belyi maps:
+- Vertices → preimages of 1
+- Edge midpoints → preimages of 0
+- Face centers → preimages of ∞
+
+This provides the combinatorial bridge to the A-model (Kazama-Suzuki) worldsheet. See 2212.05999 §8 and the description of DSD-III in §1.2.
 
 ### The Worldsheet Theory
 
@@ -307,9 +335,14 @@ The worldsheet correlators are **delta-function-localised** in string moduli spa
 
 ---
 
-## VII. KEY EQUATIONS FOR PART II (GENUS 1)
+## VII. SUPPORTING COMPUTATIONS FOR DSD-II AND DSD-III
 
-The **immediate** targets for the non-planar extension:
+The following are **supporting subproblems**, not the definitions of DSD-II/III themselves:
+
+- **DSD-II subproblem:** Derive LG correlators via TR on W(z) = 1/z + t_2*z, match to matrix model
+- **DSD-III subproblem:** Prove Belyi localization reproduces integer Strebel points at genus 1 and beyond
+
+The **immediate** computational targets:
 
 1. **Torus TR seed:** $W^{(1)}_1(p_1) = \sum_{\text{res}\,dx=0} K(p_1,q)\,B(q,\bar{q})$
    — Source: `1512.09309`, Eq. `W11`

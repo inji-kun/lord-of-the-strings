@@ -21,7 +21,8 @@ description: Solve for Strebel differential data given graph topology and face p
 </process>
 
 <preset>
-When the triality preset is active:
+When the triality preset is active, Strebel solving includes Belyi map interpretation. Feynman diagrams are Belyi maps: vertices → preimages of 1, edge midpoints → preimages of 0, face centers → preimages of ∞. This connects to DSD-III (A-model localization).
+
 - Focus on genus-one (torus) graphs: V - E + n = 0.
 - Integer Strebel lengths: l_i = n_i in Z_+, where n_i counts Wick contractions.
 - Parity constraint: sum of all P_I must be even (each edge contributes to two face perimeters).

@@ -10,9 +10,10 @@ and beyond. LOTS gives you a research assistant grounded in 21 papers from the t
 literature, organized around four pillars of reasoning (Combinatorialist, Geometer,
 Recursionist, Formalist), with 12 specialized skills, 4 lifecycle hooks, and a cross-pillar
 mapping dictionary. The preset ships tuned for the triality program: Part I is complete
-(`2212.05999`), while Parts II and III are in progress -- the corpus includes key
-precursor papers (`2412.13397`, `2510.17728`) that feed into the eventual trilogy, along
-with the $k=1$ localization program and the Kontsevich-Penner model that ties them together.
+(`2212.05999`), while DSD-II (B-model derivation via TR) and DSD-III (A-model derivation
+via Belyi/KS coset) are in progress -- the corpus includes key precursor papers
+(`2412.13397`, `2510.17728`) that feed into the eventual trilogy, along with the $k=1$
+localization program and the Kontsevich-Penner model that ties them together.
 
 ---
 
@@ -279,8 +280,8 @@ The TR kernel $K(p,q)$ and Bergmann kernel $B(p,q)$ in the Mapping Dictionary us
 conventions produces incorrect normalizations.
 
 **Active research focus:**
-- Part II (in progress, no arXiv ID yet): Non-planar extension, genus $g=1$ (torus). Key precursor: `2412.13397` (Strings from Feynman Diagrams)
-- Part III (in progress, no arXiv ID yet): The all-genus proof. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes)
+- DSD-II (unpublished): Derive the B-model dual -- topological Landau-Ginzburg with $W(z) = 1/z + t_2 z$ via topological recursion. Key precursor: `2412.13397` (Strings from Feynman Diagrams)
+- DSD-III (unpublished): Derive the A-model dual -- Kazama-Suzuki $\text{SL}(2,\mathbb{R})/U(1)$ at $k=1$ via Belyi maps. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes)
 - The plugin must NOT be overfit to Part I (`2212.05999`) which is complete
 
 **Preferred sources** are mapped per topic (Strebel geometry to `2212.05999`, TR kernels to
@@ -311,8 +312,8 @@ into context.
 | 2 | `hep-th/0402063` | From Free Fields to AdS -- II | Gopakumar | Genesis |
 | 3 | `hep-th/0504229` | From Free Fields to AdS -- III | Gopakumar | Genesis |
 | 4 | `2212.05999` | Deriving the Simplest Gauge-String Duality -- I: Open-Closed-Open Triality | Gopakumar, Mazenc | Part I (planar triality) |
-| 5 | `2412.13397` | Strings from Feynman Diagrams | Gopakumar, Kaushik, Komatsu, Mazenc, Sarkar | Part II (non-planar, $g=1$) |
-| 6 | `2510.17728` | Matrix Correlators as Discrete Volumes of Moduli Space I: Recursion Relations, the BMN-limit and DSSYK | Giacchetto, Maity, Mazenc | Part III (all-genus) |
+| 5 | `2412.13397` | Strings from Feynman Diagrams | Gopakumar, Kaushik, Komatsu, Mazenc, Sarkar | DSD-II precursor |
+| 6 | `2510.17728` | Matrix Correlators as Discrete Volumes of Moduli Space I: Recursion Relations, the BMN-limit and DSSYK | Giacchetto, Maity, Mazenc | DSD-III precursor |
 | 7 | `1803.04423` | Tensionless String Spectra on AdS$_3$ | Gaberdiel, Gopakumar | Stringy limit |
 | 8 | `1812.01007` | The Worldsheet Dual of the Symmetric Product CFT | Eberhardt, Gaberdiel, Gopakumar | Worldsheet theory |
 | 9 | `1911.00378` | Deriving the AdS$_3$/CFT$_2$ Correspondence | Eberhardt, Gaberdiel, Gopakumar | Localization proof |
@@ -329,7 +330,7 @@ into context.
 | 20 | `0803.2681` | On a worldsheet dual of the Gaussian matrix model | Razamat | Integer Strebel |
 | 21 | `0801.4590` | Counting lattice points in the moduli space of curves | Norbury | Lattice points |
 
-Papers 1--6 build the gauge theory vertex (Gopakumar's program through Parts I--III).
+Papers 1--6 build the gauge theory vertex (Gopakumar's program: Part I + DSD-II/III precursors).
 Papers 7--13 cover the string theory vertex ($k=1$ worldsheet, localization, SL(2,R) WZW).
 Papers 14--21 provide the matrix model vertex (TR, Kontsevich-Penner, discrete volumes).
 
@@ -348,9 +349,9 @@ notation. It contains 7 sections with indexed equations from the corpus.
 | SII | Schwinger to Strebel Length Mapping | `2212.05999` S5.3--5.4 |
 | SIII | Topological Recursion Kernels | `1512.09309` S4, `1412.3286` |
 | SIV | Kontsevich-Penner Model and Intersection Theory | `1512.09309` S3, `math/0111082` |
-| SV | Localization and the $k=1$ Worldsheet | `1812.01007`, `1911.00378`, `2009.11306` |
+| SV | The String Duals: B-Model, A-Model, and Localization | `1812.01007`, `1911.00378`, `2009.11306` |
 | SVI | Cross-Pillar Translation Table | All pillars |
-| SVII | Key Equations for Part II (Genus 1) | `1512.09309`, `2412.13397`, `2510.17728` |
+| SVII | Supporting Computations for DSD-II and DSD-III | `1512.09309`, `2412.13397`, `2510.17728` |
 
 ### The Cross-Pillar Translation Table (Section VI)
 

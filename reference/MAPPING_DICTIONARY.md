@@ -264,15 +264,21 @@ All edge lengths $l_i \in \mathbb{Z}_+$. Replace integration over $\mathcal{M}_{
 W(z) = \frac{1}{z} + t_2 z
 ```
 
-Spectral curve: x(z) = W(z) = 1/z + t_2*z, y(z) = -W'(z) = 1/z^2 - t_2. The TR algorithm on this curve generates the B-model correlators. The free fermion formalism (2412.13397) bridges the matrix model to this LG description.
+Spectral curve: x(z) = W(z) = 1/z + t_2*z, y(z) = -W'(z) = 1/z^2 - t_2. Source: 2212.05999 Eq. near line 1387. Convention: x = W(z), y = -W'(z) (standard TR spectral curve from superpotential). The TR algorithm on this curve generates the B-model correlators. The free fermion formalism (2412.13397) bridges the matrix model to this LG description.
 
 ### Belyi Maps (Central to DSD-III)
 
-A Belyi map is a holomorphic map P: Σ_{g,n} → CP^1 branched over only 3 points.
-For the triality program, Feynman diagrams ARE Belyi maps:
-- Vertices → preimages of 1
-- Edge midpoints → preimages of 0
-- Face centers → preimages of ∞
+A Belyi map is a holomorphic map P: Σ_g → CP^1 (compact cover) branched over only 3 points.
+For the triality program, Feynman diagrams ARE Belyi maps.
+
+In the Gopakumar-Mazenc convention (2212.05999 §8):
+- ∞: Vertex operator insertions create branching with cycle structure (k₁)...(kₙ)
+- 1: The matrix potential (Gaussian: quadratic) creates branching (2)^{|k|/2}
+- 0: Liouville wall at the cigar tip creates the remaining branching
+
+The three permutations σ₀, σ₁, σ_∞ ∈ S_{|k|} act on DARTS (half-edges), not directly on vertices/edges/faces. Their cycle decompositions encode the combinatorial data. The constraint σ₀·σ₁·σ_∞ = identity reflects trivial monodromy around the three branch points.
+
+Note: This is specific to the Gopakumar-Mazenc Feynman diagram convention. The standard dessin d'enfants convention uses preimages of 0 and 1 as the two vertex colors of a bipartite graph. The two conventions are related but not identical.
 
 This provides the combinatorial bridge to the A-model (Kazama-Suzuki) worldsheet. See 2212.05999 §8 and the description of DSD-III in §1.2.
 

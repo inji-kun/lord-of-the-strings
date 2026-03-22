@@ -11,8 +11,9 @@ description: Work with the SL(2,R)/U(1) Kazama-Suzuki coset at k=1 (A-model worl
 <process>
 1. Read `config/active-preset.txt`. If it contains a path, Read that preset file.
 2. Provide context on the Kazama-Suzuki coset SL(2,R)/U(1) at level k=1:
-   a. The coset is an N=2 superconformal field theory with central charge c = 3k/(k+2).
-   b. At k=1, c = 1. This is the A-model worldsheet theory for the triality program.
+   a. The non-compact SL(2,R)/U(1) Kazama-Suzuki coset has central charge c = 3 + 6/k.
+   b. At k=1, c = 9 — the critical value for a Calabi-Yau threefold target. This is NOT c=1; the c=1 connection comes from the auxiliary c=1 string description via analytic continuation (SU(2)/U(1) at k=-3), not from the KS coset itself.
+   c. Do NOT confuse with c = 3k/(k+2), which is the compact SU(2)/U(1) minimal model formula.
    c. The A-twist of this coset coupled to topological gravity is the target of DSD-III.
 3. Help with topological A-model observables:
    a. Spectral flow: relate NS and R sectors.

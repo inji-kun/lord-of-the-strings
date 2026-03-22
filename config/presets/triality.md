@@ -26,7 +26,7 @@ IMPORTANT: The TR kernel K(p,q) and Bergmann kernel B(p,q) in the MAPPING_DICTIO
 
 ### B-Model Target (DSD-II)
 - Superpotential: W(z) = 1/z + t_2*z (deformation of the c=1 string background)
-- Spectral curve: x(z) = 1/z + t_2*z, y(z) = 1/z^2 - t_2
+- Spectral curve: x(z) = 1/z + t_2*z, y(z) = 1/z^2 - t_2. Source: 2212.05999 Eq. near line 1387. Convention: x = W(z), y = -W'(z) (standard TR spectral curve from superpotential).
 - Goal: Show TR on this curve reproduces matrix model correlators as intersection numbers on M_{g,n}
 - Free fermion bridge from 2412.13397 is a key intermediate step
 - The B-model is a topological LG theory coupled to 2D topological gravity
@@ -34,9 +34,12 @@ IMPORTANT: The TR kernel K(p,q) and Bergmann kernel B(p,q) in the MAPPING_DICTIO
 ### A-Model Target (DSD-III)
 - Worldsheet: A-twisted Kazama-Suzuki SL(2,R)/U(1) at k=1
 - Belyi maps: Feynman diagrams ARE holomorphic maps branched over 3 points ({0, 1, ∞})
-  - Vertices → preimages of 1
-  - Edge midpoints → preimages of 0
-  - Face centers → preimages of ∞
+  In the Gopakumar-Mazenc convention (2212.05999 §8):
+  - ∞: Vertex operator insertions create branching with cycle structure (k₁)...(kₙ)
+  - 1: The matrix potential (Gaussian: quadratic) creates branching (2)^{|k|/2}
+  - 0: Liouville wall at the cigar tip creates the remaining branching
+  The three permutations σ₀, σ₁, σ_∞ ∈ S_{|k|} act on DARTS (half-edges), not directly on vertices/edges/faces. Their cycle decompositions encode the combinatorial data. The constraint σ₀·σ₁·σ_∞ = identity reflects trivial monodromy around the three branch points.
+  Note: This is specific to the Gopakumar-Mazenc Feynman diagram convention. The standard dessin d'enfants convention uses preimages of 0 and 1 as the two vertex colors of a bipartite graph. The two conventions are related but not identical.
 - Localization: string path integral localizes to discrete points = integer Strebel points
 - This is the LESS developed side — DSD-III is further from completion
 - Status: conjectural at higher genus, proven mechanisms exist at genus 0 (1911.00378)

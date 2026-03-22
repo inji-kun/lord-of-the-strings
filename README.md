@@ -114,6 +114,8 @@ Every skill maps to one or more pillars.
 | `add-reference` | -- | Fetch arXiv source, add to corpus | -- | curl |
 | `strebel-solver` | -- | Solve Strebel constraints, enumerate graphs | $g=1$ integer lengths + Belyi permutations | sage/sympy |
 | `discrete-volumes` | -- | Lattice-point recursion for $N_{g,s}$ | Recursion from `2510.17728` | sage/sympy |
+| `belyi-localization` | -- | Enumerate Belyi maps, covering maps, localization | DSD-III Belyi/dessin program | sage/sympy |
+| `kazama-suzuki` | -- | SL(2,R)/U(1) coset at k=1 (A-model worldsheet) | DSD-III target theory | -- |
 | `session-save` | `/session-save` | Persist research state | -- | -- |
 | `preset` | `/preset` | Switch active preset | -- | -- |
 
@@ -281,7 +283,7 @@ conventions produces incorrect normalizations.
 
 **Active research focus:**
 - DSD-II (unpublished): Derive the B-model dual -- topological Landau-Ginzburg with $W(z) = 1/z + t_2 z$ via topological recursion. Key precursor: `2412.13397` (Strings from Feynman Diagrams)
-- DSD-III (unpublished): Derive the A-model dual -- Kazama-Suzuki $\text{SL}(2,\mathbb{R})/U(1)$ at $k=1$ via Belyi maps. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes)
+- DSD-III (unpublished): Derive the A-model dual -- Kazama-Suzuki $\text{SL}(2,\mathbb{R})/U(1)$ at $k=1$ via Belyi maps. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes) (Note: the `kazama-suzuki` skill is speculative — DSD-III is unpublished. It is grounded in established literature but the specific derivation is not yet available.)
 - The plugin must NOT be overfit to Part I (`2212.05999`) which is complete
 
 **Preferred sources** are mapped per topic (Strebel geometry to `2212.05999`, TR kernels to

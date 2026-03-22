@@ -27,11 +27,8 @@ When the triality preset is active:
 - Augment the user's query by appending:
   ` AND (tensionless OR k=1 OR topological recursion OR Strebel OR gauge-string duality)`
   This filters results to the tensionless string / AdS3/CFT2 corner of the literature.
-- Highlight papers that cite or are cited by the core references:
-  - Eberhardt-Gaberdiel-Gopakumar (1903.00421) — tensionless limit
-  - Gaberdiel-Gopakumar (2011.04647) — worldsheet derivation
-  - Giacchetto-Lewanski (2410.13273) — topological recursion for Belyi maps
-  - Razamat (2105.01085) — Strebel parametrization
+- Highlight papers that cite or are cited by the core references.
+  Use the corpus papers in reference/source_tex/ for known references.
 - Sort results by relevance to the triality: tensionless strings <-> free symmetric orbifold <-> topological field theory.
 - Flag any results that appear to be new developments (published within the last 6 months).
 </preset>

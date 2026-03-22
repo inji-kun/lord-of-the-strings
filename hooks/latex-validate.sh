@@ -57,7 +57,14 @@ fi
 # ── 6. Compile ───────────────────────────────────────────────────────────────
 compile_dir="$(dirname "$compile_target")"
 compile_file="$(basename "$compile_target")"
-compile_output=$(cd "$compile_dir" && timeout 30 "$compiler" "${compiler_args[@]}" "$compile_file" 2>&1) \
+if command -v gtimeout >/dev/null 2>&1; then
+    TIMEOUT_CMD="gtimeout 30"
+elif command -v timeout >/dev/null 2>&1; then
+    TIMEOUT_CMD="timeout 30"
+else
+    TIMEOUT_CMD=""
+fi
+compile_output=$(cd "$compile_dir" && $TIMEOUT_CMD "$compiler" "${compiler_args[@]}" "$compile_file" 2>&1) \
   && compile_exit=0 || compile_exit=$?
 
 # ── 7. Report failures only ─────────────────────────────────────────────────

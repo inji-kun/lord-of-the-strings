@@ -20,7 +20,7 @@ Convention B (for resolvent, from 1512.09309 §3):
 IMPORTANT: The TR kernel K(p,q) and Bergmann kernel B(p,q) in the MAPPING_DICTIONARY use Convention A. When comparing to resolvent-based formulas, use Convention B.
 
 ## Active Research Focus
-- Part II (arXiv: 2412.13397): Non-planar correlators, genus g=1 (torus)
+- Part II (arXiv: 2412.13397): Strings from Feynman Diagrams, genus g=1 (torus)
 - Part III (arXiv: 2510.17728): Matrix correlators as discrete volumes, all-genus
 - The plugin must NOT be overfit to Part I (arXiv: 2212.05999) which is complete
 

@@ -3,6 +3,10 @@ name: session-save
 description: Persist the current research state to config/session-state.md
 ---
 
+<preset>
+When preset is active, include the preset name and preferred sources in the session state header.
+</preset>
+
 <process>
 1. Read `config/active-preset.txt` to determine if a preset is active. If the file is empty or missing, treat the active preset as "none".
 2. If a preset path is specified, Read that file and apply its conventions.

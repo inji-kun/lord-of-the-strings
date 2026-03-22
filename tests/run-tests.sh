@@ -7,6 +7,7 @@ FAIL=0
 
 # Setup temp dir and copy config into it
 TMPDIR=$(mktemp -d)
+trap 'rm -rf "$TMPDIR"' EXIT
 cp -r "$REPO_ROOT/config" "$TMPDIR/config"
 export LOTS_CONFIG_DIR="$TMPDIR/config"
 
@@ -57,9 +58,6 @@ if echo "$OUTPUT" | grep -q "LOTS"; then
 else
     fail "statusline hook (output contains LOTS)"
 fi
-
-# --- Cleanup ---
-rm -rf "$TMPDIR"
 
 # --- Summary ---
 echo ""

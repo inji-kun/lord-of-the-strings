@@ -9,29 +9,18 @@ emit_json() {
   local additional_ctx="$2"
 
   if command -v jq &>/dev/null; then
-    if [ -n "$system_msg" ]; then
-      jq -n \
-        --arg sm "$system_msg" \
-        --arg ac "$additional_ctx" \
-        '{"systemMessage":$sm,"hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":$ac}}'
-    else
-      jq -n \
-        --arg ac "$additional_ctx" \
-        '{"hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":$ac}}'
-    fi
+    jq -n \
+      --arg sm "$system_msg" \
+      --arg ac "$additional_ctx" \
+      '{"systemMessage":$sm,"hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":$ac}}'
   else
     # Manual fallback — escape double quotes in context
     local escaped_ctx
     escaped_ctx=$(printf '%s' "$additional_ctx" | sed 's/\\/\\\\/g; s/"/\\"/g; s/$/\\n/' | tr -d '\n' | sed 's/\\n$//')
-    if [ -n "$system_msg" ]; then
-      local escaped_sm
-      escaped_sm=$(printf '%s' "$system_msg" | sed 's/"/\\"/g')
-      printf '{"systemMessage":"%s","hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":"%s"}}\n' \
-        "$escaped_sm" "$escaped_ctx"
-    else
-      printf '{"hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":"%s"}}\n' \
-        "$escaped_ctx"
-    fi
+    local escaped_sm
+    escaped_sm=$(printf '%s' "$system_msg" | sed 's/"/\\"/g')
+    printf '{"systemMessage":"%s","hookSpecificOutput":{"hookEventName":"PreCompact","additionalContext":"%s"}}\n' \
+      "$escaped_sm" "$escaped_ctx"
   fi
 }
 

@@ -3,12 +3,7 @@ name: preset
 description: Switch the active preset for all skills
 ---
 
-# Preset Switcher
-
-This skill switches the active domain preset that all other skills load for context narrowing.
-
-## Instructions
-
+<process>
 1. Parse the user's argument. It will be one of:
    - A preset name like "triality" or "my-custom"
    - "null" or "none" to clear the active preset
@@ -31,17 +26,14 @@ This skill switches the active domain preset that all other skills load for cont
 5. **If the preset file exists:**
    - Confirm: "Preset switched to: {argument}"
    - Show the first 5 lines of the preset file so the user can verify.
+</process>
 
-## Usage Examples
+<preset>
+N/A — this is an infrastructure skill.
+</preset>
 
-- `/preset triality` — activate the triality research preset
-- `/preset none` — clear the preset, return to general-purpose mode
-- `/preset my-custom` — activate a user-created custom preset
-
-## Notes
-
-- The active preset path is always relative to the repo root.
-- Other skills read `config/active-preset.txt` at startup to decide whether
-  to load domain-specific context.
-- Only one preset can be active at a time.
-- Users can create new presets by adding `.md` files to `config/presets/`.
+<output>
+- Confirmation message indicating the new active preset (or that it was cleared).
+- First 5 lines of the preset file if one was activated.
+- List of available presets if the requested one was not found.
+</output>

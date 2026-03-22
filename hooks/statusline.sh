@@ -34,16 +34,12 @@ current_work="—"
 computation="—"
 state_file="$REPO_ROOT/config/session-state.md"
 if [ -f "$state_file" ]; then
-  # Extract first non-empty line after "## Current Work"
-  current_work=$(awk '
-    /^## Current Work/ { found=1; next }
-    found && /^##/ { exit }
-    found && /[^[:space:]]/ { print; exit }
-  ' "$state_file")
+  # Extract File: value from "- **File:** ..." format
+  current_work=$(grep -m1 '\*\*File:\*\*' "$state_file" | sed 's/.*\*\*File:\*\* *//')
   [ -z "$current_work" ] && current_work="—"
 
-  # Extract Computation: line value
-  computation=$(grep -m1 '^Computation:' "$state_file" | sed 's/^Computation:[[:space:]]*//')
+  # Extract Computation: line value (matches "- **Computation:** value" format)
+  computation=$(grep -m1 '\*\*Computation:\*\*' "$state_file" | sed 's/.*\*\*Computation:\*\* *//')
   [ -z "$computation" ] && computation="—"
 fi
 
@@ -74,4 +70,4 @@ fi
 reset="\033[0m"
 
 # ── 8. Emit line ────────────────────────────────────────────────────────
-printf "${color}LOTS${reset} | ${preset_name} | ${current_work} | ${computation} | [${color}${bar} ${pct_display}%%${reset}]\n"
+printf "${color}LOTS${reset} | ${preset_name} | ${current_work} | ${computation} | [${color}${bar} ${pct_display}%%${reset}]"

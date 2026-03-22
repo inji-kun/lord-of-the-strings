@@ -134,7 +134,7 @@ The `reference/source_tex/` directory contains full LaTeX source for:
 | arXiv ID | Role |
 |---|---|
 | `2212.05999` | Gopakumar-Mazenc Part I -- planar triality |
-| `2412.13397` | Part II -- non-planar extension ($g=1$) |
+| `2412.13397` | Part II -- Strings from Feynman Diagrams ($g=1$) |
 | `2510.17728` | Part III -- all-orders proof |
 | `2410.13273` | Giacchetto-Lewanski Les Houches notes |
 | `1512.09309` | Eynard-Orantin TR on Catalan curve |

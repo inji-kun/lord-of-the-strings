@@ -9,9 +9,10 @@ genus expansions -- and humans are bad at not losing signs or missing diagrams a
 and beyond. LOTS gives you a research assistant grounded in 21 papers from the triality
 literature, organized around four pillars of reasoning (Combinatorialist, Geometer,
 Recursionist, Formalist), with 12 specialized skills, 4 lifecycle hooks, and a cross-pillar
-mapping dictionary. The preset ships tuned for Parts I--III (`2212.05999` through
-`2412.13397` to `2510.17728`), the $k=1$ localization program, and the Kontsevich-Penner
-model that ties them together.
+mapping dictionary. The preset ships tuned for the triality program: Part I is complete
+(`2212.05999`), while Parts II and III are in progress -- the corpus includes key
+precursor papers (`2412.13397`, `2510.17728`) that feed into the eventual trilogy, along
+with the $k=1$ localization program and the Kontsevich-Penner model that ties them together.
 
 ---
 
@@ -278,8 +279,8 @@ The TR kernel $K(p,q)$ and Bergmann kernel $B(p,q)$ in the Mapping Dictionary us
 conventions produces incorrect normalizations.
 
 **Active research focus:**
-- Part II (`2412.13397`): Strings from Feynman Diagrams, genus $g=1$ (torus)
-- Part III (`2510.17728`): Matrix correlators as discrete volumes, all-genus
+- Part II (in progress, no arXiv ID yet): Non-planar extension, genus $g=1$ (torus). Key precursor: `2412.13397` (Strings from Feynman Diagrams)
+- Part III (in progress, no arXiv ID yet): The all-genus proof. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes)
 - The plugin must NOT be overfit to Part I (`2212.05999`) which is complete
 
 **Preferred sources** are mapped per topic (Strebel geometry to `2212.05999`, TR kernels to

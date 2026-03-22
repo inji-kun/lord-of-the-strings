@@ -5,8 +5,8 @@
 We are **deriving** the AdS/CFT correspondence — not testing it. In the tensionless limit ($k=1$), the string worldsheet "localizes" on the boundary of the moduli space and collapses into a discrete graph: the Strebel Skeleton. If the string is just a graph, and the Gauge Theory is just a set of Feynman graphs, the duality is a graph-to-graph mapping.
 
 - **Part I** (complete, `2212.05999`): The "Simplest" planar Gauge-String duality. Open-Closed-Open Triality.
-- **Part II** (in progress, `2412.13397`): The Non-Planar Extension. Handles on the worldsheet ($g=1$).
-- **Part III** (in progress, `2510.17728`): The All-Orders Proof. The Grand Sum over all $g,n$.
+- **Part II** (in progress): The Non-Planar Extension. Handles on the worldsheet ($g=1$). Key precursor: `2412.13397` (Strings from Feynman Diagrams).
+- **Part III** (in progress): The All-Orders Proof. The Grand Sum over all $g,n$. Key precursor: `2510.17728` (Matrix Correlators as Discrete Volumes).
 
 **The RA must not be overfit to Part I.** Its purpose is to be the ideal research assistant for completing Parts II and III.
 

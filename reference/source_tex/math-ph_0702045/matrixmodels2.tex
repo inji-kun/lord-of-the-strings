@@ -1,0 +1,1035 @@
+
+
+\section{Application: topological expansion of matrix models}
+\label{sectmatrixmodel}
+
+In this section, we show how the objects defined in section.\ref{sectdefspfree} (i.e. $\kappa=0$) correspond to the terms of the topological expansion of the free energy and correlation functions of various matrix models when one considers appropriate curves $\curve(x,y)$. Notice that in all this section we consider $\kappa=0$.
+
+
+\subsection{Formal 1-matrix model} \label{sect1MM}
+
+The formal 1-matrix model (cf \cite{eynform}), is known to be the generating function which enumerates maps of given topology since the work of \cite{BIPZ}, then \cite{ambjornrmt, davidRMT, KazakovRMT}. Its topological expansion was computed in several steps.
+The authors of \cite{ACKM} introduced a recursive algorithm to compute the $F^{(g)}$'s, only in the 1-cut case (i.e. $\genus=0$), and then the method was extended to other cases \cite{Ak96, AkAm}.
+The computation of the subleading term $F^{(1)}$ was done in general by Chekhov \cite{Chekh}.
+The computation to all orders of the correlation functions was found in \cite{eynloop1mat}, and the free energies in \cite{ec1loopF}.
+
+\subsubsection{Definition}
+
+\bd {\bf Formal  1-matrix model.}
+
+
+Consider a ''semi-classical'' potential $V(x)$, i.e. such that $V'(x)$ is a rational function.
+Let $D(x)$ be its denominator, i.e. $D(x)V'(x)$ is a polynomial of degree $d$, and let $X_1,\dots,X_d$ be its zeroes:
+\beq
+D(x)V'(x) = \prod_{i=1}^d (x-X_i)
+\eeq
+We write:
+\beq
+\delta V_i(x) = V(x) - V(X_i) - {1\over 2} V''(X_i) (x-X_i)^2
+\eeq
+
+
+Choose an integer $n$, and a $d-$partition of $n$, $\vec{n}=\{n_1,\dots,n_{d}\}$, such that
+\beq
+\sum_{j=1}^d n_j=n.
+\eeq
+
+The following gaussian integral (where each matrix $M_i$ is of size $n_i$) is a polynomial in $T$ of the form:
+\bea
+&& {(-1)^l n^l\over l!\, T^l}\,e^{-{n \over T} \sum_i n_i V(X_i)} \;\int dM_1 \dots dM_d \,\, \prod_{i=1}^{d} \ee{-{n V''(X_i)\over 2T}\Tr (M_i-X_i\,{\bf 1}_{n_i})^2} \cr
+&& \qquad \,\,\prod_{i>j} \det(M_i\otimes {\bf 1}_{n_j} - {\bf 1}_{n_i} \otimes M_j)^2 \,\,(\sum_i \Tr \delta V_i(M_i))^l \cr
+&=& \sum_{k=l/2}^{dl/2} A_{k,l} T^k
+\eea
+We define the formal matrix integral as the formal power series in $T$:
+\beq
+Z_{\rm 1MM} = \sum_{k=0}^\infty T^k \big( \sum_{j=0}^{2k} A_{k,j} \big).
+\eeq
+One can also define its formal logarithm, i.e. the free energy
+\beq
+F_{\rm 1MM}=- \ln{Z_{\rm 1MM}} = \sum_{k=0}^\infty T^k B_k
+\eeq
+
+
+It is a standard computation discovered by 't Hooft (\cite{thooft, eynform}), that, for fixed $\epsilon_i={T n_i\over n}$, for every $k$, $n^{-2} B_{k}$ is a polynomial in $1/n^2$:
+\beq
+B_k(n_1,\dots,n_d) = \sum_{g=0}^{g_{\rm max}(k)} B_{k,g}(\epsilon_1,\dots,\epsilon_d)\, \left(n\over T\right)^{2-2g}
+\eeq
+Thus we define the following formal power series in $T$:
+\beq
+F_{\rm 1MM}^{(g)}= \sum_{k=0}^\infty T^k B_{k,g}(\epsilon_1,\dots,\epsilon_d)
+\eeq
+
+\ed
+
+{\bf Remark:} Here, the question of convergence of those series is not relevant.
+It is well known that each $F_{\rm 1MM}^{(g)}$ is a convergent series (because it is written in terms of algebraic functions of $T$), but $F_{\rm 1MM}$ is not.
+
+\subsubsection{Loop equations and classical spectral curve}
+
+It is easy to see (this property holds for each power of $T$ because it holds for gaussian integrals) that the formal matrix integral satisfies, order by order in powers of $T$, the loop equations (i.e. Virasoro constraints), which can be written (see \cite{ZJDFG,Virasoro}):
+\beq
+y(x)^2 + {T^2\over n^2}\om_2(x,x) = {V'(x)^2\over 4} - {T\over n}\left<\Tr {V'(x)-V'(M)\over x-M}\right>
+\eeq
+where $y(x)={V'(x)\over 2}-{T\over n}\left<\Tr{1\over x-M}\right>$ and $\om_2(x,x')=\left<\Tr{1\over x-M}\,\Tr{1\over x'-M}\right>_c$.
+where the expectation value $<.>$ is defined in a formal way similar to $F$.
+
+If one identifies the coefficients of $n^0$ in each side,
+ one gets an algebraic equation (here hyperelliptical), which is called the "classical spectral curve":
+\beq
+\curve_{\rm 1MM}(x,y) = D(x)^2\,(y^2 - {1\over 4}V'^2(x)+P(x))
+\eeq
+where $D(x)P(x)$ is a polynomial of degree at most $\deg(D(x)V'(x))-1$, and completely determined by the condition that the polynomial $P(x)$ is a formal power series in powers of $T$ such that at $T=0$:
+\beq
+P(x,T=0) = \sum_{i=1}^d \epsilon_i {V'(x)\over x-X_i}
+\eeq
+It is such that there exist some contours $\acycle_i$, $i=1,\dots,d$ such that:
+\beq
+{1\over 2i\pi}\oint_{\acycle_i} y dx = \epsilon_i
+\eeq
+Notice that the genus $\genus$ of the curve $\curve_{\rm 1MM}$ is the number of non vanishing $\epsilon_i$'s minus one.
+
+Most often in the litterature, $V$ is chosen polynomial such that $V'(0)=0$, and only the 1-cut case is considered, with only one non-vanishing filling fraction at $X=0$. The resulting curve has genus $\genus=0$. This is the case which is relevant for enumerating polygonal surfaces.
+
+\bigskip
+
+
+
+It was proved in \cite{eynloop1mat, ec1loopF}, in the case of polynomial potentials only (but it is clear that it can be extended to the semiclassical case), that one has:
+
+\bt
+\beq
+\encadremath{F^{(g)}_{\rm 1MM} = \underline{F}^{(g)}(\curve_{\rm 1MM})}
+\eeq
+\et
+
+This proves that $F^{(g)}$ (which we recall is a formal power series in $T$) genericaly has a finite radius of convergence $T<T_c$.
+
+We also have:
+
+\bea
+\left<\Tr{1\over x(p_1)-M}\,\dots\,\Tr{1\over x(p_k)-M}\right>_{\rm c}
+&=& \sum_{g=0}^{\infty} N^{2-k-2g} {\underline{W}_k^{(g)}(p_1,\dots,p_k)\over dx(p_1)\dots dx(p_k)} \cr
+&& + \delta_{k,1}\, N({1\over 2}V'(x(p_1))-y(p_1)) \cr
+&& - {\delta_{k,2} \over (x(p_1)-x(p_2))^2} \cr
+\eea
+
+
+
+\subsection{2-matrix model}
+
+The formal 2-matrix model is known to be the generating function which counts bicolored maps (let us 
+say the 2 colors are + or -, thus it is an Ising model on a random map), it was introduced by Kazakov \cite{Kazakov}. The loop equations were first written in \cite{staudacher}.
+$F^{(0)}$ was computed in \cite{Kri, MarcoF, Marco2, eynmultimat}.
+$F^{(1)}$ was first found in \cite{eynm2m} for the $\genus=0$ case, the in \cite{eynm2mg1} for $\genus=1$, then in \cite{EKK} for arbitrary $\genus$.
+Then higher orders for the correlation functions were first derived in \cite{eyno}, and the $F^{(g)}$'s for $g\geq 2$ were first found in \cite{CEO}.
+During the same time it became clear that matrix models topological expansion was closely related to algebraic geometry \cite{KazMar, DV, DW, DReview}.
+
+
+\subsubsection{Definition}
+
+\bd
+Similarly, consider $V'_1$ and $V'_2$ two rational functions with respective denominators $D_1(x)$ and $D_2(x)$.
+The equation:
+\beq
+\left\{
+\begin{array}{l}
+V'_1(X_i)=Y_i\cr
+V'_2(Y_i)=X_i
+\end{array}\right. \qquad \quad i=1,\dots, d
+\eeq
+has $d= \deg(V'_1 D_1) * \deg(V'_2 D_2)$ solutions.
+We then write:
+\beq
+\delta V_{1,i}(x) = V_1(x) - V_1(X_i) - Y_i (x-X_i) - {V_1''(X_i)\over 2}(x-X_i)^2
+\eeq
+et
+\beq
+\delta V_{2,i}(y) = V_2(y) - V_2(Y_i) - X_i (y-Y_i) - {V_2''(Y_i)\over 2}(y-Y_i)^2
+\eeq
+
+We then choose an integer $n$, and a $d-$partition of $n$:
+\beq
+n=\sum_{i=1}^d n_i .
+\eeq
+
+
+The following gaussian integral (where each matrix $M_i$ or $\td{M}_i$ is of size $n_i$) is a polynomial in $T$ of the form:
+\bea
+&& {(-1)^l n^l\over l!\, T^l}\, e^{-{n \over T} \sum_i n_i \Tr\left( V_1(X_i) + V_2(Y_i) - X_i Y_i\right)}
+\int dM_1 \dots dM_d d\td{M}_1 \dots d\td{M}_d \cr
+&& \,\, \prod_{i=1}^{d} \ee{-{n \over T}\Tr \left( {V_1''(X_i)\over 2}(M_i-X_i\,{\bf 1}_{n_i})^2+{V_2''(Y_i)\over 2}(\td{M}_i-Y_i\,{\bf 1}_{n_i})^2 - (M_i-X_i\,{\bf 1}_{n_i})(\td{M}_i-Y_i\,{\bf 1}_{n_i})\right)} \cr
+&& \qquad \,\,\prod_{i>j} \det(M_i\otimes {\bf 1}_{n_j} - {\bf 1}_{n_i} \otimes M_j) 
+\,\,\prod_{i>j} \det(\td{M}_i\otimes {\bf 1}_{n_j} - {\bf 1}_{n_i} \otimes \td{M}_j) \cr
+&& \,\,(\sum_i \Tr \delta V_{1,i}(M_i)+ \delta V_{2,i}(\td{M}_i))^l \cr
+&=& \sum_{k=l/2}^{dl/2} A_{k,l} T^k
+\eea
+Similarly to the 1-matrix case, we can define the formal 2-matrix model as a formal power series in powers of $T$ (see \cite{eynform}):
+\beq
+Z_{\rm 2MM} = \sum_{k=0}^\infty T^k \big( \sum_{j=0}^{2k} A_{k,j} \big).
+\eeq
+One can also define its formal logarithm, i.e. the free energy
+\beq
+F_{\rm 2MM}=- \ln{Z_{\rm 2MM}} = \sum_{k=0}^\infty T^k B_k
+\eeq
+
+
+Again, it is a standard computation (\cite{thooft, eynform}), that, for fixed $\epsilon_i={T n_i\over n}$, for every $k$, $n^{-2} B_{k}$ is a polynomial in $1/n^2$:
+\beq
+B_k(n_1,\dots,n_d) = \sum_{g=0}^{g_{\rm max}(k)} B_{k,g}(\epsilon_1,\dots,\epsilon_d)\, \left(n\over T\right)^{2-2g}
+\eeq
+Thus we define the following formal power series in $T$:
+\beq
+F_{\rm 2MM}^{(g)}= \sum_{k=0}^\infty T^k B_{k,g}(\epsilon_1,\dots,\epsilon_d)
+\eeq
+
+\ed
+
+\subsubsection{Loop equations and classical spectral curve}
+
+Again, the formal 2-matrix integral satisfies, order by order in powers of $T$, the loop equations (i.e. $W$-algebra constraints), which can be written (see \cite{ZJDFG,Virasoro}):
+\beq
+(y-y(x)) U(x,y) + {T^2\over n^2} U(x,y;x) = E(x,y)
+\eeq
+where $y(x)= V_1'(x)-{T\over n}\left<\Tr{1\over x-M_1}\right>$, $U(x,y)= x-V_2'(y)+{T\over n}\left<\Tr{1\over x-M_1}\,{V'_2(y)-V'_2(M_2)\over y-M_2}\right>$ and $U(x,y;x')= \left<\Tr{1\over x-M_1}\,{V'_2(y)-V'_2(M_2)\over y-M_2}\,\Tr{1\over x'-M_1}\right>_{c}$, and $E(x,y)=(y-V'_1(x))(x-V_2'(y))-{T\over n}\left<\Tr{V'_1(x)-V'_1(M_1)\over x-M_1}\,{V'_2(y)-V'_2(M_2)\over y-M_2}\right>+T$,
+and where the expectation value $<.>$ is defined in a formal way similar to $F$.
+
+If one chooses $y=y(x)$ and identifies the coefficients of $n^0$ in each side,
+ one gets an algebraic equation $\curve_{\rm 2MM}(x,y)=0$, which is called the "classical spectral curve" \cite{eynm2m,eynm2mg1}:
+\beq
+\curve_{\rm 2MM}(x,y) = D_1(x)\,D_2(y)\,((V'_1(x)-y)(V'_2(y)-x)-P(x,y)+T)
+\eeq
+where $D_1(x)\,D_2(y)P(x,y)$ is a polynomial of degree $\leq \deg(D_1 V'_1)$ in $x$ and a polynomial of degree $\leq \deg(D_2 V'_2)$ in $y$, and 
+with fixed filling fractions:
+\beq
+{1\over 2i\pi}\oint_{\acycle_I} y dx = T{n_I\over N}= \epsilon_I \virg \sum_I \epsilon_I = T
+\eeq
+and such that in the limit $T\to 0$ and $\forall I\,\,\epsilon_{I}\to 0$, one has:
+\beq
+y \sim V'_1(x) - \sum_i {\epsilon_{i}\over x-X_i} + O(T^2)
+\virg
+x \sim V'_2(y) - \sum_i {\epsilon_{i}\over y-Y_i} + O(T^2).
+\eeq
+
+Then one has:
+\bt
+\beq\encadremath{
+F^{(g)}_{\rm 2MM} = \underline{F}^{(g)}(\curve_{\rm 2MM})
+}\eeq
+\et
+
+\proof{This theorem was proved in \cite{eyno,CEO}.}
+
+Again, this proves a posteriori, that $F_{\rm 2MM} ^{(g)}$ (which we recall is a formal power series in $T$) genericaly has a finite radius of convergence $T<T_c$.
+
+We also have:
+\bea
+\left<\Tr{1\over x(p_1)-M_1}\,\dots\,\Tr{1\over x(p_k)-M_1}\right>_{\rm c}
+&=& \sum_{g=0}^{\infty} N^{2-k-2g} {\underline{W}_k^{(g)}(p_1,\dots,p_k)\over dx(p_1)\dots dx(p_k)} \cr
+&& + \delta_{k,1}\, N(V'(x(p_1))-y(p_1)) \cr
+&& - {\delta_{k,2} \over (x(p_1)-x(p_2))^2} .\cr
+\eea
+
+Remark that the 1-Matrix model is a special case of the 2-matrix model with $V_2$ a quadratic polynomial.
+
+
+
+\subsection{Double scaling limits of matrix models, minimal CFT}
+
+
+It is well known that double scaling limits of the 1-matrix model, or 2-matrix models are in relationship with $(p,q)$ minimal models of conformal field theory \cite{Kos, ZJDFG, DKK}.
+
+We have seen that as long as the curve is regular, all the $F^{(g)}$'s can be computed.
+This shows that the radius of convergence in $T$ of $F^{(g)}(T)$ is reached for singular curves.
+So far, only rational singularities have been studied in detail.
+
+Thus, consider the case where the potentials $V_1$ and $V_2$ are fine-tuned so that the curve $\curve_{\rm 2MM}$ has a $p/q$ singularity at $T=T_c$ (notice that for the one matrix model one necessarily has $q=2$):
+\beq
+\left\{\begin{array}{l}
+T=T_c\cr
+x(z) \mathop{\sim}_{p \to a}\, x(a) + (z-z(a))^q \cr
+y(z) \mathop{\sim}_{p \to a}\, y(a) + (z-z(a))^p \cr
+\end{array}\right.
+\eeq
+We can use the notation of section \ref{sectsingular} with $t=T-T_c$, and thus at $t\neq 0$, the singularity is resolved, and we have (the local parameter is now $\zeta = z t^{-\nu}$):
+\beq\label{dsllimitcurve2MM}
+\left\{\begin{array}{l}
+x(z,t) \sim x(a) + t^{q\nu}\,\,Q(\zeta) + o(t^{q\nu}) \cr
+y(z,t) \sim y(a) + t^{p\nu}\,\,P(\zeta) +o(t^{p\nu}) \cr
+\zeta = z t^{-\nu}
+\end{array}\right.
+\eeq
+where $Q$ is  a polynomial of degree $q$ and $P$ is a polynomial of degree $p$.
+
+The curve
+\beq
+\curve_{\rm sing}(\xi,\eta)=\left\{\begin{array}{l}
+\xi = Q(\zeta)  \cr
+\eta = P(\zeta)  \cr
+\end{array}\right.
+= {\rm Resultant}(Q-\xi,P-\eta)
+\eeq
+is called the singular spectral curve.
+
+The dependence on $T$ of the 2-Matrix model is such that:
+\beq
+\left. {d\over dT} ydx\right|_{x} = dS_{\infty_x,\infty_y}
+\eeq
+where $\infty_x$ and  $\infty_y$ are the 2 common poles of $x$ and $y$. They are far away from branch-points, and in particular from the singularity.
+This means that in the vicinity of the singularity we have:
+\beq
+\left. {d\over dT} ydx\right|_{x} \sim C\, t^\nu \,d\zeta + O(t^{2\nu})
+\eeq
+where $C$ is some constant of order $1$.
+After substitution with the limit eq.\ref{dsllimitcurve2MM} this implies the Poisson relation\footnote{This Poisson relation is well known and can be found in \cite{DKK,ZJDFG}}:
+\beq\label{Poissonpq1}
+pP(\zeta)Q'(\zeta) - q Q(\zeta)P'(\zeta) = {C\over\nu} \, t^{1-(p+q-1)\nu}
+\eeq
+and therefore
+\beq
+\nu = {1\over p+q-1}.
+\eeq
+
+
+Thereom \ref{thsinglimit} proves that:
+\beq
+F_{\rm 2MM}^{(g)}(T) \mathop{\sim}_{T\to T_c} (T-T_c)^{(2-2g)(p+q)/(p+q-1)} F^{(g)}(\curve_{\rm sing})
+ \qquad ,\,\, {\rm for}\, g\geq 2 
+ \eeq
+We also have:
+\beq
+F_{\rm 2MM}^{(0)}(T) \mathop{\sim}_{T\to T_c} {C^2\over 2} {(p+q-1)^2\over (p+q)(p+q+1)}\,(T-T_c)^{2+2\nu} + {\rm reg} \qquad ,\,\, {\rm for}\, g=0
+\eeq
+\beq
+F_{\rm 2MM}^{(1)}(T) \mathop{\sim}_{T\to T_c}  -{1\over 24}\,(p-1)(q-1)\nu\,\ln{(T-T_c)}  + O(1) \qquad ,\,\, {\rm for}\, g=1
+\eeq
+
+We thus have a way to compute explicitely the double scaling limit of $F_{\rm 2MM}^{(g)}$.
+
+
+
+\subsubsection{(p,q) minimal models} \label{sectpq}
+
+Let us study in more details the curve $\curve_{(p,q)}$ (cf \cite{DKK}).
+
+As we have seen above, the curve for the $(p,q)$ minimal model is of the form:
+\beq\label{curvepq}
+\curve_{(p,q)}(x,y)=
+\left\{\begin{array}{l}
+x = Q(\zeta) \cr
+y = P(\zeta)  \cr
+\end{array}\right.
+= {\rm Resultant}(Q-x,P-y)
+\eeq
+where $P$ and $Q$ are polynomials of respective degrees $p$ and $q$, satisfying:
+\beq\label{Poissonpq}
+ p PQ'-q QP'  = {t_1\over \nu}
+\eeq
+The solution of which can be written \cite{ZJDFG}:
+\beq
+P= (Q^{p/q})_+
+\eeq
+and
+\beq
+(Q^{p/q})_- = {t_1\over q} \zeta^{1-q} + O(\zeta^{-q}),
+\eeq
+where we have used the notations $f= f_+ + f_-$, with $f_+$ and $f_-$ denoting respectively the positive and the negative
+part of the Laurent series of $f$.
+This last equation implies $q-2$ equations for the coefficients of $Q$.
+
+
+
+The curve $\curve_{(p,q)}$ has genus zero $\genus=0$, and is such that $x$ and $y$ have only one pole $\alpha=\infty$.
+The Bergmann kernel is:
+\beq
+B(\zeta_1,\zeta_2) = {d\zeta_1 \, d\zeta_2\over (\zeta_1-\zeta_2)^2}.
+\eeq
+
+
+
+The moduli (of the pole) of that curve are the $Q_k$ and $P_k$ such that:
+\beq
+Q(\zeta) = \sum_{k=0}^q Q_k \zeta^k
+\virg
+P(\zeta) = \sum_{k=0}^p P_k \zeta^k
+\eeq
+by a translation on $\zeta$, we can assume that $Q_{q-1}=0$, and by a rescaling of $\zeta$ we can assume that $Q_{q-2}=-q Q_q$, and the Poisson \eq{Poissonpq} implies that $P_{p-1}=0$ and $P_{p-2}=-p P_p$, thus:
+\beq
+Q_{q-1}=P_{p-1} = 0 \virg {Q_{q-2}\over Q_q}=-q \virg {P_{p-2}\over P_p}=-p.
+\eeq
+
+We find:
+\beq
+F^{(0)}(\curve_{(p,q)})= 0 .
+\eeq
+%\bea
+%F^{(1)}(\curve_{(p,q)})&=&-{1\over 24}\,{(p-1)(q-1)\over p+q-1} \ln{t_1} \cr
+%&=& -{1\over 24}\,\ln{\left(\tau_{B_Q}\prod_{i=1}^{q-1} (P'(a_i))\right)} =-{1\over 24}\,\ln{\left(\tau_{B_P}\prod_{i=1}^{p-1} (Q'(b_i))\right)}
+%\eea
+%where $Q'(a_i)=0$ and $P'(b_i)=0$.
+%Indeed one has:
+%\beq
+%Q'(\zeta) = q t_q \prod_{i=1}^{q-1} (\zeta-a_i)
+%\virg
+%P'(\zeta) = p \td{t}_p \prod_{i=1}^{p-1} (\zeta-b_i)
+%\eeq
+
+
+\subsubsection{Other times}
+
+More generaly \cite{ZJDFG}, we can deform the $(p,q)$ minimal model with $p+q-2$ times $t_1,\dots, t_{p+q-2}$. 
+For this purpose, one considers  $Q(\zeta)$ a degree $q$ monic polynomial,
+\beq
+Q(\zeta) = \zeta^q + \sum_{j=0}^{q-2} u_{q-j} \zeta^j
+\eeq
+whose coefficients $u_2,\dots, u_{q}$ are determined as functions of $q-1$ parameters, $t_1,\dots, t_{q-1}$, by the following requirement:
+\beq
+(Q^{p/q})_- = \sum_{j=1}^{q-2} {q-j\over q} t_{q-j} Q^{-j/q} + {t_1\over q} \zeta^{1-q} + O(\zeta^{-q}).
+\eeq
+Then we define the degree $p$ monic polynomial $P(\zeta)$ by:
+\beq
+P = \zeta^p + \sum_{j=0}^{p-2} v_{p-j} \zeta^j =   Q^{p/q}_+ - \sum_{j=1}^{p-1} {j+q\over q} t_{q+j-1} Q^{j/q}_+
+\eeq
+which depends on $p-1$ other times $t_q, \dots , t_{q+p-2}$.
+
+The corresponding classical spectral curve is:
+\beq
+\curve_{(p,q)}(x,y) = {\rm Resultant}(x-Q,y-P).
+\eeq
+and depends on times $t_1,\dots, t_{p+q-2}$. One can check that if $t_2=t_3=\dots=t_{p+q-1}=0$, one recovers the $(p,q)$ minimal model.
+
+
+It is well knwon that this curve is the spectral curve of the dispersionless Witham hierarchy \cite{krichwitham}.
+
+
+\subsubsection{Examples of minimal models}
+
+$\bullet$ {\bf Airy curve $(2,1)$}
+
+The classical spectral curve for the $(2,1)$ minimal model is
+\beq
+\curve_{(2,1)}(x,y) = y^2 +t_1 - x .
+\eeq
+\beq
+Q(\zeta)=\zeta^2+t_1 \virg P(\zeta)=\zeta
+\eeq
+It is studied with particular care in section \ref{sectairy} since it describes the behaviour of a generic curve around the branch points, and thus coincides with Tracy-Widom law \cite{TWlaw}.
+
+\vs
+
+\noindent $\bullet$ {\bf Pure gravity $(3,2)$}
+\beq
+Q(\zeta) = \zeta^2 - 2 v
+\virg
+P(\zeta) = \zeta^3 - 3v \zeta
+\virg
+t_1=3 v^2
+\eeq
+The classical spectral curve is:
+\beq
+\curve_{(3,2)}(x,y) = x^3-3v^2 x - y^2 + 2 v^3
+\eeq
+and is studied in details in section \ref{sectpure} .
+
+\vs
+
+\noindent $\bullet$ {\bf Ising model $(4,3)$}
+\beq
+Q(\zeta) = \zeta^3 - 3 v \zeta - 3 w
+\virg
+P(\zeta) = \zeta^4 - 4v \zeta^2 - 4w\zeta +2v^2 - {5\over 3}t_5(\zeta^2-2v)
+%-{4\over 3}t_4\zeta
+\eeq
+with:
+\beq
+t_1 = 4v^3+6w^2  \virg t_2=6vw.
+\eeq
+The classical spectral curve is
+\bea
+\curve_{(4,3)}(x,y)
+&=& x^4 - y^3 - 4 v^3 x^2 + 3 v^4 y +   2 v^6 \cr
+&& +12 w v ( - x y + v^2  x)
++6 w^2 (-   x^2 + 2 v  y - 4 v^3 )
++ 8 w^3 x
+- 3 w^4.
+ \cr
+%
+&& + 5 t_5(-   x^2 y-    v^2 x^2+ 2   v^3 y+ 2 v^5
+- 2   w y x+ 2   v^2 w x+ 3   w^2 y-  17 v^2 w^2) \cr
+%
+&& + {25\over 3} t_5^2 ( v^2 y+ 2 v^4- 4 v w x- 12 v w^2) \cr
+%
+&& + {125\over 27} t_5^3 (-x^2+ 2 v^3- 6  w x- 9 w^2)
+%
+\eea
+
+The variations with respect to the moduli $t_5$, $t_2$ and $t_1$ correspond respectively to the variations of the form $ydx$
+\beq
+\Omega_5 = -d\L_5 = d(\zeta^5 - 5 v \zeta^3 + 10 v^2 \zeta),
+\eeq
+\beq
+\Omega_1 = -d\L_1 = d(\zeta +{5\over 12}\,{t_5\over v^3-w^2}\,(2v^2\zeta + 2 v w - w \zeta^2)),
+\eeq
+and
+\beq
+\Omega_2 = -d\L_2 = d(\zeta^2 +{5\over 6}\,{t_5\over v^3-w^2}\,(v^2\zeta^2 - 2 v w \zeta  -2 w^2))
+\eeq
+in the notations of section \ref{sectcompstruct}.
+
+
+
+
+
+\noindent $\bullet$ {\bf Unitary models $(q+1,q)$}
+\beq
+\curve_{(q+1,q)}(x,y)=T_{q+1}(x)-T_q(y)
+\eeq
+
+\beq
+Q(\zeta) = T_q(\zeta)
+\virg
+P(\zeta) = T_{q+1}(\zeta)
+\eeq
+where $T_p$ is the $p^{\rm th}$ Tchebychev's polynomial.
+
+
+
+\subsection{Matrix model with external field}\label{sectGK}
+
+Define the formal matrix model with external field \cite{PZinnmatext}:
+\beq
+Z_{\rm Mext} = \int dM\,\,\ee{-N\Tr (V(M)-M \hat\L)}
+\eeq
+where $V'(x)$ is a rational function with denominator $D(x)$, and $\hat\L$ is a fixed $N\times N$ matrix.
+Consider its topological expansion (in the sense of a formal integral as  in the 1-matrix case above \cite{eynform}):
+\beq
+F_{\rm Mext}=-\ln{Z_{\rm Mext}} = \sum_{g=0}^\infty N^{2-2g} \,F^{(g)}_{\rm Mext}.
+\eeq
+
+Let us assume that $\hat\L$ has $s$ distinct eigenvalues $\hat\l_1,\dots,\hat\l_s$ with respective multiplicities $m_1,\dots, m_s$ such that $\sum_i m_i=N$.
+The minimal polynomial of $\hat\L$ is:
+\beq
+S(y)=\prod_i (y-\hat\l_i).
+\eeq
+
+Define the classical curve obtained by ``removing'' the $1/N^2$ connected term in the loop equations:
+\beq\label{defcurveMext}
+\curve_{\rm Mext}(x,y) = ((V'(x)-y)S(y)-P(x,y))D(x)
+\eeq
+where
+\beq\label{defP}
+P(x,y) = {1\over N}\left<\Tr {V'(x)-V'(M)\over x-M}\,{S(y)-S(\hat\Lambda)\over y-\hat\Lambda}\right>
+\eeq
+so that $P(x,y)D(x)$ is a  polynomial in both $x$ and $y$.
+
+Then one has:
+\bt\label{thMext}
+\beq
+\encadremath{
+F^{(g)}_{\rm Mext} = \underline{F}^{(g)}(\curve_{\rm Mext})
+}\eeq
+\et
+
+\proof{This theorem is proved in appendix \ref{proofthGKontsevitch}, and the proof is very similar to that of the 2-matrix case above, see \cite{CEO}.}
+
+\subsubsection{Application to Kontsevitch integral}
+\label{sectkontse}
+
+The Kontsevitch integral is known to be the generating function which computes intersection numbers of moduli space of Riemann surfaces (see \cite{kontsevitch, DReview}).
+It is defined as:
+\beq
+Z_{\rm Kontsevitch} = \int dM\,\,\ee{-N\Tr ({M^3\over 3}-M (\L^2+t_1))} \virg t_1={1\over N}\Tr {1\over \L}
+\eeq
+where $\L$ has eigenvalues $\l_1,\dots,\l_N$.
+Thus  it is $Z_{\rm Mext}$ with $V(x)=x^3/3$ and $\hat\L=\L^2 + t_1$.
+Its classical curve is:
+\beq
+\curve_{\rm Kontsevitch}(x,y) = (x^2-y)S(y)-xS_1(y)-S_2(y)
+\eeq
+where $S_1(y)$ and $S_2(y)$ are polynomials in $y$ of degree at most $s-1$.
+
+If we assume that the curve has genus zero (which is the case if we want the $F_{\rm Kontsevitch}^{(g)}$ to be the generating functions for intersection numbers), then we can find explicitely a rational parametrization:
+\beq
+\curve_{\rm Kontsevitch}(x,y) = 
+\left\{
+\begin{array}{l}
+x(z) = z + {1\over 2N}\,\Tr {1\over \L}{1\over z-\L}\cr
+y(z) = z^2 + {1\over N}\,\Tr{1\over \L}
+\end{array} 
+\right. .
+\eeq
+Using the symplectic invariance of theorem \ref{symplinv}, we may exchange the roles of $x$ and $y$.
+There is a unique branch point in $y$, solution of $y'(z)=0$, located at $z=0$.
+Since the formulae for $F^{(g)}$ consist in taking residues of rational functions at the branch point, we may consider the Taylor expansion of $x(z)$ near $z=0$, i.e.
+\beq
+\curve_{\rm Kontsevitch}(x,y) = 
+\left\{
+\begin{array}{l}
+x(z) = z - {1\over 2}\sum_{k=0}^\infty t_{k+2} z^k  \cr
+y(z) = z^2 + t_1\cr
+\end{array}
+\right.
+\eeq
+where we have defined the Kontsevitch times:
+\beq
+t_k = {1\over N}\Tr \L^{-k}
+\eeq
+so that:
+\beq
+\encadremath{
+F^{(g)}_{\rm Kontsevitch} = F^{(g)}(\curve_{\rm Kontsevitch})
+}\eeq
+
+Again, using symplectic invariance of theorem \ref{symplinv}, we may add to $x(z)$ any rational function of $y(z)$, i.e. we immediately get a 1-line proof of the following well-known theorem:
+\bt
+$F_{\rm Kontsevitch}^{(g)}$ depends only on the odd times $t_{2k+1}$, with $k\leq 3g-2$:
+\beq
+\encadremath{
+F_{\rm Kontsevitch}^{(g)}=F_{\rm Kontsevitch}^{(g)}(t_1,t_3,t_5,\dots,t_{6g-3})
+}\eeq
+\et
+
+
+And, if we assume that $t_k=0$ for $k\geq p+2$, the curve is:
+\beq
+\left\{
+\begin{array}{l}
+x(z) = z - {1\over 2}\sum_{k=0}^p  t_{k+2} z^k  \cr
+y(z) = z^2 +t_1 \cr
+\end{array}
+\right.
+\eeq
+which is identical to the curve of the $(p,2)$ model of section \ref{sectpq}, and which is well known to satisfy KdV hierarchy.
+Thus, again we have a 1-line proof of the well known result:
+\bt
+$Z_{\rm Kontsevitch}$ is a KdV hierarchy tau function.
+\et
+
+
+
+\bigskip
+
+\noindent $\bullet$ {\bf Examples: the first few correlation functions}
+
+For Kontsevitch's curve we have:
+\beq
+B(z,z')={dz \, dz'\over (z-z')^2}
+\virg
+dE_z(z') = {z \,dz'\over z^2-z'^2}
+\;
+, \;
+\om(z)=2z^2 dz \,(2 - \sum_j t_{2j+3}\, z^{2j})
+\eeq
+and the only branchpoint is located at $z=0$.
+%\bea
+%\om(z)
+%&=& (x(z)-x(-z))dy(z) \cr
+%&=& 4z^2 \left(1 + {1\over 2N} \Tr {1\over \l(z^2-\l^2)}\right)\, dz \cr
+%&=& \left(4z^2 - 2 \sum_j t_{2j+3}\, z^{2j+2}\right)\, dz. \cr
+%\eea
+%It clearly depends only on odd times.
+%For the computations, it is convenient to define the auxiliary function:
+%\beq
+%f(z) = 2 + {1\over N} \Tr {1\over \l(z^2-\l^2)} = 2 - \sum_j t_{2j+3}\, y^{j}.
+%\eeq
+%The only y-branch point $y'(z)=0$ is located at $z=0$ and we have
+%\beq
+%x'(0) = 1-{t_3 \over 2}. 
+%\eeq
+
+From the def.\ref{defloopfctions} we easily get the first correlation functions:
+\bea
+W_1^{(1)}(z)
+%&=& -\Res_{z\to 0} {zdz \over (z_1^2-z^2)\left(4z^2 - 2 \sum_j t_{2j+3}\, z^{2j+2}\right)} \,{1\over 4z^2} \cr
+%&=& - {1\over 2} \Res_{y\to 0} {dy \over (y_1-y)y f(y)}\, {1\over 4y} \cr
+%&=& - {1\over 8 y_1 (2-t_3)} \,\left({1\over y_1}+{t_5\over 2-t_3}\right), \cr
+&=& - {dz\over 8 (2-t_3)} \,\left({1\over z^4}+{t_5\over (2-t_3)z^2}\right), \cr
+\eea
+
+\bea
+W_3^{(0)}(z_1,z_2,z_3)  
+%&=& - 2\,{1\over 2}\,\Res_{z\to 0} {zdz \over (z_1^2-z^2) z^2 f(z)}\,{1\over (z-z_2)^2}\, {1\over (z-z_3)^2} \cr
+%&=& - \Res_{y\to 0} {dy \over (y_1-y)y f(y)} {1\over y_2 y_3}\cr
+%&=& - {1 \over 2-t_3}\, {1\over y_1 y_2 y_3},\cr
+&=& - {1 \over 2-t_3}\, {dz_1\,dz_2\,dz_3\over z_1^2 z_2^2 z_3^2},\cr
+\eea
+
+\bea
+ {W_2^{(1)}(z_1,z_2) }
+%&=& {1\over 2} \Res_{y\to 0} {dy \over (y_1-y)y f(y)}\, {2W_1^{(1)}(z) B(z,z_2) + W_3^{(0)}(z,z,z_2) \over dz^2 dz_2} \cr
+%&=& {1 \over 8 (t_3-2)^4 y_1^3 y_2^3} \Big[ (2-t_3)^2 ( 5 y_1^2 + 5 y_2^2+3y_1 y_2) \cr
+%&& \qquad 6 t_5^2 y_1^2 y_2^2 + (2-t_3) \big(6 t_5 y_1^2 y_2 +6 t_5 y_1 y_2^2 + 5 t_7 y_1^2 y_2^2\big) \Big] \cr
+&=& {dz_1 \, dz_2 \over 8 (2-t_3)^4 z_1^6 z_2^6} \Big[ (2-t_3)^2 ( 5 z_1^4 + 5 z_2^4+3z_1^2 z_2^2) \cr
+&& \qquad + 6 t_5^2 z_1^4 z_2^4 + (2-t_3) \big(6 t_5 z_1^4 z_2^2 +6 t_5 z_1^2 z_2^4 + 5 t_7 z_1^4 z_2^4\big) \Big] \cr
+\eea
+and
+\bea
+{W_1^{(2)}(z) } &=& - { dz \over 128 (2-t_3)^7 z^{10}} \Big[ 252\, t_5^4 z^8 + 12\, t_5^2 z^6 (2-t_3) (50\, t_7 z^2 + 21\, t_5) \cr
+&& \quad + z^4 (2-t_3)^2 ( 252\, t_5^2 + 348\, t_5 t_7 z^2 + 145\, t_7^2 z^4 + 308\, t_5 t_9 z^4) \cr
+&& \qquad + z^2 (2-t_3) (203\, t_5 +145\, z^2 t_7 + 105\, z^4 t_9 +105\, z^6 t_{11}) \cr
+&& \qquad \quad + 105\, (2 -t_3)^4 \Big] .\cr
+\eea
+
+\vs
+
+The first and second order free energies are found:
+\beq
+F_{\rm Kontsevitch}^{(1)} = - {1 \over 24} \ln\left(1-{t_3\over 2} \right)
+\eeq
+and
+\beq
+F_{\rm Kontsevitch}^{(2)} = {1 \over 1920}\, {252\, t_5^3 + 435\, t_5 t_7 (2-t_3) + 175\, t_9 (2-t_3)^2 \over (2 -t_3)^5 }.
+\eeq
+which coincide with expressions previously found in the litterature \cite{IZK}.
+
+
+
+
+\subsection{Example: Airy curve}
+\label{sectairy}
+
+The curve $y=\sqrt{x}$ is particularly important, because it corresponds to the leading behaviour of any generic curve near its branch points.
+It is also the minimal model $(1,2)$ (cf \cite{ZJDFG, BookPDF}), also called Tracy-Widom law \cite{TWlaw}.
+
+\bigskip
+
+Consider the curve
+\beq
+\curve(x,y)=y^2-x.
+\eeq
+We chose the uniformization $p=y$:
+\beq
+\left\{
+\begin{array}{lll}
+x(p)&=& p^2 \cr
+y(p)&=& p
+\end{array}
+\right.
+\eeq
+There is only one pole $\alpha=\infty$, and there is only one branch point located at $a=0$, the conjugated point is $\overline{p}=-p$.
+The Bergmann kernel is the Bergmann kernel of the Riemann sphere:
+\beq
+B(p,q)={dp \, dq\over (p-q)^2}
+\virg
+dE_q(p) = {q \,dp\over q^2-p^2}
+\virg
+\om(q)=4q^2 dq
+\eeq
+
+
+It is easy to see that all correlation functions with $2g+k\geq 3$ are of the form:
+\beq
+W_k^{(g)}(p_1,\dots,p_k) = \om_k^{(g)}(p_1^2,\dots,p_k^2)\,dp_1\dots dp_k
+\eeq
+Moreover, the diagrammatic rules are clearly homogenous, so that the function $W_1^{(g)}(p)$ must be a homogeneous function of $p$. It is easy to find that:
+\beq
+W_1^{(g)}(p) = {c_g\, dp\over p^{6g-2}}
+%W_1^{(g)}(p) = 6g-3!!\,c_g\,{ dp\over (2p)^{6g-2}}
+\eeq
+and the total $1-$point function is
+\beq\label{Adefiry1ptfc}
+W_1(p,N) = - N ydx + \sum_{g=1}^\infty N^{1-2g} W^{(g)}_1(p) = W_1(N^{1\over 3}p,1).
+\eeq
+Similarly, the total $2-$point function is
+\beq\label{Adefiry2ptfc}
+W_2(p,q,N) = \sum_{g=0}^\infty N^{-2g} W^{(g)}_2(p,q) = W_2(N^{1\over 3}p,N^{1\over 3}q,1)
+\eeq
+and in general
+\beq\label{Adefirykptfc}
+W_k(p_1,\dots,p_k,N) = \sum_{g=0}^\infty N^{2-2g-k} W^{(g)}_k(p_1,\dots,p_k) = W_k(N^{1\over 3}p_1,\dots,N^{1\over 3}p_k,1).
+\eeq
+
+\medskip
+
+The solution of the recursion def.\ref{defloopfctions} can be found explicitely in terms of the Airy function.
+
+Consider $g(x)=Ai'(x)/Ai(x)$ where $Ai(x)$ is the Airy function, i.e. $g'(x)+g^2(x)=x=p^2$. In terms of the variable $p$ we write:
+\beq
+f(p)=g(p^2)
+\virg
+f^2 + {f'\over 2p} = p^2 .
+\eeq
+It can be expanded for large $p$:
+\beq
+f(p) = \sum_{k=0}^\infty f_k p^{1-3k}
+= p - {1\over 4 p^2} - {9\over 32 p^5} + \dots
+\eeq
+where the coefficients in the expansion satisfy
+\beq
+{4-3k\over 2}f_{k-1}+\sum_{j=0}^k f_j f_{k-j} = \delta_{k,0}.
+\eeq
+
+The solution of the recursion def.\ref{defloopfctions} for the $1-$point function is:
+\beq
+W_1(p,1) = -2 {p^2-f(p)f(-p)\over f(p)-f(-p)}\, p dp
+= -2p^2dp + {dp\over (2p)^4} + {9!!\,dp\over 3^2\,(2p)^{10}}+{15!!\over 3^4\,(2p)^{16}}\dots
+\eeq
+
+
+\beq
+W_2(p,p',1) = - 4\,{(f(p)-f(p'))\,(f(-p)-f(-p'))\over (p^2-p'^2)^2\,(f(p)-f(-p))\,(f(p')-f(-p'))}\, pdp\, p'dp'
+\eeq
+In particular
+\beq
+W_2(p,p,1) = {f'(p) f'(-p)\over (f(p)-f(-p))^2}\, dp^2
+\eeq
+so that:
+\beq
+W_2(p,p,1)+W_1(p,1)^2  = 4p^4\, dp^2 = x\, dx^2
+\eeq
+
+
+%The kernel is:
+%\beq
+%K(x_1,x_2) = {1\over \sqrt{(f(p_1)-f(-p_1))(f(p_2)-f(-p_2))}}\,\,{f(-p_2)-f(p_1)\over p_1^2-p_2^2}
+%\eeq
+
+Similarly we find for instance (with obvious cyclic conventions for the indices):
+\bea
+&& W_3(p_1,p_2,p_3,1) \cr
+&= &{dx_1 dx_2 dx_3 \over (p_3^2-p_2^2)(p_3^2-p_1^2)(p_2^2-p_1^2)} \times \cr
+&& \;\; \times {\sum_{i=1}^3 f(p_i)f(-p_i)(f(p_{i-1})+f(-p_{i-1})-f(p_{i+1})-f(-p_{i+1})) 
+\over (f(p_1)-f(-p_1))(f(p_2)-f(-p_2))(f(p_3)-f(-p_3))} \cr
+&=& {dp_1 \,dp_2 \,dp_3 \over 2\, p_1^2\, p_2^2\, p_3^2} + {dp_1 \,dp_2 \,dp_3 \over 2^6\, p_1^8\, p_2^8\, p_3^8} + \dots  \cr
+\eea
+and one can easily find similar expressions for all $W_k$'s.
+
+\medskip
+
+In fact all correlation functions can be written with a determinantal formula \cite{Dysondet, eynmetha},
+with the Tracy-Widom kernel \cite{TWlaw}:
+\beq
+K(x,x')= {Ai(x)Ai'(x')-Ai'(x)Ai(x')\over x-x'}
+\eeq
+The fact that the Baker--Akhiezer function is $Ai(x)$ and satisfies the differential equation $Ai''=x Ai$ can be seen as a consequence of the Hirota equation theorem.\ref{thHirota}.
+
+\bigskip
+
+\br 
+To large $N$ leading order the first term $W^{(0)}_k$ can be written in terms of Ferrer diagrams (Young diagrams):
+\beq
+W_k^{(0)}(p_1,\dots,p_k) = {k-3 !\over 2^{k-2}}\prod_j {dp_j\over p_j^2}\,\sum_{|\l|=k-3} M_\l(1/p_i^2)\,\prod_{j} \,\,{2\l_j+1!!\over \l_j!}\,\,{1\over n_j(\l)!}
+\eeq
+where $\l$ is a Ferrer diagram, $n_i(\l)=\#\{j\,/\,\, \l_j=i\}$, and $M_\l$ are the elementary monomial symetric polynomials:
+\beq
+M_\l(z_i) = \sum_{i_1\neq i_2\neq\dots\neq i_{k-3}} z_{i_1}^{\l_1}\dots z_{i_{k-3}}^{\l_{k-3}}.
+\eeq
+
+For instance with $k=4$ there is only one diagram $(1)$, and $M_{(1)}(z_1,z_2,z_3,z_4) = z_1+z_2+z_3+z_4$, and:
+\beq
+W_{4}^{(0)}(p_1,p_2,p_3,p_4)
+= {3\over 4} \, {dp_1\, dp_2\, dp_3\, dp_4\over p_1^2\,p_2^2\,p_3^2\,p_4^2}\,\left({1\over p_1^2}+{1\over p_2^2}+{1\over p_3^2}+{1\over p_4^2}\right).
+\eeq
+\er
+
+%We have:
+%\beq
+%S_\l(z,z_K) = S_\l(z_K) + \sum_{m}^{\l'_1(\l)}\, z^{\l_m}\,S_{\l-l_m}(z_K)
+%\eeq
+\medskip
+
+\br
+The free energies are all vanishing for that curve:
+\beq
+\forall g\quad F^{(g)}=0 .
+\eeq
+\er
+
+
+
+
+\subsection{Example: pure gravity (3,2)}\label{sectpure}
+
+In this section we study in details the $(3,2)$ minimal model, also called pure gravity \cite{ZJDFG}.
+
+%In the one matrix model defined in section \ref{sect1MM}, take the potential:
+%\beq
+%V(x)=-{1\over 6}x^3+ {3\over 2} x.
+%\eeq
+%If the corresponding spectral curve has genus 0, one can find a rational parametrization:
+%\beq
+%\left\{
+%\begin{array}{l}
+%x=\beta+\gamma(p+{1\over p}) \cr
+%y= - {\gamma^2\over 4} (p^2-{1\over p^2}) - {\beta \gamma \over 2}\, (p-{1\over p}) \cr
+%\end{array}
+%\right.
+%\eeq
+%with the relations:
+%\beq
+%3=\beta^2+2\gamma^2
+%\virg
+%T=-\gamma^2 \beta
+%\eeq
+%where $T$ is a parameter.
+
+%One obvious branch point is $p=1$. When one approaches this branch point, one can check that the parametrization
+%behaves as
+%\beq
+%\left\{
+%\begin{array}{l}
+%x(z)\sim_{z \to 0} \beta + \gamma + \gamma z^2 + O(z^3) \cr
+%y(z) \sim_{z \to 0} - z (\gamma^2+\beta \gamma) + {z^2 \over 2} (\gamma^2 + \beta \gamma) - z^3 \left(2 \gamma^2 + {\beta \gamma \over 2}\right) + O(z^4)\cr
+%\end{array}
+%\right. 
+%\eeq
+%where $z = p-1$ is a local parameter around the branch point. One can see that one reaches a critical point $(3,2)$
+%if $\gamma^2+\beta \gamma$ vanishes. This can be achived by setting $T=1$. Indeed, this implies $\beta = -1$ and $\gamma = 1$.
+
+%Let us use a parameter $t$ to approach this singularity by setting:
+%\beq
+%\left\{
+%\begin{array}{l}
+%\beta = -1 - t \cr
+%\gamma^2 = 1-t-{t^2\over 2} \cr
+%\end{array}
+%\right.
+%\eeq
+%which gives (the singularity corresponds to $t \to 0$):
+%\beq
+%T= 1-{3\over 2}t^2-{t^3\over 2}.
+%\eeq
+%%
+%Let us now adapt the parametrization of the curve to this singular limit by writting
+%\beq
+%p=1- t^{1\over 2} \epsilon.
+%\eeq
+%That gives the parametrization
+It corresponds to the curve
+\beq
+\curve_{(3,2)}= \; 
+\left\{
+\begin{array}{l}
+x(z) = z^2-2v \cr
+y(z) = z^3-3v z \cr
+t_1=3 v^2
+\end{array}\right. .
+\eeq
+We recognize Tchebychev's polynomials $T_2$ and $T_3$, which satisfy the Poisson relation \eq{Poissonpq} .
+Up to a rescaling $z=\sqrt{v}\, p$, the curve reads:
+\beq
+\curve_{(3,2)} = \; 
+\left\{
+\begin{array}{l}
+x(p) = v(p^2-2) \cr
+y(z) = v^{3/2} (p^3-3 p) \cr
+t_1=3 v^2
+\end{array}\right. .
+\eeq
+There is only one $x$-branch point at $p=0$, and the conjugated point is $\overline{p}=-p$.
+%
+The Bergmann kernel is the Bergmann kernel of the Riemann sphere:
+\beq
+B(p,q)={dp \, dq\over (p-q)^2}
+\virg
+dE_q(p) = {q \,dp\over q^2-p^2}
+\eeq
+\beq
+\om(q) = (y(q)-y(\qbar))dx(q) = 4v^{5/2}\, (q^2-3)\, q^2\, dq
+\eeq
+\beq
+\Phi(q) = v^{5/2}({2\, q^5\over 5} - 2 q^3)
+\eeq
+Under a variation of $t_1$ we have:
+\beq
+\Omega_1(p) = - \left.{\partial y(p)dx(p)\over \partial t_1}\right|_{x(p)} = v^{1/2}\,dp = -v^{1/2}\,\Res_\infty q B(p,q) 
+\virg \L_1(q)= -v^{1/2}\,q
+\eeq
+so the effect of $\partial/\partial t_1$ is equivalent to:
+\beq\label{ddt32}
+\left.{\partial \over \partial t_1} W_k^{(g)}\right|_{x} = - v^{1/2}\, \Res_{q\to \infty} q  W_{k+1}^{(g)}
+\eeq
+
+%The diagrammatic rules are given by:
+%\begin{itemize}
+%\item Propagators:
+%\beq
+%{1\over 2}dE_{q,\overline{q}}(p) \to {1\over 2}de_{\epsilon,-\epsilon}(\eta)={\epsilon\, d\eta\over \eta^2-\epsilon^2}
+%\virg
+%B(p,q) \to b(\epsilon,\eta)={d\epsilon\, d\eta\over (\eta-\epsilon)^2}
+%\eeq
+
+%\item Vertex:
+%\beq
+%{1\over 2y(p)dx(p)} \to t^{-5/2}\,\, {1\over T_3(\epsilon)T'_2(\epsilon) d\epsilon}
+%\eeq
+
+%\item Variation of the time $t$:
+%\beq
+%\int_{\infty_y}^{\infty_x} B(p,q)
+%= dE_{\infty_x,\infty_y}(q)= {dq\over q} \to t^{1\over 2}\,\, d\epsilon = \Res_{\eta\to\infty} \eta\, b(\epsilon,\eta)
+%\eeq
+%\beq
+%\int_{\infty_y}^{\infty_x}{1\over 2}dE_{q,\overline{q}}(p)
+%= {1\over 2}\ln{\Lambda(q)\over \Lambda(\overline{q})} \to t^{1\over 2}\,\, \epsilon  = t^{1\over 2}\,\,\Res_{\eta\to\infty} \eta {1\over 2}de_{\epsilon,-\epsilon}(\eta)
+%\eeq
+
+%\item Root:
+%\beq
+%{1\over 2}\int^p_{\overline{p}} y dx \to t^{5/2}  {2\over 5}\,\epsilon^3\,(\epsilon^2-{5\over 3})
+%\eeq
+%\beq
+%\Res \Phi \omega \rightarrow t^{5/2}\,\,\Res_{\eta\to\infty} ({1\over 5}\eta^5-\eta^3)\omega
+%\eeq
+%
+%\end{itemize}
+
+\subsubsection{Some correlation functions}
+
+Using def.\ref{defloopfctions}, we find:
+\beq\label{W30pq32}
+W_{3}^{(0)}({p}_1,{p}_2,{p}_3) = - {v^{-5/2}\over 6}\,\,{d{p}_1 d{p}_2 d{p}_3\over {p}_1^2 {p}_2^2 {p}_3^2}
+\eeq
+
+\beq\label{W11pq32}
+W_{1}^{(1)}(p) = -{v^{-5/2}\over (12)^2}\,{p^2+3\over p^4}\,dp
+\eeq
+
+\beq\label{W21pq32}
+W_{2}^{(1)}({p},{q}) = v^{-5}\,\,{15{q}^4 + 15{p}^4 + 6{p}^4{q}^2 + 2{p}^4{q}^4 + 9{p}^2{q}^2 + 6{p}^2{q}^4\over 2^5\,3^3\,\,{p}^6\,{q}^6}\,dp\,dq
+\eeq
+
+\beq\label{W12pq32}
+W_{1}^{(2)}(p) = - v^{-15/2}\,\,
+7 {135 + 87 p^2 + 36 p^4 + 12 p^6 + 4 p^8\over 2^{10}\, 3^5\,p^{10}}\, dp
+\eeq
+
+\beq
+W_{4}^{(0)}({p}_1,{p}_2,{p}_3,{p}_4) = {v^{-5}\over 9 {p}_1^2 {p}_2^2 {p}_3^2 {p}_4^2}\,\left(1+3\sum_i {1\over {p}_i^2}\right)\,dp_1 dp_2 dp_3 dp_4
+\eeq
+
+\beq
+{W_{5}^{(0)}({p}_1,{p}_2,{p}_3,{p}_4,{p}_5) \over dp_1 dp_2 dp_3 dp_4 dp_5} = {v^{-15/2}\over 9 {p}_1^2 {p}_2^2 {p}_3^2 {p}_4^2 {p}_5^2}\,\left(1+3\sum_i {1\over {p}_i^2}+6\sum_{i<j} {1\over {p}_i^2{p}_j^2}+5\sum_i {1\over {p}_i^4}\right)
+\eeq
+etc...
+
+Using def.\ref{defFg}, and eq.\ref{ddt32}, we find from eq.\ref{W30pq32}:
+\beq
+{\partial^3 F^{(0)}\over \partial t_1^3} = -{1\over 6v} = -{1\over 2\sqrt{3 t_1}}
+\longrightarrow
+{\partial^2 F^{(0)}\over \partial t_1^2} = -{t_1^{1/2}\over \sqrt{3}}
+\eeq
+and using eq.\ref{W11pq32}:
+\beq
+{\partial F^{(1)}\over \partial t_1} = -{1\over (12)^2 v^2}=-{1\over 48 t_1}
+\longrightarrow
+{\partial^2 F^{(1)}\over \partial t_1^2} = {1\over 48 \,t_1^2}
+\eeq
+as well as using eq.\ref{W12pq32}:
+\beq
+{\partial F^{(2)}\over \partial t_1} =  - v^{-7}\,\,{ 7 \over 2^8\, 3^5} = - { 7\over 2^8\, 3^{3/2}\, t_1^{7/2}} 
+\longrightarrow
+{\partial^2 F^{(2)}\over \partial t_1^2} = {49\over 2^9\,3^{3/2}\,t_1^{9/2}} .
+\eeq
+%
+We may thus verify that the second derivative of the free energy:
+\beq
+u = {\partial^2 F\over \partial t_1^2} = \sum_{g=0}^\infty t_1^{(1-5 g)/2} u^{(g)}
+\virg
+F^{(g)}={4 u^{(g)}\over 5(1-g)(3-5g)}\, .
+\eeq
+satisfies the Painlev\'e equation to the first orders:
+\beq
+u^2+{1\over 6}u'' = {1\over 3}t_1 .
+\eeq
+It is well known that this equation is satisfied to all orders \cite{ZJDFG}, and here this can be seen as a consequence of the Hirota equation theorem. \ref{thHirota}.
+

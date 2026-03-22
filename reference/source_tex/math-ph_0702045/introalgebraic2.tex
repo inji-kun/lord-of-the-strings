@@ -1,0 +1,803 @@
+
+\section{Introduction}
+
+Computing the topological expansion of various matrix integrals has been an interesting problem for more than 30 years. The reason for it, is that formal matrix integrals (cf \cite{eynform} for a definition of formal integrals), are known to be combinatorics generating functionals.
+Some formal matrix integrals enumerate maps, or colored maps of given topology \cite{BIPZ, ZJDFG, PDFgraph}, 
+some count intersection numbers (the Kontsevitch integral and its generalizations \cite{kontsevitch}), 
+and physicists have also tried to reach the limit of continuous maps through critical limits, and thus tried to recover Liouville's field theory \cite{KPZ, BookPDF}.
+
+\medskip
+
+Many methods have been invented to compute those formal matrix integrals, and the most successful
+is undoubtedly the "loop equations" method \cite{Kazakovloop, Virasoro}, which is in fact nothing but integration by parts, or Tutte's equations \cite{tutte,tutte2}, or Schwinger--Dyson equations, or Ward identities, or Virasoro constraints, or W-algebra \cite{ZJDFG}.
+Until recently, those loop equations were solved only for the first few orders (mostly planar or torus), and case by case (for each matrix model).
+One of the most remarkable methods was obtained in \cite{ACKM}.
+Let us also mention that other methods were invented using orthogonal polynomials \cite{Mehta} (only in the case were the formal integral comes from an actual convergent integral),
+or topological string theory methods \cite{MMtopo,DV,BCOV} using the so-called holomorphic anomaly equations.
+
+
+\medskip
+
+In 2004, a new method for computing the large $N$ expansion of matrix integrals was introduced in \cite{eynloop1mat}, and further developped in \cite{eyno, ec1loopF}.
+The starting point of that method was not new, it was the same as in \cite{ACKM}, it consists in solving the loop equations recursively in powers of the expansion parameter $1/N^2$, where $N$ is the size of the matrix.
+To leading order, loop equations become algebraic equations, and give rise to an algebraic curve $\curve(x,y)=0$ where $\curve$ is some polynomial in 2 variables, which we call the ``classical  spectral curve''.
+
+The new feature which was introduced in \cite{eynloop1mat} was to use contour integrals and functions on the curve rather than on the $x$-plane as in \cite{ACKM}.
+When written on the curve, the loop equations, together with the Cauchy residue formula and the Riemann bilinear identity, simplify enormously, and take a very universal structure which can be written {\bf entirely in terms of geometric properties of the curve}.
+In other words, the solution of loop equations of many different matrix models, depends only on the properties of the spectral curve, and not on the matrix model which gives that curve.
+In particular, they can be written for any arbitrary algebraic curve, even for curves which don't come from matrix models.
+It is thus tempting to define "free energies" for any algebraic curve.
+This is what we do in this article.
+
+\bigskip
+
+Therefore, in this article, for any arbitrary algebraic curve $\curve(x,y)=0$, we define an infinite sequence of complex numbers $F^{(g)}(\curve)$, computed as residues of meromorphic forms on the curve.
+Out of these $F^{(g)}(\curve)$'s, we build a formal power series:
+\beq
+\ln{Z_N(\curve)}=-\sum_{g=0}^\infty N^{2-2g} F^{(g)}(\curve)
+\eeq
+and we study its properties.
+
+\medskip
+
+We compute the variations of $F^{(g)}$ under variations of the curve (variations of its complex structure, its moduli, and modular transformations).
+We show that the $F^{(g)}$'s are invariant under some transformations of the curve,
+namely under transformations of the curve which preserve the symplectic form up to a sign $\pm dx\wedge dy$.
+
+\smallskip
+
+We also show that $Z_N(\curve)$ satisfies bilinear Hirota equations, and thus $Z_N(\curve)$ is a formal $\tau$-function, and we construct the associated formal Baker-Hakiezer function \cite{BBT}.
+
+We thus have a notion of a $\tau$ function associated to an algebraic curve.
+Such notion has already been encountered in the litterature \cite{BBT}, and it is not clear whether our definition coincides with other existing definitions.
+What can be understood so far, is that we are defining a sort of quantum deformation of a classical $\tau$-function whose spectral curve is $\curve$.
+The classical $\tau$ function being only the dispersionless limit $ \ln{Z_{\infty}(\curve)} = - F^{(0)}(\curve)$, while our $Z_N(\curve)$ concerns the full system.
+
+\medskip
+
+
+
+
+Almost by definition, if $\curve$ is the algebraic curve coming from the large $N$ limit of the loop equations of a matrix model, then $Z_N(\curve)$ is the matrix integral.
+
+What is more interesting is to see what is $Z_N(\curve)$ for curves not coming from the large $N$ limit of the loop equations of a matrix model.
+
+We study in details a few examples.
+
+\smallskip
+
+- The double scaling limit of a matrix model. It has been well known since \cite{KazakovRMTcrit, ZJDFG}, that if we fine tune the parameters of a matrix model so that the algebraic curve $\curve$ develops a singularity,
+the free energies become singular and the most singular part of the free energies form the KP-hierarchy $\tau$-function (KdV hierarchy for the 1-matrix model).
+We show, by looking at the double scaling limit of matrix models, that the KP $\tau$-function (resp. KdV $\tau$-function), coincides with our definition for the classical limit of the $(p,q)$ systems (resp. $(p,2)$).
+
+- It has been well known since the works of Kontsevitch \cite{kontsevitch}, that the KdV $\tau$-function can be represented by another matrix integral called Kontsevitch integral.
+Kontsevitch introduced that integral as a counting function for intersection numbers, and proved that it is a KdV $\tau$-function.
+One of the key features is that it depends on the eigenvalues of a diagonal matrix $\L$, only through the quantities $t_k=\tr \L^{-k}$ for odd $k$ (cf \cite{IZK,ZJDFG}).
+Another important known property is that, if $t_k=0$ for $k> p$, it coincides with the $(p,2)$ $\tau$-function found from the double scaling limit of the 1-matrix model, i.e. the $(p,2)$ conformal minimal model.
+
+Here, we prove that the Kontsevitch matrix integral coincides with our $Z_N(\curve)$ when $\curve$ is the large $N$ limit of the Schwinger--Dyson equation of the Kontsevitch integral.
+The remarkable fact, is that for our $Z_N(\curve)$, the above properties (i.e. the fact that it depends only on odd $t_k$'s and the fact that it gives the $(p,2)$ $\tau$-function if $t_k=0$ for $k>p$) are trivial.
+We thus provide a new proof of those properties, and maybe a new interpretation.
+
+\section{Main results of this article}
+
+In this section we just sketch briefly the contents of the main body of the article.
+
+\subsection{Definitions}
+
+Given a polynomial of two variables $\curve(x,y)$, we construct an infinite sequence of 
+multilinear meromorphic forms over the curve of equation $\curve(x,y)=0$, which we call:
+\beq
+W_k^{(g)}(p_1,p_2,\dots,p_k) \virg k, g \in {\mathbf N}.
+\eeq
+In particular $W_0^{(g)}=-F^{(g)}$ are complex numbers $F^{(g)}(\curve)$.
+
+The $F^{(g)}$'s and the $W_k^{(g)}$'s are defined in terms of residues near the branchpoints of the curve only, i.e. they depend only on the {\bf local behavior of the curve near its branch points}.
+
+Then we show some properties:
+\begin{itemize}
+\item the $W_k^{(g)}$'s are {\bf symmetric} in their $k$ variables;
+\item there is a "loop insertion operator" which increases $k\to k+1$:
+\beq
+D_{B(p_{k+1},.)} W_k^{(g)}(p_1,p_2,\dots,p_k) = W_{k+1}^{(g)}(p_1,p_2,\dots,p_k,p_{k+1});
+\eeq
+\item there is an inverse operator which contracts $k\to k-1$:
+\beq
+\Res_{p_k\to {\rm branch\,points}} \Phi(p_k)\,W_k^{(g)}(p_1,p_2,\dots,p_k) = (2g+k-3)\, W_{k-1}^{(g)}(p_1,p_2,\dots,p_{k-1}).
+\eeq
+\end{itemize}
+
+The $F^{(g)}$'s and the $W_k^{(g)}$'s are defined in a way which mimics the solution of matrix models loop equations, and almost by definition, they coincide with matrix model's free energy and correlation functions when the polynomial $\curve$ is chosen as the classical large $N$ limit of the matrix model's spectral curve:
+\beq
+\ln{\left( \int dM \exp{-N\Tr V(M) }\right)} = - \sum_{g=0}^\infty N^{2-2g}\,F^{(g)}(\curve_{\rm 1MM})
+\eeq
+and
+\beq
+\left< \Tr {dx_1\over x_1-M}\,\Tr {dx_2\over x_2-M}\,\dots\,\Tr {dx_k\over x_k-M}\right> =  \sum_{g=0}^\infty N^{2-2g-k}\,W^{(g)}_k(p(x_1),p(x_2),\dots,p(x_k))
+\eeq
+
+The same construction works also for the 2-matrix model and the matrix model in an external field:
+\bea
+F^{(g)}_{\rm 1MM} =  F^{(g)}(\curve_{\rm 1MM}) \cr
+F^{(g)}_{\rm 2MM} =  F^{(g)}(\curve_{\rm 2MM}) \cr
+F^{(g)}_{\rm ext.field} =  F^{(g)}(\curve_{\rm ext.field}) .
+\eea
+in particular it works for the Kontsevitch integral
+\beq
+F^{(g)}_{\rm Kontsevitch} =  F^{(g)}(\curve_{\rm Kontsevitch}) 
+\eeq
+where the LHS is the topological expansion of the corresponding matrix integral, and the RHS is the functional defined in this article, applied to the curve $\curve(x,y)=0$ coming from the large $N$ limit of the Schwinger--Dyson equations of the corresponding matrix model.
+
+Let us emphasize that not every curve $\curve$ is the large $N$ limit of a matrix model's spectral curve, and thus our functional $F^{(g)}(\curve)$ is defined beyond matrix models, and is really an algebro-geometric object.
+It has many remarkable properties, and we list below some of the most important ones:
+
+\subsection{Remarkable properties}
+
+{\bf Theorem \ref{thdiagrepr} Diagrammatic representation:}
+\beq
+W_{k+1}^{(g)}(p,p_1,\dots,p_k) = \sum_{G\in {\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)}\,\, w(G) = w\left(\sum_{G\in {\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)}\,\, G\right)
+\eeq
+where  ${\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)$ is a set of trivalent graphs (built on trees), and $w$ is a Feynman-like weight function associating values to edges and integrals (residues in fact) to vertices of the graph.
+
+This theorem is important because it makes all formulae particularly easy to remember, and many theorems below can be proved in a diagrammatic way.
+
+
+\medskip
+{\bf Theorem \ref{thsinglimit} Singular limits:} if the curve becomes singular, the functional $F^{(g)}$ commutes with the singular limit, i.e.:
+\beq
+{\rm lim}\,\, F^{(g)}(\curve) = F^{(g)}({\rm lim}\,\, \curve).
+\eeq
+
+\medskip
+\noindent {\bf Theorem \ref{thHirota} Integrability:} the formal series:
+\beq
+\ln{Z_N(\curve)} = - \sum_{g=0}^\infty N^{2-2g}\,F^{(g)}(\curve)
+\eeq
+obeys Hirota's bilinear equations, and thus is a $\tau$ function.
+
+\medskip
+\noindent {\bf Theorem \ref{homogeneity} Homogeneity :} $F^{(g)}(\curve)$ is homogeneous of degree $2-2g$ in the moduli of the curve:
+\beq
+(2-2g)F^{(g)} = \sum_k t_k {\partial F^{(g)}\over \partial t_k}.
+\eeq
+
+\medskip
+\noindent {\bf Theorem \ref{variat} Deformations :} if the curve $\curve$ is deformed into $\curve+\delta\curve$,
+the differential $ydx$ is deformed into $ydx\to ydx+\delta(ydx)$ where $\delta(ydx)$ is a meromorphic one-form which we denote $\delta(ydx)= - \Omega$, and which can be written as:
+$\Omega  = \int_{\partial\Omega} W_2^{(0)} \L$ for some appropriate contour $\partial\Omega$ and some appropriate function $\L$. Then we have:
+\beq
+\delta W_{k}^{(g)}(p_1,p_2,\dots,p_k) = \int_{\partial\Omega} \L(p_{k+1})\,W_{k+1}^{(g)}(p_1,p_2,\dots,p_k,p_{k+1}) .
+\eeq
+
+
+\medskip
+\noindent {\bf Theorem \ref{symplinv} Symplectic invariance :} $F^{(g)}(\curve)$ is unchanged under the following changes of curve $\curve(x,y)$:
+\beq\label{symplecticinvintro}
+\begin{array}{l}
+y\to y+ R(x) \virg \hbox{$R(x)$=rational fraction of $x$,} \cr
+y\to c y \,\, , \,\,\, x\to c^{-1}x\,  \virg \hbox{$c$=complex number,} \cr
+y\to - y \,\, , \,\,\, x\to x\, , \cr
+y\to x \,\, , \,\,\, x\to y\, .
+\end{array}
+\eeq
+all those transformations conserve the symplectic form $dx\wedge dy$ up to the sign.
+
+
+
+\medskip
+\noindent {\bf Theorem \ref{thmodular} Modular transformations :} 
+the modular dependence of $F^{(g)}(\curve)$ is only in the Bergmann kernel (defined in section \ref{secdefBergmann}), and thus the modular transformations of $F^{(g)}(\curve)$ are derived from those of the Bergmann kernel.
+Under a modular transformation, the Bergmann kernel is changed into $B(p,q) \to B(p,q) + 2i\pi\,du(p) \kappa du(q)$, and thus we introduce a new kernel for any arbitrary symmetric matrix $\kappa$:
+\beq
+B_\kappa(p,q) \to B(p,q) + 2i\pi\,du(p) \kappa du(q)
+\eeq
+We thus define some $F^{(g)}_\kappa(\curve)$, and we compute:
+\beq
+{\partial F^{(g)}\over \partial \kappa}
+\eeq
+We also remark that when $\kappa = (\overline\tau-\tau)^{-1}$, $F^{(g)}_\kappa(\curve)$ is modular invariant.
+
+\subsection{Some applications, Kontsevitch's integral}
+
+{\bf $(p,q)$ minimal models, KP and KdV Hierarchies:}
+it is well known \cite{ZJDFG, DKK} that some rational singular limits of matrix models correspond to $(p,q)$ minimal models, and theorem \ref{thsinglimit} implies that:
+\beq
+F^{(g)}_{(p,q)} =  F^{(g)}(\curve_{(p,q)}) 
+\eeq
+and it is well known that $(p,q)$ minimal models are some reductions of KdV hierarchy for $q=2$ and KP hierarchy for general $(p,q)$.
+
+Notice that the $x\leftrightarrow y$ symmetry of theorem \ref{symplinv} (i.e. \eq{symplecticinvintro}) implies the famous $(p,q)\leftrightarrow (q,p)$ duality \cite{ZJDFG, BookPDF, KharMar}.
+
+\bigskip
+{\bf Kontsevitch integral's properties:}
+Kontsevitch's integral is defined as:
+\beq
+Z_{\rm Kontsevitch}(\L) = \int dM\, \ee{-N\Tr {M^3\over 3} - M\L^2}
+\virg
+\ln{Z_{\rm Kontsevitch}} = -\sum_{g=0}^\infty N^{2-2g}\, F^{(g)}_{\rm Kontsevitch}
+\eeq
+and we define the Kontsevitch's times:
+\beq
+t_k={1\over N}\Tr \L^{-k}.
+\eeq
+It is straightforward to write the Schwinger-Dyson equations and find the classical spectral curve:
+\beq
+\curve_{\rm Kontsevitch} = \left\{
+\begin{array}{l}
+x(z) = z + {1\over 2N}\Tr {1\over \L} {1\over z-\L} \cr
+y(z) = z^2 + t_1
+\end{array}\right. .
+\eeq
+According to theorem \ref{thMext}, we have:
+\beq
+F^{(g)}_{\rm Kontsevitch} = F^{(g)}(\curve_{\rm Kontsevitch}).
+\eeq
+Using the $x\leftrightarrow y$ invariance of eq.\ref{symplecticinvintro}, we see that the only branch point in $y$ is located at $z=0$, and since the $F^{(g)}$'s depend only on the local behavior near the branchpoint, we may perform a Taylor expansion of $x(z)$ near $z=0$:
+\beq
+\curve_{\rm Kontsevitch}(t_1,t_2,\dots) = \left\{
+\begin{array}{l}
+x(z) = z - {1\over 2} \sum_{k=0}^\infty t_{k+2} z^k \cr
+y(z) = z^2 + t_1
+\end{array}\right. .
+\eeq
+From the symplectic invariance theorem \ref{symplinv}, (i.e. eq.\ref{symplecticinvintro}), we may add to $x$ any rational function of $y$ i.e. of $z^2$, thus we may substract to $x$ its even part, and thus the following curves are related by symplectic invariance:
+\beq
+\curve_{\rm Kontsevitch}(t_1,t_2,t_3,\dots) \sim \curve_{\rm Kontsevitch}(t_1,0,t_3,0,t_5,\dots) .
+\eeq
+We thus have a very easy proof that {\bf $F^{(g)}_{\rm Kontsevitch}$ depends only on odd times}.
+
+Moreover, if $t_k=0$ for $k>p+2$, we have:
+\beq
+\curve_{\rm Kontsevitch}(t_1,t_2,\dots,t_{p+2},0,\dots) = \left\{
+\begin{array}{l}
+x(z) = z - {1\over 2} \sum_{k=0}^{p} t_{k+2} z^k \cr
+y(z) = z^2 + t_1
+\end{array}\right.
+\eeq
+which is exactly the curve of the $(p,2)$ minimal model, i.e. it satisfies KdV hierarchy.
+We thus have a very easy proof that {\bf $Z_{\rm Kontsevitch}$ is a KdV tau-function}.
+
+\medskip
+
+Those are old and classical results about the Kontsevitch integral, and we just propose a new proof, in order to illustrate the power of the tools we introduce.
+
+%===============================================================
+\section{Algebraic curves, reminder and notations}
+%===============================================================
+
+
+We begin by recalling some elements of algebraic geometry, which are used to fix the notations.
+We refer the reader to
+\cite{Farkas} or \cite{Fay} for further details about algebro-geometric concepts.
+
+\bigskip
+
+\noindent
+\begin{tabular}{|l@{ $\,\,\longrightarrow\,\,$ }p{260pt}|}
+\hline
+&\underline{\bf Summary of notations} \\
+\hline
+$\curve(x,y)=0$ & classical spectral curve. \\
+$d_1+1= \deg_{x} \curve$  & $x$-degree of the polynomial $\curve$. \\
+$d_2+1 = \deg_{y} \curve$  & $y$-degree of the polynomial $\curve$ (number of sheets). \\
+$\bfa=\{a_i\} $ & set of branch points $dx(a_i)=0$. \\
+$\bfalpha=\{\alpha_i\} $ & poles of $ydx$. \\
+$\genus$ & genus  of the curve. \\
+$\underline\acycle_i \cap \underline\bcycle_j =\delta_{ij}$ & cannonical basis of non-contractible cycles. \\
+$du_i$  & cannonical holomorphic forms $\oint_{\underline\acycle_j} du_i = \delta_{ij}$. \\
+$\tau_{ij} = \oint_{\underline\bcycle_j} du_i$ & Riemann's matrix of periods. \\
+$u_i(p) = \int_{p_0}^p du_i$ & Abel map. \\
+$\acycle=\underline\acycle - \kappa (\underline\bcycle-\tau\underline\acycle)$ & $\kappa$-modified $\acycle$-cycles \\
+$\bcycle=\underline\bcycle-\tau\underline\acycle$ & $\kappa$-modified $\bcycle$-cycles, $\acycle_i \cap \bcycle_j =\delta_{ij}$ \\
+$dS_{q_1,q_2}(p)$ & 3rd kind differential with simple poles $q_1$ and $q_2$, such that $\Res_{q_1} dS_{q_1,q_2} = 1=- \Res_{q_2} dS_{q_1,q_2}$ and $\oint_{\acycle_i} dS_{q_1,q_2} =0$. \\
+$B(p,q)$ & Bergmann kernel, i.e. 2nd kind differential with double pole at $p=q$, no residue and vanishing $\acycle$-cycle integrals. \\
+$z={\vec{n}+\tau\vec{m}\over 2}$ & regular odd characterisic, i.e. $\sum_{i=1}^g n_i m_i =$odd. \\
+$dh_z = \sum_i \left. {\partial \theta_z(\vec{v})\over \partial v_i}\right|_{v=0}\,du_i$ & Holomorphic form with only double zeroes. \\
+$\underline\primef(p,q)={\theta_z(u(p)-u(q),\tau)\over \sqrt{dh_z(p)dh_z(q)}}$ & Prime form independent of $z$, with a simple zero at $p=q$.\\
+$\Phi(p)=\int_o^p y dx$ & some antiderivative of $ydx$ defined on the universal covering.\\
+$\pbar$, $x(\pbar)=x(p)$ & if $p$ is near a branchpoints $a$, then $\pbar\neq p$ is the unique other point near $a$ such that $x(\pbar)=x(p)$.\\
+$p^i(p)$, $x(p^i)=x(p)$ &  The $p^i$'s, $i=0,\dots,d_2$,  are the pre-images of $x(p)$ on the curve. By convention $p^0(p)=p$.\\
+$D_\Omega = \delta_\Omega + \tr (\kappa \,\delta_\Omega\tau \,\kappa {\partial \over \partial \kappa})$ & Covariant variation wrt $\Omega = \delta(y dx)$.\\
+\hline
+\end{tabular}
+
+\bigskip
+
+Consider an (embedded) algebraic curve given by its equation:
+\beq
+\curve(x,y)=0
+\eeq
+where $\curve$ is an almost arbitrary polynomial of two variables. This is equivalent to considering a compact
+Riemann surface $\overline{\Sigma}$ and 2 meromorphic functions $x$ and $y$, such that 
+\beq
+\forall p \in \overline{\Sigma} \virg \; \curve(x(p),y(p))=0.
+\eeq
+
+We only require that $\curve(x,y)$ is  not factorizable, and that all branchpoints (zeroes of $dx$) are simple, i.e. near a branchpoint $a_i$,
+$y$ behaves like a square root $\sqrt{x-x(a_i)}$.
+
+\subsection{Some properties of algebraic curves} \label{sectgeomalg}
+
+\subsubsection{Sheets}
+
+For each complex $x$, there exist $d_2+1=\deg_y\curve$ solutions for $y$ of $\curve(x,y)=0$.
+This means that there are exactly $d_2+1$ points on the Riemann surface $\overline{\Sigma}$ for which $x(p)=x$:
+$\overline{\Sigma}$ has a sheet structure with $d_2+1$ $x$-sheets.
+We call them:
+\beq
+x(p)=x \quad \leftrightarrow\quad p=p^i(x)\,\, ,\,\,\, i=0,\dots, d_2.
+\eeq
+
+
+\begin{figure}
+\beq
+\begin{array}{r}
+{\epsfxsize 7cm\epsffile{branch.eps}}
+\end{array} \eeq
+\caption{Example of an algebraic curve with two $x$-branch points $a_1$ and $a_2$ and a three sheeted structure
+($x$ has three preimages). One can see that the map
+$p \to \overline{p}$ is not globally defined, for instance when $q \to p$, we have $\qbar \to p^{(2)}$. The notion of conjugated point depends on the branch point.}
+\label{branch}
+\end{figure}
+
+
+
+\subsubsection{Branch points and conjugated points}
+
+Let $a_i$, $i=1,\dots, n$, $\bfa=\{a_1,\dots,a_n\}$ be the set of branch-points, solutions of $dx=0$:
+\beq
+\forall a\in \bfa \virg dx(a)=0.
+\eeq
+Since we assume that the branch-points are simple zeros of $dx$, we have the following property:
+if $p$ is in the vicinity of a branch-point $a_i$, there is a unique point $\pbar\neq p$, such that $x(\pbar)=x(p)$, which is also in the vicinity of $a_i$.
+$\pbar$ depends on $i$, and in general, $\pbar$ is not globaly defined (see fig. \ref{branch} for an example).
+
+Notice that $\pbar$ is one of the $p^k$ defined in the previous section.
+
+%\begin{figure}
+%\beq
+%\begin{array}{r}
+%{\epsfxsize 7cm\epsffile{torussheet.eps}}
+%\end{array}
+%\eeq
+%\caption{Example of a two-sheeted representation of the torus (genus $\genus=1$) with 4 branch-points
+%and two pre-image of $x(p)$. Each plane correspond to one $x$-sheet, i.e. one particular solution of $x(p)=x$.
+%The branch-points are the points where the two sheets merge and they are linked by cuts gluing the two
+%sheets together.}
+%\label{tor2}
+%\end{figure}
+
+
+
+\subsubsection{Genus, cycles, Abel map}
+
+If the curve has genus $\genus$, there are $2\genus$ homologicaly independent non-trivial cycles, and we may choose a (not unique) cannonical basis:
+\beq
+\underline\acycle_i\cap \underline\bcycle_j=\delta_{ij}
+\virg
+\underline\acycle_i\cap \underline\acycle_j=0
+\virg
+\underline\bcycle_i\cap \underline\bcycle_j=0.
+\eeq
+The simply connected domain obtained by removing all $\underline\acycle$ and $\underline\bcycle$-cycles from the curve is called the ``{\bf fundamental domain}''
+(see fig.(\ref{tor1}) for the example of the torus).
+
+
+On a genus $\genus$ curve, there are $\genus$ linearly independent holomorphic forms $du_1,\dots, du_\genus$, which we choose normalized on the $\underline\acycle$-cycles:
+\beq
+\oint_{\underline\acycle_j} du_i = \delta_{ij}.
+\eeq
+
+The {\bf Riemann matrix of period} is defined by the $\underline\bcycle$-cycles
+\beq
+\tau_{ij} = \oint_{\underline\bcycle_j} du_i.
+\eeq
+They have the property that
+\beq
+\tau_{ij}=\tau_{ji} \virg \Im\,\tau>0.
+\eeq
+
+Given a  base point $p_0$ on the curve (we assume it is not on any $\underline\acycle$ or $\underline\bcycle$-cycle), we define the {\bf Abel map}
+\beq
+u_i(p) = \int_{p_0}^{p} du_i
+\eeq
+where the integration path is in the fundamental domain.
+The $\genus$-dimensional vector $u(p)=(u_1(p),\dots,u_\genus(p))$ maps the curve into its Jacobian.
+
+\begin{figure}
+\beq
+\begin{array}{r}
+{\epsfxsize 5cm\epsffile{torus.eps}}
+\end{array}
+\Leftrightarrow
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{fundamental.eps}}
+\end{array} \eeq
+\caption{Example of canonical cycles and the corresponding fundamental domain in the case of the torus (genus $\genus=1$).}
+\label{tor1}
+\end{figure}
+
+%The Abel map depends on $p_0$, but in practice, we shall consider only differences of $u$'s, which are independent of $p_0$.
+
+\subsubsection{Theta-functions and prime forms}
+
+We say that $z\in \C^\genus$ is a {\bf characteristic} if there exist two vectors with integer coefficients $\vec{a}\in Z^\genus$ and $\vec{b}\in Z^\genus$ such that:
+\beq
+z={\vec{a}+\tau.\vec{b}\over 2}.
+\eeq
+$z$ is called an odd characteristic if
+\beq
+\sum_{i=1}^\genus a_i b_i = {\rm odd}.
+\eeq
+Given a characteristic $z={\vec{a}+\tau \vec{b}\over 2}$, and given a symmetric matrix $\tau_{ij}=\tau_{ji}$ such that $\Im\tau$ is positive definite, and a vector $v\in \C^\genus$, we define the $\theta_z$ function:
+\beq
+\theta_z(v,\tau) = \sum_{\vec{n}\in Z^\genus} \ee{i\pi (\vec{n}-\vec{b}/2)^t \tau (\vec{n}-\vec{b}/2)}\,\ee{2i\pi (v+\vec{a}/2)^t.(\vec{n}+\vec{b}/2)}.
+\eeq
+If $z$ is an odd characteristic, $\theta_z$ is an odd function of $v$, and in particular $\theta_z(0,\tau)=0$
+and we define the following holomorphic form:
+\beq
+dh_z(p) = \sum_{i=1}^\genus du_i(p)\,\,. \,\left.{\partial \theta_z(v)\over \partial v_i}\right|_{v=0}.
+\eeq
+All its $\genus-1$ zeroes are double zeroes, so that it makes sense to consider its square root defined on the fundamental domain.
+The {\bf prime form} is:
+\beq
+\underline{\primef}(p,q) = {\theta_z(u(p)-u(q))\over \sqrt{dh_z(p)\,dh_z(q)}}.
+\eeq
+It is independent of $z$, and it vanishes only if $p=q$ (and with a simple zero), and has no pole.
+
+\subsubsection{Bergmann kernel}\label{secdefBergmann}
+
+We define a bilinear meromorphic form called the ``{\bf Bergmann kernel}'' \cite{BergSchif, Fay2}:
+\beq
+\Bergmann(p,q) = \hbox{Bergmann kernel}
+\eeq
+as the unique $1$-form in $p$, which has a double pole with no residue at $p=q$ and no other pole, and which is normalized such that
+\beq
+\Bergmann(p,q) \sim_{p\to q} {dz(p)dz(q)\over (z(p)-z(q))^2} + {\rm finite}
+\virg
+\oint_{\underline\acycle_I} \Bergmann =0
+\eeq
+where $z$ is any local coordinate on the curve in the vicinity of $q$.
+The Bergmann kernel depends only on the complex structure of the curve, and not on the details of $\curve$.
+For instance if $\curve$ has genus zero, $\Bergmann$ is the Bergmann kernel of the projective complex plane (the Riemann sphere),
+and if the curve has genus $1$, $\Bergmann$ is related to the Weierstrass function.
+
+%\br
+%One knows more precisely the behaviour of the Bergmann kernel near its pole. For any local variable $z$, one has
+%\bea
+%\Bergmann(p,q) &=& dz(p) dz(q) \left[ {1 \over (z(p)-z(q))^2} + {1 \over 6} S_{Bz}(p) \right. \cr
+%&& \left. \; \; - {1 \over 12} S_{Bz}'(p) (z(p)-z(q)) + O((z(p)-z(q))^2) \right] \cr
+%\eea
+%near the diagonal $p \to q$, where $S_{Bz}(p)$ is the Bergmann projective connection associated to the variable $z$.
+%\er
+
+
+\medskip
+
+{\bf Properties:}
+
+\beq
+\Bergmann(p,q)=\Bergmann(q,p)
+\virg
+\oint_{q\in\underline\bcycle_i} \Bergmann(p,q) = 2i\pi\, du_i(p).
+\eeq
+%
+For any odd characteristic $z$, we have:
+\beq
+\Bergmann(p,q) = d_p d_q \ln{(\theta_z(u(p)-u(q)))}
+\eeq
+%
+If $f(p)$ is any meromorphic function, its differential is given by
+\beq\label{Bergmanndiff}
+df(p) = \Res_{q\to p} \Bergmann(p,q) f(q).
+\eeq
+
+\subsubsection{3rd type differentials}
+
+Given two points $q_1$ and $q_2$ on the curve , we define the 1-form $\underline{dS}_{q_1,q_2}$ by:
+\beq
+\underline{dS}_{q_1,q_2}(p) = \int_{q_2}^{q_1} \Bergmann(p,q)
+\eeq
+where the integration path is in the fundamental domain.
+
+$\underline{dS}_{q_1,q_2}$ is the unique meromorphic form with only simple poles at $q_1$ and $q_2$, such that:
+\beq
+\Res_{q_1} \underline{dS}_{q_1,q_2} = 1 = - \Res_{q_2} \underline{dS}_{q_1,q_2}
+\virg
+\oint_{\underline\acycle_i} \underline{dS}_{q_1,q_2} = 0
+.
+\eeq
+
+
+\subsubsection{Modified set of cycles:}\label{secgeneralizedcycles}
+
+In order to easily deal with modular properties of the objects we are going to introduce, it is convenient to  define some modified cycles and kernels with an arbitrary symmetric matrix $\kappa$. When $\kappa=0$, all those quantities reduce to the unmodified ones. The modular transformations of the modified objects, merely amount to a change of $\kappa$.
+
+\medskip
+
+We thus choose an arbitrary {\bf $\genus\times \genus$ symmetric matrix $\kappa$} with complex coefficients, and we define another set of cycles:
+\bea
+\acycle_i &=& \underline\acycle_i - \sum_j \kappa_{ij} (\underline\bcycle_j - \sum_l \tau_{jl} \underline\acycle_l ) \cr
+\bcycle_i &=& \underline\bcycle_i - \sum_j \tau_{ij} \underline\acycle_j
+\eea
+They satisfy:
+\beq
+\acycle_i\cap \bcycle_j=\delta_{ij}
+\virg
+\acycle_i\cap \acycle_j=0
+\virg
+\bcycle_i\cap \bcycle_j=0
+\eeq
+and we straightforwardly have
+\beq
+\oint_{\acycle_i} du_j = \delta_{ij}
+\virg
+\oint_{\bcycle_i} du_j = 0.
+\eeq
+
+
+\subsubsection{Modified Bergmann kernel}\label{secdefgeneBergmann}
+
+We also define the modified Bergmann kernel, normalized on $\acycle$ instead of $\underline\acycle$:
+\beq
+B(p,q) = \Bergmann(p,q) + 2i\pi\, \sum_{i,j}\, du_i(p)\, \kappa_{ij}\, du_j(q).
+\eeq
+It is such that
+\beq
+B(p,q)=B(q,p)
+\virg
+\oint_{\acycle_I} B =0
+\virg
+\oint_{q\in\bcycle_i} B(p,q) = 2i\pi\, du_i(p)
+\eeq
+and if $f(p)$ is any meromorphic function, its differential is given by:
+\beq\label{geneBergmanndiff}
+df(p) = \Res_{q\to p} B(p,q) f(q)
+.
+\eeq
+
+
+$\bullet$ For $\kappa=0$ we have $\Bergmann=B$.
+
+$\bullet$ For $\kappa=(\overline\tau-\tau)^{-1}$, $B$ is the Schiffer kernel \cite{BergSchif, Fay2},
+and it is modular invariant.
+
+
+\subsubsection{Modified prime form}
+
+Similarly we define a modified prime form:
+\beq
+\primef(p,q) 
+=
+\underline{\primef}(p,q)  \, \ee{2i\pi u^t(p)\kappa u(q)}
+\eeq
+It vanishes only if $p=q$ (with a simple zero), and has no pole.
+
+
+
+\subsubsection{Modified 3rd type differentials}
+
+In the same fashion, we define the modified 3rd type differentials ${dS}_{q_1,q_2}$ by:
+\beq
+{dS}_{q_1,q_2}(p) = \int_{q_2}^{q_1} B(p,q)
+\eeq
+where the integration path is in the fundamental domain.
+
+$dS_{q_1,q_2}$ is the unique meromorphic form with only simple poles at $q_1$ and $q_2$, such that:
+\beq
+\Res_{q_1} dS_{q_1,q_2} = 1 = - \Res_{q_2} dS_{q_1,q_2}
+\virg
+\oint_{\acycle_i} dS_{q_1,q_2} = 0
+.
+\eeq
+
+
+\medskip
+
+{\bf Properties:}
+
+\beq
+dS_{q_1,q_2} = - dS_{q_2,q_1}
+\eeq
+
+\beq
+dS_{q_1,q_2}(p) = d_p \ln{\left(\theta_z(u(p)-u(q_1))\over \theta_z(u(p)-u(q_2))\right)} + 2i\pi\, \sum_{i,j}\, du_i(p) \kappa_{ij} (u_j(q_1)-u_j(q_2))
+\eeq
+
+\beq
+\oint_{\bcycle_i} dS_{q_1,q_2} = 2i\pi (u_i(q_1)-u_i(q_2))
+\eeq
+
+\beq
+d_{q_1} \left(dS_{q_1,q_2}(p)\right) =  B(q_1,p)
+\eeq
+
+\beq
+\int_{p_1}^{p_2} dS_{q_1,q_2} = \int_{q_1}^{q_2} dS_{p_1,p_2}
+\eeq
+
+\medskip
+
+{\bf Cauchy residue formula:} for any meromorphic function $f(p)$ we have:
+\beq
+f(p) = - \Res_{q_1\to p} dS_{q_1,q_2}(p) f(q_1).
+\eeq
+
+\subsubsection{Bergmann tau function}
+
+The {\bf Bergmann $\tau$-function} $\tau_{Bx}$ was introduced and studied in \cite{KoKo,KoKo2,EKK}, it is such that
+\beq\label{deftauBx}
+{\d \ln{(\tau_{Bx})}\over \d x(a_i)} =  \Res_{p\to a_i} {B(p,\pbar)\over dx(p)}
+\eeq
+It is well defined because the Rauch variational formula \cite{Rauch} implies that the RHS is a closed form.
+Notice that $\tau_{Bx}$ is  defined only up to a multiplicative constant which will play no role in all the sequel.
+
+
+
+\subsection{Examples: genus 0 and 1}
+
+\noindent $\bullet$ {\bf Genus 0}
+
+If the curve $\curve$ has a genus $\genus = 0$, it is conformaly equivalent to the Riemann sphere, i.e. the complex plane with a point at $\infty$, and there exists a rationnal parametrization of the curve. 
+It means that there exists two rational functions $X(p)$ and $Y(p)$ such that:
+\beq
+\curve(x,y) = 0 \quad \leftrightarrow \quad \exists p\in {\bf C}\, , \,\, x=X(p)\, , \, y=Y(p)
+\eeq
+
+In this case, the Bergmann kernel is the Bergmann kernel of the Riemann sphere:
+\beq
+B(p,q)=\Bergmann(p,q) = {dp dq \over (p-q)^2} = d_p\,d_q\,\ln{(p-q)}.
+\eeq
+The prime form is:
+\beq
+\primef(p,q) =\underline\primef(p,q)= {p-q\over \sqrt{dp\,dq}} .
+\eeq
+
+\noindent $\bullet$ {\bf Genus 1}
+
+If the curve has genus $\genus=1$, then it can be parametrized on a rhombus corresonding to the fundamental domain of a torus (see fig. \ref{tor1}). 
+It means that there exists two elliptical functions $X(p)$ and $Y(p)$ such that (see \cite{ellipticalf} for elliptical functions):
+\bea
+\curve(x,y) = 0 \quad \leftrightarrow \quad \exists p\in {\bf C}\, , \,\, x=X(p)\, , \, y=Y(p) \cr
+X(p+1)=X(p+\tau)=X(p) \virg
+Y(p+1)=Y(p+\tau)=Y(p) 
+\eea
+
+Then, the Bergmann kernel is the corresponding Weierstrass function \cite{ellipticalf}:
+\beq
+\Bergmann(p,q) = (\wp(p-q,\tau)+{\pi\over \Im\tau})\,\,dp dq .
+\eeq
+The prime form is:
+\beq
+\underline\primef(p,q) = {\theta_1(p-q,\tau)\over \theta'_1(0,\tau) \sqrt{dp\,dq}} .
+\eeq
+
+When $\kappa={-1\over 2i \Im\tau}$, the modified Bergmann kernel is the Schiffer kernel, and if $\genus=1$ it is the Weierstrass function:
+\beq
+B(p,q) = \wp(p-q,\tau)\,\,dp dq .
+\eeq
+
+
+
+
+\subsection{Riemann bilinear identity}
+
+If $\om_1$ and $\om_2$ are two meromorphic forms on the curve.
+Let $p_0$ be an arbitrary base point, we consider the function $\Phi_1$ defined on the fundamental domain by
+\beq
+\Phi_1(p) = \int_{p_0}^p \om_1
+.
+\eeq
+We have
+\beq\label{Riemannbilinear}
+\Res_{p\to {\rm all\, poles}} \Phi_1(p)\om_2(p) = {1\over 2i\pi}\, \sum_{i=1}^\genus \oint_{\underline\acycle_i} \om_1 \oint_{\underline\bcycle_i} \om_2 - \oint_{\underline\bcycle_i} \om_1 \oint_{\underline\acycle_i} \om_2 .
+\eeq
+Note that this identity holds also for the modified cycles with any $\kappa$:
+\beq\label{Riemannbilinear2}
+\Res_{p\to {\rm all\, poles}} \Phi_1(p)\om_2(p) = {1\over 2i\pi}\, \sum_{i=1}^\genus \oint_{\acycle_i} \om_1 \oint_{\bcycle_i} \om_2 - \oint_{\bcycle_i} \om_1 \oint_{\acycle_i} \om_2 .
+\eeq
+In particular with $\om_1(p)=B(p,q)$, we have:
+\beq
+\Res_{p\to {\rm all\, poles}} dS_{p,p_0}(q)\, \om (p) = - \sum_{i=1}^\genus du_i(q)\,\oint_{\acycle_i} \om
+\eeq
+and:
+\beq\label{blineardSCauchy}
+\om(q) = \Res_{p\to {\rm poles\, of}\,\om} dS_{p,p_0}(q)\, \om (p) + \sum_{i=1}^\genus du_i(q)\,\oint_{\acycle_i} \om
+.\eeq
+
+
+
+
+\subsection{Moduli of the curve} \label{sectmoduliofcurve}
+
+The curve $\curve(x,y)=0$ is  parameterized by:
+\begin{itemize}
+\item a genus $\genus$ compact Riemann surface $\bar\Sigma$,  with periods $\tau_{ij}$.
+\item punctures $\alpha_i$ at the poles of $x$ and $y$, whose moduli are given by the negative coefficients of the Laurent series of $ydx$ near the poles.
+\item the $\acycle$-cycle integrals of $ydx$, called filling fractions.
+\end{itemize}
+
+%\subsubsection{Riemann matrix of periods}
+
+%The moduli of a compact Riemann surface $\bar\Sigma$ are Riemann periods
+%\beq
+%\tau_{ij} = \oint_{\underline\bcycle_j} du_i.
+%\eeq
+
+\subsubsection{Filling fractions}
+
+We define:
+\beq
+\epsilon_i = {1\over 2i\pi} \oint_{\acycle_i} ydx
+\eeq
+which are called ``filling fractions'' by analogy with matrix models (\cite{eynm2mg1}).
+
+
+\subsubsection{Moduli of the poles}
+
+Consider a pole $\alpha$ of $ydx$, define the ``{\bf temperatures}'':
+\beq
+t_\alpha=\Res_\alpha ydx
+.
+\eeq
+Notice that:
+\beq\label{sumresydxzero}
+\sum_\alpha t_\alpha=0.
+\eeq
+
+Then consider the 3 cases:
+
+$\bullet$ Either $\alpha$ is a pole of $x$ of degree $d_\alpha$, then we define the local parameter near $\alpha$ as:
+\beq
+z_\alpha(p) = x(p)^{1\over d_\alpha};
+\eeq
+
+$\bullet$ or $\alpha$ is not a pole of $x$ neither a branchpoint (thus it is a pole of $y$), then we define the local parameter near $\alpha$ as:
+\beq
+z_\alpha(p) = {1\over x(p)-x(\alpha)}.
+\eeq
+
+$\bullet$ or $\alpha$ is not a pole of $x$, and it is a branchpoint (thus it is a pole of $y$), then we define the local parameter near $\alpha$ as:
+\beq
+z_\alpha(p) = {1\over \sqrt{x(p)-x(\alpha)}}.
+\eeq
+
+\bigskip
+
+In all cases, in the vicinity of $\alpha$, we define the ``{\bf potential}''
+\beq
+V_\alpha(p) = \Res_{q\to \alpha} y(q)dx(q)\, \ln{\left(1-{ z_\alpha(p)\over z_\alpha(q)}\right)}
+\eeq
+which is a polynomial in $z_\alpha(p)$:
+\beq
+V_\alpha(p) = \sum_{k=1}^{\deg V_\alpha} t_{\alpha,k}\, z_\alpha^k(p).
+\eeq
+The {\bf $t_{\alpha,k}$ are the moduli of the pole $\alpha$}.
+
+\bigskip
+
+We have the following properties:
+\beq
+dV_\alpha(p) = \Res_{q\to \alpha} y(q)dx(q)\,  {dz_\alpha(p)\over z_\alpha(p)-z_\alpha(q)} ,
+\eeq
+\beq
+\Res_\alpha dV_\alpha=0
+\eeq
+and
+\beq
+y(p)dx(p) \mathop{{\sim}}_{p\to\alpha} dV_\alpha(p) - t_\alpha\, {dz_\alpha(p)\over z_\alpha(p)} +O({dz_\alpha(p)\over z_\alpha(p)^2}).
+\eeq
+We have from \eq{blineardSCauchy}:
+\beq\label{ydxmoduli}
+y(p)dx(p) = -\sum_\alpha  \Res_{q\to\alpha} B(p,q) V_{\alpha}(q) + \sum_\alpha t_\alpha dS_{\alpha,o}(p) + 2i\pi \sum_i \epsilon_i du_i(p) .
+\eeq
+
+If we introduce
+\beq
+B_{\alpha,k}(p) = - \Res_{q\to\alpha} B(p,q) \,z_\alpha(q)^k,
+\eeq
+we can turn this expression to
+\beq\label{ydxmodulitka}
+ydx = \sum_{\alpha,k} t_{\alpha,k} B_{\alpha,k} + \sum_\alpha t_\alpha dS_{\alpha,o} + 2i\pi \sum_i \epsilon_i du_i(p)
+\eeq
+in order to exhibit the moduli of the curve.

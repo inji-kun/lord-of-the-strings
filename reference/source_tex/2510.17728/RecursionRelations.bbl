@@ -1,0 +1,453 @@
+
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{Oku23}
+K.~Okuyama, \emph{Discrete analogue of the {Weil--Petersson} volume in double
+  scaled {SYK}}, \href{https://doi.org/10.1007/JHEP09(2023)133}{\emph{J. High
+  Energy Phys.} {\bfseries 2023} (2023) 1}
+  [\href{https://arxiv.org/abs/2306.15981}{{\ttfamily 2306.15981}}].
+
+\bibitem{Eyn04}
+B.~Eynard, \emph{{Topological expansion for the 1-{Hermitian} matrix model
+  correlation functions}},
+  \href{https://doi.org/10.1088/1126-6708/2004/11/031}{\emph{JHEP} {\bfseries
+  11} (2004) 031} [\href{https://arxiv.org/abs/hep-th/0407261}{{\ttfamily
+  hep-th/0407261}}].
+
+\bibitem{AMM05}
+A.~Alexandrov, A.~Mironov and A.~Morozov, \emph{Solving {Virasoro} constraints
+  in matrix models},
+  \href{https://doi.org/10.1002/prop.200410212}{\emph{Fortschr. Phys.}
+  {\bfseries 53} (2005) 512}
+  [\href{https://arxiv.org/abs/hep-th/0412205}{{\ttfamily hep-th/0412205}}].
+
+\bibitem{CEO06}
+L.~Chekhov, B.~Eynard and N.~Orantin, \emph{{Free energy topological expansion
+  for the 2-matrix model}},
+  \href{https://doi.org/10.1088/1126-6708/2006/12/053}{\emph{JHEP} {\bfseries
+  12} (2006) 053} [\href{https://arxiv.org/abs/math-ph/0603003}{{\ttfamily
+  math-ph/0603003}}].
+
+\bibitem{EO07}
+B.~Eynard and N.~Orantin, \emph{Invariants of algebraic curves and topological
+  expansion}, \href{https://doi.org/10.4310/CNTP.2007.v1.n2.a4}{\emph{Commun.
+  Number Theory Phys.} {\bfseries 1} (2007) 347}
+  [\href{https://arxiv.org/abs/math-ph/0702045}{{\ttfamily math-ph/0702045}}].
+
+\bibitem{ginsparg1993lectures}
+P.H.~Ginsparg and G.W.~Moore, \emph{{Lectures on 2D gravity and 2D string
+  theory}},  in \emph{{Theoretical Advanced Study Institute (TASI 92): From
+  Black Holes and Strings to Particles}}, pp.~277--469, 10, 1993
+  [\href{https://arxiv.org/abs/hep-th/9304011}{{\ttfamily hep-th/9304011}}].
+
+\bibitem{DiFrancesco:1993cyw}
+P.~Di~Francesco, P.H.~Ginsparg and J.~Zinn-Justin, \emph{{2D gravity and random
+  matrices}}, \href{https://doi.org/10.1016/0370-1573(94)00084-G}{\emph{Phys.
+  Rept.} {\bfseries 254} (1995) 1}
+  [\href{https://arxiv.org/abs/hep-th/9306153}{{\ttfamily hep-th/9306153}}].
+
+\bibitem{Mir07a}
+M.~Mirzakhani, \emph{Simple geodesics and {Weil--Petersson} volumes of moduli
+  spaces of bordered {Riemann} surfaces},
+  \href{https://doi.org/10.1007/s00222-006-0013-2}{\emph{Invent. Math.}
+  {\bfseries 167} (2007) }.
+
+\bibitem{Mir07b}
+M.~Mirzakhani, \emph{{Weil--Petersson} volumes and intersection theory on the
+  moduli space of curves},
+  \href{https://doi.org/10.1090/S0894-0347-06-00526-1}{\emph{J. Amer. Math.
+  Soc.} {\bfseries 20} (2007) 1}.
+
+\bibitem{EO07+}
+B.~Eynard and N.~Orantin, \emph{{Weil}--{Petersson} volume of moduli spaces,
+  {Mirzakhani}'s recursion and matrix models},
+  \href{https://arxiv.org/abs/0705.3600}{{\ttfamily 0705.3600}}.
+
+\bibitem{SSSJTmatrix}
+P.~Saad, S.H.~Shenker and D.~Stanford, \emph{{JT gravity as a matrix
+  integral}},  \href{https://arxiv.org/abs/1903.11115}{{\ttfamily 1903.11115}}.
+
+\bibitem{SW20}
+D.~Stanford and E.~Witten, \emph{{JT} gravity and the ensembles of random
+  matrix theory}, \href{https://doi.org/10.4310/ATMP.2020.v24.n6.a4}{\emph{Adv.
+  Theor. Math. Phys.} {\bfseries 24} (2020) 1475}
+  [\href{https://arxiv.org/abs/1907.03363}{{\ttfamily 1907.03363}}].
+
+\bibitem{SaadTasi}
+P.~Saad, \emph{{TASI lectures on random matrix universality in AdS/CFT}},
+  \href{https://doi.org/10.22323/1.403.0011}{\emph{PoS} {\bfseries TASI2021}
+  (2023) 11}.
+
+\bibitem{TuriaciLesHouches}
+G.J.~Turiaci, \emph{{Les Houches lectures on two-dimensional gravity and
+  holography}},
+  \href{https://doi.org/10.21468/SciPostPhysLectNotes.113}{\emph{SciPost Phys.
+  Lect. Notes} (2026) 113} [\href{https://arxiv.org/abs/2412.09537}{{\ttfamily
+  2412.09537}}].
+
+\bibitem{CJohnsonReview}
+C.V.~Johnson, \emph{{Wigner meets \textquoteright{}t Hooft near the black hole
+  horizon}}, \href{https://doi.org/10.1142/S0218271822420032}{\emph{Int. J.
+  Mod. Phys. D} {\bfseries 31} (2022) 2242003}
+  [\href{https://arxiv.org/abs/2206.03509}{{\ttfamily 2206.03509}}].
+
+\bibitem{CliffMaciek}
+C.V.~Johnson and M.~Kolanowski, \emph{{Extended JT supergravity and random
+  matrix models: The power of the string equation}},
+  \href{https://arxiv.org/abs/2507.07185}{{\ttfamily 2507.07185}}.
+
+\bibitem{CliffWPsuper}
+W.~Ahmed, C.V.~Johnson and K.~Saraswat, \emph{{Weil--Petersson volumes for
+  extended JT supergravity from ordinary differential equations}},
+  \href{https://doi.org/10.1007/JHEP02(2026)197}{\emph{JHEP} {\bfseries 02}
+  (2026) 197} [\href{https://arxiv.org/abs/2507.18715}{{\ttfamily
+  2507.18715}}].
+
+\bibitem{NS13}
+P.~Norbury and N.~Scott, \emph{Polynomials representing {Eynard--Orantin}
+  invariants}, \href{https://doi.org/10.1093/qmath/has004}{\emph{Q. J. Math.}
+  {\bfseries 64} (2013) 515} [\href{https://arxiv.org/abs/1001.0449}{{\ttfamily
+  1001.0449}}].
+
+\bibitem{Str84}
+K.~Strebel, \emph{Quadratic Differentials}, Springer (1984),
+  \href{https://doi.org/10.1007/978-3-662-02414-0}{10.1007/978-3-662-02414-0}.
+
+\bibitem{Kon92}
+M.~Kontsevich, \emph{{Intersection theory on the moduli space of curves and the
+  matrix Airy function}}, \href{https://doi.org/10.1007/BF02099526}{\emph{Comm.
+  Math. Phys.} {\bfseries 147} (1992) 1}.
+
+\bibitem{TW94}
+C.A.~Tracy and H.~Widom, \emph{Level-spacing distributions and the {A}iry
+  kernel}, \href{https://doi.org/10.1007/BF02100489}{\emph{Commun. Math. Phys.}
+  {\bfseries 159} (1994) 151}
+  [\href{https://arxiv.org/abs/hep-th/9211141}{{\ttfamily hep-th/9211141}}].
+
+\bibitem{Eyn16}
+B.~Eynard, \emph{Counting Surfaces}, vol.~70 of \emph{Progress in Mathematical
+  Physics}, Birkh{\"a}user Basel (2016),
+  \href{https://doi.org/10.1007/978-3-7643-8797-6}{10.1007/978-3-7643-8797-6}.
+
+\bibitem{BrezinHikamiAiry}
+E.~Br\'ezin and S.~Hikami, \emph{Universal singularity at the closure of a gap
+  in a random matrix theory},
+  \href{https://doi.org/10.1103/PhysRevE.57.4140}{\emph{Phys. Rev. E}
+  {\bfseries 57} (1998) 4140}.
+
+\bibitem{BrezinZee}
+E.~Brezin and A.~Zee, \emph{{Universality of the correlations between
+  eigenvalues of large random matrices}},
+  \href{https://doi.org/10.1016/0550-3213(93)90121-5}{\emph{Nucl. Phys. B}
+  {\bfseries 402} (1993) 613}.
+
+\bibitem{BMN02}
+D.E.~Berenstein, J.M.~Maldacena and H.S.~Nastase, \emph{{Strings in flat space
+  and pp waves from {$\mathcal{N} = 4$} super {Yang}--{Mills}}},
+  \href{https://doi.org/10.1088/1126-6708/2002/04/013}{\emph{JHEP} {\bfseries
+  04} (2002) 013} [\href{https://arxiv.org/abs/hep-th/0202021}{{\ttfamily
+  hep-th/0202021}}].
+
+\bibitem{BCSW12}
+J.~Bennett, D.~Cochran, B.~Safnuk and K.~Woskoff, \emph{Topological recursion
+  for symplectic volumes of moduli spaces of curves},
+  \href{https://doi.org/10.1307/mmj/1339011530}{\emph{Michigan J. Math.}
+  {\bfseries 61} (2012) 331} [\href{https://arxiv.org/abs/1010.1747}{{\ttfamily
+  1010.1747}}].
+
+\bibitem{ABCGLW}
+J.E.~Andersen, G.~Borot, S.~Charbonnier, A.~Giacchetto, D.~Lewa{\'n}ski and
+  C.~Wheeler, \emph{On the {Kontsevich} geometry of the combinatorial
+  {Teichm{\"u}ller} space},  \href{https://arxiv.org/abs/2010.11806}{{\ttfamily
+  2010.11806}}.
+
+\bibitem{SonnerETHMatrix}
+D.L.~Jafferis, D.K.~Kolchmeyer, B.~Mukhametzhanov and J.~Sonner, \emph{{Matrix
+  models for eigenstate thermalization}},
+  \href{https://doi.org/10.1103/PhysRevX.13.031033}{\emph{Phys. Rev. X}
+  {\bfseries 13} (2023) 031033}
+  [\href{https://arxiv.org/abs/2209.02130}{{\ttfamily 2209.02130}}].
+
+\bibitem{JKMS23}
+D.L.~Jafferis, D.K.~Kolchmeyer, B.~Mukhametzhanov and J.~Sonner,
+  \emph{{{J}ackiw--{T}eitelboim gravity with matter, generalized eigenstate
+  thermalization hypothesis, and random matrices}},
+  \href{https://doi.org/10.1103/PhysRevD.108.066015}{\emph{Phys. Rev. D}
+  {\bfseries 108} (2023) 066015}
+  [\href{https://arxiv.org/abs/2209.02131}{{\ttfamily 2209.02131}}].
+
+\bibitem{DN}
+N.~Do and P.~Norbury, \emph{A $q$-analogue of {Mirzakhani}'s recursion for
+  {Weil}--{Petersson} volumes},
+  \href{https://arxiv.org/abs/2510.12431}{{\ttfamily 2510.12431}}.
+
+\bibitem{Gia21}
+A.~Giacchetto, \emph{Geometric and topological recursion and invariants of the
+  moduli space of curves}, Ph.D. thesis, Rheinische
+  Friedrich-Wilhelms-Universität Bonn, 2021.
+
+\bibitem{Wit91}
+E.~Witten, \emph{{Two-dimensional gravity and intersection theory on moduli
+  space}},  in \emph{{Surveys in differential geometry}}, vol.~1, pp.~243--310,
+  Lehigh University, Bethlehem, PA, 1991,
+  \href{https://doi.org/10.4310/SDG.1990.v1.n1.a5}{DOI}.
+
+\bibitem{Nor10}
+P.~Norbury, \emph{Counting lattice points in the moduli space of curves},
+  \href{https://doi.org/10.4310/MRL.2010.v17.n3.a7}{\emph{Math. Res. Lett.}
+  {\bfseries 17} (2010) 467} [\href{https://arxiv.org/abs/0801.4590}{{\ttfamily
+  0801.4590}}].
+
+\bibitem{GL26}
+A.~Giacchetto and D.~Lewański, \emph{{Les Houches lecture notes on moduli
+  spaces of Riemann surfaces}},
+  \href{https://doi.org/10.21468/SciPostPhysLectNotes.111}{\emph{SciPost Phys.
+  Lect. Notes} (2026) 111} [\href{https://arxiv.org/abs/2410.13273}{{\ttfamily
+  2410.13273}}].
+
+\bibitem{MP98}
+M.~Mulase and M.~Penkava, \emph{Ribbon graphs, quadratic differentials on
+  {Riemann} surfaces, and algebraic curves defined over
+  {$\overline{\mathbb{Q}}$}},
+  \href{https://doi.org/10.4310/AJM.1998.v2.n4.a11}{\emph{Asian J. Math.}
+  {\bfseries 4} (1998) 875}
+  [\href{https://arxiv.org/abs/math-ph/9811024}{{\ttfamily math-ph/9811024}}].
+
+\bibitem{Muk03}
+S.~Mukhi, \emph{{Topological matrix models, Liouville matrix model and $c = 1$
+  string theory}},  in \emph{{IPM String School and Workshop 2003}}, 10, 2003
+  [\href{https://arxiv.org/abs/hep-th/0310287}{{\ttfamily hep-th/0310287}}].
+
+\bibitem{GKKMS}
+R.~Gopakumar, R.~Kaushik, S.~Komatsu, E.A.~Mazenc and D.~Sarkar, \emph{{Strings
+  from Feynman diagrams}},  \href{https://arxiv.org/abs/2412.13397}{{\ttfamily
+  2412.13397}}.
+
+\bibitem{Wol85}
+S.~Wolpert, \emph{On the {Weil--Petersson} geometry of the moduli space of
+  curves}, \href{https://doi.org/10.2307/2374363}{\emph{Am. J. Math.}
+  {\bfseries 107} (1985) 969}.
+
+\bibitem{DVV91}
+R.~Dijkgraaf, H.~Verlinde and E.~Verlinde, \emph{Topological strings in $d <
+  1$}, \href{https://doi.org/10.1016/0550-3213(91)90129-L}{\emph{Nucl. Phys. B}
+  {\bfseries 352} (1991) 59}.
+
+\bibitem{ABO17}
+J.E.~Andersen, G.~Borot and N.~Orantin, \emph{Geometric recursion},
+  \href{https://arxiv.org/abs/1711.04729}{{\ttfamily 1711.04729}}.
+
+\bibitem{Andersen:MV}
+J.E.~Andersen, G.~Borot, S.~Charbonnier, V.~Delecroix, A.~Giacchetto,
+  D.~Lewa{\'{n}}ski et~al., \emph{{Topological recursion for
+  Masur{\textendash}Veech volumes}},
+  \href{https://doi.org/10.1112/jlms.12686}{\emph{J. Lond. Math. Soc.}
+  {\bfseries 107} (2023) 254}
+  [\href{https://arxiv.org/abs/1905.10352}{{\ttfamily 1905.10352}}].
+
+\bibitem{Fuji:MV}
+H.~Fuji and M.~Manabe, \emph{{Some generalizations of Mirzakhani's recursion
+  and Masur--Veech volumes via topological recursions}},
+  \href{https://doi.org/10.3842/SIGMA.2024.043}{\emph{SIGMA} {\bfseries 20}
+  (2024) 043} [\href{https://arxiv.org/abs/2303.14154}{{\ttfamily
+  2303.14154}}].
+
+\bibitem{ChekhovDisc}
+L.~Chekhov, \emph{{Matrix model for discretized moduli space}},
+  \href{https://doi.org/10.1016/0393-0440(93)90031-9}{\emph{J. Geom. Phys.}
+  {\bfseries 12} (1993) 153}
+  [\href{https://arxiv.org/abs/hep-th/9205106}{{\ttfamily hep-th/9205106}}].
+
+\bibitem{ChekhovMakeenkoKP}
+L.~Chekhov and Y.~Makeenko, \emph{{The multicritical Kontsevich--Penner
+  model}}, \href{https://doi.org/10.1142/S0217732392003700}{\emph{Mod. Phys.
+  Lett. A} {\bfseries 7} (1992) 1223}
+  [\href{https://arxiv.org/abs/hep-th/9201033}{{\ttfamily hep-th/9201033}}].
+
+\bibitem{Gop04a}
+R.~Gopakumar, \emph{{From free fields to AdS space. I}},
+  \href{https://doi.org/10.1103/PhysRevD.70.025009}{\emph{Phys. Rev. D}
+  {\bfseries 70} (2004) 025009}
+  [\href{https://arxiv.org/abs/hep-th/0308184}{{\ttfamily hep-th/0308184}}].
+
+\bibitem{Gop04b}
+R.~Gopakumar, \emph{{From free fields to AdS space. II}},
+  \href{https://doi.org/10.1103/PhysRevD.70.025010}{\emph{Phys. Rev. D}
+  {\bfseries 70} (2004) 025010}
+  [\href{https://arxiv.org/abs/hep-th/0402063}{{\ttfamily hep-th/0402063}}].
+
+\bibitem{Gop05}
+R.~Gopakumar, \emph{{From free fields to AdS: III}},
+  \href{https://doi.org/10.1103/PhysRevD.72.066008}{\emph{Phys. Rev. D}
+  {\bfseries 72} (2005) 066008}
+  [\href{https://arxiv.org/abs/hep-th/0504229}{{\ttfamily hep-th/0504229}}].
+
+\bibitem{EKR15}
+B.~Eynard, T.~Kimura and S.~Ribault, \emph{{Random matrices}},
+  \href{https://arxiv.org/abs/1510.04430}{{\ttfamily 1510.04430}}.
+
+\bibitem{Bou26}
+V.~Bouchard, \emph{{Les Houches lecture notes on topological recursion}},
+  \href{https://doi.org/10.21468/SciPostPhysLectNotes.115}{\emph{SciPost Phys.
+  Lect. Notes} (2026) 115} [\href{https://arxiv.org/abs/2409.06657}{{\ttfamily
+  2409.06657}}].
+
+\bibitem{ABCO24}
+J.E.~Andersen, G.~Borot, L.~Chekhov and N.~Orantin, \emph{The {ABCD} of
+  topological recursion},
+  \href{https://doi.org/10.1016/j.aim.2023.109473}{\emph{Adv. Math.} {\bfseries
+  439} (2024) 109473} [\href{https://arxiv.org/abs/1703.03307}{{\ttfamily
+  1703.03307}}].
+
+\bibitem{KS18}
+M.~Kontsevich and Y.~Soibelman, \emph{Airy structures and symplectic geometry
+  of topological recursion},  in \emph{2016 AMS von Neumann Symposium,
+  Topological Recursion and its Influence in Analysis, Geometry and Topology},
+  vol.~100, pp.~433--489, Amer. Math. Soc., Providence, RI, 2018,
+  \href{https://doi.org/10.1090/pspum/100}{DOI}
+  [\href{https://arxiv.org/abs/1701.09137}{{\ttfamily 1701.09137}}].
+
+\bibitem{Nor13}
+P.~Norbury, \emph{String and dilaton equations for counting lattice points in
+  the moduli space of curves},
+  \href{https://doi.org/10.1090/S0002-9947-2012-05559-0}{\emph{Trans. Amer.
+  Math. Soc.} {\bfseries 365} (2013) 1687}
+  [\href{https://arxiv.org/abs/0905.4141}{{\ttfamily 0905.4141}}].
+
+\bibitem{Sachdev:1992fk}
+S.~Sachdev and J.~Ye, \emph{{Gapless spin fluid ground state in a random,
+  quantum Heisenberg magnet}},
+  \href{https://doi.org/10.1103/PhysRevLett.70.3339}{\emph{Phys. Rev. Lett.}
+  {\bfseries 70} (1993) 3339}
+  [\href{https://arxiv.org/abs/cond-mat/9212030}{{\ttfamily
+  cond-mat/9212030}}].
+
+\bibitem{Kitaev_talk}
+A.~Kitaev, \emph{{A simple model of quantum holography}},
+  \url{http://online.kitp.ucsb.edu/online/entangled15/kitaev/},
+  \url{http://online.kitp.ucsb.edu/online/entangled15/kitaev2/} (2015).
+
+\bibitem{MaldacenaStanford}
+J.~Maldacena and D.~Stanford, \emph{{Remarks on the Sachdev--Ye--Kitaev
+  model}}, \href{https://doi.org/10.1103/PhysRevD.94.106002}{\emph{Phys. Rev.
+  D} {\bfseries 94} (2016) 106002}
+  [\href{https://arxiv.org/abs/1604.07818}{{\ttfamily 1604.07818}}].
+
+\bibitem{Cotler:2016fpe}
+J.S.~Cotler, G.~Gur-Ari, M.~Hanada, J.~Polchinski, P.~Saad, S.H.~Shenker
+  et~al., \emph{{Black holes and random matrices}},
+  \href{https://doi.org/10.1007/JHEP05(2017)118}{\emph{JHEP} {\bfseries 05}
+  (2017) 118} [\href{https://arxiv.org/abs/1611.04650}{{\ttfamily
+  1611.04650}}].
+
+\bibitem{Berkooz:2018qkz}
+M.~Berkooz, P.~Narayan and J.~Simon, \emph{{Chord diagrams, exact correlators
+  in spin glasses and black hole bulk reconstruction}},
+  \href{https://doi.org/10.1007/JHEP08(2018)192}{\emph{JHEP} {\bfseries 08}
+  (2018) 192} [\href{https://arxiv.org/abs/1806.04380}{{\ttfamily
+  1806.04380}}].
+
+\bibitem{Berkooz:2018jqr}
+M.~Berkooz, M.~Isachenkov, V.~Narovlansky and G.~Torrents, \emph{{Towards a
+  full solution of the large N double-scaled SYK model}},
+  \href{https://doi.org/10.1007/JHEP03(2019)079}{\emph{JHEP} {\bfseries 03}
+  (2019) 079} [\href{https://arxiv.org/abs/1811.02584}{{\ttfamily
+  1811.02584}}].
+
+\bibitem{BerkoozReview}
+M.~Berkooz and O.~Mamroud, \emph{{A cordial introduction to double scaled
+  SYK}}, \href{https://doi.org/10.1088/1361-6633/ada889}{\emph{Rept. Prog.
+  Phys.} {\bfseries 88} (2025) 036001}
+  [\href{https://arxiv.org/abs/2407.09396}{{\ttfamily 2407.09396}}].
+
+\bibitem{Erd_s_2014}
+L.~Erdős and D.~Schröder, \emph{Phase transition in the density of states of
+  quantum spin glasses},
+  \href{https://doi.org/10.1007/s11040-014-9164-3}{\emph{Math. Phys. Anal.
+  Geom.} {\bfseries 17} (2014) 441–464}.
+
+\bibitem{TM02}
+J.~Tannery and J.~Molk, \emph{\'{E}l{\'e}ments de la th{\'e}orie des fonctions
+  elliptiques, Tome {III}}, Gauthier-Villars, Paris (1893--1902).
+
+\bibitem{HH15}
+K.~{Hessami Pilehrood} and T.~{Hessami Pilehrood}, \emph{On $q$-analogues of
+  two-one formulas for multiple harmonic sums and multiple zeta star values},
+  \href{https://doi.org/10.1007/s00605-014-0715-2}{\emph{Monatsh. Math.}
+  {\bfseries 176} (2015) 275}
+  [\href{https://arxiv.org/abs/1304.0269}{{\ttfamily 1304.0269}}].
+
+\bibitem{BLMPP25}
+A.~Blommaert, A.~Levine, T.G.~Mertens, J.~Papalini and K.~Parmentier,
+  \emph{{Wormholes, branes and finite matrices in sine dilaton gravity}},
+  \href{https://doi.org/10.1007/JHEP09(2025)123}{\emph{JHEP} {\bfseries 09}
+  (2025) 123} [\href{https://arxiv.org/abs/2501.17091}{{\ttfamily
+  2501.17091}}].
+
+\bibitem{CollierVMS}
+S.~Collier, L.~Eberhardt, B.~M{\"u}hlmann and V.A.~Rodriguez, \emph{{The
+  Virasoro minimal string}},
+  \href{https://doi.org/10.21468/SciPostPhys.16.2.057}{\emph{SciPost Phys.}
+  {\bfseries 16} (2024) 057}
+  [\href{https://arxiv.org/abs/2309.10846}{{\ttfamily 2309.10846}}].
+
+\bibitem{CliffVMS}
+C.V.~Johnson, \emph{{Random matrix model of the Virasoro minimal string}},
+  \href{https://doi.org/10.1103/PhysRevD.110.066015}{\emph{Phys. Rev. D}
+  {\bfseries 110} (2024) 066015}
+  [\href{https://arxiv.org/abs/2401.06220}{{\ttfamily 2401.06220}}].
+
+\bibitem{CliffSuperVMS}
+C.V.~Johnson, \emph{{Further aspects of supersymmetric Virasoro minimal
+  strings}},  \href{https://arxiv.org/abs/2506.19000}{{\ttfamily 2506.19000}}.
+
+\bibitem{RangamaniSuperVMS}
+M.~Rangamani and J.~Zheng, \emph{{Towards the super Virasoro minimal string}},
+  \href{https://doi.org/10.1007/JHEP09(2025)061}{\emph{JHEP} {\bfseries 09}
+  (2025) 061} [\href{https://arxiv.org/abs/2505.08892}{{\ttfamily
+  2505.08892}}].
+
+\bibitem{IoannisVMS}
+B.~M{\"u}hlmann, V.~Narovlansky and I.~Tsiares, \emph{{On the three-point
+  functions in timelike $\mathcal{N}=1$ Liouville CFT}},
+  \href{https://arxiv.org/abs/2505.08890}{{\ttfamily 2505.08890}}.
+
+\bibitem{Collier:CLS}
+S.~Collier, L.~Eberhardt, B.~M{\"u}hlmann and V.A.~Rodriguez, \emph{{Complex
+  Liouville String}}, \href{https://doi.org/10.1103/k74n-s63l}{\emph{Phys. Rev.
+  Lett.} {\bfseries 134} (2025) 251602}
+  [\href{https://arxiv.org/abs/2409.17246}{{\ttfamily 2409.17246}}].
+
+\bibitem{Collier:CLS:world}
+S.~Collier, L.~Eberhardt, B.~M{\"u}hlmann and V.A.~Rodriguez, \emph{{The
+  complex Liouville string: The worldsheet}},
+  \href{https://doi.org/10.21468/SciPostPhys.19.2.033}{\emph{SciPost Phys.}
+  {\bfseries 19} (2025) 033}
+  [\href{https://arxiv.org/abs/2409.18759}{{\ttfamily 2409.18759}}].
+
+\bibitem{Collier:CLS:matrix}
+S.~Collier, L.~Eberhardt, B.~M{\"u}hlmann and V.A.~Rodriguez, \emph{{The
+  complex Liouville string: The matrix integral}},
+  \href{https://doi.org/10.21468/SciPostPhys.18.5.154}{\emph{SciPost Phys.}
+  {\bfseries 18} (2025) 154}
+  [\href{https://arxiv.org/abs/2410.07345}{{\ttfamily 2410.07345}}].
+
+\bibitem{Collier:CLS:nonper}
+S.~Collier, L.~Eberhardt, B.~M{\"u}hlmann and V.A.~Rodriguez, \emph{{The
+  complex Liouville string: worldsheet boundaries and non-perturbative
+  effects}}, \href{https://doi.org/10.21468/SciPostPhys.19.2.034}{\emph{SciPost
+  Phys.} {\bfseries 19} (2025) 034}
+  [\href{https://arxiv.org/abs/2410.09179}{{\ttfamily 2410.09179}}].
+
+\bibitem{Collier:path}
+S.~Collier, L.~Eberhardt and B.~M{\"u}hlmann, \emph{{The complex {Liouville}
+  string: The gravitational path integral}},
+  \href{https://doi.org/10.21468/SciPostPhys.19.4.115}{\emph{SciPost Phys.}
+  {\bfseries 19} (2025) 115}
+  [\href{https://arxiv.org/abs/2501.10265}{{\ttfamily 2501.10265}}].
+
+\bibitem{OkuyamaCap}
+K.~Okuyama, \emph{{Cap amplitudes in random matrix models}},
+  \href{https://arxiv.org/abs/2509.03930}{{\ttfamily 2509.03930}}.
+
+\end{thebibliography}\endgroup

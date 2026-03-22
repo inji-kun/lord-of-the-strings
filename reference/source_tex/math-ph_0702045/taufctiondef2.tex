@@ -1,0 +1,646 @@
+\section{Definition of Correlation functions and free energies}
+
+In all this section, the curve $\curve(x,y)=0$ and a symmetric matrix $\kappa$ are given and fixed.
+The unfamiliar reader may choose $\kappa=0$ since most usual applications (matrix models) correspond to that case.
+
+
+\subsection{Notations}
+
+
+Consider an arbitrary point $p\in\bar\Sigma$, and a point $q$ of $\bar\Sigma$ which is in the vicinity of a branch point $a_i$ (so that $\qbar$ is well defined).
+We define:
+\bd\label{defdiagrule}
+ Diagrammatic rules:
+\beq
+{\mathbf{\rm vertex:}}\qquad \om(q) = (y(q)-y(\qbar))dx(q)
+\eeq
+\beq
+{\mathbf{\rm line-propagator:}}\qquad B(p,q)
+\eeq
+\beq
+{\mathbf{\rm arrow-propagator:}}\qquad dE_{q}(p) = {1\over 2} \int_{q}^{\qbar} B(\xi,p)
+\eeq
+where the integration path is a  path which lies entirely in a vincinity of $a_i$ (thus it is uniquely defined)\footnote{This definition is the opposite
+of the notation used in \cite{eyno,CEO} since the integral goes from $q$ to $\qbar$ instead of going from
+$\qbar$ to $q$.}.
+\beq
+{\mathbf{\rm root:}}\qquad \Phi(q) = \int_{o}^q y dx
+\eeq
+where $o$ is an arbitrary base point on the curve, i.e. $\Phi$ is an arbitrary antiderivative of $y dx$, i.e.  $d\Phi=ydx$.
+\ed
+The reason why we call these objects diagramatic rules and vertices, propagator or root, is explained in section \ref{sectiondiagrepresent} below.
+
+Notice that $dE$ depends on $i$, i.e. on which branchpoint we are considering, but we omit to mention the index $i$ in order to make the notations easier to read.
+In all what follows it is always clear which $i$ is being considered.
+
+\bigskip
+{\bf Notation for subset of indices:}
+
+Given a set of points of the curve $\{ p_{1}, p_{2},\dots, p_{n}\}$, 
+if $K=\{ i_1,i_2,\dots,i_k\}$ is any subset of $\{ 1,2,\dots, n\}$, we denote:
+\beq\label{notationsubsetint}
+{\mathbf p_K} = \{ p_{i_1}, p_{i_2},\dots, p_{i_k}\}
+\eeq
+
+
+\subsection{Correlation functions and free energies}
+
+\subsubsection{Correlation functions}
+
+The {\bf $k$-point correlation functions to order $g$, $W_{k}^{(g)}$}, 
+are meromorphic multilinear forms, defined
+by the following recursive triangular system:
+\bd\label{defloopfctions}
+Correlation functions
+\beq
+W_k^{(g)}=0 \quad {\rm if}\,\, g<0
+\eeq
+\beq
+W_1^{(0)}(p) = 0
+\eeq
+\beq\encadremath{
+W_2^{(0)}(p_1,p_2) = B(p_1,p_2)
+}\eeq
+and define recursively (remember that ${\bf p_K}$ is a $k$-uplet of points cf eq.\ref{notationsubsetint}):
+\beq\label{defWkgrecursive}\encadremath{
+\begin{array}{l} 
+W_{k+1}^{(g)}(p,{\bf p_K}) 
+= \Res_{q\to {\bf a}} {dE_{q}(p)\over \om(q)}\,\Big(  \cr
+\qquad \sum_{m=0}^g \sum_{J\subset K} W_{|J|+1}^{(m)}(q,{\bf p_J})W_{k-|J|+1}^{(g-m)}(\qbar,{\bf p_{K/J}})
++ W_{k+2}^{(g-1)}(q,\qbar,{\bf p_K}) \Big) \cr
+\end{array}
+}\eeq
+\ed
+This system is triangular because all terms in the RHS have lower $2g+k$ than in the LHS and
+given $W_1^{(0)}$ and $W_2^{(0)}$, it has a unique solution.
+
+
+Notice that $W_{k+1}^{(g)}(p,p_1,\dots,p_k)$ is a multilinear meromorphic form in each of its arguments, it is clearly symmetric in the last $k$-ones, and we prove below (theorem \ref{thsymWk}) that it is in fact symmetric in all its arguments.
+
+More properties of $W_{k+1}^{(g)}$ are studied below in section \ref{propcorrel}.
+
+\subsubsection{Free energies}
+
+We define the {\bf free energies} which are complex numbers:
+
+\bd\label{defFg}
+Free energies.
+
+For $g>1$
+\beq\encadremath{
+F^{(g)} = {1\over 2-2g}\,\sum_i \Res_{q\to a_i} \Phi(q) W_{1}^{(g)}(q)
+}\eeq
+and
+\beq\encadremath{
+F^{(1)}=-{1\over 2}\ln{(\tau_{Bx})}\,\,-{1\over 24}\ln{\left(\prod_i y'(a_i) \right)}- \ln\left(\det \kappa\right)
+}\eeq
+where
+\beq
+y'(a_i) = {dy(a_i)\over dz_i(a_i)}
+\virg
+z_i(p) = \sqrt{x(p)-x(a_i)}
+\eeq
+and $\tau_{Bx}$ is the Bergmann $\tau$-function defined in \eq{deftauBx}.
+
+$F^{(0)}$ is defined in the next section.
+
+\ed
+
+\subsubsection{Leading order free energy  \texorpdfstring{$F^{(0)}$}{F0}.}
+
+Let us define $F^{(0)}$ as follows
+:
+%by one of these two quantities
+
+\beq\label{defF0}\encadremath{
+F^{(0)}
+= {1\over 2}\sum_{\alpha} \Res_\alpha V_\alpha ydx + {1\over 2} \sum_{\alpha} t_\alpha \mu_\alpha
+- {1\over 4i\pi}\sum_i \oint_{\acycle_i} ydx \oint_{\bcycle_i} ydx 
+%&= &  -{1\over 2}\sum_{\alpha,\beta} \Res_{p\to \alpha}\Res_{q\to \beta} V_\alpha(p) B(p,q) V_\beta(q)
+%+ \sum_{\alpha,\beta} t_\beta \Res_\alpha V_\alpha dS_{\beta,o} \cr
+%&& - {1\over 2}\sum_{\alpha, \beta} t_\alpha t_\beta \ln{(\gamma_{\alpha,\beta})}
+%- {1\over 2}\epsilon^t \Gamma  \cr
+}\eeq
+where $\mu_\alpha$ is given by 
+%any of the equivalent following expressions:
+\beq
+\mu_\alpha
+%&=& \sum_\beta \Res_\beta V_\beta dS_{\alpha,o}
+%- \sum_{\beta} t_\beta  \ln{(\gamma_{\alpha,\beta})} - 2i\pi \sum_i \epsilon_i (u_i(\alpha)-u_i(o)) \cr
+= \int_\alpha^{o} (ydx - dV_\alpha + t_\alpha {dz_\alpha\over z_\alpha}) + V_\alpha(o) - t_\alpha \ln{(z_\alpha(o))} 
+\eeq
+%and where
+%\beq
+%\ln{\gamma_{\alpha,\alpha}} = -\int_\alpha^o (dS_{\alpha,o'} + {dz_\alpha\over z_\alpha}) +  \ln{(z_\alpha(o))}
+%\eeq
+%\beq
+%\ln{\gamma_{\alpha,\beta}} = \ln{\left(\primef(\alpha,\beta)\primef(o,o')\over \primef(\alpha,o')\primef(\beta,o)\right)}
+%\eeq
+%as well as
+%\beq
+%\Gamma  := \oint_{\bcycle} ydx.
+%\eeq
+Notice that $\mu_\alpha$ depends on some base point $o$, but the sum $\sum_\alpha t_\alpha \mu_\alpha$ does not.
+
+\subsubsection{Special free energies and correlation functions}
+\label{sectdefspfree}
+
+All the quantities defined so far, were defined with the $\kappa$-modified cycles and modified Bergmann kernel.
+Let us also define them for $\kappa=0$ (for instance $F^{(1)}$ obviously needs another definition).
+
+Therefore we also define the unmodified quantities corresponding to $\kappa=0$, as:
+\beq
+\label{defspcorr}
+\forall k,g, \qquad 
+\underline{W}_{k}^{(g)}(p_1,\dots,p_k)
+:= \left. W_{k}^{(g)}(p_1,\dots,p_k)
+\right|_{\kappa = 0},
+\eeq
+\beq \label{defspfree}
+{\rm for}\,\, g>1, \qquad
+\underline{F}^{(g)} := {1\over 2-2g}\,\sum_i \Res_{q\to a_i} \Phi(q) \underline{W}_{1}^{(g)}(q)
+= \left.
+F^{(g)} \right|_{\kappa = 0} \,\, ,
+\eeq
+\beq
+\underline{F}^{(1)}=-{1\over 2}\ln{(\tau_{\underline{B}x})}\,\,-{1\over 24}\ln{\left(\prod_i y'(a_i) \right)} \,\, ,
+\eeq
+\beq
+{\rm and}\qquad
+\underline{F}^{(0)}
+= {1\over 2}\sum_{\alpha} \Res_\alpha V_\alpha ydx + {1\over 2} \sum_{\alpha} t_\alpha \mu_\alpha
+- {1\over 4i\pi}\sum_i \oint_{\underline\acycle_i} ydx \oint_{\underline\bcycle_i} ydx \, .
+\eeq
+
+\br
+The special functions, except $\underline{F}^{(1)}$ and $\underline{F}^{(0)}$, are obtained by changing $B$ and $dS$ by
+$\Bergmann$ and $\underline{dS}$ in the diagrammatic rules defined in section \ref{sectiondiagrepresent}.
+\er
+
+\subsection{Tau function}
+
+\bd
+We define the {\bf tau-function} as the formal power series in $N^{-2}$:
+\beq\encadremath{
+\ln{(Z_N(\curve))} = -\sum_{g=0}^\infty N^{2-2g} F^{(g)}.
+}\eeq
+\ed
+We show in section \ref{sectintegrability} that $Z_N(\curve)$ is indeed a tau-function because it obeys Hirota equations, order by order in $N^{-2}$.
+
+
+\subsection{Properties of correlation functions}\label{propcorrel}
+
+
+The loop functions defined in definition \ref{defloopfctions} satisfy the following theorems, whose {\bf proofs can be found
+in Appendix \ref{appprop}}:
+
+
+%---------------------------------thpolesW30------------------
+\bt\label{thW30}
+The correlation function $W_3^{(0)}$ is worth:
+\beq
+W_3^{(0)}(p,p_1,p_2) = \Res_{q\to \bfa} {B(q,p)B(q,p_1)B(q,p_2)\over dx(q) dy(q)}
+\eeq
+\et
+In particular, $W_3^{(0)}$ is symmetric in its 3  variables.
+
+
+%---------------------------------thpolesWkgbp------------------
+\bt\label{thpolesWkgbp}
+For $(k,g)\neq (1,0)$, the loop function $W_{k+1}^{(g)}(p,p_1,\dots,p_k)$ has poles (in any of its variables $p,p_1,\dots,p_k$) only at the branch points.
+%, of degree $6g+2k-4$.
+\et
+
+
+%---------------------------------thWkcycle------------------
+\bt\label{thWkcycle}
+For every ${\cal A}$ cycle we have:
+\beq
+\forall i=1,\dots,\genus \qquad \oint_{p\in{\cal A}_i} W_{k+1}^{(g)}(p,p_1,\dots,p_k) = 0
+,
+\eeq
+\beq
+\forall i=1,\dots,\genus, \forall m=1,\dots,k \qquad \oint_{p_m\in{\cal A}_i} W_{k+1}^{(g)}(p,p_1,\dots,p_k) = 0
+.
+\eeq
+\et
+
+
+%---------------------------------thsumWk------------------
+\bt\label{thsumWk}
+For every $k$ and $g$, we have:
+\beq\label{thsumWk1}
+\sum_i {W_{k+1}^{(g)}(p^i,p_1,\dots,p_k) \over dx(p^i)}= \delta_{k,1}\delta_{g,0}\,{dx(p_1)\over (x(p)-x(p_1))^2}
+\eeq
+and if $k\geq 1$:
+\beq\label{thsumWk2}
+\sum_i {W_{k+1}^{(g)}(p_1,p^i,p_2,\dots,p_k) \over dx(p^i)} = \delta_{k,1}\delta_{g,0}\,{dx(p_1)\over (x(p)-x(p_1))^2}
+\eeq
+where we recall that $p^i$ are all the points such that $x(p^i)=x(p)$ (see section \ref{sectgeomalg}).
+\et
+
+
+%---------------------------------thPkpol------------------
+\bt\label{thPkpol}
+For $(k,g)\neq (0,1)$,
+\bea
+P_k^{(g)}(x(p),{\bf p_K})
+&=& {1\over dx(p)^2}\,\sum_i \Big[-2y(p^i)dx(p) W_{k+1}^{(g)}(p^i,{\bf p_K}) + W_{k+2}^{(g-1)}(p^i,p^i,{\bf p_K}) \cr
+&& \qquad \qquad + \sum_{m=0}^g \sum_{J\subset K} W_{j+1}^{(m)}(p^i,{\bf p_J})W_{k-j+1}^{(g-m)}(p^i,{\bf p_{K/J}}) \Big] \cr
+\eea
+ is a rational function of $x(p)$, with no poles at branch-points.
+\et
+
+
+
+%---------------------------------thsymWk------------------
+\bt\label{thsymWk}
+$W_k^{(g)}$ is a symmetric function of its $k$ variables.
+\et
+
+
+
+\bc\label{corResxyWk}
+\beq
+\forall i,\qquad \Res_{p\to a_i} W^{(g)}_{k+1}(p,p_1,\dots,p_k) =0
+,
+\eeq
+\beq
+\forall i,\qquad \Res_{p\to a_i} x(p) W^{(g)}_{k+1}(p,p_1,\dots,p_k) =0
+,
+\eeq
+\beq
+\sum_i \Res_{p\to a_i} y(p) W^{(g)}_{k+1}(p,p_1,\dots,p_k) =0
+,
+\eeq
+\beq
+\sum_i \Res_{p\to a_i} x(p)y(p) W^{(g)}_{k+1}(p,p_1,\dots,p_k) =0
+.
+\eeq
+\ec
+
+
+
+
+
+
+%---------------------------------thintPhi------------------
+\bt\label{thintPhi}
+For $k\geq 1$ we have:
+\beq
+\Res_{p_{k+1}\to \bfa,p_1,\dots,p_k} \Phi(p_{k+1}) W^{(g)}_{k+1}({\bf p_K},p_{k+1}) = (2g+k-2) W^{(g)}_k({\bf p_K}) + \delta_{g,0}\delta_{k,1} y(p_1)dx(p_1)
+.
+\eeq
+\et
+Notice that for $k=0$ and $g\geq 2$, it holds by definition if we define $W^{(g)}_0= - F^{(g)}$.
+
+
+
+\subsection{Diagrammatic representation \label{sectiondiagrepresent}}
+
+
+
+The recursive  definitions of $W_k^{(g)}$ and $F^{(g)}$ can be represented {\bf graphically}.
+
+We represent the multilinear form $W_k^{(g)}(p_1,\dots,p_k)$ as a blob-like ``surface'' with $g$ holes and
+$k$ legs (or punctures) labeled with the variables $p_1,\dots, p_k$, and $F^{(g)}$ with $0$ legs and
+$g$ holes.
+\beq
+W_{k+1}^{(g)}(p,p_1,\dots,p_k):=\begin{array}{r}
+{\epsfxsize 4.5cm\epsffile{Wk.eps}}
+\end{array}
+\virg
+F^{(g)}:= \begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{Fg.eps}}
+\end{array}
+\eeq
+
+We represent the Bergmann kernel $B(p,q)$ (which is also $W_2^{(0)}$, i.e. a blob with 2 legs and no hole) as a straight non-oriented line between $p$ and $q$
+\beq
+B(p,q):= \begin{array}{r}
+{\epsfxsize 2cm\epsffile{berg.eps}}
+\end{array}.
+\eeq
+
+We represent ${dE_{q}(p)\over \om(q)}$ as a straight arrowed line with the arrow from $p$ towards $q$, and with a tri-valent vertex whose legs are $q$ and $\qbar$
+\beq
+{dE_{q}(p)\over \om(q)}:= \begin{array}{r}
+{\epsfxsize 3cm\epsffile{vertex.eps}}
+\end{array}.
+\eeq
+
+\medskip
+
+\subsubsection*{Graphs}
+
+\bd\label{defgraphs}
+For any $k\geq 0$ and $g\geq 0$ such that $k+2g\geq 3$, we define:
+
+Let ${\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)$ be the set of connected trivalent graphs defined as follows:
+\begin{enumerate}
+
+\item there are $2g+k-1$ tri-valent vertices called vertices.
+\item there is one 1-valent vertex labelled by $p$, called the root.
+\item there are $k$ 1-valent vertices labelled with $p_1,\dots,p_k$ called the leaves.
+\item There are $3g+2k-1$ edges.
+\item Edges can be arrowed or non-arrowed. There are $k+g$ non-arrowed edges and $2g+k-1$ arrowed edges.
+\item The edge starting at $p$ has an arrow leaving from the root $p$.
+\item The $k$ edges ending at the leaves $p_1,\dots, p_k$ are non-arrowed.
+\item The arrowed edges form a "spanning\footnote{It goes through all vertices.} planar\footnote{planar tree means that the left child and right child are not equivalent. The right child is marked by a black disk on the outgoing edge.} binary skeleton\footnote{a binary skeleton tree is a binary tree from which we have removed the leaves, i.e. a tree with vertices of valence 1, 2 or 3.} tree" with root $p$. The arrows are oriented from root towards leaves. In particular, this induces a partial ordering of all vertices.
+\item There are $k$ non-arrowed edges going from a vertex to a leaf, and $g$ non arrowed edges joining two inner vertices. Two inner vertices can be connected by a non arrowed edge only if one is the parent of the other along the tree.
+\item If an arrowed edge and a non-arrowed inner edge come out of a vertex, then the arrowed edge is the left child. This rule
+only applies when the non-arrowed edge links this vertex to one of its descendants (not one of its parents).
+
+\end{enumerate}
+
+\ed
+
+
+We have the following useful lemma:
+\bl\label{lemgraphaddleg}
+There is a $1$ to $3g+2k-1$ map from ${\cal G}_{k+1}^{(g)}(p,{\bf p_K})$ to ${\cal G}_{k+2}^{(g)}(p,{\bf p_K},p_{k+1})$.
+\el
+\proof{If $G$ is  a graph in ${\cal G}_{k+2}^{(g)}(p,p_1,\dots,p_k,p_{k+1})$, remove the non-arrowed edge attached to the leaf $p_{k+1}$ and remove the corresponding vertex, and merge the incoming and the other outgoing edges of that vertex. You clearly get a graph $G'\in{\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)$. It is clear that the same graph is obtained $3g+2k-1$ times (the number of edges of $G'$.
+And it is clear that from any $G'\in{\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)$, you can obtain $3g+2k-1$ graphs $G\in{\cal G}_{k+2}^{(g)}(p,p_1,\dots,p_k,p_{k+1})$ by adding a new vertex on any edge, and linking this new vertex to the leaf $p_{k+1}$.}
+
+\vs
+
+\noindent {\bf Example of ${\cal G}_{1}^{(2)}(p)$}
+
+As an example, let us build step by step all the graphs of ${\cal G}_{1}^{(2)}(p)$, i.e. $g=2$ and $k=0$.
+
+We first draw all planar binary skeleton trees with one root $p$ and $2g+k-1=3$ arrowed edges:
+\beq
+\begin{array}{r}
+{\epsfxsize 2cm\epsffile{w12.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{w21.eps}}
+\end{array}.
+\eeq
+%
+Then, we draw $g+k=2$ non-arrowed edges in all possible ways such that every vertex is trivalent, also satisfying rule 9) of definition.\ref{defgraphs}. There is only
+one possibility for the first graph and two for the second one:
+\beq
+\begin{array}{r}
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{y123.eps}}
+\end{array}
+\virg
+{\epsfxsize 2.2cm\epsffile{y122.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 3cm\epsffile{y121.eps}}
+\end{array}.
+\eeq
+
+It just remains to specify the left and right children for each vertex. The only possibilities in accordance with rule 10) of def.\ref{defgraphs} are\footnote{ Note that the graphs are not
+necessarily planar.}:
+\bea
+\begin{array}{r}
+{\epsfxsize 2.2cm\epsffile{y123.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{x124.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 3cm\epsffile{x122.eps}}
+\end{array} \cr
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{x123.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 3cm\epsffile{x121.eps}}
+\end{array} .\cr
+\eea
+
+In order to simplify the drawing, we can draw a black dot to specify the right child. This way one gets only planar graphs.
+\bea
+\begin{array}{r}
+{\epsfxsize 2.2cm\epsffile{w122.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{w125.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 3cm\epsffile{w123.eps}}
+\end{array} \cr
+\begin{array}{r}
+{\epsfxsize 2.5cm\epsffile{w124.eps}}
+\end{array}
+\virg
+\begin{array}{r}
+{\epsfxsize 3cm\epsffile{w121.eps}}
+\end{array} \cr
+\eea
+%
+Remark that without the prescriptions 9) and 10), one would get 13 different graphs whereas we only have 5.
+
+
+\subsubsection*{Weight of a graph}
+
+Consider a graph $G\in {\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)$.
+Then, to each vertex $i=1,\dots,2g+k-1$ of $G$, we associate a label $q_i$, and we associate $q_i$ to the beginning of the left child edge, and $\qbar_i$ to the right child edge.
+Thus, each edge (arrowed or not), links two labels which are points on the Riemann surface $\bar\Surf$.
+\begin{itemize}
+\item To an arrowed edge going from $q'$ towards $q$, we associate a factor ${dE_q(q')\over (y(q)-y(\qbar))dx(q)}$.
+\item To a non arrowed edge going between $q'$ and $q$ we associate a factor $B(q',q)$.
+\item Following the arrows backwards (i.e.  from leaves to root), for each vertex $q$, we take a residue at $q\to \bfa$, i.e. we sum over all branchpoints.
+\end{itemize}
+After taking all the residues, we get the weight of the graph:
+\beq
+w(G)
+\eeq
+which is a multilinear form in $p,p_1,\dots,p_k$.
+
+Similarly, we define weights of linear combinations of graphs by:
+\beq
+w(\alpha G_1 + \beta G_2) = \alpha w(G_1) + \beta w(G_2)
+\eeq
+and for a disconnected graph, i.e. a product of two graphs:
+\beq
+w( G_1  G_2) = w(G_1)  w(G_2)
+.
+\eeq
+
+
+\bt\label{thdiagrepr}
+We have:
+\beq
+W_{k+1}^{(g)}(p,p_1,\dots,p_k) = \sum_{G\in {\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)}\,\, w(G) = w\left(\sum_{G\in {\cal G}_{k+1}^{(g)}(p,p_1,\dots,p_k)}\,\, G\right)
+\eeq
+\et
+\proof{This is precisely what the recursion equations \ref{defWkgrecursive} of def.\ref{defloopfctions} are doing.
+Indeed, one can represent them diagrammatically by
+\beq
+\begin{array}{r}
+{\epsfxsize 10cm\epsffile{recurW.eps}}
+\end{array}.
+\eeq
+}
+
+\bigskip
+
+
+Such graphical notations are very convenient, and are a good support for intuition and even help proving some relationships.
+It was immediately noticed after \cite{eynloop1mat} that those diagrams look very much like Feynman graphs, and there was a hope that they could be the Feynman's graphs for the Kodaira--Spencer theory.
+But they ARE NOT Feynman graphs, because Feynman graphs can't have non-local restrictions like the fact that non oriented lines can join only a vertex and one of its descendent.
+
+Those graphs are merely a notation for the recursive definition \ref{defloopfctions}.
+
+\bl\label{lemmasymfactor} {\bf Symmetry factor:}
+The weight of two graphs differing by the exchange of the right and left children of a vertex are the same. Indeed, the distinction between right and left child is just a way of encoding symmetry factors.
+\el
+
+\proof{
+This property follows directly from theorem \ref{thsumWk} and the definition \eq{defWkgrecursive}.
+Consider one term contributing to the first part of RHS of \eq{defWkgrecursive}:
+\beq
+\begin{array}{l}
+\displaystyle \Res_{q \to {\bf a}} {dE_{q}(p) \over \omega(q)} W_{|J|+1}^{(m)}(q,{\bf P_J}) W_{k-|J|+1}^{(g-m)}(\qbar,{\bf P_{K/J}}) \cr
+\displaystyle \qquad \quad =  - \Res_{q \to {\bf a}} {dE_{q}(p) \over \omega(q)} W_{|J|+1}^{(m)}(q,{\bf P_J}) W_{k-|J|+1}^{(g-m)}(q,{\bf P_{K/J}}) \cr
+\displaystyle \qquad \quad =  \Res_{q \to {\bf a}} {dE_{q}(p) \over \omega(q)} W_{|J|+1}^{(m)}(\qbar,{\bf P_J}) W_{k-|J|+1}^{(g-m)}(q,{\bf P_{K/J}}) .\cr
+\end{array}
+\eeq
+where the equalities are obtained by adding terms without residues at the branch points to the integrand and
+using theorem \ref{thsumWk}. 
+One can perform the same trick for the second term in \eq{defWkgrecursive} and this proves the lemma.}
+
+
+\subsection{Examples.}
+
+Let us present some examples of correlation functions and free energy for low order.
+
+\subsubsection*{Correlation functions.}
+
+To leading order, one has the first correlation functions given by:
+\beq
+W_{2}^{(0)}(p,q) = B(p,q).
+\eeq
+
+\bea
+W_{3}^{(0)}(p,p_1,p_2)&=& \begin{array}{r}
+{\epsfxsize 3.5cm\epsffile{w31.eps}}
+\end{array}
++
+\begin{array}{r}
+{\epsfxsize 3.5cm\epsffile{w32.eps}}
+\end{array} \cr
+&=& \Res_{q \to {\bf a}} {dE_q(p) \over \omega(q)} \left[ B(q,p_1) B(\overline{q},p_2) + B(\overline{q},p_1) B(q,p_2) \right] \cr
+\eea
+
+\bea
+W_4^{(0)}(p,p_1,p_2,p_3)
+&=& 
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{W4.eps}}
+\end{array}
++ \;\;\;\; \hbox{perm. (1,2,3)}\cr
+&& + \begin{array}{r}
+{\epsfxsize 4cm\epsffile{W41.eps}}
+\end{array}
++ \;\;\;\; \hbox{perm. (1,2,3)}\cr
+&=& \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} {dE_q(p) \over \omega(q)} {dE_r(q) \over \omega(r)}
+\left[ B(\qbar,p_1)B(r,p_2)B(\overline{r},p_3) \right. \cr
+&& + B(\qbar,p_1)B(\overline{r},p_2)B(r,p_3) + B(\qbar,p_2)B(r,p_1)B(\overline{r},p_3) \cr
+&& + B(\qbar,p_2)B(\overline{r},p_1)B(r,p_3) + B(\qbar,p_3)B(r,p_2)B(\overline{r},p_1) \cr
+&& \left. + B(\qbar,p_3)B(\overline{r},p_2)B(r,p_1)\right] \cr
+&& + \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} {dE_{q}(p) \over \omega(q)} {dE_r(\qbar) \over \omega(r)}
+\left[ B(q,p_1)B(r,p_2)B(\overline{r},p_3) \right. \cr
+&& + B(q,p_1)B(\overline{r},p_2)B(r,p_3) + B(q,p_2)B(r,p_1)B(\overline{r},p_3)\cr
+&& + B(q,p_2)B(\overline{r},p_1)B(r,p_3) + B(q,p_3)B(r,p_2)B(\overline{r},p_1) \cr
+&& \left. + B(q,p_3)B(\overline{r},p_2)B(r,p_1)\right] \cr
+\eea
+
+
+First orders for the one point correlation function read:
+\bea
+W_{1}^{(1)}(p) &=& \begin{array}{r}
+{\epsfxsize 4cm\epsffile{w11.eps}}
+\end{array} \cr
+&=& \Res_{q \to {\bf a}} {dE_q(p) \over \omega(q)} B(q, \qbar)\cr
+\eea
+
+\bea
+W_1^{(2)}(p)&=&
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{w121.eps}}
+\end{array}
++
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{w123.eps}}
+\end{array} \cr
+&& +
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{w124.eps}}
+\end{array}
++
+\begin{array}{r}
+{\epsfxsize 4cm\epsffile{w125.eps}}
+\end{array} \cr
+&& + \begin{array}{r}
+{\epsfxsize 3.1cm\epsffile{w122.eps}}
+\end{array}
+\cr
+&=&  \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  {dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {dE_s(\qbar) \over \omega(s)} B(r,\overline{r}) B(s, \overline{s})\cr
+&&  +\Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  {dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {dE_s(\overline{r}) \over \omega(s)} B(r,\qbar) B(s,\overline{s})\cr
+&&  +\Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  {dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {dE_s(r) \over \omega(s)} \left[ B(\qbar,\overline{r}) B(s,\overline{s})
+ \right. \cr
+&& \left. + B(\overline{s},\qbar) B(s,\overline{r}) + B(s,\qbar) B(\overline{s},\overline{r}) \right]\cr
+&=&
+2 \begin{array}{r}
+{\epsfxsize 4cm\epsffile{w121.eps}}
+\end{array}
+ +2 
+ \begin{array}{r}
+{\epsfxsize 3cm\epsffile{w124.eps}}
+\end{array}  
++ \begin{array}{r}
+{\epsfxsize 2.8cm\epsffile{w122.eps}}
+\end{array}
+\eea
+where the last expression is obtained using lemma \ref{lemmasymfactor}.
+
+
+\subsubsection*{Free energy.}
+
+The second order free energy reads
+\bea
+-2 F^{(2)}
+&=&  \Res_{p \to {\bf a}} \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  {\Phi(p) dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {dE_s(\qbar) \over \omega(s)} B(r,\overline{r}) B(s, \overline{s})\cr
+&&  +\Res_{p \to {\bf a}} \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  { \Phi(p) dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {\Phi(p) dE_s(\overline{r}) \over \omega(s)} B(r,\qbar) B(s,\overline{s})\cr
+&&  +\Res_{p \to {\bf a}} \Res_{q \to {\bf a}} \Res_{r \to {\bf a}} \Res_{s \to {\bf a}}  { \Phi(p) dE_q(p) \over \omega(q)}
+{dE_r(q) \over \omega(r)} {dE_s(r) \over \omega(s)} \left[ B(\qbar,\overline{r}) B(s,\overline{s})
+ \right. \cr
+&& \left. + B(\overline{s},\qbar) B(s,\overline{r}) + B(s,\qbar) B(\overline{s},\overline{r}) \right]\cr
+\eea
+
+
+
+\subsection{Remark: Teichmuller pant gluings}
+
+Every Riemann surface of genus $g$ with $k$ punctures can be decomposed into 
+$2g+k$ pants whose boundaries are $3g+k$ closed geodesics (in the metric with constant negative curvature).
+The number of ways (in the combinatorial sense) of gluing $2g+k$ pants by their boundaries is clearly the same as the number of diagrams of ${\cal G}_{k}^{(g)}$, and each diagram corresponds to one pant decomposition.
+
+
+Example with $k=1$ and $g=2$:
+$$
+W_1^{(2)}={\epsfxsize 2.2cm\epsffile{teich121.eps}}+2 {\epsfxsize 3cm\epsffile{teich122.eps}}+2 {\epsfxsize 3cm\epsffile{teich123.eps}}
+$$
+
+
+
+

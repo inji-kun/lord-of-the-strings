@@ -1,0 +1,12 @@
+# Dev-specific Claude Code instructions (use CLAUDE_EXAMPLE.md as template)
+.claude/CLAUDE.md
+.claude/settings.local.json
+
+# Session state (generated at runtime)
+config/session-state.md
+config/active-preset.txt
+
+# OS
+.DS_Store
+reference/source_tex/1812.01007/*
+!reference/source_tex/1812.01007/1812.01007_main.tex

@@ -1,0 +1,25 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "RecursionRelations.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "Bibliography.bib"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "JHEP.bst"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "RecursionRelations.bbl"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

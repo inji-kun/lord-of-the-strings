@@ -1,0 +1,404 @@
+
+\section{Matrix model with an external field}
+\label{proofthGKontsevitch}
+
+We consider the matrix model with external field defined in section
+(\ref{sectGK}):
+\beq\label{defZLambda} Z(\Lambda):=\int_{H_n} dM \, e^{-N
+Tr(V(M) - M\widehat{\L} )} \eeq
+
+where we assume that $\widetilde\L$ is the diagonal matrix:
+\beq
+\widehat{\L}={\rm diag}\,(\,\mathop{\overbrace{\widehat{\lambda}_1,\dots,\widehat{\lambda}_1}}^{n_1},\mathop{\overbrace{\widehat{\lambda}_2,\dots,\widehat{\lambda}_2}}^{n_2},\dots,\mathop{\overbrace{\widehat{\lambda}_s,\dots,\widehat{\lambda}_s}}^{n_s}\,)
+\eeq
+and $V'(x)$ is a rational fraction with denominator $D(x)$:
+$V'(x) = {\sum_{k=0}^{d} g_k x^k \over D(x)}$.
+
+In particular, the polynomial
+$S(y):=\prod_{i=1}^s (y-\widehat{\lambda}_i)$ is the minimal polynomial of $\widetilde\L$.
+
+We define the correlation functions
+$\overline{w}_{k}(x_1,\dots,x_k) := N^{k-2}\left< \prod_{i=1}^k \tr{1\over x_{i}-M}\right>_c$
+and their $1/N^2$ expansion
+\beq\label{Mextdefwklh}
+\overline{w}_{k}(\bfx_K) = \sum_{h=0}^\infty {1\over N^{2h}}\,\overline{w}_{k}^{(h)}(\bfx_K).
+\eeq
+
+We also define the auxiliary functions
+\beq\label{Mextdefubarkl}
+\overline{u}_{k}(x,y;\bfx_K) := N^{|K|-1} \left< \tr {1\over x-M} {S(y)-S(\L)\over y-\L}\,\,
+\prod_{r=1}^{|K|} \tr{1\over x_{i_r}-M}\right>_c
+\eeq
+and
+\beq\label{Mextdefpkl}
+P_{k}(x,y;\bfx_K) := N^{|K|-1} \left< \tr {V'(x)-V'(M_1)\over x-M} {S(y)-S(\L)\over y-\L}\,\,
+\prod_{r=1}^{|K|} \tr{1\over x_{i_r}-M}\right>_c.
+\eeq
+
+Notice that $\overline{u}_{k,}(x,y;\bfx_K)$ is a polynomial in $y$ of degree $s-1$, and
+$D(x) P_{k}(x,y;\bfx_K)$ is a polynomial in $x$ of degree $d-1$ and in $y$ of degree $s-1$ (note that
+$P_{0}$ corresponds to $P$ in \eq{defP}).
+
+It is convenient to renormalize those functions, and define:
+\beq\label{defukl}
+u_{k}(x,y;\bfx_K):=\overline{u}_{k}(x,y;\bfx_K)  -\delta_{k,0}S(y)
+\eeq
+and
+\beq\label{defwkl}
+w_{k}(\bfx_K):=\overline{w}_{k}(\bfx_K)  + {\delta_{k,2}  \over (x_1-x_2)^2} .
+\eeq
+
+\subsection{Loop equations}
+
+Consider the change of variables
+\beq
+\delta M = {1\over x-M}{S(y)-S(\L)\over y-\L}.
+\eeq
+You get the loop equation
+\beq
+\overline{w}_1(x)\overline{u}_0(x,y)+{1\over N^2}\overline{u}_1(x,y;x)
+=
+V'(x)\overline{u}_0(x,y) - P_0(x,y)-y\overline{u}_0(x,y) + S(y)\overline{w}_1(x)
+\eeq
+i.e.
+\beq
+(y+\overline{w}_1(x)-V'(x))(\overline{u}_0(x,y)-S(y))+{1\over N^2}\overline{u}_1(x,y;x)
+= (V'(x)-y)S(y) - P_0(x,y).
+\eeq
+We define the polynomial both in $x$ and $y$
+\beq
+E_{Mext}(x,y):= \left((V'(x)-y)S(y) - P_0(x,y)\right) D(x)
+\eeq
+and
+\beq
+Y(x):=V'(x)-\overline{w}_1(x).
+\eeq
+The loop equation thus implies:
+\beq
+(y-Y(x))u_0(x,y)D(x)+{1\over N^2}u_1(x,y;x)D(x) = E_{Mext}(x,y)
+\eeq
+and in particular
+\beq\label{Mextloop1}
+E_{Mext}(x,Y(x))={1\over N^2}u_1(x,Y(x);x)D(x).
+\eeq
+
+The leading order of the topological expansion reads
+\beq
+E_{Mext}^{(0)}(x,Y(x))
+= 0
+\eeq
+which defines an algebraic curve.
+
+\subsection{Leading order algebraic curve}
+
+Let us study the curve $\curve_{Mext}(x,y)=E_{Mext}^{(0)}(x,y)=0$ defining a compact Riemann surface $\overline{\Sigma}$ and
+two functions $x$ and $y$ defined on it.
+
+Because $y$ is a solution of a degree $s+1$ equation, $\curve_{Mext}(x,y)$  has $s+1$ $x$-sheets.
+The sheets can be identified by their large $x$ behavior:
+
+$\bullet$ in the physical sheet, we have $Y(x)\sim V'(x)-1/x+O(1/x^2)$
+
+$\bullet$ in the other sheets, $Y(x)\sim \widehat{\lambda}_i + {n_i\over N}\,{1\over x}+O(1/x^2)$
+
+Let us note by $p^i \in \overline{\Sigma}$ with $i= 0 \dots s$ the different points of the curve whose $x$-projection are $x(p)$, i.e.
+\beq
+\forall i,j \;\;\; x(p^i) = x(p^j).
+\eeq
+The superscript $0$ corresponds to the point in the physical sheet.
+
+From the correlation functions previously defined on the $x$ and $y$ projections, one defines the corresponding
+meromorphic 1-forms on the curve as follows:
+\beq
+W_k({\bf p_K}) :=w_k({\bf x(p_K)})\, dx(p_1)\dots dx(p_k)
+\eeq
+and
+\beq
+U_k(p,y;{\bf p_K}) :=u_k(x(p),y;{\bf x(p_K)})\, dx(p)dx(p_1)\dots dx(p_k)
+\eeq
+as well as there topological expansions
+\beq
+W_k({\bf p_K}) = \sum_{h=0}^\infty N^{2-2h}\,W_k^{(h)}({\bf p_K})
+\;\;\; \hbox{and} \;\;\;
+U_k(p,y;{\bf p_K}) = \sum_{h=0}^\infty N^{2-2h}\,U_k^{(h)}(p,y;{\bf p_K}).
+\eeq
+
+
+\subsubsection{Filling fractions and genus}
+
+The curve has a genus $g\leq d s -1$ and we work with fixed filling fractions
+\beq
+\epsilon_I:={1\over 2i\pi}\oint_{{\cal A}_I} y dx.
+\eeq
+
+
+%\subsubsection{Properties of the differential \texorpdfstring{$ydx$}{ydx}: Partie a enlever ?}
+%
+%$\bullet$ $x$ has a pole of degree $1$ and $y$ has a pole of degree $d$ at $\infty_x$ in the physical sheet.
+%$ydx$ has thus a pole of degree $d+2$, and one has:
+%\beq
+%\Res_{\infty_x} y dx = 1
+%\eeq
+%as well as (where $V(x)=\sum_{k=0}^{d+1} g_k x^k$):
+%\beq
+%\forall k=1,\dots, d+1, \qquad \Res_{\infty_x} x^{-k} y dx = -k{g_k}
+%\eeq
+%
+%
+%$\bullet$ $x$ has a pole of degree $1$ and $y\to \L_i$ is regular at the point $\l_i$ such that $y(\l_i)=\L_i$ in the $i^{\rm th}$ sheet.
+%$ydx$ has thus a pole of degree $2$, and one has:
+%\beq
+%\Res_{\l_i} y dx = -{n_i\over N}
+%\eeq
+%and
+%\beq
+%\Res_{\l_i} x^{-1} y dx = -\L_i
+%\eeq
+%
+%$\bullet$ On the ${\cal A}$ cycles, one has:
+%\beq
+%\oint_{{\cal A}_I} y dx=2i\pi\epsilon_I
+%\eeq
+%
+%$\bullet$ $y$ and $dx$ have no other poles.
+
+
+
+\subsubsection{Subleading loop equations}
+Consider the topological expansion of the loop equation \eq{Mextloop1}. It reads, for $h\geq 1$:
+\bea\label{Mextmastloop2} E^{(h)}(x,y) &=&
+D(x) (y-Y(x)) u_0^{(h)}(x,y) + D(x) w_{1,0}^{(h)}(x) u_0^{(0)}(x,y) \cr && +
+D(x) \sum_{m=1}^{h-1} w_{1,0}^{(m)}(x) u_0^{(h-m)}(x,y) + D(x) u_1^{(h-1)}(x,y;x), \cr \eea
+where $E^{(h)}(x,y)$ is the $h$'th term in the $\hbar^2$-expansion
+of the spectral curve.
+
+
+
+\subsection{Diagrammatic rules for the correlation functions and the free energy}
+In this section, one proves that the correlation functions' and the free energy's topological expansion of this model do coincide
+with the $\underline{W}_k^{(h)}$'s and $\underline{F}^{(h)}$'s defined following the definitions of \eq{defspcorr} and \eq{defspfree} for the classical spectral
+curve ${\cal{E}}_{Mext}(x,y)=0$.
+
+
+\subsubsection{The semi-classical spectral curve}
+Let us reexpress the semi-classical spectral curve (i.e. the whole formal series $E_{Mext}(x,y)$) in terms of the
+classical one $E_{Mext}^{(0)}(x,y)$.
+
+\bt
+\beq \label{MextdefE}
+\begin{array}{rcl}
+E_{Mext}(x,y) &=& -D(x)``\left<\prod_{i=0}^s (y-V'(x(p))+{1 \over N} \Tr{1 \over x(p^{(i)})-M}) \right>'' \cr
+&=& D(x)\left[(V'(x)-y)S(y) - P_0(x,y)\right]
+\end{array}
+\eeq
+and
+\beq
+U_0(p,y) = - ``\left<\prod_{i=1}^s (y-V'(x(p))+{1 \over N} \Tr{1 \over x(p^{(i)})-M}) \right>''
+\eeq
+where $``<.>''$ means that one replace $\overline{w}_2$ by $w_2$ in the expansion.
+\et
+
+\proof{
+One proves that the ${1 \over N^2}$-expansions of 
+\beq
+\widetilde{E}(x,y) = -D(x) \left<\prod_{i=0}^s (y-V'(x(p))+{1 \over N} \Tr{1 \over x(p^{(i)})-M}) \right>
+\eeq
+and 
+\beq
+\widetilde{U}(p,y) = -D(x) \left<\prod_{i=1}^s (y-V'(x(p))+{1 \over N} \Tr{1 \over x(p^{(i)})-M}) \right>
+\eeq
+coincide with the expansion of $E_{Mext}(x,y)$ and $U_0(p,y)$.
+
+Let the topological expansions be
+\beq
+\widetilde{E}(x,y) = \sum_g N^{-2g} \widetilde{E}^{(g)}(x,y)
+\;\;\; ,\;\;\; \widetilde{U}(p,y) = \sum_g N^{-2g} \widetilde{U}^{(g)}(p,y).
+\eeq
+
+
+Expanding the expressions of $\widetilde{E}(x,y)$ and $\widetilde{U}(p,y)$ into cumulants, one recovers
+\bea \widetilde{E}^{(h)}(x,y) &=&
+(y-Y(x)) D(x) \widetilde{U}_0^{(h)}(x,y) + D(x) w_{1}^{(h)}(x) \widetilde{U}_0^{(0)}(x,y) \cr && +
+D(x) \sum_{m=1}^{h-1} w_{1}^{(m)}(x) \widetilde{U}_0^{(h-m)}(x,y) +  D(x) \widetilde{U}_1^{(h-1)}(x,y;x), \cr \eea
+which coincides with \eq{Mextmastloop2}.
+
+One easily proves that this system of equations admits a unique solution thanks to the polynomial
+properties of $\widetilde{U}(p,y)$ and that the leading orders $h=0$ coincide.
+The proof is extremely similar to that for the 2-matrix model (cf. theorem 1 in \cite{CEO}).
+}
+
+
+\subsubsection{Diagrammatic solution}
+
+One has:
+\beq
+W_2^{(0)}(p_1,p_2) = \underline{B}(p_1,p_2)
+\eeq
+where $\underline{B}$ is the Bergmann kernel of the algebraic curve ${\cal{E}}_{Mext}$.
+
+
+The coefficient of $y^s$ of \eq{MextdefE}, divided by $D(x)$, is:
+\beq
+V'(x) +\sum_i \L_i = \sum_i Y(p^i).
+\eeq
+It implies that
+\beq
+{dx(p)dx(q)\over (x(p)-x(q))^2}  = \sum_i W_2^{(0)}(p^i,q)
+\;\;\; \hbox{and} \;\;\; \forall h >1 \, , \; \sum_i W_2^{(h)}(p^i,q) =0,
+\eeq
+i.e.
+\beq
+\ovl\om_2(p,q)+\sum_{i=1}^s \om_2(p^i,q) = 0.
+\eeq
+
+
+
+The coefficient of $y^{s-1}$ is:
+\beq
+\sum_{i<j} Y(p^i)Y(p^j)+{1\over N^2}\om_2(p^i,p^j)  = V'(x)\sum_i \L_i + \sum_{i<j}\L_i \L_j + {1\over N} \left< \tr {V'(x)-V'(M_1)\over x-M_1}\right>.
+\eeq
+Notice that:
+\bea
+&& \sum_{i< j} \left( Y(p^i)Y(p^j)+{1\over N^2}\om_2(p^i,p^j) \right) \cr
+&=& {1\over 2}\sum_{i} \left(Y(p^i)(V'(x)+\sum_j \L_j-Y(p^i)) - {1\over N^2} \ovl\om_2(p^i,p^i) \right) \cr
+&=& {1\over 2}(V'(x)+\sum_j \L_j)^2 - {1\over 2}\sum_{i} \left( Y(p^i)^2 + {1\over N^2} \ovl\om_2(p^i,p^i) \right). \cr
+\eea
+Thus:
+\beq
+V'(x)^2+\sum_{i}\L_i^2 -  {2\over N} \left< \tr {V'(x)-V'(M_1)\over x-M_1}\right>
+= \sum_{i} \left( Y(p^i)^2 + {1\over N^2} \ovl\om_2(p^i,p^i) \right).
+\eeq
+
+Notice that the LHS is the ratio of a polynomial in $x$ and $D(x)$: ${Q(x)\over D(x)} = V'(x)^2+\sum_{i}\L_i^2 -  {2\over N} \left< \tr {V'(x)-V'(M_1)\over x-M_1}\right>$.
+
+The topological expansion of this equation reads for $h\geq 1$
+\beq\label{Mextyexp4}
+\encadremath{
+\begin{array}{l}
+ 2 \sum_{i=0}^{d_2} y(p^i) W_{1,0}^{(h)}(p^i)dx(p) \cr
+= {\sum_{i=0}^{d_2} \sum_{m=1}^{h-1} W_{1,0}^{(m)}(p^i) W_{1,0}^{(h-m)}(p^i) } + {\sum_{i=0}^{d_2} \ovl{W}_{2,0}^{(h-1)}(p^i,p^i)}  + 2 {Q^{(h)}(x(p)) dx(p)^2 \over D(x(p))}.
+\end{array}
+} \eeq
+
+From now on, following the lines of \cite{CEO}, one multiplies these equations by ${1 \over 2} {dE_{p,\overline{p}}(q)
+\over y(p)-y(\overline{p})} $, takes the residues when $p \to \mu_\alpha$ and sums over all the branch points
+and obtains:
+\beq\label{MextrecW1}
+W_{1,0}^{(h)}(q) = \sum_{\alpha} \Res_{p \to \mu_\alpha} { {1 \over 2} dE_{p,\overline{p}}(q)  (W_{2,0}^{(h-1)}(p,\pbar) + \sum_{m=1}^{h-1} W_{1,0}^{(m)}(p) W_{1,0}^{(h-m)}(\pbar) ) \over(y(p)-y(\overline{p})) dx(p)}.
+\eeq
+
+Differentiating wrt the potential $V(x_i)$, one can finally write down an expression for the correlation functions:
+\beq\label{MextconjecturerecW} \encadremath{
+\begin{array}{rcl}
+ W_{k+1,0}^{(h)}(q,p_K)
+&=&   \sum_{\alpha} \Res_{p \to \mu_\alpha} {{1\over
+2}dE_{p,\pbar}(q)\over (y(p)-y(\pbar))\,dx(p)}\left(
+W_{k+1,0}^{(h-1)}(p,\overline{p},p_K) + \right. \cr && \;\;\; +
+\left. \sum_{j,m} W_{j+1,0}^{(m)}(p,p_J) \,
+W_{k+1-j,0}^{(h-m)}(\overline{p},p_{K-J}) \right) . \cr
+\end{array}}\eeq
+
+This coincides with the reccursive definition \ref{defspcorr} and ensures the equality of the correlation functions
+with the former defined special "loop functions".
+
+Keeping on following \cite{CEO}, one finds that the topological expansion of the free energy also coincides with the
+special free energies defined on \ref{defspfree}, that is the $\tau$-function of the algebraic curve.
+
+
+
+%\subsection{Special cases}
+%Let us specify the result in some particular cases, and recover some well known $\tau$-functions.
+%
+%\subsubsection{Rational curve case}
+%
+%We can parameterize the curve as:
+%\beq
+%\left\{
+%\begin{array}{l}
+%x(z) = z + \sum_k {n_k\over N}\,{1\over (z-\l_k)Q'(\l_k)}\cr
+%y(z) = Q(z) = \hbox{Polynomial of degree }\,d
+%\end{array}
+%\right.
+%\eeq
+%where $Q$ and the $\l_i$ are determined by:
+%\beq
+%\left\{
+%\begin{array}{l}
+%Q(\l_i) = \L_i \cr
+%Q(z) = \mathop{{\rm Pol}}_{z\to\infty}\, V'(x(z))
+%\end{array}
+%\right.
+%\eeq
+%
+%
+%\subsubsection{Kontsevitch case}
+%
+%\beq
+%Z(\L) = \int dM \,\ee{-N\Tr \left({M^3\over 3} - t_1 M -\l^2 M\right)}
+%\eeq
+%
+%We have $d=2$, $V(x)={x^3\over 3}-t_1 x $. We write $\L=\l^2$ and define
+%We write:
+%\beq
+%t_j = {1\over N}\Tr {1\over \l^j} = \sum_k {\epsilon_k \over \l_k^j}
+%\eeq
+%
+%We can parameterize the curve as:
+%\beq
+%\left\{
+%\begin{array}{l}
+%x(z) = z + {1\over 2}\,\sum_k {\epsilon_k\over  \l_k} \,{1\over (z-\l_k)}\cr
+%y(z) = z^2
+%\end{array}
+%%\right.
+%\eeq
+%We work with the roles of $x$ and $y$ reversed, but it does not change anything to the $F^{(g)}$'s thanks to the
+%symplectic invariance.
+%I.e.
+%\beq
+%\left\{
+%\begin{array}{l}
+%x(z) = z + {1\over 2N}\,\Tr{1\over \l(z-\l)}\cr
+%y(z) = z^2
+%%\end{array}
+%\right.
+%\eeq
+%
+%Notice that we could also change $x$ into
+%\bea
+%\td{x}(z)
+%&=&  x(z) - \sum_k {\epsilon_k\over 2}{1\over y-\l_k^2} \cr
+%&=& z + {1\over 2}\,\sum_k {\epsilon_k\over  \l_k} \,{1\over (z-\l_k)} - \sum_k {\epsilon_k\over 4\l_k}({1\over (z-\l_k)}-{1\over (z+\l_k)}) \cr
+%&=& z + {z\over 2} \sum_k {\epsilon_k\over \l_k}\,{1\over (z^2-\l_k^2)} \cr
+%&=& z\left(1 + {1\over 2N} \Tr {1\over \l(z^2-\l^2)}\right) \cr
+%&=& {1\over 2}\, z\left(2 -  \sum_j  t_{2j+3} z^{2j}\right)
+%\eea
+%without changing the free energy.
+%
+%\subsubsection{KDV-hierarchy \texorpdfstring{$\tau$}{tau}-function}
+%If one chooses  $\lambda$ such that $\forall j > l, \; t_{2j+3}=0 $, the curve becomes
+%\beq
+%\left\{
+%\begin{array}{l}
+%x(z) = P(z) \cr
+%y(z) = z^2 \cr
+%\end{array}
+%\right.
+%\eeq
+%where $P$ is a polynomial of degree $2 l +1$ and $F$ is the corresponding $\tau$ function, i.e. the one corresponding
+%to $(2l+1,2)$ in the KDV hierarchie.
+%
+%\subsubsection{Dependance on the times and examples}
+%We have:
+%
+%
+%\bea
+%\Phi(z)
+%&=& {1\over 2}\int_0^z (x(z)-x(-z))dy(z) \cr
+%&=& {2\over 3}z^3 -  \sum_j {1\over 2j+3}t_{2j+3}\, z^{2j+3}  .\cr
+%%\eea
+
+
+
+
+

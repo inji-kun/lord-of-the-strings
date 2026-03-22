@@ -1,0 +1,866 @@
+
+\section{Variations of the curve}
+\label{sectcompstruct}
+
+The goal of this section is to study how the various $F^{(g)}$ and correlation functions change under the variations of moduli of the curve.
+
+%\subsection{Variation of the curve}%
+
+Consider an infinitesimal variation of the curve $\curve\to \curve+\delta \curve$.
+%Since $\curve$ is a polynomial, $\delta\curve$ is a polynomial function of $x$ and $y$:
+%\beq
+%\delta \curve= p(x,y)
+%\eeq
+%Notice that $p(x,y)$ is defined modulo $\curve(x,y)$.
+%\medskip
+It induces a variation of the function $y(x)$ at fixed $x$:
+\beq
+\delta_\Omega\,\, y|_x \,dx = - \Omega.
+\eeq
+%where $\Omega$ is some one form:
+%\beq
+%\Omega = {\delta \curve(x,y)\over \curve_y(x,y)}\, dx = {p(x,y)\over \curve_y(x,y)}\, dx = -{p(x,y)\over \curve_x(x,y)}\, dy
+%\eeq
+If we use a local coordinate $z$, we may prefer to work at fixed $z$ instead of fixed $x$, we have a Poisson structure:
+\beq\label{deltaydxxdy}
+\delta_\Omega\, y|_z\,dx - \delta_\Omega\, x|_z\, dy = - \Omega
+\eeq
+
+The possible $\Omega$'s can be classified as first type (holomorphic), second type (residueless, and vanishing $\acycle$-cycles) and third type (only simple poles and vanishing $\acycle$-cycles), 
+see \cite{Marco2} for this classification.
+
+%Notice  that ${dx \over \curve_y(x,y(x))}$ has no poles at branchpoints of $x$, and ${dy \over \curve_x(x(y),y)}$ has no poles at branchpoints of $y$.
+%Thus $\Omega$ may have poles at double points,
+%and it may have (possibly higher degree poles) at poles of $x$ and at poles of $y$.
+%It may also have no pole at all, and be a holomorphic form.
+
+
+\subsection{Rauch variational formula}
+
+Equation \ref{deltaydxxdy} implies that the variation of position of a branch point $a_i$ is given by:
+\beq
+\delta_\Omega\, x(a_i) =  {\Omega(a_i)\over dy(a_i)}.
+\eeq
+We assume here that ${\Omega\over dy}$ has no pole at branchpoints.
+Then, Rauch variational formula \cite{Rauch, Fay} implies that the change of the Bergmann kernel is
+\bea
+\left. \delta_\Omega \underline{B}(p,q)\right|_{x(p),x(q)}
+&=&  \sum_i {\Omega(a_i)\over dy(a_i)} \Res_{r\to a_i} {\underline{B}(r,p)\underline{B}(r,q)\over dx(r)} \cr
+&=&  \sum_i \Res_{r\to a_i} {\Omega(r)\underline{B}(r,p)\underline{B}(r,q)\over dx(r)dy(r)} .
+\eea
+%where the second equality holds because the integrant has simple poles at the branchpoints $a_i$.
+In particular after integrating over a $\underline\bcycle$-cycle we have:
+\bea
+\left. \delta_\Omega du(p)\right|_{x(p)}
+&=&  \sum_i \Res_{r\to a_i} {\Omega(r)\underline{B}(r,p)du(r)\over dx(r)dy(r)}, \cr
+\eea
+and integrating again over a $\underline\bcycle$-cycle:
+\bea
+ \delta_\Omega \tau
+&=&  2i\pi \sum_i \Res_{r\to a_i} {\Omega(r)du(r) du^t(r)\over dx(r)dy(r)} .\cr
+\eea
+
+Let us  compute the variations of the $\kappa$-modified Bergmann kernel:
+\bea
+\left. \delta_\Omega B(p,q)\right|_{x(p),x(q)}
+&=& \left. \delta_\Omega \underline{B}(p,q)\right|_{x(p),x(q)} + 2i\pi \left. \delta_\Omega du^t(p)\right|_{x(p)} \, \kappa du(q) \cr
+&& + 2i\pi du^t(p) \,\kappa\, \left. \delta_\Omega du(q)\right|_{x(q)}  \cr
+&=&  \Res_{r\to \bfa} {\Omega(r)\underline{B}(r,p)\underline{B}(r,q)\over dx(r)dy(r)} \cr
+&& + 2i\pi  \Res_{r\to \bfa} {\Omega(r)\underline{B}(r,p)du^t(r)\kappa du(q)\over dx(r)dy(r)} \cr
+&& + 2i\pi \Res_{r\to \bfa} {\Omega(r)\underline{B}(r,q)du^t(p) \,\kappa\, du(r)\over dx(r)dy(r)}  \cr
+&=&  \Res_{r\to \bfa} {\Omega(r)\underline{B}(r,p)\underline{B}(r,q)\over dx(r)dy(r)}
+\cr
+&& +  \Res_{r\to \bfa} {\Omega(r)\underline{B}(r,p) (B(r,q) - \underline{B}(r,q))\over dx(r)dy(r)} \cr
+&& +  \Res_{r\to \bfa} {\Omega(r) (B(r,p) - \underline{B}(r,p))\underline{B}(r,q)\over dx(r)dy(r)}  \cr
+&=&  \Res_{r\to \bfa} {\Omega(r) B(r,p)B(r,q)\over dx(r)dy(r)} \cr
+&& +  4\pi^2 \, \Res_{r\to \bfa} {\Omega(r) du^t(p) \kappa du(r) du^t(r) \kappa du(q)\over dx(r)dy(r)}  \cr
+&=&  \Res_{r\to \bfa} {\Omega(r) B(r,p)B(r,q)\over dx(r)dy(r)}  -  2i\pi \, du^t(p) \kappa \, \delta_\Omega\tau\, \kappa du(q) 
+\eea
+i.e.
+\bea\label{eqDOmBResB}
+ \left( \delta_\Omega + \tr (\kappa \,\delta_\Omega\tau \,\kappa {\partial \over \partial \kappa})\right)_{x(p),x(q)}\,\,  B(p,q)
+&=&  \Res_{r\to \bfa} {\Omega(r) B(r,p)B(r,q)\over dx(r)dy(r)}  \cr
+&=& - 2 \Res_{r\to \bfa} {\Omega(r) dE_r(p)B(r,q)\over \om(r)}   .\cr
+\eea
+We thus define the {\bf covariant variation}:
+\beq
+\encadremath{
+D_\Omega = \delta_\Omega + \tr (\kappa \,\delta_\Omega\tau \,\kappa {\partial \over \partial \kappa})
+.}
+\eeq
+It is more convenient to rewrite \eq{eqDOmBResB} as follows:
+\bea
+D_\Omega B(p,q) &=& - 2 \Res_{r\to \bfa} {\Omega(r) dE_r(p)B(r,q)\over \om(r)}   \cr
+&=& - 2 \Res_{r\to \bfa} \Res_{s\to r} {\Omega(r) dE_r(p) B(s,q)\over (y(r)- y(\overline{r})) (x(s) - x(r))}   \cr
+&=& 2 \Res_{r\to \bfa} \Res_{s\to \overline{r}} {\Omega(r) dE_r(p) B(s,q)\over (y(r)- y(\overline{r})) (x(s) - x(r))}   \cr
+&=& 2 \Res_{r\to \bfa} {\Omega(r) dE_r(p)B(\overline{r},q)\over \om(r)}   \cr
+&=& \Res_{r\to \bfa} {dE_r(p)\over \om(r)} \left[ \Omega(r) B(\overline{r},q) + \Omega(\overline{r}) B(r,q) \right]  \, . 
+\eea
+because now we recognize the propagator and vertex of def.\ref{defdiagrule}.
+Similarly, by integrating once with respect to $q$, near a branch point $a_j$ we get:
+\bea
+\left. D_\Omega\, dE_{q}(p)\right|_{x(p),x(q)}  &=&  - 2 \Res_{r\to \bfa} { dE_{r}(p) \over \om(r)}\, \Omega(r) dE_{q}(r) \cr
+&=& \Res_{r\to \bfa} { dE_{r}(p) \over \om(r)}\, \left[ \Omega(r) dE_{q}(\overline{r}) + \Omega(\overline{r}) dE_{q}(r) \right] \cr
+\eea
+
+Those two relations can be  depicted:
+$$ \mbox{\epsfxsize=12cm{\epsfbox{DBpq.eps}}} $$
+and
+$$ \mbox{\epsfxsize=12cm{\epsfbox{DdEpq.eps}}} .$$
+
+From this last variation, one can compute the covariant variations of the correlation functions and free energies through
+the following lemma:
+
+\bl \label{lemDOmega} For any symmetric bilinear form $f(q,p)=f(p,q)$:
+%, such that $f(q,)=f(\qbar)$:
+\bea
+D_\Omega \left( \Res_{q\to {\bf a}} {dE_{q}(p)\over \om(q)}\, f(q,\qbar) \right)_{x(p)}
+&=& 2    \sum_{i,j} \Res_{r\to a_i}\Res_{q\to a_j} { dE_{r}(p) \over \om(r)}\, \Omega(r)\, {dE_{q}(r) \over \om(q)}\, f(q,\qbar) \cr
+ && + \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)} \,\, D_\Omega \left(f(q,\qbar)\right)_{x(q)} . \cr
+\eea
+\el
+
+$$ \mbox{\epsfxsize=12cm{\epsfbox{lemmaDdE.eps}}} $$
+
+
+
+
+Graphically, this means that taking the variation of a diagram just consists in adding a leg $\Omega$ in all possible edges of the graph.
+In particular if $\Omega$ can be written as:
+\beq
+\Omega(p) = \int_{\partial\Omega} B(p,q) \Lambda(q)
+\eeq
+where the path ${\partial\Omega}$ does not intersect small circles around branch-points\footnote{This excludes the case where $\Omega$ corresponds to the variation of an hard edge, cf \cite{eynhardedges,  chekhovhe, Marco2}.}, then we have:
+
+\bt \label{variat} Variations of correlation functions and free energies:
+For $g+k>1$ we have
+\beq\encadremath{
+\left. D_\Omega W_k^{(g)}(p_1,\dots,p_k)\right|_{x(p_i)} =  \int_{\partial\Omega} W_{k+1}^{(g)}(p_1,\dots,p_k,q) \Lambda(q)
+}\eeq
+and,
+for $g \geq 1$,
+\beq\label{deltaFgintW1L}\encadremath{
+D_\Omega F^{(g)} = - \int_{\partial\Omega} W_1^{(g)}(p) \L(p).
+}\eeq
+
+\et
+
+This theorem is proved in appendix \ref{sectproofvariat}. It follows directely from lemma \ref{lemgraphaddleg} and lemma \ref{lemDOmega}.
+
+
+
+\subsection{Loop insertion operator}
+
+In particular for any point $q$ lying away from the branch-points, if we choose
+\beq
+\Omega(p) = B(p,q)
+\eeq
+we call $D_{B(.,q)}$ the {\bf loop insertion operator}, by analogy with matrix models \cite{ACKM,courseynard}.
+
+
+It acts on the correlation functions and free energies as follows:
+\bt
+\beq
+D_B \, W_{k}^{(g)}(p_1,\dots,p_k) = W_{k+1}^{(g)}(p_1,\dots,p_k,q)
+\eeq
+\beq
+D_B \, F^{(g)} = - W_{1}^{(g)}(q)
+\eeq
+and
+\beq
+D_B \, F^{(0)} = y(q)dx(q) +{1 \over 4 i \pi} \left( \kappa \oint_{\bcycle}ydx \right)^t \oint_{\bcycle} \oint_{\bcycle} W_{3,0}
+\kappa \oint_{\bcycle}ydx
+.
+\eeq
+\et
+Thus, the loop insertion operator, adds one leg to correlation functions.
+
+
+\subsection{Variations with respect to the moduli}
+
+Let us consider canonical variations of the curve corresponding to each moduli of the curve defined in section \ref{sectmoduliofcurve}.
+We use \eq{ydxmodulitka}
+\beq\label{ydxmodulitkabis}
+ydx = \sum_{\alpha,k} t_{\alpha,k} B_{\alpha,k} + \sum_\alpha t_\alpha dS_{\alpha,o} + 2i\pi \sum_i \epsilon_i du_i(p)
+\eeq
+to identify the $\Omega$'s corresponding to varying only one modulus.
+
+
+\subsubsection*{Variation of filling fractions}
+
+Consider the variation of the curve
+\beq
+\Omega(p) = -2i\pi du_i(p)  = -\oint_{\bcycle_i} B(p,q).
+\eeq
+i.e. $\partial\Omega=\bcycle_i$ and $\L=-1$.
+It is such that:
+\beq
+\delta_\Omega \epsilon_j =  \delta_{ij}
+\virg
+\delta_\Omega t_\alpha= 0
+\virg
+\delta_\Omega V_\alpha= 0.
+\eeq
+Therefore it is equivalent to varying only the filling fraction $\epsilon_i={1\over 2i\pi}\oint_{\acycle_i} y dx$:
+\beq
+D_{-2i\pi du_i} = {\partial \over \partial \epsilon_i}
+\eeq
+
+
+Theorem \ref{variat} gives
+\beq
+{\partial \over \partial \epsilon_i} \, W_{k}^{(g)}(p_1,\dots,p_k) = - \oint_{\bcycle_i} W_{k+1}^{(g)}(p_1,\dots,p_k,q),
+\eeq
+and
+\beq
+{\partial \over \partial \epsilon_i} \, F^{(g)} =   \oint_{\bcycle_i} W_{1}^{(g)}(q),
+\eeq
+and
+\beq
+ {\partial \over \partial \epsilon_i} \, F^{(0)}= - \oint_{\bcycle_j} ydx + {1 \over 4 i \pi} \left( \kappa  \oint_{\bcycle} ydx\right)^t \; \delta_{- 2 i \pi du_i} (\tau) \;  \kappa  \oint_{\bcycle} ydx.
+\eeq
+
+
+\subsubsection*{Variation of temperatures}
+
+Let $\alpha$ and $\alpha'$ be two distinct poles of $y dx$.
+Consider the variation of the curve
+\beq
+\Omega(p) = - dS_{\alpha,\alpha'}(p)  = \int_{\alpha}^{\alpha'} B(p,q)
+\virg{\rm i.e.}\,\,\,
+\partial\Omega = [\alpha,\alpha'] \,\,\, , \,\, \L=1
+\eeq
+It is such that:
+\beq
+\delta_\Omega \epsilon_j =0
+\virg
+\delta_\Omega t_\beta= \delta_{\alpha, \beta} - \delta_{\alpha', \beta}
+\virg
+\delta_\Omega V_\beta= 0.
+\eeq
+Therefore it is equivalent to varying only the temperatures $t_\alpha$ and $t_{\alpha'}$:
+\beq
+D_{-dS_{\alpha,\alpha'}} = {\partial \over \partial t_\alpha} - {\partial \over \partial t_\alpha'}
+\eeq
+Notice that it is impossible to vary only one temperature $t_\alpha$ since we have $\sum_\beta t_\beta=0$.
+
+Theorem \ref{variat} gives
+\beq
+\left( {\partial \over \partial t_\alpha} - {\partial \over \partial t_\alpha'} \right) \, W_{k}^{(g)}(p_1,\dots,p_k) = \int_\alpha^{\alpha'} W_{k+1}^{(g)}(p_1,\dots,p_k,q),
+\eeq
+\beq
+\left({\partial \over \partial t_\alpha} - {\partial \over \partial t_\alpha'}\right) \, F^{(g)} =  \int_{\alpha'}^{\alpha} W_{1}^{(g)}(q)
+\eeq
+and
+\beq
+\left({\partial \over \partial t_\alpha} - {\partial \over \partial t_\alpha'}\right)  F^{(o)} =  \mu_\alpha-\mu_{\alpha'} + {1 \over 4 i \pi} \left( \kappa  \oint_{\bcycle} ydx\right)^t \; \delta_{-dS_{\alpha,\alpha'}} (\tau) \;  \kappa  \oint_{\bcycle} ydx.
+\eeq
+
+
+
+\subsubsection*{Variation of the moduli of the poles}
+
+Let $\alpha$ be a pole of $y dx$.
+Consider the variation of the curve
+\beq
+\Omega(p) = - B_{\alpha,k}  =  \Res_\alpha B(p,q) z_\alpha^k(q),
+\eeq
+i.e. $\partial\Omega$ is a small circle around $\alpha$ and $\L={1\over 2i\pi}\, z_\alpha^k$.
+It is such that:
+\beq
+\delta_\Omega \epsilon_j = 0
+\virg
+\delta_\Omega t_\beta= 0
+\virg
+\delta_\Omega t_{\beta,k'}= \delta_{\alpha,\beta} \delta_{k,k'}
+\eeq
+Therefore it is equivalent to varying only the coefficient $t_{\alpha,k}$:
+\beq
+D_{-B_{\alpha,k}} = {\partial \over \partial t_{\alpha,k}}
+\eeq
+
+Theorem \ref{variat} gives
+\beq
+{\partial \over \partial t_{\alpha,k}} \, W_{k}^{(g)}(p_1,\dots,p_k) =  \Res_\alpha z_\alpha^k(q) W_{k+1}^{(g)}(p_1,\dots,p_k,q),
+\eeq
+\beq
+{\partial \over \partial t_{\alpha,k}} \, F^{(g)} = - \Res_\alpha z_\alpha^k(q) W_{1}^{(g)}(q)
+\eeq
+and
+\beq
+{\partial \over \partial t_{\alpha,k}} F^{(o)} =   \Res_{\alpha} ydx z_\alpha^k + {1 \over 4 i \pi} \left( \kappa  \oint_{\bcycle} ydx\right)^t \; \delta_{B_{\alpha,k}} (\tau) \;  \kappa  \oint_{\bcycle} ydx.
+\eeq
+
+
+
+
+
+\subsection{Homogeneity}
+
+\bt \label{homogeneity} For $g>1$, we have the homogeneity property:
+\beq
+(2-2g)F^{(g)}=
+\sum_{\alpha,k} t_{\alpha,k} {\partial\over \partial t_{\alpha,k}} F^{(g)}
++ \sum_{\alpha} t_{\alpha} {\partial\over t_{\alpha}} F^{(g)}
++ \sum_{i} \epsilon_i {\partial\over \partial \epsilon_i} F^{(g)}
+\eeq
+i.e. $F^{(g)}$ is homogeneous of degree $2-2g$.
+\et
+The proof is given in appendix \ref{sectproofvariat}.
+
+
+
+
+
+
+
+\subsection{Variations of  \texorpdfstring{$F^{(0)}$}{F0} with respect to the moduli.}
+
+In this section we compute the first and second deriatives of $F^{(0)}$ with respect to the moduli of the
+curve. This paragraph is only for bookkeeping since those expressions have been known for some time \cite{Kri, Marco2,MarcoF}. 
+Here we set $\kappa=0$.
+
+\subsubsection*{First derivatives of $F^{(0)}$.}
+
+\beq
+{\partial {F}^{(0)}\over \partial t_{\alpha,k}} = \Res_\alpha z_\alpha^k \, y dx
+\eeq
+
+\beq
+{\partial {F}^{(0)}\over \partial t_{\alpha,\beta}}=\left({\partial\over \partial t_{\alpha}}-{\partial\over \partial t_{\beta}}\right)  F^{(0)} = \mu_\alpha-\mu_\beta
+\eeq
+
+\beq
+{\partial F^{(0)}\over \partial \epsilon_i} = - \oint_{\bcycle_i} ydx
+\eeq
+
+
+\bigskip
+
+\subsubsection*{Second derivatives of $F^{(0)}$.}
+
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,k} \partial t_{\beta,l} } = (\delta_{\alpha,\beta}-1)\, \Res_{p\to \alpha}\Res_{q\to \beta} z_\alpha(p)^{k} B(p,q) z_\beta(q)^{l}
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,k} \partial t_{\gamma,\beta}} = \Res_\alpha z_\alpha^k dS_{\gamma,\beta}
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,k} \partial \epsilon_i } = 2i\pi \Res_\alpha z_\alpha^{k} du_i = - \oint_{\bcycle_i} B_{\alpha,k}
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial \epsilon_i \partial t_{\alpha,\beta}} = 2i\pi (u_i(\beta)-u_i(\alpha))
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial \epsilon_i \partial \epsilon_j} = 0 \;\; (-2i\pi \tau_{ij} \; for \; \underline{F}^{(0)} )
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,\beta}^2} = \ln{(d\zeta_\alpha(\alpha)d\zeta_\beta(\beta)\primef(\alpha,\beta)^2)}
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,\beta} \partial t_{\alpha,\gamma}} = \ln{\left(d\zeta_\alpha(\alpha)\primef(\alpha,\beta)\primef(\alpha,\gamma)\over \primef(\beta,\gamma)\right)}
+\eeq
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,\beta} \partial t_{\delta,\gamma}} = \ln{\left(\primef(\delta,\beta)\primef(\alpha,\gamma)\over \primef(\alpha,\delta)\primef(\beta,\gamma)\right)}
+\eeq
+where $\zeta_\alpha = {1 \over z_\alpha}$ is a local coordinate around the pole $\alpha$.
+
+\br
+The definition of $F^{(0)}$ given in \eq{defF0} is nothing but the homogeneity property since it is written in terms
+of the first derivatives. One can also write a formula focusing more on the second order derivatives of $F^{(0)}$:
+\bea
+F^{(0)}&=&  -{1\over 2}\sum_{\alpha,\beta} \Res_{p\to \alpha}\Res_{q\to \beta} V_\alpha(p) B(p,q) V_\beta(q)
++ \sum_{\alpha,\beta} t_\beta \Res_\alpha V_\alpha dS_{\beta,o}  \cr
+&& \; - {1\over 2}\sum_{\alpha, \beta} t_\alpha t_\beta \ln{(\gamma_{\alpha,\beta})}
+- {1\over 2}\epsilon^t \oint_{\bcycle} ydx  \cr
+\eea
+where 
+\beq
+\ln{\gamma_{\alpha,\alpha}} = -\int_\alpha^o (dS_{\alpha,o'} + {dz_\alpha\over z_\alpha}) +  \ln{(z_\alpha(o))}
+\eeq
+and
+\beq
+\ln{\gamma_{\alpha,\beta}} = \ln{\left(\primef(\alpha,\beta)\primef(o,o')\over \primef(\alpha,o')\primef(\beta,o)\right)}.
+\eeq
+
+One can notice that, in these terms,
+\beq
+{\partial^2 F^{(0)}\over \partial t_{\alpha,\beta}^2} = \ln(\gamma_{\alpha,\alpha}\gamma_{\beta,\beta}).
+\eeq
+
+\er
+
+
+\section{Variations with respect to  \texorpdfstring{$\kappa$}{k} and modular transformations}
+
+\subsection{Variations with respect to  \texorpdfstring{$\kappa$}{k}}\label{sectvarikappa}
+
+We have introduced the matrix $\kappa$ in order to easily compute modular transformations of our functions. Somehow variations of $\kappa$ play the role of infinitesimal modular transformations.
+Therefore it is important to compute ${\partial/\partial \kappa}$, and we will use this result in section \ref{sectmodular}.
+
+First, notice that $W^{(g)}_k(p_1,\dots,p_k)$ is a polynomial in $\kappa$ of degree $3g+2k-3$, and $F^{(g)}$ is a polynomial in $\kappa$ of degree $3g-3$ for $g>1$ (number of propagators in a graph of ${\cal G}_k^{(g)}$).
+
+\bt\label{thdWdkappa}
+\beq\encadremath{
+\begin{array}{lcl}
+2i\pi {\partial \over \partial \kappa_{ij}}\,W^{(g)}_{k}({\bf p_K})
+&=&  {1\over 2}\,\oint_{r\in\bcycle_j}\oint_{s\in\bcycle_i} W^{(g-1)}_{k+2}({\bf p_K},r,s) \cr
+&& + {1\over 2}\,\sum_h \sum_{L\subset K} \oint_{r\in\bcycle_i} W^{(h)}_{|L|+1}({\bf p_L},r) \oint_{s\in\bcycle_j} W^{(g-h)}_{k-|L|+1}({\bf p_{K/L}},s) \cr
+\end{array}
+}\eeq
+and in particular for $g \geq 2$:
+\beq\encadremath{
+- 2i\pi {\partial \over \partial \kappa_{ij}}\,F^{(g)}
+=  {1\over 2}\,\oint_{r\in\bcycle_j}\oint_{s\in\bcycle_i} W^{(g-1)}_{2}(r,s) + {1\over 2}\,\sum_{h=1}^{g-1} \oint_{r\in\bcycle_i} W^{(h)}_{1}(r) \oint_{s\in\bcycle_j} W^{(g-h)}_{1}(s)
+}\eeq
+
+and
+\beq
+ {\partial \over \partial \kappa_{ij}}\,F^{(1)} =  {1 \over \kappa_{ji}}.
+\eeq
+
+
+\et
+This theorem is proved in Appendix \ref{sectproofvariat}
+
+
+Notice that these equations are to be compared with the Kodaira--Spencer theory \cite{ABK,ADKMV,BCOV, EMO}.
+
+
+
+
+
+
+\subsection{Modular transformations} \label{sectmodular}
+
+Consider a modular change of cycles:
+\beq
+\pmatrix{\underline\acycle \cr \underline\bcycle} = \pmatrix{\delta_{\acycle \acycle'} & \delta_{\acycle \bcycle'}\cr \delta_{\bcycle \acycle'} & \delta_{\bcycle \bcycle'}} \pmatrix{\underline\acycle' \cr \underline\bcycle'}
+\virg
+\pmatrix{\underline\acycle' \cr \underline\bcycle'} = \pmatrix{\delta_{\acycle' \acycle} & \delta_{\acycle' \bcycle}\cr \delta_{\bcycle' \acycle} & \delta_{\bcycle' \bcycle}} \pmatrix{\underline\acycle \cr \underline\bcycle}
+\eeq
+where $\delta_{\acycle' \acycle} = \delta_{\bcycle \bcycle'}^t$, $\delta_{\acycle' \bcycle} = - \delta_{\acycle \bcycle'}^t$,
+$\delta_{\bcycle' \bcycle} = \delta_{\acycle \acycle'}^t$, $\delta_{\bcycle' \acycle} = - \delta_{\bcycle \acycle'}^t$ and the matrices $\delta_{\acycle \acycle'},\delta_{\acycle \bcycle'},\delta_{\bcycle \acycle'},\delta_{\bcycle \bcycle'}$ have integer coefficients
+and satisfy $\delta_{\acycle \acycle'} \delta_{\bcycle \bcycle'}^t - \delta_{\bcycle \acycle'} \delta_{\acycle \bcycle'}^t = Id$.
+
+Under this transformation of the cycle homology basis, the Abel map and the matrix of period change like:
+\beq
+du' = {\cal{J}} du \virg du = {\cal{J}}^{-1} du'
+\eeq
+with ${\cal{J}} = 
+(\delta_{\acycle \acycle'}^t+\tau' \delta_{\acycle \bcycle'}^t) = (\delta_{\bcycle \bcycle'}-\tau \delta_{\acycle \bcycle'})^{-1}$
+and
+\beq
+\tau' = (\delta_{\bcycle \bcycle'}-\tau \delta_{\acycle \bcycle'})^{-1} (-\delta_{\bcycle \acycle'}+\tau \delta_{\acycle \acycle'})
+\virg
+\tau = (\delta_{\acycle \acycle'}^t+\tau' \delta_{\acycle \bcycle'}^t)^{-1}\,(\delta_{\bcycle \acycle'}^t+\tau' \delta_{\bcycle \bcycle'}^t).
+\eeq
+
+Let us define the following symmetric matrix:
+\beq
+\widehat{\kappa}=\widehat{\kappa}^t=(\delta_{\bcycle \bcycle'} \delta_{\acycle \bcycle'}^{-1}-\tau )^{-1}
+= 
+\delta_{\acycle \bcycle'} {\cal{J}}
+\eeq
+it is such that the Bergmann kernel changes like:
+\beq\label{modularchB}
+\underline{B}' = \underline{B} + 2i\pi\, du^t \widehat{\kappa} du .
+\eeq
+The $\kappa$-modified Bergmann kernel changes like:
+\bea
+B'(p,q) &=& \underline{B}(p,q) + 2 i \pi \left[ du'^t(p) \kappa du'(q) + du^t(p) \widehat{\kappa} du(q) \right] \cr
+&=& \underline{B}(p,q) + 2 i \pi du^t(p) \left( \widehat{\kappa} + {\cal{J}}^t
+\kappa {\cal{J}} \right) du(q).
+\eea
+
+In other words, the effect of a modular change of cycles is equivalent to a change $\kappa\to \widehat{\kappa} + {\cal{J}}^t \kappa {\cal{J}} $ in the definition of the kernel $B(p,q)$.
+
+Thus, the modular variations of the free energies satisfy the following theorem:
+\bt
+\label{thmodular}
+For $g\geq 2$ the modular transformation of the free energies $F^{(g)}$ consists in changing $\kappa$ to
+$\widehat{\kappa} + {\cal{J}}^t \kappa {\cal{J}}$ in the definitions of the modified Bergmann kernel and Abelian differential.
+
+The first correction $F^{(1)}$ changes like:
+\beq
+F^{(1)'} = F^{(1)} - {1\over 2} \ln{(\delta_{\bcycle \bcycle'} -\tau \delta_{\acycle \bcycle'})}.
+\eeq
+
+An equivalent way of saying the same thing, is that:
+if we change the basis of cycles and change the matrix $\kappa\to {\cal J}^{t\,-1}(\kappa-\widehat\kappa){\cal J}^{-1}$, then the $F^{(g)}$'s are unchanged for $g>1$.
+\et
+\proof{
+The result for $g\geq 2$ comes directly from the variation of the Bergmann kernel.
+
+$F^{(1)}$ depends on the cycles only through the Bergmann tau function.
+Since,
+\bea
+{\d \ln{(\tau_{B'x})}\over \d x(a_i)} - {\d \ln{(\tau_{Bx})}\over \d x(a_i)}
+&=&  \Res_{p\to a_i} {\underline{B}'(p,\pbar)-\underline{B}(p,\pbar)\over dx(p)} \cr
+&=& 2i\pi\, \Res_{p\to a_i} {du^t(p) \widehat\kappa du(\pbar)\over dx(p)} \cr
+&=& - 2i\pi\, \Res_{p\to a_i} {du^t(p) \widehat\kappa du(p)\over dx(p)} \cr
+&=& - \Tr \kappa {\d \tau \over \d x(a_i)} \cr
+&=& - \Tr (\delta_{\bcycle \bcycle'}-\tau \delta_{\acycle \bcycle'})^{-1} {\d \tau \delta_{\acycle \bcycle'} \over \d x(a_i)} \cr
+&=& {\d  \ln{\det (\delta_{\bcycle \bcycle'}-\tau \delta_{\acycle \bcycle'})}  \over \d x(a_i)} \cr
+\eea
+and this characterizes the Bergmann tau function totally (up to a general multiplicative factor),
+one obtains the second result of the theorem.
+}
+
+
+\br
+The transformation of leading order $F^{(0)}$ is more complicated and its computation is more involved
+as the final result depends explicitely on the position of the poles $\alpha$ in the fundamental domain.
+Let us just mention that it depends on all the parameters of the modular transformation explicitely.
+\er
+
+\bt
+If one chooses $\kappa={i\over 2\, \Im\tau}$, then $F^{(g)}(\kappa)$ is modular invariant.
+\et
+
+\proof{
+
+
+
+%First of all, one must notice that this $\kappa$ depends on the cycles. Hence it changes under the modular transformation.
+
+%Write the Bergmann kernel as follows:
+%\bea\label{defk'}
+%B(p,q) &=& \Bergmann(p,q) + 2i \pi du^t(p) \kappa du(q) \cr
+%&=& \Bergmann'(p,q) + 2i \pi du'^t(p) \kappa' du'(q). \cr
+%\eea
+%We show that $\kappa = {1 \over \overline{\tau}-\tau}$ implies that $\kappa' = {1 \over \overline{\tau'}-\tau'}$.
+
+%From the definition of $\kappa'$ (\ref{defk'}), one gets
+%\beq
+%{\cal{J}}^t \kappa' {\cal{J}} = \kappa - \widehat{\kappa} = \kappa ( \widehat{\kappa}^{-1} - \kappa^{-1} ) \widehat{\kappa}.
+%\eeq
+%Since $\widehat{\kappa}= (\delta_{\bcycle \bcycle'} \delta_{\acycle \bcycle'}^{-1} - \tau)^{-1}$ and the matrices
+%of modular transformation have integer coefficients, it comes that
+%\beq
+%\widehat{\kappa}^{-1} - \kappa^{-1} = \delta_{\bcycle \bcycle'} \delta_{\acycle \bcycle'}^{-1} - \tau +\tau -\overline{\tau}
+%= \delta_{\bcycle \bcycle'} \delta_{\acycle \bcycle'}^{-1} - \overline{\tau} = \overline{\widehat{\kappa}}^{-1}
+%\eeq
+%and then
+%\beq
+%{\cal{J}}^t \kappa' {\cal{J}}= \kappa \overline{\widehat{\kappa}}^{-1} \widehat{\kappa}.
+%\eeq 
+%Inverting this equation and multiplying by ${\cal{J}}$ on the left and ${\cal{J}}^t$ on the right, one obtains:
+%\bea
+%\kappa'^{-1} &=& {\cal{J}} \; {\widehat{\kappa}}^{-1} \; \overline{\widehat{\kappa}} \; \kappa^{-1} \; {\cal{J}}^t \cr
+%&=& \delta_{\acycle \bcycle'}^{-1} \; \overline{\widehat{\kappa}} \; \kappa^{-1} \; {\cal{J}}^t \cr
+%&=& \overline{\delta_{\acycle \bcycle'}^{-1} \widehat{\kappa}} \; \kappa^{-1} \; {\cal{J}}^t \cr
+%&=& \overline{\cal{J}} \; \kappa^{-1} \; {\cal{J}}^t .\cr
+%\eea
+%Since $\kappa'$ is symmetric, one can transpose this equation and get:
+%\beq
+%\kappa'^{-1} = {\cal{J}} \; \kappa^{-1} \; {\cal{J}}^{\dagger} 
+%= {\cal{J}} \; ( \overline{\widehat{\kappa}}^{-1} - \widehat{\kappa}^{-1} ) \; {\cal{J}}^{\dagger} 
+%\eeq
+%where we have used that $ \kappa^{-1} = \overline{\tau} - \tau = \overline{\widehat{\kappa}}^{-1} - \widehat{\kappa}^{-1} $.
+
+%Let us now introduce $\check{\kappa} = - \left({\cal{J}}^t \right)^{-1} \widehat{\kappa} {\cal{J}}^{-1} = - \left( {\cal{J}}^t \right)^{-1} \delta_{\acycle \bcycle'} = \check{\kappa}^t $ which
+%satisfies 
+%\beq
+%\Bergmann(p,q) = \Bergmann'(p,q) + 2i \pi du'^t(p) \check{\kappa} du'(q).
+%\eeq
+%In this language, one gets
+%\bea
+%\kappa'^{-1} &=& - \check{\kappa}^{-1} \left({\cal{J}}^t \right)^{-1} {\cal{J}}^{\dagger} + {\cal{J}} \overline{\cal{J}}^{-1} {\overline{\check{\kappa}}}^{-1} \cr
+%&=& \delta_{\acycle \bcycle'}^{-1} \; {\cal{J}}^{\dagger} - {\cal{J}} \; \left(\delta_{\acycle \bcycle'}^t \right)^{-1} \cr
+%&=&  \left(\check{\kappa}^{-1}\right)^t - \left(\overline{\check{\kappa}}^{-1}\right)^t \cr
+%&=& \check{\kappa}^{-1} - \overline{\check{\kappa}}^{-1} \cr
+%&=& \overline{\tau'} - \tau' .\cr
+%\eea
+%Therefore, we have proved that the modified Bergmann kernel is modular invariant for this value of $\kappa$.
+
+It is well known that for that value of $\kappa$, the modified Bergmann kernel is the Schiffer kernel and is modular invariant.
+Indeed, it is easy to check that if $\kappa={i\over 2\,\Im\tau}$ one has
+$\hat\kappa+{\cal J}^t \kappa {\cal J} = {i\over 2\,\Im\tau'}$.
+
+
+Since the only modular dependence of $F^{(g)}$ for $g\geq 1$ is in the Bergmann kernel, this proves the modular invariance of the $F^{(g)}$'s.
+
+}
+
+
+
+
+\section{Symplectic invariance}
+
+The following theorem is mostly the reason why we call $F^{(g)}$'s invariants of the curve.
+This theorem seems to be rather important and it has beautiful applications as we will see in section \ref{sectkontse}.
+
+\bt
+\label{symplinv}
+The following transformations of $\curve$ leave the $F^{(g)}$'s unchanged:
+
+$\bullet$ \vspace{0.3mm} $x\to {ax+b\over cx+d}$ and $y\to {(cx+d)^2\over ad-bc} y$.
+
+$\bullet$ \vspace{0.3mm} $y\to y +R(x)$ where $R$ is any rational function.
+
+$\bullet$ \vspace{0.3mm} $y\to  y$ and $x\to -x$.
+
+$\bullet$ \vspace{0.3mm} $y\to x$ and $x\to y$.
+
+
+\et
+Notice that these are transformations which conserve the symplectic  form
+\beq|
+dx\wedge dy|
+\eeq
+In particular we have the $PSL_2(\C)$ invariance:
+\beq
+\pmatrix{x\cr y} \longrightarrow \pmatrix{a & b \cr c & d}\,\pmatrix{x\cr y} \qquad\virg (ad-bc)^2=1
+\eeq
+
+That symplectic invariance seems to be a very powerful tool to see if different matrix models have the same topological expansion. For example, in section \ref{sectkontse} we show how symplectic invariance can be used to provide a new and very easy proof of some properties of the Kontsevitch integral.
+
+
+\medskip
+
+\proof{
+Invariance under the first 2 transformations is obvious from the definitions, because the only $x$ and $y$ dependance of the $W_k^{(g)}$'s is in $\om(q)=(y(q)-y(\qbar))dx(q)$ which is clearly unchanged under the first 2 transformations (notice that the transformation $x\to {ax+b\over cx+d}$ conserves the branchpoints). In fact the first 2 transformations leave $W_k^{(g)}$ unchanged.
+
+In the 3rd transformation the only thing which changes is the sign of $\om$, and it is easy to see that $W_k^{(g)}$ is multiplied by $(-1)^{2g-2+k}=(-1)^k$, and $F^{(g)}$ is multiplied by $(-1)^{2g-2}=1$.
+
+The 4th transformation is the difficult one. 
+The proof consists in building some ''mixed correlation functions'', and seeing that their definition by inverting the roles of $x$ and $y$ lead to the same objetcs.
+Since it is long and involves new results in the framework of matrix model, it is written in a separate paper
+\cite{EOSym}.
+
+The case of $F^{(0)}$ and $F^{(1)}$ are done separately in appendix \ref{appsymplinvF0F1}.
+}
+
+
+
+
+\section{Singular limits}
+
+\label{sectsingular}
+
+Consider a 1-parameter family of algebraic curves:
+\beq
+\curve(x,y,t)
+\eeq
+such that the curve at $t=0$ has a singular branchpoint $a$ with a $p/q$ rational singularity,
+i.e. in some local coordinate $z$ near $a$ we have:
+\beq
+\left\{\begin{array}{l}
+t=0\cr
+x(z) \sim x(a) + (z-a)^q \cr
+y(z) \sim y(a) + (z-a)^p \cr
+\end{array}\right.
+\eeq
+
+At $t\neq 0$, the singularity is smoothed, and we have (the local parameter is now $\zeta = z\, t^{-\nu}$):
+\beq
+\left\{\begin{array}{l}
+x(z,t) \sim x(a) + t^{q\nu}\,\,Q(\zeta) + o(t^{q\nu}) \cr
+y(z,t) \sim y(a) + t^{p\nu}\,\,P(\zeta) +o(t^{p\nu}) \cr
+\end{array}\right.
+\eeq
+where $Q$ is  a polynomial of degree $q$ and $P$ is a polynomial of degree $p$, and where $\nu$ is some exponent which depends on the choice of the parameter $t$.
+
+The curve
+\beq
+\curve_{\rm sing}(\xi,\eta)=\left\{\begin{array}{l}
+\xi(\zeta) = Q(\zeta)  \cr
+\eta(\zeta) = P(\zeta)  \cr
+\end{array}\right.
+= {\rm Resultant}(Q-\xi,P-\eta)
+\eeq
+is called the singular spectral curve.
+
+
+
+One observes that $F^{(g)}(\curve)$ is singular in the small $t$ limit, and it behaves like
+\beq
+F^{(g)}(\curve(t)) \sim t^{\gamma_g} F^{(g)}_{\rm sing} + o(t^{\gamma_g}) \qquad ,\,\, {\rm for}\, g\geq 2
+\eeq
+%\beq
+%F^{(0)}(\curve(t)) \sim {1\over 2} {(p+q-1)^2\over (p+q)(p+q+1)}\,t^{2(p+q)\nu} + {\rm reg} \qquad ,\,\, {\rm for}\, g=0
+%\eeq
+\beq
+F^{(1)}(\curve(t)) \sim -{1\over 24}\,(p-1)(q-1)\nu\,\ln{(t)}  + O(1) \qquad ,\,\, {\rm for}\, g=1
+\eeq
+$F^{(g)}_{\rm sing}$ is called the double scaling limit of $F^{(g)}$.
+The exponent $\gamma_g$ and $F^{(g)}_{\rm sing}$ are given by the following theorem:
+
+\bt\label{thsinglimit} Singular limits:
+\beq\encadremath{
+F^{(g)}_{\rm sing}(\curve) = F^{(g)}(\curve_{\rm sing}) \qquad ,\,\, {\rm for}\, g\geq 2
+}\eeq
+and
+\beq
+\gamma_g = (2-2g)(p+q)\nu .
+\eeq
+In other words, our construction of $F^{(g)}$ commutes with the singular limit.
+
+
+\et
+
+\proof{
+It is easy to see that the most singular term in the limit of the Bergmann kernel in that regime, behaves like $t^{0}$, and thus $dE_{z'}(z)$ as well.
+The denominator $((y(z)-y(\overline{z}))dx(z)$ in the recursion behaves like $t^{\nu(p+q)} (P(\zeta)-P(\ovl\zeta))Q'(\zeta)d\zeta$,
+and by recursion on $k$ and $g$, we easily see that:
+\beq
+W_{k}^{(g)}(z_1,\dots,z_k) \sim t^{(2-2g-k)(p+q)\nu}\,\, \om_k^{(g)}(\zeta_1,\dots,\zeta_k)
+\eeq
+if all $z_i$'s are close to $a$, and is subdominant if some $z_i$'s are not in the vicinity of $a$.
+The leading contribution to $W_{k}^{(g)}$ is thus obtained by taking $z'$ and $\overline{z}'$ in the vicinity of $a$ only in eq.\ref{defWkgrecursive},
+i.e. $\om_k^{(g)}(\zeta_1,\dots,\zeta_k)$ obey the same recursion formula as eq.\ref{defWkgrecursive}, with the curve $\curve_{\rm sing}$.
+The same holds for the free energy.
+
+}
+
+
+
+
+\section{Integrability}
+\label{sectintegrability}
+
+Here, we prove that $Z$ is a tau-function, because it satisfies some Hirota equation.
+
+
+
+
+\subsection{Baker-Akhiezer function}
+
+Given two points $\xi$ and $\eta$ in the fundamental domain, we define the following kernel as a formal series in $1/N$:
+\bea
+K_N(\xi,\eta) &=& { \ee{- N\int_\eta^\xi y dx}\over E(\xi,\eta)\,\sqrt{dx(\xi)dx(\eta)}} \cr
+&& \; \exp{\left( - \sum_{g=0}^\infty \sum_{l=1, 2-2g-l<0}^\infty {1\over l!}\,\,N^{2-2g-l}\,\,\int_\eta^\xi\int_\eta^\xi\dots\int_\eta^\xi W^{(g)}_l(p_1,\dots,p_l) \right)}
+\cr
+\eea
+where the integration path lies in the fundamental domain.
+
+This kernel has the following properties:
+\begin{itemize}
+
+\item Notice that $(x(\xi)-x(\eta))K_N(\xi,\eta) \to 1$ when $\eta\to\xi$.
+
+\item We have:
+\beq
+\mathop{{\rm lim}}_{\eta\to\xi}\, \Big( K_N(\xi,\eta) - {1\over (x(\xi)-x(\eta))} \Big) = -Ny(\xi) + {W_1(\xi)\over dx(\xi)} 
+\eeq
+where $W_1=\sum_{g=1}^\infty N^{1-2g} W_1^{(g)}$.
+
+\item we have:
+\beq
+K_N(\xi,\eta) = K_{-N}(\eta,\xi)
+\eeq
+
+%\item If $\xi$ goes around an $\acycle$ cycle, $K_N$ is left unchanged, because $W_l^{(g)}$'s have vanishing $\acycle$ cycle integrals.
+
+\item One may think that $K_N$ is singular at branchpoints because $\ln{K_N}$ has poles, however, using the singular limit theorem \ref{thsinglimit}, we see that the leading behavior of all $W_l^{(g)}$'s is given by the $W_l^{(g)}$'s of the Airy curve $y=\sqrt{x}$ described in section \ref{sectairy}.
+Therefore, near a branchpoint $a$, when $\xi,\eta \to a$, to leading order $K_N$ is the Tracy-Widom kernel \cite{TWlaw}:
+\bea
+K_N(\xi,\eta) \sim {Ai(\hat\xi)Ai'(\hat\eta)-Ai'(\hat\xi)Ai(\hat\eta)\over \hat\xi-\hat\eta} \cr
+\hat\xi=N^{2/3}(x(\xi)-x(a)) \virg \hat\eta=N^{2/3}(x(\eta)-x(a))
+\eea
+In other words, $K_N$ is not singular near branchpoints.
+
+\item The only singularities of $K_N(\xi,\eta)$ are essential singularities at all the poles of $ydx$, with a singular part equal to $\exp{(-N\int^\xi_\eta ydx)}$, as well as a simple pole at $\xi=\eta$.
+
+\end{itemize}
+
+
+
+\bigskip
+
+Then, given a pole $\alpha$ of $ydx$, we define for $\xi$ in the vicinity of $\alpha$:
+\bea
+\psi_{\alpha,N}(\xi) &=& {\ee{-N\, V_\alpha(\xi)} \ee{-N\int_\alpha^\xi (ydx-d V_\alpha+t_\alpha {dz_\alpha\over z_\alpha})} \over E(\xi,\alpha)\,\sqrt{dx(\xi) d\zeta_\alpha(\alpha)}}\,\left(z_\alpha(\xi)\right)^{N t_\alpha}  \cr
+&& \exp{\left( - \sum_{g=0}^\infty \sum_{l=1, 2-2g-l<0}^\infty {1\over l!}\,\,N^{2-2g-l}\,\,\int_\alpha^\xi\int_\alpha^\xi\dots\int_\alpha^\xi W^{(g)}_l(p_1,\dots,p_l)\right)} \cr
+&=&\mathop{{\rm lim}}_{\eta\to\alpha} \left( K(\xi,\eta)\,\sqrt{dx(\eta)\over d\zeta_\alpha(\eta)}\,\ee{-NV_\alpha(\eta)}\,\left(z_\alpha(\eta)\right)^{Nt_\alpha}\,\right)
+\eea
+where $\zeta_\alpha$ is the local parameter near $\alpha$,
+$\zeta_\alpha={1\over z_\alpha}$,
+and
+$
+\phi_{\alpha,N}(\xi) = \psi_{\alpha,-N}(\xi) 
+$.
+
+They have the following properties:
+\begin{itemize}
+
+%\item If $\xi$ goes around an $\acycle$ cycle, $K_N$ is left unchanged, because $W_l^{(g)}$'s have vanishing $\acycle$ cycle integrals.
+
+\item $\psi_{\alpha,N}$ was defined only in the vicinity of $\alpha$, but it can be easily analytically continued to the whole curve, by choosing an arbitrary point $o$ in the vicinity of $\alpha$ and writing:
+\bea
+&& \int_{\alpha}^\xi (ydx-dV_\alpha+t_\alpha {dz_\alpha\over z_\alpha}) + V_\alpha(\xi) - t_\alpha\ln{(z_\alpha(\xi))} \cr
+&=&
+\int_o^\xi ydx + \int_{\alpha}^o (ydx-dV_\alpha+t_\alpha {dz_\alpha\over z_\alpha}) + V_\alpha(o) - t_\alpha\ln{(z_\alpha(o))}
+\eea
+
+\item Using the singular limit theorem \ref{thsinglimit} near branchpoints, we see that the leading behavior of all $W_l^{(g)}$'s is given by the $W_l^{(g)}$'s of the Airy curve $y=\sqrt{x}$ described in section \ref{sectairy}.
+Therefore, near a branchpoint $a$, when $\xi,\eta\to a$ we have:
+\bea
+\psi_{\alpha,N}(\xi) \sim  C\, Ai(\hat\xi) \virg \hat\xi=N^{2/3}(x(\xi)-x(a)) 
+\eea
+where $C$ is some normalization constant ($C={\psi_{\alpha,N}(a)/ Ai(0)}$).
+In other words, $\psi_{\alpha,N}$ is not singular near branchpoints.
+
+\item The only singularities of $\psi_{\alpha,N}$ are essential singularities at all the poles of $ydx$, with a singular part equal to $\exp{(-N\int^\xi ydx)}$.
+
+
+\end{itemize}
+
+This is why we call those formal functions Baker-Akhiezer functions (cf \cite{BBT}).
+
+
+\br
+In fact, those functions are exactly Baker-Akhiezer functions only when the curve has genus $\genus=0$.
+In the general case, the Baker-Akhiezer functions must also have the property that they take the same value after going around a non-trivial cycle.
+It is not difficult to multiply $\psi_{\alpha,N}$ by the appropriate $\theta$ function in order to fulfill that property. However, if we do that, we destroy the $1/N^2$ expansion.
+
+This is why the $\psi_{\alpha,N}$ defined above can be called a "formal Baker-Akhiezer function".
+This definition is sufficient to find a formal Hirota equation, valid only order by order in $1/N^2$.
+
+\er
+
+
+
+\subsection{Sato relation}
+
+Given two points $\xi$ and $\eta$ on $\overline{\Sigma}$, and a complex number $r$, we define the curve:
+\beq
+\curve + r[\xi,-\eta] = \left\{ \left(x(p),y(p)+r{dS_{\xi,\eta}(p)\over dx(p)}\right)\quad , \,\, p\in \Sigma  \right\}
+\eeq
+The differential $ydx + rdS_{\xi,\eta}$ has  the same $\acycle$-contour integrals as $ydx$, the same poles with the same singular part, plus two additional simple poles, one located at $p=\xi$ with residue $r$,
+and one at $p=\eta$ with residue $-r$.
+
+We have Sato's relation:
+\bt\label{thSato}
+\beq
+K_N(\xi,\eta) = {Z_N(\curve+{1\over N}[\xi,-\eta])\over Z_N(\curve)}
+\virg
+\psi_{\alpha,N}(\xi) = {Z_N(\curve+{1\over N}[\xi,\alpha])\over Z_N(\curve)}
+\eeq
+\et
+Indeed, the definition of $K_N$ is the formal Taylor expansion in powers of $r=1/N$ of the RHS.
+
+
+
+\subsection{Hirota equation}
+
+Consider two algebraic curve $\curve(x,y)$ and $\td\curve(x,y)$
+ with the same conformal structure (i.e. the same compact Riemann surface $\overline\Sigma$), 
+then we have an Hirota bilinear relation:
+
+\bt\label{thHirota}
+We have the bilinear relation:
+\beq
+\Res_{\eta\to\zeta} dx(\eta)\,K_N(\xi,\eta)\,\td{K}_{\td{N}}(\eta,\zeta) = K_N(\xi,\zeta)
+\eeq
+and also:
+\beq\label{hirotapsi}
+\Res_{\xi\to \alpha} dx(\xi)\,\psi_{\alpha,N}(\xi)\,\td{\psi}_{\alpha,-\td{N}}(\xi) = 0 \qquad \qquad {\rm if}\,\, \td{N}\td{t}_\alpha >  N t_\alpha+1
+\eeq
+which takes exactly the form of the Hirota equation \cite{BBT, kostovhirota}.
+\et
+
+It is important to notice that this Hirota equation makes sense only order by order in its $1/N^2$ expansion. In the way we have obtained it, it is meaningless for finite $N$ (appart maybe from the genus zero case $\genus=0$, under the condition that the $1/N^2$ series is convergent).
+Therefore, we have a "formal Hirota equation".
+

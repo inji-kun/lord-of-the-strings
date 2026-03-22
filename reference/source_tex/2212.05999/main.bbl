@@ -1,0 +1,819 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{100}
+
+\bibitem{tHooftPlanar}
+G.~'t~Hooft, {\em {A Planar Diagram Theory for Strong Interactions}},
+  \href{http://dx.doi.org/10.1016/0550-3213(74)90154-0}{Nucl. Phys. B
+  {\bfseries 72} (1974)461}.
+
+\bibitem{gopakumar2011simplest}
+R.~Gopakumar, {\em {What is the Simplest Gauge-String Duality?}},
+  \href{http://arxiv.org/abs/1104.2386}{{\ttfamily arXiv:1104.2386 [hep-th]}}.
+
+\bibitem{gopakumar2013correlators}
+R.~Gopakumar and R.~Pius, {\em {Correlators in the Simplest Gauge-String
+  Duality}}, \href{http://dx.doi.org/10.1007/JHEP03(2013)175}{JHEP {\bfseries
+  03} (2013)175}, \href{http://arxiv.org/abs/1212.1236}{{\ttfamily
+  arXiv:1212.1236 [hep-th]}}.
+
+\bibitem{Gaberdiel:2018rqv}
+M.~R. Gaberdiel and R.~Gopakumar, {\em {Tensionless string spectra on
+  AdS$_{3}$}}, \href{http://dx.doi.org/10.1007/JHEP05(2018)085}{JHEP {\bfseries
+  05} (2018)085}, \href{http://arxiv.org/abs/1803.04423}{{\ttfamily
+  arXiv:1803.04423 [hep-th]}}.
+
+\bibitem{eberhardt2020deriving}
+L.~Eberhardt, M.~R. Gaberdiel, and R.~Gopakumar, {\em {Deriving the
+  AdS$_{3}$/CFT$_{2}$ correspondence}},
+  \href{http://dx.doi.org/10.1007/JHEP02(2020)136}{JHEP {\bfseries 02}
+  (2020)136}, \href{http://arxiv.org/abs/1911.00378}{{\ttfamily
+  arXiv:1911.00378 [hep-th]}}.
+
+\bibitem{eberhardt2019worldsheet}
+L.~Eberhardt, M.~R. Gaberdiel, and R.~Gopakumar, {\em {The Worldsheet Dual of
+  the Symmetric Product CFT}},
+  \href{http://dx.doi.org/10.1007/JHEP04(2019)103}{JHEP {\bfseries 04}
+  (2019)103}, \href{http://arxiv.org/abs/1812.01007}{{\ttfamily
+  arXiv:1812.01007 [hep-th]}}.
+
+\bibitem{dei2021free}
+A.~Dei, M.~R. Gaberdiel, R.~Gopakumar, and B.~Knighton, {\em {Free field
+  world-sheet correlators for ${\rm AdS}_3$}},
+  \href{http://dx.doi.org/10.1007/JHEP02(2021)081}{JHEP {\bfseries 02}
+  (2021)081}, \href{http://arxiv.org/abs/2009.11306}{{\ttfamily
+  arXiv:2009.11306 [hep-th]}}.
+
+\bibitem{gaberdiel2021string}
+M.~R. Gaberdiel and R.~Gopakumar, {\em {String Dual to Free N=4 Supersymmetric
+  Yang-Mills Theory}},
+  \href{http://dx.doi.org/10.1103/PhysRevLett.127.131601}{Phys. Rev. Lett.
+  {\bfseries 127} 13, (2021)131601},
+  \href{http://arxiv.org/abs/2104.08263}{{\ttfamily arXiv:2104.08263
+  [hep-th]}}.
+
+\bibitem{gaberdiel2021worldsheet}
+M.~R. Gaberdiel and R.~Gopakumar, {\em {The worldsheet dual of free super
+  Yang-Mills in 4D}}, \href{http://dx.doi.org/10.1007/JHEP11(2021)129}{JHEP
+  {\bfseries 11} (2021)129}, \href{http://arxiv.org/abs/2105.10496}{{\ttfamily
+  arXiv:2105.10496 [hep-th]}}.
+
+\bibitem{Aharony:2020omh}
+O.~Aharony, S.~M. Chester, and E.~Y. Urbach, {\em {A Derivation of AdS/CFT for
+  Vector Models}}, \href{http://dx.doi.org/10.1007/JHEP03(2021)208}{JHEP
+  {\bfseries 03} (2021)208}, \href{http://arxiv.org/abs/2011.06328}{{\ttfamily
+  arXiv:2011.06328 [hep-th]}}.
+
+\bibitem{DSDII}
+R.~Gopakumar and E.~A. Mazenc, {\em Deriving the Simplest Gauge/String Duality
+  II: The B-Model},. To appear.
+
+\bibitem{DSDIII}
+R.~Gopakumar and E.~A. Mazenc, {\em Deriving the Simplest Gauge/String Duality
+  III: The A-Model},. To appear.
+
+\bibitem{ginsparg1993lectures}
+P.~H. Ginsparg and G.~W. Moore, {\em {Lectures on 2-D gravity and 2-D string
+  theory}}, in {\em {Theoretical Advanced Study Institute (TASI 92): From Black
+  Holes and Strings to Particles}}, pp.~277--469.
+\newblock 10, 1993.
+\newblock \href{http://arxiv.org/abs/hep-th/9304011}{{\ttfamily
+  arXiv:hep-th/9304011}}.
+
+\bibitem{klebanov1991string}
+I.~R. Klebanov, {\em {String theory in two-dimensions}}, in {\em {Spring School
+  on String Theory and Quantum Gravity (to be followed by Workshop)}}.
+\newblock 7, 1991.
+\newblock \href{http://arxiv.org/abs/hep-th/9108019}{{\ttfamily
+  arXiv:hep-th/9108019}}.
+
+\bibitem{Anninos:2020ccj}
+D.~Anninos and B.~M\"uhlmann, {\em {Notes on matrix models (matrix musings)}},
+  \href{http://dx.doi.org/10.1088/1742-5468/aba499}{J. Stat. Mech. {\bfseries
+  2008} (2020)083109}, \href{http://arxiv.org/abs/2004.01171}{{\ttfamily
+  arXiv:2004.01171 [hep-th]}}.
+
+\bibitem{gross-migdal}
+D.~J. Gross and A.~A. Migdal, {\em {Nonperturbative Two-Dimensional Quantum
+  Gravity}}, \href{http://dx.doi.org/10.1103/PhysRevLett.64.127}{Phys. Rev.
+  Lett. {\bfseries 64} (1990)127}.
+
+\bibitem{brezin1990exactly}
+E.~Brezin and V.~A. Kazakov, {\em {Exactly Solvable Field Theories of Closed
+  Strings}}, \href{http://dx.doi.org/10.1016/0370-2693(90)90818-Q}{Phys. Lett.
+  B {\bfseries 236} (1990)144--150}.
+
+\bibitem{KAZAKOV1990212}
+V.~Kazakov, {\em A simple solvable model of quantum field theory of open
+  strings},
+  \href{http://dx.doi.org/https://doi.org/10.1016/0370-2693(90)91431-A}{Physics
+  Letters B {\bfseries 237} 2, (1990)212--215}.
+  \url{https://www.sciencedirect.com/science/article/pii/037026939091431A}.
+
+\bibitem{douglas1990strings}
+M.~R. Douglas and S.~H. Shenker, {\em {Strings in Less Than One-Dimension}},
+  \href{http://dx.doi.org/10.1016/0550-3213(90)90522-F}{Nucl. Phys. B
+  {\bfseries 335} (1990)635}.
+
+\bibitem{freefieldsadsI}
+R.~Gopakumar, {\em {From free fields to AdS. I}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.70.025009}{Phys. Rev. D {\bfseries
+  70} (2004)025009}, \href{http://arxiv.org/abs/hep-th/0308184}{{\ttfamily
+  arXiv:hep-th/0308184}}.
+
+\bibitem{freefieldsadsII}
+R.~Gopakumar, {\em {From free fields to AdS. II}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.70.025010}{Phys. Rev. D {\bfseries
+  70} (2004)025010}, \href{http://arxiv.org/abs/hep-th/0402063}{{\ttfamily
+  arXiv:hep-th/0402063}}.
+
+\bibitem{freefieldsIII}
+R.~Gopakumar, {\em {From free fields to AdS: III}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.72.066008}{Phys. Rev. D {\bfseries
+  72} (2005)066008}, \href{http://arxiv.org/abs/hep-th/0504229}{{\ttfamily
+  arXiv:hep-th/0504229}}.
+
+\bibitem{DijkgraafVafa02}
+R.~Dijkgraaf and C.~Vafa, {\em Matrix models, topological strings, and
+  supersymmetric gauge theories},
+  \href{http://dx.doi.org/10.1016/s0550-3213(02)00766-6}{Nuclear Physics B
+  {\bfseries 644} 1-2, (Nov, 2002)3–20}.
+  \url{http://dx.doi.org/10.1016/S0550-3213(02)00766-6}.
+
+\bibitem{Aganagic_2005}
+M.~Aganagic, R.~Dijkgraaf, A.~Klemm, M.~Marino, and C.~Vafa, {\em Topological
+  Strings and Integrable Hierarchies},
+  \href{http://dx.doi.org/10.1007/s00220-005-1448-9}{Communications in
+  Mathematical Physics {\bfseries 261} 2, (Oct, 2005)451–516}.
+  \url{http://dx.doi.org/10.1007/s00220-005-1448-9}.
+
+\bibitem{razamatGauss}
+S.~S. Razamat, {\em {On a worldsheet dual of the Gaussian matrix model}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2008/07/026}{JHEP {\bfseries 07}
+  (2008)026}, \href{http://arxiv.org/abs/0803.2681}{{\ttfamily arXiv:0803.2681
+  [hep-th]}}.
+
+\bibitem{razamat2010matrices}
+S.~S. Razamat, {\em {From Matrices to Strings and Back}},
+  \href{http://dx.doi.org/10.1007/JHEP03(2010)049}{JHEP {\bfseries 03}
+  (2010)049}, \href{http://arxiv.org/abs/0911.0658}{{\ttfamily arXiv:0911.0658
+  [hep-th]}}.
+
+\bibitem{itzhaki2005large}
+N.~Itzhaki and J.~McGreevy, {\em {The Large N harmonic oscillator as a string
+  theory}}, \href{http://dx.doi.org/10.1103/PhysRevD.71.025003}{Phys. Rev. D
+  {\bfseries 71} (2005)025003},
+  \href{http://arxiv.org/abs/hep-th/0408180}{{\ttfamily arXiv:hep-th/0408180}}.
+
+\bibitem{berenstein2004toy}
+D.~Berenstein, {\em {A Toy model for the AdS / CFT correspondence}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2004/07/018}{JHEP {\bfseries 07}
+  (2004)018}, \href{http://arxiv.org/abs/hep-th/0403110}{{\ttfamily
+  arXiv:hep-th/0403110}}.
+
+\bibitem{deMelloKoch:2014khl}
+R.~de~Mello~Koch and L.~Nkumane, {\em {Topological String Correlators from
+  Matrix Models}}, \href{http://dx.doi.org/10.1007/JHEP03(2015)004}{JHEP
+  {\bfseries 03} (2015)004}, \href{http://arxiv.org/abs/1411.5226}{{\ttfamily
+  arXiv:1411.5226 [hep-th]}}.
+
+\bibitem{ghoshalMukhiLG}
+D.~Ghoshal and S.~Mukhi, {\em {Topological Landau-Ginzburg model of
+  two-dimensional string theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(94)90177-5}{Nucl. Phys. B
+  {\bfseries 425} (1994)173--190},
+  \href{http://arxiv.org/abs/hep-th/9312189}{{\ttfamily arXiv:hep-th/9312189}}.
+
+\bibitem{hananyOzPlLG}
+A.~Hanany, Y.~Oz, and M.~R. Plesser, {\em {Topological Landau-Ginzburg
+  formulation and integrable structure of 2-d string theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(94)90176-7}{Nucl. Phys. B
+  {\bfseries 425} (1994)150--172},
+  \href{http://arxiv.org/abs/hep-th/9401030}{{\ttfamily arXiv:hep-th/9401030}}.
+
+\bibitem{Eynard:2007kz}
+B.~Eynard and N.~Orantin, {\em {Invariants of algebraic curves and topological
+  expansion}}, \href{http://dx.doi.org/10.4310/CNTP.2007.v1.n2.a4}{Commun. Num.
+  Theor. Phys. {\bfseries 1} (2007)347--452},
+  \href{http://arxiv.org/abs/math-ph/0702045}{{\ttfamily
+  arXiv:math-ph/0702045}}.
+
+\bibitem{eynard2008algebraic}
+B.~Eynard and N.~Orantin, {\em {Algebraic methods in random matrices and
+  enumerative geometry}}, \href{http://arxiv.org/abs/0811.3531}{{\ttfamily
+  arXiv:0811.3531 [math-ph]}}.
+
+\bibitem{eynard2bp}
+B.~Eynard, {\em {Invariants of spectral curves and intersection theory of
+  moduli spaces of complex curves}},
+  \href{http://dx.doi.org/10.4310/CNTP.2014.v8.n3.a4}{Commun. Num. Theor. Phys.
+  {\bfseries 8} (2014)541--588},
+  \href{http://arxiv.org/abs/1110.2949}{{\ttfamily arXiv:1110.2949 [math-ph]}}.
+
+\bibitem{MukhiVafa}
+S.~Mukhi and C.~Vafa, {\em {Two-dimensional black hole as a topological coset
+  model of c = 1 string theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(93)90094-6}{Nucl. Phys. B
+  {\bfseries 407} (1993)667--705},
+  \href{http://arxiv.org/abs/hep-th/9301083}{{\ttfamily arXiv:hep-th/9301083}}.
+
+\bibitem{MOOgI}
+J.~M. Maldacena and H.~Ooguri, {\em {Strings in AdS(3) and SL(2,R) WZW model
+  1.: The Spectrum}}, \href{http://dx.doi.org/10.1063/1.1377273}{J. Math. Phys.
+  {\bfseries 42} (2001)2929--2960},
+  \href{http://arxiv.org/abs/hep-th/0001053}{{\ttfamily arXiv:hep-th/0001053}}.
+
+\bibitem{bauer1993triangulations}
+M.~Bauer and C.~Itzykson, {\em Triangulations}, Recherche Coopérative sur
+  Programme n°25 {\bfseries 44} (1993)39--112.
+  \url{http://eudml.org/doc/274975}.
+
+\bibitem{koch2010matrix}
+R.~de~Mello~Koch and S.~Ramgoolam, {\em {From Matrix Models and Quantum Fields
+  to Hurwitz Space and the absolute Galois Group}},
+  \href{http://arxiv.org/abs/1002.1634}{{\ttfamily arXiv:1002.1634 [hep-th]}}.
+
+\bibitem{gaberdiel2021symmetric}
+M.~R. Gaberdiel, R.~Gopakumar, B.~Knighton, and P.~Maity, {\em {From symmetric
+  product CFTs to AdS$_{3}$}},
+  \href{http://dx.doi.org/10.1007/JHEP05(2021)073}{JHEP {\bfseries 05}
+  (2021)073}, \href{http://arxiv.org/abs/2011.10038}{{\ttfamily
+  arXiv:2011.10038 [hep-th]}}.
+
+\bibitem{aharony2007remarks}
+O.~Aharony, J.~R. David, R.~Gopakumar, Z.~Komargodski, and S.~S. Razamat, {\em
+  {Comments on worldsheet theories dual to free large N gauge theories}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.75.106006}{Phys. Rev. D {\bfseries
+  75} (2007)106006}, \href{http://arxiv.org/abs/hep-th/0703141}{{\ttfamily
+  arXiv:hep-th/0703141}}.
+
+\bibitem{Joburg}
+R.~Gopakumar, {\em Open-closed-open string duality}, 2010.
+\newblock
+  \url{https://www.icts.res.in/sites/default/files/media/attachments/files/joburg.pdf}.
+  Talk at Second Joburg Workshop on String Theory.
+
+\bibitem{Maldacena:2005hi}
+J.~M. Maldacena, {\em {Long strings in two dimensional string theory and
+  non-singlets in the matrix model}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2005/09/078}{JHEP {\bfseries 09}
+  (2005)078}, \href{http://arxiv.org/abs/hep-th/0503112}{{\ttfamily
+  arXiv:hep-th/0503112}}.
+
+\bibitem{ImbimboMukhi}
+C.~Imbimbo and S.~Mukhi, {\em {The Topological matrix model of c = 1 string}},
+  \href{http://dx.doi.org/10.1016/0550-3213(95)00334-O}{Nucl. Phys. B
+  {\bfseries 449} (1995)553--568},
+  \href{http://arxiv.org/abs/hep-th/9505127}{{\ttfamily arXiv:hep-th/9505127}}.
+
+\bibitem{ghoshalMukhiIm}
+D.~Ghoshal, C.~Imbimbo, and S.~Mukhi, {\em Topological 2D string theory:
+  Higher-genus amplitudes and $W_\infty$ identities}, Nuclear Physics B
+  {\bfseries 440} 1-2, (1995)355--372.
+
+\bibitem{ashok2006topological}
+S.~K. Ashok, S.~Murthy, and J.~Troost, {\em {Topological cigar and the c=1
+  string : Open and closed}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2006/02/013}{JHEP {\bfseries 02}
+  (2006)013}, \href{http://arxiv.org/abs/hep-th/0511239}{{\ttfamily
+  arXiv:hep-th/0511239}}.
+
+\bibitem{CostelloGaiottoTH}
+K.~Costello and D.~Gaiotto, {\em {Twisted Holography}},
+  \href{http://arxiv.org/abs/1812.09257}{{\ttfamily arXiv:1812.09257
+  [hep-th]}}.
+
+\bibitem{Costello:2020jbh}
+K.~Costello and N.~M. Paquette, {\em {Twisted Supergravity and Koszul Duality:
+  A case study in AdS$_3$}},
+  \href{http://dx.doi.org/10.1007/s00220-021-04065-3}{Commun. Math. Phys.
+  {\bfseries 384} 1, (2021)279--339},
+  \href{http://arxiv.org/abs/2001.02177}{{\ttfamily arXiv:2001.02177
+  [hep-th]}}.
+
+\bibitem{beemRastelli2015}
+C.~Beem, M.~Lemos, P.~Liendo, W.~Peelaers, L.~Rastelli, and B.~C. van Rees,
+  {\em {Infinite Chiral Symmetry in Four Dimensions}},
+  \href{http://dx.doi.org/10.1007/s00220-014-2272-x}{Commun. Math. Phys.
+  {\bfseries 336} 3, (2015)1359--1433},
+  \href{http://arxiv.org/abs/1312.5344}{{\ttfamily arXiv:1312.5344 [hep-th]}}.
+
+\bibitem{bonettiRastelli2018}
+F.~Bonetti and L.~Rastelli, {\em {Supersymmetric localization in AdS$_{5}$ and
+  the protected chiral algebra}},
+  \href{http://dx.doi.org/10.1007/JHEP08(2018)098}{JHEP {\bfseries 08}
+  (2018)098}, \href{http://arxiv.org/abs/1612.06514}{{\ttfamily
+  arXiv:1612.06514 [hep-th]}}.
+
+\bibitem{Budzik:2021fyh}
+K.~Budzik and D.~Gaiotto, {\em {Giant gravitons in twisted holography}},
+  \href{http://arxiv.org/abs/2106.14859}{{\ttfamily arXiv:2106.14859
+  [hep-th]}}.
+
+\bibitem{GV98}
+R.~Gopakumar and C.~Vafa, {\em {Topological gravity as large N topological
+  gauge theory}}, \href{http://dx.doi.org/10.4310/ATMP.1998.v2.n2.a8}{Adv.
+  Theor. Math. Phys. {\bfseries 2} (1998)413--442},
+  \href{http://arxiv.org/abs/hep-th/9802016}{{\ttfamily arXiv:hep-th/9802016}}.
+
+\bibitem{GV99}
+R.~Gopakumar and C.~Vafa, {\em {On the gauge theory / geometry
+  correspondence}}, \href{http://dx.doi.org/10.4310/ATMP.1999.v3.n5.a5}{Adv.
+  Theor. Math. Phys. {\bfseries 3} (1999)1415--1443},
+  \href{http://arxiv.org/abs/hep-th/9811131}{{\ttfamily arXiv:hep-th/9811131}}.
+
+\bibitem{WittenCSasOSFT}
+E.~Witten, {\em {Chern-Simons gauge theory as a string theory}}, Prog. Math.
+  {\bfseries 133} (1995)637--678,
+  \href{http://arxiv.org/abs/hep-th/9207094}{{\ttfamily arXiv:hep-th/9207094}}.
+
+\bibitem{OV2002worldsheet}
+H.~Ooguri and C.~Vafa, {\em {World sheet derivation of a large N duality}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(02)00620-X}{Nucl. Phys. B
+  {\bfseries 641} (2002)3--34},
+  \href{http://arxiv.org/abs/hep-th/0205297}{{\ttfamily arXiv:hep-th/0205297}}.
+
+\bibitem{komatsuOCO}
+Y.~Jiang, S.~Komatsu, and E.~Vescovi, {\em {Structure constants in $
+  \mathcal{N} $ = 4 SYM at finite coupling as worldsheet g-function}},
+  \href{http://dx.doi.org/10.1007/JHEP07(2020)037}{JHEP {\bfseries 07} 07,
+  (2020)037}, \href{http://arxiv.org/abs/1906.07733}{{\ttfamily
+  arXiv:1906.07733 [hep-th]}}.
+
+\bibitem{KontsevichAiry}
+M.~Kontsevich, {\em {Intersection theory on the moduli space of curves and the
+  matrix Airy function}}, \href{http://dx.doi.org/10.1007/BF02099526}{Commun.
+  Math. Phys. {\bfseries 147} (1992)1--23}.
+
+\bibitem{DijkgraafIntersectionNotes}
+R.~Dijkgraaf, {\em {Intersection theory, integrable hierarchies and topological
+  field theory}}, NATO Sci. Ser. B {\bfseries 295} (1992)95--158,
+  \href{http://arxiv.org/abs/hep-th/9201003}{{\ttfamily arXiv:hep-th/9201003}}.
+
+\bibitem{mukhireview}
+S.~Mukhi, {\em {Topological matrix models, Liouville matrix model and c = 1
+  string theory}}, in {\em {IPM String School and Workshop 2003}}.
+\newblock 10, 2003.
+\newblock \href{http://arxiv.org/abs/hep-th/0310287}{{\ttfamily
+  arXiv:hep-th/0310287}}.
+
+\bibitem{exact}
+J.~Maldacena, G.~Moore, N.~Seiberg, and D.~Shih, {\em Exact vs. Semiclassical
+  Target Space of the Minimal String},
+  \href{http://dx.doi.org/10.1088/1126-6708/2004/10/020}{Journal of High Energy
+  Physics {\bfseries 2004} 10, (Oct, 2004)020–020}.
+  \url{http://dx.doi.org/10.1088/1126-6708/2004/10/020}.
+
+\bibitem{Gaiotto:2003yb}
+D.~Gaiotto and L.~Rastelli, {\em {A Paradigm of open / closed duality:
+  Liouville D-branes and the Kontsevich model}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2005/07/053}{JHEP {\bfseries 07}
+  (2005)053}, \href{http://arxiv.org/abs/hep-th/0312196}{{\ttfamily
+  arXiv:hep-th/0312196}}.
+
+\bibitem{marino2004houches}
+M.~Marino, {\em {Les Houches lectures on matrix models and topological
+  strings}},
+\newblock 10, 2004.
+\newblock \href{http://arxiv.org/abs/hep-th/0410165}{{\ttfamily
+  arXiv:hep-th/0410165}}.
+
+\bibitem{Brezin:2016eax}
+E.~Br\'ezin and S.~Hikami,
+  \href{http://dx.doi.org/10.1007/978-981-10-3316-2}{{\em {Random Matrix Theory
+  with an External Source}}}, vol.~19 of {\em Springer Briefs in Mathematical
+  Physics}.
+\newblock Springer, 2016.
+
+\bibitem{hartnoll2019topological}
+S.~A. Hartnoll, E.~A. Mazenc, and Z.~D. Shi, {\em {Topological order in matrix
+  Ising models}}, \href{http://dx.doi.org/10.21468/SciPostPhys.7.6.081}{SciPost
+  Phys. {\bfseries 7} 6, (2019)081},
+  \href{http://arxiv.org/abs/1908.07058}{{\ttfamily arXiv:1908.07058
+  [hep-th]}}.
+
+\bibitem{Hashimoto_2005}
+A.~Hashimoto, M.-x. Huang, A.~Klemm, and D.~Shih, {\em Open/closed string
+  duality for topological gravity with matter},
+  \href{http://dx.doi.org/10.1088/1126-6708/2005/05/007}{Journal of High Energy
+  Physics {\bfseries 2005} 05, (May, 2005)007–007}.
+  \url{http://dx.doi.org/10.1088/1126-6708/2005/05/007}.
+
+\bibitem{goel2021string}
+A.~Goel and H.~Verlinde, {\em {Towards a String Dual of SYK}},
+  \href{http://arxiv.org/abs/2103.03187}{{\ttfamily arXiv:2103.03187
+  [hep-th]}}.
+
+\bibitem{quantumChaos}
+F.~Haake, {\em Quantum Signatures of Chaos}.
+\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
+
+\bibitem{Zirnbauer1996}
+M.~R. Zirnbauer, {\em Supersymmetry for systems with unitary disorder: circular
+  ensembles}, \href{http://dx.doi.org/10.1088/0305-4470/29/22/013}{Journal of
+  Physics A: Mathematical and General {\bfseries 29} 22, (Nov,
+  1996)7113--7136}.
+
+\bibitem{AltlandSonner2020}
+A.~Altland and J.~Sonner, {\em {Late time physics of holographic quantum
+  chaos}}, \href{http://dx.doi.org/10.21468/SciPostPhys.11.2.034}{SciPost Phys.
+  {\bfseries 11} (2021)034}, \href{http://arxiv.org/abs/2008.02271}{{\ttfamily
+  arXiv:2008.02271 [hep-th]}}.
+
+\bibitem{Altland2022}
+A.~Altland, B.~Post, J.~Sonner, J.~van~der Heijden, and E.~Verlinde, {\em
+  {Quantum chaos in 2D gravity}},
+  \href{http://arxiv.org/abs/2204.07583}{{\ttfamily arXiv:2204.07583
+  [hep-th]}}.
+
+\bibitem{Kimura_2014}
+T.~Kimura, {\em {Note on a duality of topological branes}},
+  \href{http://dx.doi.org/10.1093/ptep/ptu141}{PTEP {\bfseries 2014} 10,
+  (2014)103B04}, \href{http://arxiv.org/abs/1401.0956}{{\ttfamily
+  arXiv:1401.0956 [hep-th]}}.
+
+\bibitem{harish1957differential}
+Harish-Chandra, {\em {Differential Operators on a Semisimple Lie Algebra}},
+  \href{http://dx.doi.org/10.2307/2372387}{Am. J. Math. {\bfseries 79} 1,
+  (1957)87}.
+
+\bibitem{itzykson1980planar}
+C.~Itzykson and J.~B. Zuber, {\em {The Planar Approximation. 2.}},
+  \href{http://dx.doi.org/10.1063/1.524438}{J. Math. Phys. {\bfseries 21}
+  (1980)411}.
+
+\bibitem{brown2011complex}
+T.~W. Brown, {\em {Complex matrix model duality}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.83.085002}{Phys. Rev. D {\bfseries
+  83} (2011)085002}, \href{http://arxiv.org/abs/1009.0674}{{\ttfamily
+  arXiv:1009.0674 [hep-th]}}.
+
+\bibitem{octagon}
+T.~Bargheer, F.~Coronado, and P.~Vieira, {\em {Octagons I: Combinatorics and
+  Non-Planar Resummations}},
+  \href{http://dx.doi.org/10.1007/JHEP08(2019)162}{JHEP {\bfseries 08}
+  (2019)162}, \href{http://arxiv.org/abs/1904.00965}{{\ttfamily
+  arXiv:1904.00965 [hep-th]}}.
+
+\bibitem{ZwiebachProof}
+B.~Zwiebach, {\em {A Proof that Witten's open string theory gives a single
+  cover of moduli space}}, \href{http://dx.doi.org/10.1007/BF02099176}{Commun.
+  Math. Phys. {\bfseries 142} (1991)193--216}.
+
+\bibitem{WittenOSFT}
+E.~Witten, {\em {Noncommutative Geometry and String Field Theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(86)90155-0}{Nucl. Phys. B
+  {\bfseries 268} (1986)253--294}.
+
+\bibitem{ads5strebel}
+F.~Bhat, R.~Gopakumar, P.~Maity, and B.~Radhakrishnan, {\em {Twistor coverings
+  and Feynman diagrams}}, \href{http://dx.doi.org/10.1007/JHEP05(2022)150}{JHEP
+  {\bfseries 05} (2022)150}, \href{http://arxiv.org/abs/2112.05115}{{\ttfamily
+  arXiv:2112.05115 [hep-th]}}.
+
+\bibitem{knighton}
+B.~Knighton, {\em {Classical geometry from the tensionless string}},
+  \href{http://arxiv.org/abs/2207.01293}{{\ttfamily arXiv:2207.01293
+  [hep-th]}}.
+
+\bibitem{mulaseStrebel}
+M.~Mulase and M.~Penkava, {\em Ribbon Graphs, Quadratic Differentials on
+  Riemann Surfaces, and Algebraic Curves Defined over $\bar Q$},.
+  \url{https://arxiv.org/abs/math-ph/9811024}.
+
+\bibitem{strebel1984}
+K.~Strebel, {\em Quadratic differentials}, in {\em Quadratic Differentials},
+  pp.~16--26.
+\newblock Springer, 1984.
+
+\bibitem{harer1988cohomology}
+J.~L. Harer, {\em The cohomology of the moduli space of curves}, in {\em Theory
+  of moduli}, pp.~138--221.
+\newblock Springer, 1988.
+
+\bibitem{gursoy1}
+A.~Domingo~Gallegos, U.~G\"ursoy, and N.~Zinnato, {\em {From Feynman graphs to
+  Witten diagrams}},
+  \href{http://dx.doi.org/10.1088/1742-6596/2191/1/012012}{J. Phys. Conf. Ser.
+  {\bfseries 2191} 1, (2022)012012},
+  \href{http://arxiv.org/abs/2202.07767}{{\ttfamily arXiv:2202.07767
+  [hep-th]}}.
+
+\bibitem{Gursoy2}
+D.~Gallegos, U.~Gursoy, and N.~Zinnato, {\em {Strings from interacting quantum
+  fields}}, \href{http://arxiv.org/abs/2211.16514}{{\ttfamily arXiv:2211.16514
+  [hep-th]}}.
+
+\bibitem{hori2001duality}
+K.~Hori and A.~Kapustin, {\em {Duality of the fermionic 2-D black hole and N=2
+  liouville theory as mirror symmetry}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2001/08/045}{JHEP {\bfseries 08}
+  (2001)045}, \href{http://arxiv.org/abs/hep-th/0104202}{{\ttfamily
+  arXiv:hep-th/0104202}}.
+
+\bibitem{harer1986euler}
+J.~Harer and D.~Zagier, {\em The Euler characteristic of the moduli space of
+  curves.}, Inventiones mathematicae {\bfseries 85} (1986)457--485.
+
+\bibitem{penner1988perturbative}
+R.~C. Penner, {\em {Perturbative series and the moduli space of Riemann
+  surfaces}}, J. Diff. Geom. {\bfseries 27} 1, (1988)35--53.
+
+\bibitem{grossKlc=1}
+D.~J. Gross and I.~R. Klebanov, {\em {One-dimensional String Theory on a
+  Circle}}, \href{http://dx.doi.org/10.1016/0550-3213(90)90667-3}{Nucl. Phys. B
+  {\bfseries 344} (1990)475--498}.
+
+\bibitem{mooreRangPlessScattering}
+G.~W. Moore, M.~R. Plesser, and S.~Ramgoolam, {\em {Exact S matrix for 2-D
+  string theory}}, \href{http://dx.doi.org/10.1016/0550-3213(92)90020-C}{Nucl.
+  Phys. B {\bfseries 377} (1992)143--190},
+  \href{http://arxiv.org/abs/hep-th/9111035}{{\ttfamily arXiv:hep-th/9111035}}.
+
+\bibitem{mandal1991interactions}
+G.~Mandal, A.~M. Sengupta, and S.~R. Wadia, {\em {Interactions and scattering
+  in d = 1 string theory}},
+  \href{http://dx.doi.org/10.1142/S0217732391001585}{Mod. Phys. Lett. A
+  {\bfseries 6} (1991)1465--1478}.
+
+\bibitem{Dijkgraaf:1991qh}
+R.~Dijkgraaf, {\em {Intersection theory, integrable hierarchies and topological
+  field theory}}, NATO Sci. Ser. B {\bfseries 295} (1992)95--158,
+  \href{http://arxiv.org/abs/hep-th/9201003}{{\ttfamily arXiv:hep-th/9201003}}.
+
+\bibitem{BonoraXiong2matrix}
+L.~Bonora and C.~S. Xiong, {\em {Two matrix model and c = 1 string theory}},
+  \href{http://dx.doi.org/10.1016/0370-2693(95)00153-C}{Phys. Lett. B
+  {\bfseries 347} (1995)41--48},
+  \href{http://arxiv.org/abs/hep-th/9405004}{{\ttfamily arXiv:hep-th/9405004}}.
+
+\bibitem{ChekhovMakeenkoKP}
+L.~Chekhov and Y.~Makeenko, {\em {The Multicritical Kontsevich-Penner model}},
+  \href{http://dx.doi.org/10.1142/S0217732392003700}{Mod. Phys. Lett. A
+  {\bfseries 7} (1992)1223--1236},
+  \href{http://arxiv.org/abs/hep-th/9201033}{{\ttfamily arXiv:hep-th/9201033}}.
+
+\bibitem{AlexandrovNormal}
+S.~Y. Alexandrov, V.~A. Kazakov, and I.~K. Kostov, {\em {2-D string theory as
+  normal matrix model}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(03)00546-7}{Nucl. Phys. B
+  {\bfseries 667} (2003)90--110},
+  \href{http://arxiv.org/abs/hep-th/0302106}{{\ttfamily arXiv:hep-th/0302106}}.
+
+\bibitem{Zubernotes}
+J.-B. Zuber, {\em {Introduction to Random Matrices}},.
+  \url{https://www.lpthe.jussieu.fr/~zuber/RMT_2012.pdf}.
+
+\bibitem{daul1993rational}
+J.~M. Daul, V.~A. Kazakov, and I.~K. Kostov, {\em {Rational theories of 2-D
+  gravity from the two matrix model}},
+  \href{http://dx.doi.org/10.1016/0550-3213(93)90582-A}{Nucl. Phys. B
+  {\bfseries 409} (1993)311--338},
+  \href{http://arxiv.org/abs/hep-th/9303093}{{\ttfamily arXiv:hep-th/9303093}}.
+
+\bibitem{nakayama2004liouville}
+Y.~Nakayama, {\em {Liouville field theory: A Decade after the revolution}},
+  \href{http://dx.doi.org/10.1142/S0217751X04019500}{Int. J. Mod. Phys. A
+  {\bfseries 19} (2004)2771--2930},
+  \href{http://arxiv.org/abs/hep-th/0402009}{{\ttfamily arXiv:hep-th/0402009}}.
+
+\bibitem{dijkgraaf1990notes}
+R.~Dijkgraaf, H.~L. Verlinde, and E.~P. Verlinde, {\em {Notes on topological
+  string theory and 2-D quantum gravity}}, in {\em {Cargese Study Institute:
+  Random Surfaces, Quantum Gravity and Strings}}.
+\newblock 11, 1990.
+
+\bibitem{dijkgraaf1991topological}
+R.~Dijkgraaf, H.~L. Verlinde, and E.~P. Verlinde, {\em {Topological strings in
+  d \ensuremath{<} 1}},
+  \href{http://dx.doi.org/10.1016/0550-3213(91)90129-L}{Nucl. Phys. B
+  {\bfseries 352} (1991)59--86}.
+
+\bibitem{witten2dBlackHole}
+E.~Witten, {\em {On string theory and black holes}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.44.314}{Phys. Rev. D {\bfseries 44}
+  (1991)314--324}.
+
+\bibitem{MSW}
+G.~Mandal, A.~M. Sengupta, and S.~R. Wadia, {\em {Classical solutions of
+  two-dimensional string theory}},
+  \href{http://dx.doi.org/10.1142/S0217732391001822}{Mod. Phys. Lett. A
+  {\bfseries 6} (1991)1685--1692}.
+
+\bibitem{Elitzur:1990ubs}
+S.~Elitzur, A.~Forge, and E.~Rabinovici, {\em {Some global aspects of string
+  compactifications}},
+  \href{http://dx.doi.org/10.1016/0550-3213(91)90073-7}{Nucl. Phys. B
+  {\bfseries 359} (1991)581--610}.
+
+\bibitem{DVV2dblackholeprop}
+R.~Dijkgraaf, H.~L. Verlinde, and E.~P. Verlinde, {\em {String propagation in a
+  black hole geometry}},
+  \href{http://dx.doi.org/10.1016/0550-3213(92)90237-6}{Nucl. Phys. B
+  {\bfseries 371} (1992)269--314}.
+
+\bibitem{Eberhardt:2020akk}
+L.~Eberhardt, {\em {AdS$_{3}$/CFT$_{2}$ at higher genus}},
+  \href{http://dx.doi.org/10.1007/JHEP05(2020)150}{JHEP {\bfseries 05}
+  (2020)150}, \href{http://arxiv.org/abs/2002.11729}{{\ttfamily
+  arXiv:2002.11729 [hep-th]}}.
+
+\bibitem{Knighton:2020kuh}
+B.~Knighton, {\em {Higher genus correlators for tensionless AdS$_{3}$
+  strings}}, \href{http://dx.doi.org/10.1007/JHEP04(2021)211}{JHEP {\bfseries
+  04} (2021)211}, \href{http://arxiv.org/abs/2012.01445}{{\ttfamily
+  arXiv:2012.01445 [hep-th]}}.
+
+\bibitem{DiFrancescoItzykson}
+P.~Di~Francesco and C.~Itzykson, {\em {A Generating function for fatgraphs}},
+  Ann. Inst. H. Poincare Phys. Theor. {\bfseries 59} (1993)117--140,
+  \href{http://arxiv.org/abs/hep-th/9212108}{{\ttfamily arXiv:hep-th/9212108}}.
+
+\bibitem{vafatopLG}
+C.~Vafa, {\em {Topological Landau-Ginzburg models}},
+  \href{http://dx.doi.org/10.1142/S0217732391000324}{Mod. Phys. Lett. A
+  {\bfseries 6} (1991)337--346}.
+
+\bibitem{losev1993descendants}
+A.~Losev, {\em {Descendants constructed from matter field in topological
+  Landau-Ginzburg theories coupled to topological gravity}},
+  \href{http://dx.doi.org/10.1007/BF01017145}{Theor. Math. Phys. {\bfseries 95}
+  (1993)595--603}, \href{http://arxiv.org/abs/hep-th/9211090}{{\ttfamily
+  arXiv:hep-th/9211090}}.
+
+\bibitem{SSSJTmatrix}
+P.~Saad, S.~H. Shenker, and D.~Stanford, {\em {JT gravity as a matrix
+  integral}}, \href{http://arxiv.org/abs/1903.11115}{{\ttfamily
+  arXiv:1903.11115 [hep-th]}}.
+
+\bibitem{eynard1bp}
+B.~Eynard, {\em {Intersection numbers of spectral curves}},
+  \href{http://arxiv.org/abs/1104.0176}{{\ttfamily arXiv:1104.0176 [math-ph]}}.
+
+\bibitem{Thorn:1991fv}
+C.~B. Thorn, {\em {Reformulating string theory with the 1/N expansion}}, in
+  {\em {The First International A.D. Sakharov Conference on Physics}}.
+\newblock 5, 1991.
+\newblock \href{http://arxiv.org/abs/hep-th/9405069}{{\ttfamily
+  arXiv:hep-th/9405069}}.
+
+\bibitem{Klebanov-susskind}
+I.~R. Klebanov and L.~Susskind, {\em {Continuum Strings From Discrete Field
+  Theories}}, \href{http://dx.doi.org/10.1016/0550-3213(88)90237-4}{Nucl. Phys.
+  B {\bfseries 309} (1988)175--187}.
+
+\bibitem{Ribault:2003ss}
+S.~Ribault and V.~Schomerus, {\em {Branes in the 2-D black hole}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2004/02/019}{JHEP {\bfseries 02}
+  (2004)019}, \href{http://arxiv.org/abs/hep-th/0310024}{{\ttfamily
+  arXiv:hep-th/0310024}}.
+
+\bibitem{fotopoulos2005d}
+A.~Fotopoulos, V.~Niarchos, and N.~Prezas, {\em {D-branes and extended
+  characters in SL(2,R) / U(1)}},
+  \href{http://dx.doi.org/10.1016/j.nuclphysb.2004.12.030}{Nucl. Phys. B
+  {\bfseries 710} (2005)309--370},
+  \href{http://arxiv.org/abs/hep-th/0406017}{{\ttfamily arXiv:hep-th/0406017}}.
+
+\bibitem{DVongeom02}
+R.~Dijkgraaf and C.~Vafa, {\em {On geometry and matrix models}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(02)00764-2}{Nucl. Phys. B
+  {\bfseries 644} (2002)21--39},
+  \href{http://arxiv.org/abs/hep-th/0207106}{{\ttfamily arXiv:hep-th/0207106}}.
+
+\bibitem{MartinecManual}
+E.~J. Martinec, {\em Criticality, catastrophes, and compactifications}, Physics
+  and Mathematics of Strings (1990)389--443.
+  \url{https://doi.org/10.1142/9789814434461_0010}.
+
+\bibitem{vafa1989catastrophes}
+C.~Vafa and N.~P. Warner, {\em {Catastrophes and the Classification of
+  Conformal Theories}},
+  \href{http://dx.doi.org/10.1016/0370-2693(89)90473-5}{Phys. Lett. B
+  {\bfseries 218} (1989)51--58}.
+
+\bibitem{okuda2004d}
+T.~Okuda and H.~Ooguri, {\em {D-branes and phases on string world sheet}},
+  \href{http://dx.doi.org/10.1016/j.nuclphysb.2004.08.036}{Nucl. Phys. B
+  {\bfseries 699} (2004)135--150},
+  \href{http://arxiv.org/abs/hep-th/0404101}{{\ttfamily arXiv:hep-th/0404101}}.
+
+\bibitem{CJohnsonReview}
+C.~V. Johnson, {\em {Wigner meets \textquoteright{}t Hooft near the black hole
+  horizon}}, \href{http://dx.doi.org/10.1142/S0218271822420032}{Int. J. Mod.
+  Phys. D {\bfseries 31} 14, (2022)2242003},
+  \href{http://arxiv.org/abs/2206.03509}{{\ttfamily arXiv:2206.03509
+  [hep-th]}}.
+
+\bibitem{EVerlindeJTstring}
+B.~Post, J.~van~der Heijden, and E.~Verlinde, {\em {A universe field theory for
+  JT gravity}}, \href{http://dx.doi.org/10.1007/JHEP05(2022)118}{JHEP
+  {\bfseries 05} (2022)118}, \href{http://arxiv.org/abs/2201.08859}{{\ttfamily
+  arXiv:2201.08859 [hep-th]}}.
+
+\bibitem{KodairaSpencer}
+M.~Bershadsky, S.~Cecotti, H.~Ooguri, and C.~Vafa, {\em {Kodaira-Spencer theory
+  of gravity and exact results for quantum string amplitudes}},
+  \href{http://dx.doi.org/10.1007/BF02099774}{Commun. Math. Phys. {\bfseries
+  165} (1994)311--428}, \href{http://arxiv.org/abs/hep-th/9309140}{{\ttfamily
+  arXiv:hep-th/9309140}}.
+
+\bibitem{witten2004perturbative}
+E.~Witten, {\em {Perturbative gauge theory as a string theory in twistor
+  space}}, \href{http://dx.doi.org/10.1007/s00220-004-1187-3}{Commun. Math.
+  Phys. {\bfseries 252} (2004)189--258},
+  \href{http://arxiv.org/abs/hep-th/0312171}{{\ttfamily arXiv:hep-th/0312171}}.
+
+\bibitem{cachazo2005lectures}
+F.~Cachazo and P.~Svrcek, {\em {Lectures on twistor strings and perturbative
+  Yang-Mills theory}}, \href{http://dx.doi.org/10.22323/1.019.0005}{PoS
+  {\bfseries RTN2005} (2005)004},
+  \href{http://arxiv.org/abs/hep-th/0504194}{{\ttfamily arXiv:hep-th/0504194}}.
+
+\bibitem{mason2008heterotic}
+L.~J. Mason and D.~Skinner, {\em {Heterotic twistor-string theory}},
+  \href{http://dx.doi.org/10.1016/j.nuclphysb.2007.11.010}{Nucl. Phys. B
+  {\bfseries 795} (2008)105--137},
+  \href{http://arxiv.org/abs/0708.2276}{{\ttfamily arXiv:0708.2276 [hep-th]}}.
+
+\bibitem{Heckman:2011ju}
+J.~J. Heckman and H.~Verlinde, {\em {Super Yang-Mills Theory as a Twistor
+  Matrix Model}}, \href{http://arxiv.org/abs/1104.2605}{{\ttfamily
+  arXiv:1104.2605 [hep-th]}}.
+
+\bibitem{Heckman:2011qu}
+J.~J. Heckman and H.~Verlinde, {\em {Instantons, Twistors, and Emergent
+  Gravity}}, \href{http://arxiv.org/abs/1112.5210}{{\ttfamily arXiv:1112.5210
+  [hep-th]}}.
+
+\bibitem{VerlindeHeckAmplitudesGaussian}
+J.~J. Heckman and H.~Verlinde, {\em {Gravity Amplitudes from a Gaussian Matrix
+  Model}}, \href{http://dx.doi.org/10.1007/JHEP09(2013)150}{JHEP {\bfseries 09}
+  (2013)150}, \href{http://arxiv.org/abs/1112.5209}{{\ttfamily arXiv:1112.5209
+  [hep-th]}}.
+
+\bibitem{chicherin2015correlation}
+D.~Chicherin, R.~Doobary, B.~Eden, P.~Heslop, G.~P. Korchemsky, L.~Mason, and
+  E.~Sokatchev, {\em Correlation functions of the chiral stress-tensor
+  multiplet in $ \mathcal{N}=4$ SYM}, Journal of High Energy Physics {\bfseries
+  2015} 6, (2015)1--51.
+
+\bibitem{erickson2000wilson}
+J.~K. Erickson, G.~W. Semenoff, and K.~Zarembo, {\em {Wilson loops in N=4
+  supersymmetric Yang-Mills theory}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(00)00300-X}{Nucl. Phys. B
+  {\bfseries 582} (2000)155--175},
+  \href{http://arxiv.org/abs/hep-th/0003055}{{\ttfamily arXiv:hep-th/0003055}}.
+
+\bibitem{drukker2001exact}
+N.~Drukker and D.~J. Gross, {\em {An Exact prediction of N=4 SUSYM theory for
+  string theory}}, \href{http://dx.doi.org/10.1063/1.1372177}{J. Math. Phys.
+  {\bfseries 42} (2001)2896--2914},
+  \href{http://arxiv.org/abs/hep-th/0010274}{{\ttfamily arXiv:hep-th/0010274}}.
+
+\bibitem{Lin:2004nb}
+H.~Lin, O.~Lunin, and J.~M. Maldacena, {\em {Bubbling AdS space and 1/2 BPS
+  geometries}}, \href{http://dx.doi.org/10.1088/1126-6708/2004/10/025}{JHEP
+  {\bfseries 10} (2004)025},
+  \href{http://arxiv.org/abs/hep-th/0409174}{{\ttfamily arXiv:hep-th/0409174}}.
+
+\bibitem{pestun2012localization}
+V.~Pestun, {\em {Localization of gauge theory on a four-sphere and
+  supersymmetric Wilson loops}},
+  \href{http://dx.doi.org/10.1007/s00220-012-1485-0}{Commun. Math. Phys.
+  {\bfseries 313} (2012)71--129},
+  \href{http://arxiv.org/abs/0712.2824}{{\ttfamily arXiv:0712.2824 [hep-th]}}.
+
+\bibitem{okuyama2018connected}
+K.~Okuyama, {\em {Connected correlator of 1/2 BPS Wilson loops in
+  $\mathcal{N}=4$ SYM}}, \href{http://dx.doi.org/10.1007/JHEP10(2018)037}{JHEP
+  {\bfseries 10} (2018)037}, \href{http://arxiv.org/abs/1808.10161}{{\ttfamily
+  arXiv:1808.10161 [hep-th]}}.
+
+\bibitem{giombi2010correlators}
+S.~Giombi and V.~Pestun, {\em {Correlators of local operators and 1/8 BPS
+  Wilson loops on S**2 from 2d YM and matrix models}},
+  \href{http://dx.doi.org/10.1007/JHEP10(2010)033}{JHEP {\bfseries 10}
+  (2010)033}, \href{http://arxiv.org/abs/0906.1572}{{\ttfamily arXiv:0906.1572
+  [hep-th]}}.
+
+\bibitem{giombiKomatsu2018exact}
+S.~Giombi and S.~Komatsu, {\em {Exact Correlators on the Wilson Loop in
+  $\mathcal{N}=4$ SYM: Localization, Defect CFT, and Integrability}},
+  \href{http://dx.doi.org/10.1007/JHEP05(2018)109}{JHEP {\bfseries 05}
+  (2018)109}, \href{http://arxiv.org/abs/1802.05201}{{\ttfamily
+  arXiv:1802.05201 [hep-th]}}. [Erratum: JHEP 11, 123 (2018)].
+
+\bibitem{SuperpotforCS}
+S.~Kachru, S.~H. Katz, A.~E. Lawrence, and J.~McGreevy, {\em {Open string
+  instantons and superpotentials}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.62.026001}{Phys. Rev. D {\bfseries
+  62} (2000)026001}, \href{http://arxiv.org/abs/hep-th/9912151}{{\ttfamily
+  arXiv:hep-th/9912151}}.
+
+\bibitem{Morozov:1995pb}
+A.~Morozov, {\em {Matrix models as integrable systems}}, in {\em {CRM-CAP
+  Summer School on Particles and Fields '94}}.
+\newblock 1, 1995.
+\newblock \href{http://arxiv.org/abs/hep-th/9502091}{{\ttfamily
+  arXiv:hep-th/9502091}}.
+
+\end{thebibliography}\endgroup

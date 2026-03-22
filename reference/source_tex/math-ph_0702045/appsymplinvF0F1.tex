@@ -1,0 +1,150 @@
+\section{Proof of the symplectic invariance of \texorpdfstring{$F^{(0)}$}{F0} and \texorpdfstring{$F^{(1)}$}{F1}}
+\label{appsymplinvF0F1}
+
+
+\subsection{\texorpdfstring{$F^{(1)}$}{F1}}
+Let us study how $F^{(1)}$ is changed under the exchange of the roles of $x$ and $y$.
+For this purpose, we define the images of $F^{(1)}$ and $W_1^{(1)}(p)$ under this
+transormation, i.e.
+\beq
+\widehat{W}_1^{(1)}(p):= - \Res_{q \to {\bf b}} {\int_{\tilde{q}}^q B(p,\xi) \over 2 (x(q)-x(\tilde{q})) dy(q)} B(q, \tilde{q})
+\eeq
+and
+\beq
+\widehat{F}^{(1)} = -{1 \over 2 } ln \tau_{By} - {1 \over 24} ln \prod_j x'(b_j)
+\eeq
+where ${\bf b}$ denotes the set of $y$-branch points,
+$\tilde{q}$ is the only point satisfying $y(q) = y(\tilde{q})$ and approaching a branch point $b_j$
+when $q \to b_j$, $\tau_{By}$ is the Bergmann tau function associated to $y$ and $x'(b_j)= {dx(b_j) \over d\tilde{z}_j(b_j)}$.
+According to theorem \ref{variat}, for any variation $\Omega$ of the curve, the variation of the free energy reads
+\beq
+\delta_\Omega \widehat{F}^{(1)} = \int_{\cal{C}} \widehat{W}_1^{(1)}(p) \L(p).
+\eeq
+Thus, the variation of the difference between the two "free energies" reads
+\beq
+\delta_\Omega \left( F^{(1)} - \widehat{F}^{(1)} \right) = \int_{\cal{C}} \left( W_1^{(1)}(p) + \widehat{W}_1^{(1)}(p) \right) \L(p) .
+\eeq
+
+In order to evaluate this quantity, one needs the following lemma:
+\bl
+For any choice of variable $z$:
+\beq\label{sumW}
+W_1^{(1)}(p) + \widehat{W}_1^{(1)}(p) = {1 \over 24} d_p \left[{1 \over x' y'} \left( 2  S_{Bz}(p)
++ {x'' y'' \over x' y'} + {x''^2 \over x'^2} - {x''' \over x'} + {y''^2 \over y'^2} - {y''' \over y'} \right) \right]
+\eeq
+where the derivatives are taken with respect to the variable $z$ and $S_{Bz}$ denotes
+the Bergmann projective connection associated to $z$.
+\el
+
+\proof{
+From the definitions , one easily derives that
+\beq\label{sumW1}
+W_1^{(1)}(p) + \widehat{W}_1^{(1)}(p) = \Res_{q \to p} {B(p,q) \over (x(p)-x(q)) (y(p)-y(q))}.
+\eeq
+
+Let us now expand the integrand in terms of an arbitrary local variable $z$ when $p \to q$. The different factors
+read
+\beq
+{B(p,q) \over dz(p) dz(q)}= {1 \over (z(p)-z(q))^2} + {1 \over 6} S_{Bz}(p) - {z(p)-z(q) \over 12} S_{Bz}'(p)+ O((z(p)-z(q))^2)
+\eeq
+and
+\bea
+{1 \over y(p)-y(q)} &=& {1 \over (z(p)-z(q)) y'(p)} \Big[ 1 - (z(p)-z(q)) {y'' \over 2 y'} \cr 
+&& \; \; + (z(p)-z(q))^2 \left( {y''^2 \over 4 y'^2} - {y'''\over 6 y'}\right) \cr
+&& \; \; \; \;   + {(z(p)-z(q))^3 \over 24} \left(- {y'''' \over y'} +4 {y''' y'' \over y'^2} - {3 y''^3 \over y'^3} \right) \cr
+&& \qquad + O((z(p)-z(q))^4) \Big] .\cr
+\eea
+Inserting it altogether inside \eq{sumW1}, one can explicitly compute the residues and one recognizes the
+formula \ref{sumW}.
+}
+
+We can now prove the following theorem stating the symmetry of $F^{(1)}$ under the exchange of $x \leftrightarrow y$:
+\bl\label{symF1}
+The two free energies transform in the same way under any variation of the moduli of the curve:
+\beq
+\delta_\Omega  F^{(1)} = \delta_\Omega \widehat{F}^{(1)}
+\eeq
+\el
+
+\proof{
+We already know that
+\beq
+\delta_\Omega \left( F^{(1)} - \widehat{F}^{(1)} \right) = \int_{p \in \cal{C}}
+{1 \over 24} d_p \left[{1 \over x' y'} \left( 2  S_{Bz}(p)
++ {x'' y'' \over x' y'} + {x''^2 \over x'^2} - {x''' \over x'} + {y''^2 \over y'^2} - {y''' \over y'} \right) \right]
+\L(p)
+\eeq
+for an arbitrary variable $z$.
+
+We just have to check that this quantity vanishes for the transformations corresponding to varying the moduli
+of the curve. Because the function inside the differential wrt $p$ vanishes at the poles of $ydx$, one can
+check that it is indeed the case.
+}
+
+
+Thus the first correction to the free energy satisfies the following variation under symplectic transformations:
+\bt
+$F^{(1)}$ does not change under the following transformations of $\curve$:
+
+$\bullet$ \vspace{0.3mm} $y\to y +R(x)$ where $R$ is a rational function.
+
+$\bullet$ \vspace{0.3mm} $y\to c y$ and $x\to {1\over c}x$ where $c$ is a non-zero complex number.
+
+$\bullet$ \vspace{0.3mm} $x\to x +R(y)$ where $R$ is a rational function.
+
+$\bullet$ \vspace{0.3mm} $y\to x$ and $x\to y$.
+
+$F^{(1)}$ is shifted by a multiple of $ i \pi/12$ when $\curve$ is changed by $x \to - x$.
+
+\et
+
+\proof{The first transformation is obvious from the definition since neither $ln \tau_{Bx}$ nor $y'(a_i)$ changes.
+
+The second one follows from theorem 2 in \cite{EKK} for $f=x$ and $g={x \over c}$ which shows that
+the variations of $ln(\tau_{Bx})$ and $y'(a_i)$ compensate.
+
+The fourth one is nothing but lemma (\ref{symF1}) and it gives the third one when combined with the first.
+
+The last transformation holds because $ln \tau_{Bx}$ is left unchanged and $y'(a_i)$ changes sign.
+
+}
+
+\subsection{\texorpdfstring{$F^{(0)}$}{F0}}
+
+\bt
+$F^{(0)}$ does not change under the following transformations of $\curve$:
+
+$\bullet$ \vspace{0.3mm} $y\to y +{\cal{P}}(x)$ where ${\cal{P}}$ is a polynomial.
+
+$\bullet$ \vspace{0.3mm} $y \to y$ and $x \to -x$.
+
+$\bullet$ \vspace{0.3mm} $y\to c y$ and $x\to {1\over c}x$ where $c$ is a non-zero complex number.
+
+$\bullet$ \vspace{0.3mm} $x\to x +{\cal{P}}(y)$ where ${\cal{P}}$ is a polynomial.
+
+$\bullet$ \vspace{0.3mm} $y\to x$ and $x\to y$.
+
+\et
+
+\proof{
+The second and third transformations come from the structure of $F^{(0)}$ which is bilinear in objects proportionnal to $ydx$.
+
+One can obtain the last one following the same method as for $F^{(1)}$: we compute the variation of the difference
+of the two free energies under the changes of the moduli of $\curve$ and show that they vanish.
+
+Let us now show the first invariance. In this case, the variation of the free energy is
+$\delta_{{\cal{P}}(x)dx} F^{(0)}$. Since ${\cal{P}}(x)$ is a polynomial one can write it
+\beq
+{\cal{P}}(x(p)) = \Res_{q \to p} B(p,q) {\cal{Q}}(x(q)) = - \sum_\alpha \Res_{q \to \alpha} B(p,q) {\cal{Q}}(x(q)),
+\eeq
+where ${\cal{Q}}(x)$ is also a polynomial in $x$. Then, theorem (\ref{variat}) implies the invariance
+of $F^{(0)}$ under this transformation.
+
+The fourth transformation is a combination of the first and the last one.
+
+
+}
+
+
+
+

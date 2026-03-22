@@ -1,0 +1,162 @@
+\section{Variation of the curve} 
+\label{sectproofvariat}
+%----------------------------------------------------------------------
+In this appendix, we proove the theorems stated in sections (\ref{sectcompstruct})
+and section (\ref{sectvarikappa}).
+
+{\bf Lemma \ref{lemDOmega} }\proof{
+\beq
+\begin{array}{l}
+D_\Omega\, \left( \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)}\, f(q,\qbar) \right)_{x(p)}\cr
+=   \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)} \,\, D_\Omega \left(f(q,\qbar)\right)_{x(q)} -  \sum_j \Res_{q\to a_j} {dE_{q}(p)\over (\om(q))^2}\,(\Omega(q)-\Omega(\qbar))\, f(q,\qbar)  \cr
+ +2   \sum_j \Res_{q\to a_j} \sum_i \Res_{r\to a_i} { dE_{r}(p) \over \om(r)}\, \Omega(r)\, {dE_{q}(r) \over \om(q)}\, f(q,\qbar) \cr 
+=   \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)} \,\, D_\Omega \left(f(q,\qbar)\right)_{x(q)} - 2  \sum_j \Res_{q\to a_j} {dE_{q}(p)\over (\om(q))^2}\,\Omega(q)\, f(q,\qbar)  \cr
+ +2   \sum_j \Res_{q\to a_j} \sum_i \Res_{r\to a_i} { dE_{r}(p) \over \om(r)}\, \Omega(r)\, {dE_{q}(r) \over \om(q)}\, f(q,\qbar) \cr
+=   \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)} \,\, D_\Omega \left(f(q,\qbar)\right)_{x(q)} - 2  \sum_j \Res_{q\to a_j} \Res_{r\to q} {dE_{q}(r) dE_r(p)\over \om(q) \om(r)}\,\Omega(r)\, f(q,\qbar)  \cr
+ +2   \sum_j \Res_{q\to a_j} \sum_i \Res_{r\to a_i} { dE_{r}(p) \over \om(r)}\, \Omega(r)\, {dE_{q}(r) \over \om(q)}\, f(q,\qbar) \cr
+%
+=   \sum_j \Res_{q\to a_j} {dE_{q}(p)\over \om(q)} \,\, D_\Omega \left(f(q,\qbar)\right)_{x(q)} \cr
+ +2    \sum_i \Res_{r\to a_i}\sum_j \Res_{q\to a_j} { dE_{r}(p) \over \om(r)}\, \Omega(r)\, {dE_{q}(r) \over \om(q)}\, f(q,\qbar) \cr
+\end{array}
+\eeq
+}
+
+\vs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Theorem \ref{variat}} \proof{
+This theorem straightforwardly comes from the diagrammatic rules described in the preceding paragraph except for
+the variation of $F^{(1)}$.
+
+Let us prove it for $F^{(1)}$ with $\Omega(p) = \int_{\cal C} B(p,q) \Lambda(q)$.
+One has
+\beq
+\begin{array}{rcl}
+- \int_{\cal C} W_1^{(g)}(p) \L(p) &=&
+- \Res_{q \to {\bf a}} {\int_{\cal C} dE_q(p) \L(p) \over \omega(q)} B(q,\qbar) \cr
+&=& - \Res_{q \to {\bf a}} {\int_{\cal C} dE_q(p) \L(p) dz_i(q) dz_i(\qbar) \over \omega(q)} \left[ {1 \over (z(q)-z(\qbar))^2} + {1 \over 6} S_B(q) \right] \cr
+\end{array}
+\eeq
+where $z_i$ is a local variable near the branch point $a_i$ and $S_B$ is the corresponding Bergmann projective connection.
+Since the last term has a simple pole at the branch point $a_i$, one can write
+\bea
+- \Res_{q \to {\bf a}} {\int_{\cal C} dE_q(p) \L(p) dz_i(q) dz_i(\qbar) \over \omega(q)} {1 \over 6} S_B(q)
+&=& - {1 \over 2} \sum_i {\Omega(a_i) \over dy(a_i)}  \Res_{q \to a_i} {B(q,\qbar) \over dx(q)} \cr
+&=& - {1 \over 2} \delta_{\Omega} ln \tau_{Bx}. \cr
+\eea
+
+On the other hand, one can express the first term thanks to the local variables $z_i$ and compute
+\bea
+- \Res_{q \to {\bf a}} {\int_{\cal C} dE_q(p) \L(p) dz_i(q) dz_i(\qbar) \over \omega(q) (z(q)-z(\qbar))^2} 
+&=& - {1 \over 24} \delta_\Omega (y'(a_i))\cr
+\eea
+provided that $z_i(q) - z_i(\qbar)= 2 z_i(q)$.
+}
+
+\vs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Theorem (\ref{homogeneity}) }\proof{
+Using theorem \ref{thintPhi}, we have:
+\beq
+(2-2g)F^{(g)} = -\Res_\bfa \Phi W_1^{(g)}
+\eeq
+and using eq.\ref{ydxmoduli}, we can choose for any arbitrary $o'$:
+\beq
+\Phi(p)=
+-\sum_\alpha \Res_{\alpha} V_\alpha dS_{p,o'}
++ \sum_\alpha t_\alpha \int_{o}^\alpha dS_{p,o'}
++ \sum_i \epsilon_i \oint_{\bcycle_i} dS_{p,o'}
+\eeq
+which implies:
+\beq
+\begin{array}{l}
+ (2-2g)F^{(g)}
+= -\Res_\bfa \Phi W_1^{(g)} \cr
+= \sum_\alpha \Res_{p\to\bfa}  \Res_{q\to\alpha} V_\alpha(q) dS_{p,o'}(q) W_1^{(g)}(p)  - \sum_\alpha t_\alpha \Res_{p\to\bfa}  \int_{q=o}^\alpha dS_{p,o'}(q) W_1^{(g)}(p) \cr
+ - \sum_i \epsilon_i \Res_{p\to\bfa} \oint_{q\in\bcycle_i} dS_{p,o'}(q) W_1^{(g)}(p) .\cr
+\end{array}
+\eeq
+Since the poles $\alpha$ and the branch points $a_i$ do not coincide, one can exchange the order of integration. Then, one can
+move the integration contours for $p$ in order to integrate only around the last pole $p \to q$:
+\beq
+\begin{array}{l}
+ (2-2g)F^{(g)}\cr
+= \sum_\alpha t_\alpha  \int_{q=o}^\alpha \Res_{p\to q}  dS_{p,o'}(q) W_1^{(g)}(p) - \sum_\alpha  \Res_{q\to\alpha} \Res_{p\to q}  V_\alpha(q) dS_{p,o'}(q) W_1^{(g)}(p)   \cr
+ + \sum_i \epsilon_i \oint_{q\in\bcycle_i} \Res_{p\to q}  dS_{p,o'}(q) W_1^{(g)}(p) \cr
+=  \sum_\alpha  \Res_{q\to\alpha} V_\alpha(q) W_1^{(g)}(q)  - \sum_\alpha t_\alpha  \int_{q=o}^\alpha W_1^{(g)}(q)  - \sum_i \epsilon_i \oint_{q\in\bcycle_i} W_1^{(g)}(q) .\cr
+\end{array}
+\eeq
+}
+
+
+\vs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Theorem (\ref{thdWdkappa})} \proof{
+We have
+\bea
+2i\pi {\partial \over \partial \kappa_{ij}}\,W^{(0)}_{2}(p_1,p_2)
+&=& {1\over 2}(2i\pi)^2 (du_i(p_1) du_j(p_2)+du_i(p_2) du_j(p_1))\cr
+&=& {1\over 2}\,\oint_{r\in\bcycle_j}\oint_{s\in\bcycle_i} (B(p_1,r)B(p_2,s) + B(p_2,r)B(p_1,s)). \cr
+\eea
+Thus the theorem holds for $k=2$ and $g=0$.And by integration we get 
+\bea
+- 2i\pi {\partial \over \partial \kappa_{ij}} dE_q(p)
+&=&  2 (i\pi)^2 (du_i(p) (u_j(q)-u_j(\qbar))+du_j(p) (u_i(q)-u_i(\qbar))) \cr
+&=& - {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j}  (B(p,r) dE_q(s)+B(p,s) dE_q(r)) .\cr
+\eea
+
+\beq
+\begin{array}{rl}
+& 2i\pi {\partial \over \partial \kappa_{ij}} W_{k+1}^{(g)}(p,p_K) \cr
+%
+=& 2i\pi {\partial \over \partial \kappa_{ij}} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\, \Big(
+W_{k+2}^{(g-1)}(q,\qbar,p_K) + \sum W_{j+1}^{(h)}(q,p_J) W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \Big) \cr
+%
+=& {1 \over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j}  \Res_{q\to\bfa} {B(p,r) dE_q(s)+B(p,s) dE_q(r)\over (y(q)-y(\qbar))dx(q)}\, \Big(
+W_{k+2}^{(g-1)}(q,\qbar,p_K) \cr
+& \hspace{8cm} + \sum W_{j+1}^{(h)}(q,p_J) W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \Big) \cr
+&  + \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\, \Big( 2i\pi {\partial \over \partial \kappa_{ij}} W_{k+2}^{(g-1)}(q,\qbar,p_K) \Big) \cr
+&+ \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\, \Big( \sum 2i\pi {\partial \over \partial \kappa_{ij}} W_{j+1}^{(h)}(q,p_J) W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \Big) \cr
+& + \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\, \Big( \sum  W_{j+1}^{(h)}(q,p_J)  2i\pi {\partial \over \partial \kappa_{ij}}W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \Big) \cr
+%
+=&   {1 \over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j}  \Big( B(p,r) W^{(g)}_{k+1}(s,p_K)+B(p,s)  W^{(g)}_{k+1}(r,p_K) \Big) \cr
+& + {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,
+\Big( W_{k+4}^{(g-2)}(q,\qbar,p_K,r,s) \cr
+& + 2 W_{j+3}^{(h)}(q,\qbar,p_J,r) W_{k-j+1}^{(g-1-h)}(p_{K/J},s) + 2 W_{j+2}^{(h)}(q,p_J,r) W_{k-j+2}^{(g-1-h)}(\qbar,p_{K/J},s)
+\Big) \cr
+%
+& + {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,  \sum_J W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \times \cr
+&\hspace{2cm} \times  \Big( W_{j+3}^{(h-1)}(q,p_J,r,s) + 2 \sum_L W_{l+2}^{(m)}(q,p_L,r) W_{k-j-l+1}^{(h-m)}(p_{K/(J\cup L)},s) \Big) \cr
+%
+& + {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,  \sum_J W_{k-j+1}^{(g-h)}(q,p_{K/J}) \times \cr
+& \hspace{2cm} \times \Big( W_{j+3}^{(h-1)}(\qbar,p_J,r,s) + 2 \sum_L W_{l+2}^{(m)}(\qbar,p_L,r) W_{k-j-l+1}^{(h-m)}(p_{K/(J\cup L)},s) \Big)   \cr
+\end{array}
+\eeq
+We regroup together all terms with 2 $W$'s and all terms with 3 $W$'s:
+\beq
+\begin{array}{rl}
+& 2i\pi {\partial \over \partial \kappa_{ij}} W_{k+1}^{(g)}(p,p_K) \cr
+%
+=&   {1 \over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j}  \Big( B(p,r) W^{(g)}_{k+1}(s,p_K)+B(p,s)  W^{(g)}_{k+1}(r,p_K) \Big) \cr
+%
+& + \oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,  \sum_J  W_{j+3}^{(h-1)}(q,p_J,r,s) W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \cr
+%
+& + \oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,   \Big(  W_{j+2}^{(h)}(q,p_J,r) W_{k-j+2}^{(g-1-h)}(\qbar,p_{K/J},s) \Big) \cr
+%
+& + {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\, W_{k+4}^{(g-2)}(q,\qbar,p_K,r,s) \cr
+%
+& + \oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)} \times \cr
+& \hspace{2cm} \times \Big( \sum_J  \sum_L W_{l+2}^{(m)}(\qbar,p_L,r) W_{k-j-l+1}^{(h-m)}(p_{K/(J\cup L)},s)  W_{k-j+1}^{(g-h)}(q,p_{K/J}) \Big) \cr
+%
+& + \oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)} \times \cr
+& \hspace{2cm} \times \Big( \sum_J   \sum_L W_{l+2}^{(m)}(q,p_L,r) W_{k-j-l+1}^{(h-m)}(p_{K/(J\cup L)},s)  W_{k-j+1}^{(g-h)}(\qbar,p_{K/J}) \Big) \cr
+%
+& + {1\over 2}\,\oint_{r\in \bcycle_i}\oint_{s\in \bcycle_j} \Res_{q\to\bfa} {dE_q(p)\over (y(q)-y(\qbar))dx(q)}\,  \Big( 2 W_{j+3}^{(h)}(q,\qbar,p_J,r) W_{k-j+1}^{(g-1-h)}(p_{K/J},s)  \Big) \cr
+\end{array}
+\eeq
+We recognize the recursion  relation  eq.\ref{defWkgrecursive} in lines 2 to 5, and in lines 6 to 8, and this gives the theorem.
+
+The theorem for the free energies, is easy obtained using theorem  \ref{thintPhi}.
+}

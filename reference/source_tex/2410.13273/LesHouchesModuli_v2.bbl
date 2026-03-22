@@ -1,0 +1,2618 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global/global}
+  \entry{Agg21}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Aggarwal},
+         familyi={A\bibinitperiod},
+         given={Amol},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AA1}
+    \strng{fullhash}{AA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Agg21}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1007/s00222-021-01059-9
+    \endverb
+    \verb{eprint}
+    \verb 2004.05042
+    \endverb
+    \field{number}{3}
+    \field{pages}{897–1010}
+    \field{title}{Large genus asymptotics for intersection numbers and
+  principal strata volumes of quadratic differentials}
+    \field{volume}{226}
+    \field{journaltitle}{Invent. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Ani}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=AI}{%
+         family={Aniceto},
+         familyi={A\bibinitperiod},
+         given={In{\^e}s},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AI1}
+    \strng{fullhash}{AI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ani}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{{Les Houches} lecture notes on resurgence and applications}
+  \endentry
+
+  \entry{ABS19}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=AI}{%
+         family={Aniceto},
+         familyi={A\bibinitperiod},
+         given={In{\^e}s},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Ba{\c{s}}ar},
+         familyi={B\bibinitperiod},
+         given={G{\"o}k{\c{c}}e},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Schiappa},
+         familyi={S\bibinitperiod},
+         given={Ricardo},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AIBGSR1}
+    \strng{fullhash}{AIBGSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{ABS19}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1016/j.physrep.2019.02.003
+    \endverb
+    \verb{eprint}
+    \verb 1802.10441
+    \endverb
+    \field{pages}{135}
+    \field{title}{A primer on resurgent transseries and their asymptotics}
+    \field{volume}{809}
+    \field{journaltitle}{Phys. Rep.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2019}
+  \endentry
+
+  \entry{ACG11}{book}{}{}
+    \name{author}{3}{}{%
+      {{hash=AE}{%
+         family={Arbarello},
+         familyi={A\bibinitperiod},
+         given={Enrico},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Cornalba},
+         familyi={C\bibinitperiod},
+         given={Maurizio},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GPA}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={Phillip\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{AECMGPA1}
+    \strng{fullhash}{AECMGPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{ACG11}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1007/978-3-540-69392-5
+    \endverb
+    \field{series}{Grundlehren der mathematischen Wissenschaften}
+    \field{subtitle}{Volume II with a contribution by J.~D. Harris}
+    \field{title}{Geometry of Algebraic Curves}
+    \field{volume}{268}
+    \field{year}{2011}
+  \endentry
+
+  \entry{AC25}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=AA}{%
+         family={Artemev},
+         familyi={A\bibinitperiod},
+         given={Aleksandr},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CI}{%
+         family={Chaban},
+         familyi={C\bibinitperiod},
+         given={Igor},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AACI1}
+    \strng{fullhash}{AACI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{AC25}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1007/JHEP01(2025)151
+    \endverb
+    \verb{eprint}
+    \verb 2403.02305
+    \endverb
+    \field{number}{1}
+    \field{pages}{31}
+    \field{title}{{$(2,2p+1)$} minimal string and intersection theory {I}}
+    \field{volume}{2025}
+    \field{journaltitle}{J. High Energy Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2025}
+  \endentry
+
+  \entry{Ber}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bertola},
+         familyi={B\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ber}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{Les Houches} lecture notes on {Riemann} surfaces and {Theta}
+  functions}
+  \endentry
+
+  \entry{Bou26}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=BV}{%
+         family={Bouchard},
+         familyi={B\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SciPost}%
+    }
+    \strng{namehash}{BV1}
+    \strng{fullhash}{BV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Bou26}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.21468/SciPostPhysLectNotes.115
+    \endverb
+    \verb{eprint}
+    \verb 2409.06657
+    \endverb
+    \field{title}{{Les Houches lecture notes on topological recursion}}
+    \field{volume}{115}
+    \field{journaltitle}{SciPost Phys. Lect. Notes}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+    \field{year}{2026}
+  \endentry
+
+  \entry{BCGS}{unpublished}{}{}
+    \name{author}{4}{}{%
+      {{hash=BV}{%
+         family={Bouchard},
+         familyi={B\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=CNK}{%
+         family={Chidambaram},
+         familyi={C\bibinitperiod},
+         given={Nitin\bibnamedelima Kumar},
+         giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Giacchetto},
+         familyi={G\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Shadrin},
+         familyi={S\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BV+1}
+    \strng{fullhash}{BVCNKGASS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BCGS}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{eprint}
+    \verb 2505.11291
+    \endverb
+    \field{title}{Theta classes: generalized topological recursion,
+  integrability and {$\mathcal{W}$}-constraints}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+  \endentry
+
+  \entry{BKMP09}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=BV}{%
+         family={Bouchard},
+         familyi={B\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Klemm},
+         familyi={K\bibinitperiod},
+         given={Albrecht},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={{Mari\~{n}o}},
+         familyi={M\bibinitperiod},
+         given={Marcos},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pasquetti},
+         familyi={P\bibinitperiod},
+         given={Sara},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{BV+1}
+    \strng{fullhash}{BVKAMMPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BKMP09}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1007/s00220-008-0620-4
+    \endverb
+    \verb{eprint}
+    \verb 0709.1453
+    \endverb
+    \field{number}{1}
+    \field{pages}{117–178}
+    \field{title}{Remodeling the {B}-model}
+    \field{volume}{287}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2009}
+  \endentry
+
+  \entry{BM08}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=BV}{%
+         family={Bouchard},
+         familyi={B\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={{Mari\~{n}o}},
+         familyi={M\bibinitperiod},
+         given={Marcos},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Amer. Math. Soc., Providence, RI}%
+    }
+    \strng{namehash}{BVMM1}
+    \strng{fullhash}{BVMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BM08}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{From Hodge theory to integrability and TQFT:
+  $tt^{\ast}$-geometry}
+    \verb{doi}
+    \verb 10.1090/pspum/078/2483754
+    \endverb
+    \verb{eprint}
+    \verb 0709.1458
+    \endverb
+    \field{pages}{263–283}
+    \field{title}{{Hurwitz} numbers, matrix models and enumerative geometry}
+    \field{volume}{78}
+    \field{journaltitle}{Proc. Sympos. Pure Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2008}
+  \endentry
+
+  \entry{BG80}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=BE}{%
+         family={Br\'ezin},
+         familyi={B\bibinitperiod},
+         given={Edouard},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GDJ}{%
+         family={Gross},
+         familyi={G\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BEGDJ1}
+    \strng{fullhash}{BEGDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BG80}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1016/0370-2693(80)90562-6
+    \endverb
+    \field{pages}{120}
+    \field{title}{The external field problem in the large {$N$} limit of {QCD}}
+    \field{volume}{97}
+    \field{journaltitle}{Phys. Lett. B}
+    \field{year}{1980}
+  \endentry
+
+  \entry{BIPZ78}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=BE}{%
+         family={Brézin},
+         familyi={B\bibinitperiod},
+         given={Edouard},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=IC}{%
+         family={Itzykson},
+         familyi={I\bibinitperiod},
+         given={Claude},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Parisi},
+         familyi={P\bibinitperiod},
+         given={Giorgio},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=ZJB}{%
+         family={Zuber},
+         familyi={Z\bibinitperiod},
+         given={Jean-Bernard},
+         giveni={J\bibinithyphendelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BE+1}
+    \strng{fullhash}{BEICPGZJB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BIPZ78}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1007/BF01614153
+    \endverb
+    \field{pages}{35–51}
+    \field{title}{Planar diagrams}
+    \field{volume}{59}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{year}{1978}
+  \endentry
+
+  \entry{CGG25}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=CNK}{%
+         family={Chidambaram},
+         familyi={C\bibinitperiod},
+         given={Nitin\bibnamedelima K.},
+         giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={{Garcia-Failde}},
+         familyi={G\bibinitperiod},
+         given={Elba},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Giacchetto},
+         familyi={G\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CNKGEGA1}
+    \strng{fullhash}{CNKGEGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{CGG25}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1007/s00222-025-01351-y
+    \endverb
+    \verb{eprint}
+    \verb 2205.15621
+    \endverb
+    \field{pages}{929–997}
+    \field{title}{Relations on {$\overline{\mathcal{M}}_{g,n}$} and the
+  negative {$r$}-spin {Witten} conjecture}
+    \field{volume}{241}
+    \field{journaltitle}{Invent. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2025}
+  \endentry
+
+  \entry{Chi08}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=CA}{%
+         family={Chiodo},
+         familyi={C\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CA1}
+    \strng{fullhash}{CA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Chi08}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10/dnt2wg
+    \endverb
+    \verb{eprint}
+    \verb math/0607324
+    \endverb
+    \field{number}{6}
+    \field{pages}{1461–1496}
+    \field{title}{Towards an enumerative geometry of the moduli space of
+  twisted curves and {\texorpdfstring{$r$}{r}}th roots}
+    \field{volume}{144}
+    \field{journaltitle}{Compos. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2008}
+  \endentry
+
+  \entry{CEMR24}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=CS}{%
+         family={Collier},
+         familyi={C\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=EL}{%
+         family={Eberhardt},
+         familyi={E\bibinitperiod},
+         given={Lorenz},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={M{\"u}hlmann},
+         familyi={M\bibinitperiod},
+         given={Beatrix},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RVA}{%
+         family={Rodriguez},
+         familyi={R\bibinitperiod},
+         given={Victor\bibnamedelima A.},
+         giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSELMBRVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{CEMR24}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.21468/SciPostPhys.16.2.057
+    \endverb
+    \verb{eprint}
+    \verb 2309.10846
+    \endverb
+    \field{number}{2}
+    \field{pages}{057}
+    \field{title}{The {Virasoro} minimal string}
+    \field{volume}{16}
+    \field{journaltitle}{SciPost Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2024}
+  \endentry
+
+  \entry{CEMR25}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=CS}{%
+         family={Collier},
+         familyi={C\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=EL}{%
+         family={Eberhardt},
+         familyi={E\bibinitperiod},
+         given={Lorenz},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={M{\"u}hlmann},
+         familyi={M\bibinitperiod},
+         given={Beatrix},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RVA}{%
+         family={Rodriguez},
+         familyi={R\bibinitperiod},
+         given={Victor\bibnamedelima A.},
+         giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SciPost}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSELMBRVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{CEMR25}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.21468/SciPostPhys.18.5.154
+    \endverb
+    \verb{eprint}
+    \verb 2410.07345
+    \endverb
+    \field{pages}{154}
+    \field{title}{The complex {Liouville} string: {T}he matrix integral}
+    \field{volume}{18}
+    \field{journaltitle}{SciPost Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2025}
+  \endentry
+
+  \entry{DM69}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=DP}{%
+         family={Deligne},
+         familyi={D\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mumford},
+         familyi={M\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPMD1}
+    \strng{fullhash}{DPMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DM69}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1007/BF02684599
+    \endverb
+    \field{number}{1}
+    \field{pages}{75–109}
+    \field{title}{The irreducibility of the space of curves of given genus}
+    \field{volume}{36}
+    \field{journaltitle}{Publ. Math. Inst. Hautes Études Sci.}
+    \field{year}{1969}
+  \endentry
+
+  \entry{DVV91}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=DR}{%
+         family={Dijkgraaf},
+         familyi={D\bibinitperiod},
+         given={Robbert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VH}{%
+         family={Verlinde},
+         familyi={V\bibinitperiod},
+         given={Herman},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=VE}{%
+         family={Verlinde},
+         familyi={V\bibinitperiod},
+         given={Erik},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{DRVHVE1}
+    \strng{fullhash}{DRVHVE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DVV91}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1016/0550-3213(91)90129-L
+    \endverb
+    \field{number}{1}
+    \field{pages}{59–86}
+    \field{title}{Topological strings in $d < 1$}
+    \field{volume}{352}
+    \field{journaltitle}{Nucl. Phys. B.}
+    \field{year}{1991}
+  \endentry
+
+  \entry{Dub96}{inbook}{}{}
+    \name{author}{1}{}{%
+      {{hash=DB}{%
+         family={Dubrovin},
+         familyi={D\bibinitperiod},
+         given={Boris},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=FM}{%
+         family={Francaviglia},
+         familyi={F\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Greco},
+         familyi={G\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DB1}
+    \strng{fullhash}{DB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dub96}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{Integrable systems and quantum groups}
+    \verb{doi}
+    \verb 10.1007/BFb0094793
+    \endverb
+    \verb{eprint}
+    \verb hep-th/9407018
+    \endverb
+    \field{pages}{120–348}
+    \field{series}{Lecture Notes in Mathematics}
+    \field{title}{Geometry of {$2d$} topological field theories}
+    \field{volume}{1620}
+    \field{eprinttype}{arXiv}
+    \field{year}{1996}
+  \endentry
+
+  \entry{DOSS14}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=DP}{%
+         family={{Dunin-Barkowski}},
+         familyi={D\bibinitperiod},
+         given={Petr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=ON}{%
+         family={Orantin},
+         familyi={O\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Shadrin},
+         familyi={S\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Spitz},
+         familyi={S\bibinitperiod},
+         given={Loek},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DP+1}
+    \strng{fullhash}{DPONSSSL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DOSS14}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1007/s00220-014-1887-2
+    \endverb
+    \verb{eprint}
+    \verb 1211.4021
+    \endverb
+    \field{number}{2}
+    \field{pages}{669–700}
+    \field{title}{Identification of the {Givental} formula with the spectral
+  curve topological recursion procedure}
+    \field{volume}{328}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Ebe24}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=EL}{%
+         family={Eberhardt},
+         familyi={E\bibinitperiod},
+         given={Lorenz},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{EL1}
+    \strng{fullhash}{EL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ebe24}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.1007/s00220-024-04963-2
+    \endverb
+    \verb{eprint}
+    \verb 2204.09789
+    \endverb
+    \field{number}{3}
+    \field{pages}{76}
+    \field{title}{Off-shell partition functions in 3d gravity}
+    \field{volume}{405}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2024}
+  \endentry
+
+  \entry{EHX97}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=ET}{%
+         family={Eguchi},
+         familyi={E\bibinitperiod},
+         given={Tohru},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={Hori},
+         familyi={H\bibinitperiod},
+         given={Kentaro},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=XCS}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Chuan-Sheng},
+         giveni={C\bibinithyphendelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{ETHKXCS1}
+    \strng{fullhash}{ETHKXCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EHX97}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.1016/S0370-2693(97)00401-2
+    \endverb
+    \verb{eprint}
+    \verb hep-th/9703086
+    \endverb
+    \field{number}{1-2}
+    \field{pages}{71–80}
+    \field{title}{Quantum cohomology and {Virasoro} algebra}
+    \field{volume}{402}
+    \field{journaltitle}{Phys. Lett. B}
+    \field{eprinttype}{arXiv}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Eyn}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EB1}
+    \strng{fullhash}{EB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Eyn}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{eprint}
+    \verb 1104.0176
+    \endverb
+    \field{title}{Intersection numbers of spectral curves}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+  \endentry
+
+  \entry{Eyn14b}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EB1}
+    \strng{fullhash}{EB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Eyn14}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.4310/CNTP.2014.v8.n3.a4
+    \endverb
+    \verb{eprint}
+    \verb 1110.2949
+    \endverb
+    \field{pages}{541–588}
+    \field{title}{Invariants of spectral curves and intersection theory of
+  moduli spaces of complex curves}
+    \field{volume}{8}
+    \field{journaltitle}{Commun. Number Theory Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+    \field{year}{2014}
+  \endentry
+
+  \entry{EGGGL}{unpublished}{}{}
+    \name{author}{5}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={{Garcia-Failde}},
+         familyi={G\bibinitperiod},
+         given={Elba},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Giacchetto},
+         familyi={G\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gregori},
+         familyi={G\bibinitperiod},
+         given={Paolo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Lewański},
+         familyi={L\bibinitperiod},
+         given={Danilo},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EB+1}
+    \strng{fullhash}{EBGEGAGPLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EGGGL}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{eprint}
+    \verb 2309.03143
+    \endverb
+    \field{title}{Resurgent large genus asymtotics of intersection numbers}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+  \endentry
+
+  \entry{EO}{unpublished}{}{}
+    \name{author}{2}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=ON}{%
+         family={Orantin},
+         familyi={O\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EBON1}
+    \strng{fullhash}{EBON1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EO}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{eprint}
+    \verb 0705.3600
+    \endverb
+    \field{title}{{Weil–Petersson} volume of moduli spaces, {Mirzakhani}'s
+  recursion and matrix models}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+  \endentry
+
+  \entry{EO07}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=ON}{%
+         family={Orantin},
+         familyi={O\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {International Press of Boston}%
+    }
+    \strng{namehash}{EBON1}
+    \strng{fullhash}{EBON1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EO07}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.4310/CNTP.2007.v1.n2.a4
+    \endverb
+    \verb{eprint}
+    \verb math-ph/0702045
+    \endverb
+    \field{number}{2}
+    \field{pages}{347–452}
+    \field{title}{Invariants of algebraic curves and topological expansion}
+    \field{volume}{1}
+    \field{journaltitle}{Commun. Number Theory Phys.}
+    \field{eprinttype}{arXiv}
+    \field{year}{2007}
+  \endentry
+
+  \entry{EO15}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=EB}{%
+         family={Eynard},
+         familyi={E\bibinitperiod},
+         given={Bertrand},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=ON}{%
+         family={Orantin},
+         familyi={O\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{EBON1}
+    \strng{fullhash}{EBON1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EO15}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.1007/s00220-015-2361-5
+    \endverb
+    \verb{eprint}
+    \verb 1205.1103
+    \endverb
+    \field{number}{2}
+    \field{pages}{483–567}
+    \field{title}{Computation of open {Gromov–Witten} invariants for toric
+  {Calabi–Yau} 3-folds by topological recursion, a proof of the {BKMP}
+  conjecture}
+    \field{volume}{337}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math-ph}
+    \field{year}{2015}
+  \endentry
+
+  \entry{FSZ10}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=FC}{%
+         family={Faber},
+         familyi={F\bibinitperiod},
+         given={Carel},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Shadrin},
+         familyi={S\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zvonkine},
+         familyi={Z\bibinitperiod},
+         given={Dimitri},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCSSZD1}
+    \strng{fullhash}{FCSSZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{FSZ10}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.24033/asens.2130
+    \endverb
+    \verb{eprint}
+    \verb math/0612510
+    \endverb
+    \field{number}{4}
+    \field{pages}{621–658}
+    \field{title}{Tautological relations and the {$r$}-spin {Witten}
+  conjecture}
+    \field{volume}{43}
+    \field{journaltitle}{Ann. Sci. \'{E}cole Norm. Sup.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2010}
+  \endentry
+
+  \entry{FLZ20}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=FB}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Bohan},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LCCM}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chiu-Chu\bibnamedelima Melissa},
+         giveni={C\bibinithyphendelim C\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=ZZ}{%
+         family={Zong},
+         familyi={Z\bibinitperiod},
+         given={Zhengyu},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FBLCCMZZ1}
+    \strng{fullhash}{FBLCCMZZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{FLZ20}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1090/jams/934
+    \endverb
+    \verb{eprint}
+    \verb 1604.07123
+    \endverb
+    \field{number}{1}
+    \field{pages}{135–222}
+    \field{title}{On the remodeling conjecture for toric {Calabi–Yau}
+  3-orbifolds}
+    \field{volume}{33}
+    \field{journaltitle}{J. Amer. Math. Soc.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Giv01a}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=GAB}{%
+         family={Givental},
+         familyi={G\bibinitperiod},
+         given={Aleksandr\bibnamedelima B.},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Независимый Московский
+  университет–МЦНМО}%
+    }
+    \strng{namehash}{GAB1}
+    \strng{fullhash}{GAB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Giv01}
+    \field{extraalpha}{1}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.17323/1609-4514-2001-1-4-551-568
+    \endverb
+    \verb{eprint}
+    \verb math/0108100
+    \endverb
+    \field{number}{4}
+    \field{pages}{551–568}
+    \field{title}{{Gromov–Witten} invariants and quantization of quadratic
+  {Hamiltonians}}
+    \field{volume}{1}
+    \field{journaltitle}{Mosc. Math. J.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Giv01b}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=GAB}{%
+         family={Givental},
+         familyi={G\bibinitperiod},
+         given={Alexander\bibnamedelima B.},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {OUP}%
+    }
+    \strng{namehash}{GAB2}
+    \strng{fullhash}{GAB2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Giv01}
+    \field{extraalpha}{2}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1155/S1073792801000605
+    \endverb
+    \verb{eprint}
+    \verb math/0008067
+    \endverb
+    \field{number}{23}
+    \field{pages}{1265–1286}
+    \field{title}{Semisimple {Frobenius} structures at higher genus}
+    \field{volume}{2001}
+    \field{journaltitle}{Int. Math. Res. Not.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2001}
+  \endentry
+
+  \entry{GM}{unpublished}{}{}
+    \name{author}{2}{}{%
+      {{hash=GR}{%
+         family={Gopakumar},
+         familyi={G\bibinitperiod},
+         given={Rajesh},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MEA}{%
+         family={Mazenc},
+         familyi={M\bibinitperiod},
+         given={Edward\bibnamedelima A},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GRMEA1}
+    \strng{fullhash}{GRMEA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{GM}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{eprint}
+    \verb 2212.05999
+    \endverb
+    \field{title}{Deriving the simplest gauge-string duality – {I}:
+  open-closed-open triality}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+  \endentry
+
+  \entry{GP99}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=GT}{%
+         family={Graber},
+         familyi={G\bibinitperiod},
+         given={Tom},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{GTPR1}
+    \strng{fullhash}{GTPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{GP99}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1007/s002220050293
+    \endverb
+    \verb{eprint}
+    \verb alg-geom/9708001
+    \endverb
+    \field{number}{2}
+    \field{pages}{487–518}
+    \field{title}{Localization of virtual classes}
+    \field{volume}{135}
+    \field{journaltitle}{Invent. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{1999}
+  \endentry
+
+  \entry{GW80}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=GDJ}{%
+         family={Gross},
+         familyi={G\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=WE}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GDJWE1}
+    \strng{fullhash}{GDJWE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{GW80}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1103/PhysRevD.21.446
+    \endverb
+    \field{pages}{446}
+    \field{title}{Possible third-order phase transition in the large-{$N$}
+  lattice gauge theory}
+    \field{volume}{21}
+    \field{journaltitle}{Phys. Rev. D}
+    \field{year}{1980}
+  \endentry
+
+  \entry{HZ86}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Harer},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zagier},
+         familyi={Z\bibinitperiod},
+         given={Don},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{HJZD1}
+    \strng{fullhash}{HJZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{HZ86}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1007/BF01390325
+    \endverb
+    \field{number}{3}
+    \field{pages}{457–485}
+    \field{title}{The {Euler} characteristic of the moduli space of curves}
+    \field{volume}{85}
+    \field{journaltitle}{Invent. Math.}
+    \field{year}{1986}
+  \endentry
+
+  \entry{Hoo74}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=tHG}{%
+         prefix={'t},
+         prefixi={t\bibinitperiod},
+         family={Hooft},
+         familyi={H\bibinitperiod},
+         given={Gerard},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HGt1}
+    \strng{fullhash}{HGt1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Hoo74}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1016/0550-3213(74)90154-0
+    \endverb
+    \field{number}{3}
+    \field{pages}{461–473}
+    \field{title}{A planar diagram theory for strong interactions}
+    \field{volume}{72}
+    \field{journaltitle}{Nuclear Physics. B}
+    \field{year}{1974}
+  \endentry
+
+  \entry{Joh}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=JC}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Clifford},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JC1}
+    \strng{fullhash}{JC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Joh}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{{Les Houches} lecture notes on {2D} gravity and matrix
+  models}
+  \endentry
+
+  \entry{Kit}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=KA}{%
+         family={Kitaev},
+         familyi={K\bibinitperiod},
+         given={Alexei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KA1}
+    \strng{fullhash}{KA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Kit}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+  \field{howpublished}{\href{https://online.kitp.ucsb.edu/online/entangled15/kitaev/}{Talk
+  1} and \href{https://online.kitp.ucsb.edu/online/entangled15/kitaev2/}{Talk
+  2}}
+    \field{note}{at Kavli Institute for Theoretical Physics, April 7, 2015 and
+  May 27, 2015}
+    \field{title}{A simple model of quantum holography}
+  \endentry
+
+  \entry{Kon92}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=KM}{%
+         family={Kontsevich},
+         familyi={K\bibinitperiod},
+         given={Maxim},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KM1}
+    \strng{fullhash}{KM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Kon92}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1007/BF02099526
+    \endverb
+    \field{number}{1}
+    \field{pages}{1–23}
+    \field{title}{Intersection theory on the moduli space of curves and the
+  matrix {Airy} function}
+    \field{volume}{147}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{year}{1992}
+  \endentry
+
+  \entry{KM94}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=KM}{%
+         family={Kontsevich},
+         familyi={K\bibinitperiod},
+         given={Maxim},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Manin},
+         familyi={M\bibinitperiod},
+         given={Yuri},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KMMY1}
+    \strng{fullhash}{KMMY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KM94}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1007/BF02101490
+    \endverb
+    \verb{eprint}
+    \verb hep-th/9402147
+    \endverb
+    \field{number}{3}
+    \field{pages}{525\bibrangedash 562}
+    \field{title}{{Gromov–Witten} classes, quantum cohomology, and
+  enumerative geometry}
+    \field{volume}{164}
+    \field{journaltitle}{Commun. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{year}{1994}
+  \endentry
+
+  \entry{Liu}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=LCCM}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chiu-Chu\bibnamedelima Melissa},
+         giveni={C\bibinithyphendelim C\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LCCM1}
+    \strng{fullhash}{LCCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Liu}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{{Les Houches} lecture notes on {A}-model topological string
+  theory}
+  \endentry
+
+  \entry{LLZ03}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=LCCM}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chiu-Chu\bibnamedelima Melissa},
+         giveni={C\bibinithyphendelim C\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Kefeng},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Lehigh University}%
+    }
+    \strng{namehash}{LCCMLKZJ1}
+    \strng{fullhash}{LCCMLKZJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LLZ03}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.4310/jdg/1090511689
+    \endverb
+    \verb{eprint}
+    \verb math/0306434
+    \endverb
+    \field{number}{2}
+    \field{pages}{289–340}
+    \field{title}{A proof of a conjecture of {Mari\~{n}o–Vafa} on {Hodge}
+  integrals}
+    \field{volume}{65}
+    \field{journaltitle}{J. Differ. Geom.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2003}
+  \endentry
+
+  \entry{MV02}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=MM}{%
+         family={{Mari{\~n}o}},
+         familyi={M\bibinitperiod},
+         given={Marcos},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={Vafa},
+         familyi={V\bibinitperiod},
+         given={Cumrun},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Mathematical Society}%
+    }
+    \strng{namehash}{MMVC1}
+    \strng{fullhash}{MMVC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{MV02}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Orbifolds in Mathematics and Physics}
+    \verb{eprint}
+    \verb hep-th/0108064
+    \endverb
+    \field{isbn}{0821829904}
+    \field{pages}{185–204}
+    \field{title}{Framed knots at large {$N$}}
+    \field{volume}{310}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2002}
+  \endentry
+
+  \entry{MOPPZ17}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=MA}{%
+         family={Marian},
+         familyi={M\bibinitperiod},
+         given={Alina},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OD}{%
+         family={Oprea},
+         familyi={O\bibinitperiod},
+         given={Dragos},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pixton},
+         familyi={P\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zvonkine},
+         familyi={Z\bibinitperiod},
+         given={Dimitri},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {De Gruyter}%
+    }
+    \strng{namehash}{MA+1}
+    \strng{fullhash}{MAODPRPAZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{MOPPZ17}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1515/crelle-2015-0003
+    \endverb
+    \verb{eprint}
+    \verb 1311.3028
+    \endverb
+    \field{number}{732}
+    \field{pages}{147–163}
+    \field{title}{The {Chern} character of the {Verlinde} bundle over
+  {$\overline{\mathcal{M}}_{g,n}$}}
+    \field{volume}{2017}
+    \field{journaltitle}{J. Reine Angew. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math,AG}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Mar26}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MM}{%
+         family={Mariño},
+         familyi={M\bibinitperiod},
+         given={Marcos},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM1}
+    \strng{fullhash}{MM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mar26}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.21468/SciPostPhysLectNotes.112
+    \endverb
+    \verb{eprint}
+    \verb 2411.16211
+    \endverb
+    \field{title}{{Les Houches} lecture notes on non-perturbative topological
+  strings}
+    \field{volume}{112}
+    \field{journaltitle}{SciPost Phys. Lect. Notes}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2026}
+  \endentry
+
+  \entry{McS98}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MG}{%
+         family={McShane},
+         familyi={M\bibinitperiod},
+         given={Greg},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{MG1}
+    \strng{fullhash}{MG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{McS98}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1007/s002220050235
+    \endverb
+    \field{number}{3}
+    \field{pages}{607–632}
+    \field{title}{Simple geodesics and a series constant over {Teichmüller}
+  space}
+    \field{volume}{132}
+    \field{journaltitle}{Invent. Math.}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Mir07}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MM}{%
+         family={Mirzakhani},
+         familyi={M\bibinitperiod},
+         given={Maryam},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM2}
+    \strng{fullhash}{MM2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mir07}
+    \field{extraalpha}{1}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1007/s00222-006-0013-2
+    \endverb
+    \field{number}{1}
+    \field{title}{Simple geodesics and {Weil–Petersson} volumes of moduli
+  spaces of bordered {Riemann} surfaces}
+    \field{volume}{167}
+    \field{journaltitle}{Invent. Math.}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Mir07+}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MM}{%
+         family={Mirzakhani},
+         familyi={M\bibinitperiod},
+         given={Maryam},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM2}
+    \strng{fullhash}{MM2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mir07}
+    \field{extraalpha}{2}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1090/S0894-0347-06-00526-1
+    \endverb
+    \field{number}{1}
+    \field{pages}{1–23}
+    \field{title}{{Weil–Petersson} volumes and intersection theory on the
+  moduli space of curves}
+    \field{volume}{20}
+    \field{journaltitle}{J. Amer. Math. Soc.}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Mum83}{incollection}{}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={Mumford},
+         familyi={M\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Birkhäuser, Boston, MA}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mum83}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Arithmetic and Geometry}
+    \verb{doi}
+    \verb doi.org/10.1007/978-1-4757-9286-7_12
+    \endverb
+    \field{pages}{271–328}
+    \field{series}{Progress in Mathematics}
+    \field{title}{Towards an enumerative geometry of the moduli space of
+  curves}
+    \field{volume}{36}
+    \field{year}{1983}
+  \endentry
+
+  \entry{Nor23}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=NP}{%
+         family={Norbury},
+         familyi={N\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NP1}
+    \strng{fullhash}{NP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Nor23}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb 10.2140/gt.2023.27.2695
+    \endverb
+    \verb{eprint}
+    \verb 1712.03662
+    \endverb
+    \field{pages}{2695–2761}
+    \field{title}{A new cohomology class on the moduli space of curves}
+    \field{volume}{27}
+    \field{journaltitle}{Geom. Topol.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2023}
+  \endentry
+
+  \entry{OP04}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OA}{%
+         family={Okounkov},
+         familyi={O\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Mathematical Sciences Publishers}%
+    }
+    \strng{namehash}{OAPR1}
+    \strng{fullhash}{OAPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{OP04}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.2140/gt.2004.8.675
+    \endverb
+    \verb{eprint}
+    \verb math/0307209
+    \endverb
+    \field{number}{2}
+    \field{pages}{675–699}
+    \field{title}{Hodge integrals and invariants of the unknot}
+    \field{volume}{8}
+    \field{journaltitle}{Geom. Topol.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2004}
+  \endentry
+
+  \entry{OP06a}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OA}{%
+         family={Okounkov},
+         familyi={O\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OAPR1}
+    \strng{fullhash}{OAPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{OP06}
+    \field{extraalpha}{1}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.4007/annals.2006.163.517
+    \endverb
+    \verb{eprint}
+    \verb math/0204305
+    \endverb
+    \field{number}{2}
+    \field{pages}{517–560}
+    \field{title}{{Gromov–Witten} theory, {Hurwitz} theory, and completed
+  cycles}
+    \field{volume}{163}
+    \field{journaltitle}{Ann. of Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2006}
+  \endentry
+
+  \entry{OP06b}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OA}{%
+         family={Okounkov},
+         familyi={O\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{OAPR1}
+    \strng{fullhash}{OAPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{OP06}
+    \field{extraalpha}{2}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.4007/annals.2006.163.561
+    \endverb
+    \verb{eprint}
+    \verb math/0207233
+    \endverb
+    \field{number}{2}
+    \field{pages}{561–605}
+    \field{title}{The equivariant {Gromov–Witten} theory of $\mathbb{P}^1$}
+    \field{volume}{163}
+    \field{journaltitle}{Ann. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2006}
+  \endentry
+
+  \entry{OP06c}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=OA}{%
+         family={Okounkov},
+         familyi={O\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OAPR1}
+    \strng{fullhash}{OAPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{OP06}
+    \field{extraalpha}{3}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.1007/s00222-005-0455-y
+    \endverb
+    \verb{eprint}
+    \verb math/0308097
+    \endverb
+    \field{pages}{47–108}
+    \field{title}{Virasoro constraints for target curves}
+    \field{volume}{163}
+    \field{journaltitle}{Invent. Math.}
+    \field{eprinttype}{arXiv}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Pan18}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pan}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+  \field{howpublished}{\href{https://www.youtube.com/watch?v=LbNQHE2sJjk}{{ICM}~2018
+  Plenary Lecture}}
+    \field{title}{Geometry of the moduli space of curves}
+  \endentry
+
+  \entry{Pan19}{inproceedings}{}{}
+    \name{author}{1}{}{%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {World Scientific, River Edge, NJ}%
+    }
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pan19}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Proceedings of the International Congress of
+  Mathematicians (ICM 2018)}
+    \verb{doi}
+    \verb 10.1142/9789813272880_0031
+    \endverb
+    \verb{eprint}
+    \verb 1712.02528
+    \endverb
+    \field{pages}{869–898}
+    \field{title}{Cohomological field theory calculations}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2019}
+  \endentry
+
+  \entry{PPZ15}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=PR}{%
+         family={Pandharipande},
+         familyi={P\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pixton},
+         familyi={P\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zvonkine},
+         familyi={Z\bibinitperiod},
+         given={Dimitri},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PRPAZD1}
+    \strng{fullhash}{PRPAZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{PPZ15}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1090/S0894-0347-2014-00808-0
+    \endverb
+    \verb{eprint}
+    \verb 1303.1043
+    \endverb
+    \field{number}{1}
+    \field{pages}{279–309}
+    \field{title}{Relations on {$\overline{\mathcal{M}}_{g,n}$} via $3$-spin
+  structures}
+    \field{volume}{28}
+    \field{journaltitle}{J. Amer. Math. Soc.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2015}
+  \endentry
+
+  \entry{PV00}{incollection}{}{}
+    \name{author}{2}{}{%
+      {{hash=PA}{%
+         family={Polishchuk},
+         familyi={P\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vaintrob},
+         familyi={V\bibinitperiod},
+         given={Arkady},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=PE}{%
+         family={Previato},
+         familyi={P\bibinitperiod},
+         given={Emma},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Amer. Math. Soc., Providence, RI}%
+    }
+    \strng{namehash}{PAVA1}
+    \strng{fullhash}{PAVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{PV00}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Advances in Algebraic Geometry motivated by Physics}
+    \field{chapter}{3}
+    \verb{eprint}
+    \verb math/0011032
+    \endverb
+    \field{isbn}{082182810X}
+    \field{pages}{229–250}
+    \field{title}{Algebraic construction of {Witten}'s top {Chern} class}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+    \field{year}{2000}
+  \endentry
+
+  \entry{SSS}{unpublished}{}{}
+    \name{author}{3}{}{%
+      {{hash=SP}{%
+         family={Saad},
+         familyi={S\bibinitperiod},
+         given={Phil},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SSH}{%
+         family={Shenker},
+         familyi={S\bibinitperiod},
+         given={Stephen\bibnamedelima H},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Stanford},
+         familyi={S\bibinitperiod},
+         given={Douglas},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SPSSHSD1}
+    \strng{fullhash}{SPSSHSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SSS}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{eprint}
+    \verb 1903.11115
+    \endverb
+    \field{title}{{JT} gravity as a matrix integral}
+    \field{journaltitle}{arXiv preprint arXiv:1903.11115}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+  \endentry
+
+  \entry{Sch20}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=SJ}{%
+         family={Schmitt},
+         familyi={S\bibinitperiod},
+         given={Johannes},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SJ1}
+    \strng{fullhash}{SJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Sch20}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+  \field{howpublished}{\url{https://www.math.uni-bonn.de/people/schmitt/ModCurves/Script.pdf}}
+    \field{title}{The moduli space of curves}
+    \field{year}{2020}
+  \endentry
+
+  \entry{SW20}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=SD}{%
+         family={Stanford},
+         familyi={S\bibinitperiod},
+         given={Douglas},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WE}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {International Press of Boston, Inc.}%
+    }
+    \strng{namehash}{SDWE1}
+    \strng{fullhash}{SDWE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SW20}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.4310/ATMP.2020.v24.n6.a4
+    \endverb
+    \verb{eprint}
+    \verb 1907.03363
+    \endverb
+    \field{number}{6}
+    \field{pages}{1475–1680}
+    \field{title}{{JT} gravity and the ensembles of random matrix theory}
+    \field{volume}{24}
+    \field{journaltitle}{Adv. Theor. Math. Phys.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Tel12}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=TC}{%
+         family={Teleman},
+         familyi={T\bibinitperiod},
+         given={Constantin},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{TC1}
+    \strng{fullhash}{TC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tel12}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1007/s00222-011-0352-5
+    \endverb
+    \verb{eprint}
+    \verb 0712.0160
+    \endverb
+    \field{number}{3}
+    \field{pages}{525–588}
+    \field{title}{The structure of {$2D$} semi-simple field theories}
+    \field{volume}{188}
+    \field{journaltitle}{Invent. Math.}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AT}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Tur26}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=TGJ}{%
+         family={Turiaci},
+         familyi={T\bibinitperiod},
+         given={Gustavo\bibnamedelima J.},
+         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TGJ1}
+    \strng{fullhash}{TGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tur26}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.21468/SciPostPhysLectNotes.113
+    \endverb
+    \verb{eprint}
+    \verb 2412.09537
+    \endverb
+    \field{title}{{Les Houches} lecture notes on two-dimensional gravity and
+  holography}
+    \field{volume}{113}
+    \field{journaltitle}{SciPost Phys. Lect. Notes}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{hep-th}
+    \field{year}{2026}
+  \endentry
+
+  \entry{Tut68}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=TWT}{%
+         family={Tutte},
+         familyi={T\bibinitperiod},
+         given={William\bibnamedelima T},
+         giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TWT1}
+    \strng{fullhash}{TWT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tut68}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1090/S0002-9904-1968-11877-4
+    \endverb
+    \field{pages}{64\bibrangedash 74}
+    \field{title}{On the enumeration of planar maps}
+    \field{volume}{74}
+    \field{journaltitle}{Bull. Amer. Math. Soc.}
+    \field{year}{1968}
+  \endentry
+
+  \entry{Wit91}{inproceedings}{}{}
+    \name{author}{1}{}{%
+      {{hash=WE}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WE1}
+    \strng{fullhash}{WE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wit91}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{{Surveys in Differential Geometry}}
+    \verb{doi}
+    \verb 10.4310/SDG.1990.v1.n1.a5
+    \endverb
+    \field{eventtitle}{Conference on geometry and topology}
+    \field{pages}{243–310}
+    \field{title}{Two-dimensional gravity and intersection theory on moduli
+  space}
+    \field{venue}{Harvard University, Cambridge, MA, USA}
+    \field{volume}{1}
+    \field{year}{1991}
+    \field{eventday}{27}
+    \field{eventmonth}{04}
+    \field{eventyear}{1990}
+    \field{eventendday}{29}
+    \field{eventendmonth}{04}
+    \field{eventendyear}{1990}
+  \endentry
+
+  \entry{Wit92}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=WE}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{WE1}
+    \strng{fullhash}{WE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wit92}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.1016/0550-3213(92)90235-4
+    \endverb
+    \field{number}{1-2}
+    \field{pages}{191–245}
+    \field{title}{The {$N$} matrix model and gauged {WZW} models}
+    \field{volume}{371}
+    \field{journaltitle}{Nucl. Phys. B}
+    \field{year}{1992}
+  \endentry
+
+  \entry{Wit93}{incollection}{}{}
+    \name{author}{1}{}{%
+      {{hash=WE}{%
+         family={Witten},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=GLR}{%
+         family={Goldberg},
+         familyi={G\bibinitperiod},
+         given={Lisa\bibnamedelima R.},
+         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=PAV}{%
+         family={Phillips},
+         familyi={P\bibinitperiod},
+         given={Anthony\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Publish or Perish, Houston, TX}%
+    }
+    \strng{namehash}{WE1}
+    \strng{fullhash}{WE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wit93}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Topological methods in Modern Mathematics. A symposium in
+  honor of John Milnor's sixtieth birthday}
+    \field{isbn}{0914098268}
+    \field{pages}{235–269}
+    \field{title}{Algebraic geometry associated with matrix models of
+  two-dimensional gravity}
+    \field{year}{1993}
+  \endentry
+
+  \entry{Wol85}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=WS}{%
+         family={Wolpert},
+         familyi={W\bibinitperiod},
+         given={Scott},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{WS1}
+    \strng{fullhash}{WS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wol85}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.2307/2374363
+    \endverb
+    \field{number}{4}
+    \field{pages}{969–997}
+    \field{title}{On the {Weil–Petersson} geometry of the moduli space of
+  curves}
+    \field{volume}{107}
+    \field{journaltitle}{Am. J. Math}
+    \field{year}{1985}
+  \endentry
+
+  \entry{Zvo}{unpublished}{}{}
+    \name{author}{1}{}{%
+      {{hash=ZD}{%
+         family={Zvonkine},
+         familyi={Z\bibinitperiod},
+         given={Dimitri},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZD1}
+    \strng{fullhash}{ZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zvo}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{eprint}
+    \verb math/0209071
+    \endverb
+    \field{title}{Strebel differentials on stable curves and {Kontsevich}'s
+  proof of {Witten}'s conjecture}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.AG}
+  \endentry
+
+  \entry{Zvo12}{incollection}{}{}
+    \name{author}{1}{}{%
+      {{hash=ZD}{%
+         family={Zvonkine},
+         familyi={Z\bibinitperiod},
+         given={Dimitri},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=PA}{%
+         family={Papadopoulos},
+         familyi={P\bibinitperiod},
+         given={Athanase},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Eur. Math. Soc.}%
+    }
+    \strng{namehash}{ZD1}
+    \strng{fullhash}{ZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zvo12}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Handbook of Teichm{\"u}ller theory}
+    \field{chapter}{11}
+    \verb{doi}
+    \verb 10.4171/103-1/12
+    \endverb
+    \field{pages}{667–716}
+    \field{title}{An introduction to moduli spaces of curves and their
+  intersection theory}
+    \field{volume}{3}
+    \field{year}{2012}
+  \endentry
+\enddatalist
+\endinput

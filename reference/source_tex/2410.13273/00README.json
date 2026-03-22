@@ -1,0 +1,21 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "LesHouchesModuli_v2.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "BiblioModuli.bib"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "LesHouchesModuli_v2.bbl"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

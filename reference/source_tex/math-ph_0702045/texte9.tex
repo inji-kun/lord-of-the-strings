@@ -1,0 +1,354 @@
+\documentclass[12pt]{article}
+% Bertrand Eynard, 01/06/2005
+
+\usepackage{epsf,amsfonts,hyperref}
+%\usepackage[notref,notcite]{showkeys}
+%\usepackage{cite}
+\bibliographystyle{prsty}
+\usepackage{graphicx}
+
+
+%--------------------------macros-------------------------
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newcommand{\newsection}{    % Numeration of eqs. is automatic
+\setcounter{equation}{0}
+\section}
+%
+\renewcommand{\appendix}[1]{
+%    \addtocounter{section}{1}
+    \setcounter{section}{0}
+    \setcounter{equation}{0}
+    \renewcommand{\thesection}{\Alph{section}}
+		\renewcommand{\theequation}{\Alph{section}-\arabic{equation}}
+%    \section*{Appendix \thesection\protect\indent #1}
+%    \addcontentsline{toc}{section}{Appendix \thesection\ \ \ #1}
+}
+%
+%
+%
+%\renewcommand{\appendix}[1]{
+%    \addtocounter{section}{1}
+%    \setcounter{equation}{0}
+%    \renewcommand{\thesection}{\Alph{section}}
+%    \section*{Appendix \thesection\protect\indent #1}
+%    \addcontentsline{toc}{section}{Appendix \thesection\ \ \ #1}
+%}
+%
+\newcommand\encadremath[1]{\vbox{\hrule\hbox{\vrule\kern8pt
+\vbox{\kern8pt \hbox{$\displaystyle #1$}\kern8pt}
+\kern8pt\vrule}\hrule}}
+\def\enca#1{\vbox{\hrule\hbox{
+\vrule\kern8pt\vbox{\kern8pt \hbox{$\displaystyle #1$}
+\kern8pt} \kern8pt\vrule}\hrule}}
+
+%
+\newcommand\figureframex[3]{
+\begin{figure}[bth]
+\hrule\hbox{\vrule\kern8pt
+\vbox{\kern8pt \vbox{
+\begin{center}
+{\mbox{\epsfxsize=#1.truecm\epsfbox{#2}}}
+\end{center}
+\caption{#3}
+}\kern8pt}
+\kern8pt\vrule}\hrule
+\end{figure}
+}
+%
+\newcommand\figureframey[3]{
+\begin{figure}[bth]
+\hrule\hbox{\vrule\kern8pt
+\vbox{\kern8pt \vbox{
+\begin{center}
+{\mbox{\epsfysize=#1.truecm\epsfbox{#2}}}
+\end{center}
+\caption{#3}
+}\kern8pt}
+\kern8pt\vrule}\hrule
+\end{figure}
+}
+
+
+\newcommand{\genus}{{\mathbf g \!\!\! /\;\;}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\def\br{\begin{remark}\rm\small}
+\def\er{\end{remark}}
+\def\bt{\begin{theorem}}
+\def\et{\end{theorem}}
+\def\bd{\begin{definition}}
+\def\ed{\end{definition}}
+\def\bp{\begin{proposition}}
+\def\ep{\end{proposition}}
+\def\bl{\begin{lemma}}
+\def\el{\end{lemma}}
+\def\bc{\begin{corollary}}
+\def\ec{\end{corollary}}
+\def\beaq{\begin{eqnarray}}
+\def\eeaq{\end{eqnarray}}
+\newcommand{\proof}[1]{{\noindent \bf proof:}\par
+{#1} $\square$}
+
+
+%
+\newcommand{\rf}[1]{(\ref{#1})}
+\newcommand{\eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\rfig}[1]{fig.~\ref{#1}}
+
+\newcommand{\equ}[2]{\begin{equation}{\label{#1}}{#2}\end{equation}}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand\eol{\hspace*{\fill}\linebreak}
+\newcommand\eop{\vspace*{\fill}\pagebreak}
+
+\newcommand{\hs}{\hspace{0.7cm}}
+\newcommand{\vs}{\vspace{0.7cm}}
+%
+%
+
+%----------------------------------------------------
+% Liaisons
+%
+\renewcommand{\and}{{\qquad {\rm and} \qquad}}
+\newcommand{\where}{{\qquad {\rm where} \qquad}}
+\newcommand{\with}{{\qquad {\rm with} \qquad}}
+\newcommand{\for}{{\qquad {\rm for} \qquad}}
+\newcommand{\virg}{{\qquad , \qquad}}
+
+\newcommand{\ie}{{\it i.e.}\ }
+
+
+%----------------------------------------------------
+% Abreviations
+
+\newcommand{\Det}{{\,\rm Det}} \newcommand{\Tr}{{\,\rm Tr}\:}
+%\newcommand{\Tr}{{\,\rm Tr}\:}
+\newcommand{\tr}{{\,\rm tr}\:}
+\newcommand{\cte}{{\,\rm cte}\,}
+\newcommand{\Res}{\mathop{\,\rm Res\,}}
+
+
+\newcommand{\td}[1]{{\tilde{#1}}}
+
+\renewcommand{\l}{\lambda}
+%\newcommand{\th}{\theta}
+\newcommand{\om}{\omega}
+\newcommand{\calP}{{\cal P}}
+
+\newcommand{\ii}{{\mathrm{i}}}
+\newcommand{\e}{{\,\rm e}\,}
+\newcommand{\ee}[1]{{{\rm e}^{#1}}}
+
+\renewcommand{\d}{{{\partial}}}
+\newcommand{\D}{{{\hbox{d}}}}
+\newcommand{\dmat}[2]{\mathrm{d}_{\scriptscriptstyle{#1}}[#2]}
+
+\newcommand{\C}{{\mathbf C}}
+
+% \newcommand{\Pint}{{{{\rm PP}\int}}}
+\newcommand{\Pint}{{\int\kern -1.em -\kern-.25em}}
+\newcommand{\Vol}{\mathrm{Vol}}
+
+\newcommand{\moy}[1]{\left<{#1}\right>}
+
+\renewcommand{\Re}{{\mathrm{Re}}}
+\renewcommand{\Im}{{\mathrm{Im}}}
+
+\newcommand{\sn}{{\rm sn}}
+\newcommand{\cn}{{\rm cn}}
+\newcommand{\dn}{{\rm dn}}
+\newcommand{\ssq}[1]{{\sqrt{\sigma({#1})}}}
+
+
+\renewcommand{\a}{o}
+\renewcommand{\l}{\lambda}
+\renewcommand{\L}{\Lambda}
+\renewcommand{\ssq}[1]{{\sqrt{\sigma({#1})}}}
+\newcommand{\ovl}{\overline}
+\newcommand{\bfx}{{\mathbf x}}
+\newcommand{\bfy}{{\mathbf y}}
+\newcommand{\bfp}{{\mathbf p}}
+
+\newcommand{\acycle}{{\cal A}}
+\newcommand{\bcycle}{{\cal B}}
+
+\newcommand{\curve}{{\cal E}}
+\newcommand{\Surf}{\Sigma}
+
+\newcommand{\pbar}{\ovl{p}}
+\newcommand{\qbar}{\ovl{q}}
+
+\newcommand{\bfa}{{\mathbf{a}}}
+\newcommand{\bfb}{{\mathbf{b}}}
+\newcommand{\bfalpha}{{\mathbf{\alpha}}}
+
+\newcommand{\primef}{{E}}
+
+\newcommand{\Bergmann}{{\underline{B}}}
+
+%----------------------------------formattage-------------
+\textwidth 155mm
+\textheight 235mm
+%
+\topmargin 0pt
+\oddsidemargin 5mm
+\headheight 0pt
+\headsep 0pt
+\topskip 9mm
+%
+%---------------------------------------------------------
+\begin{document}
+%=============================Page de titre==============%\date{??}
+%\author{Eynard}
+%\title{Correlation functions for hermitian random matrices}
+%\topmargin .5cm \textheight 21.5cm \textwidth 15.8cm
+%\oddsidemargin 0.54cm
+%\evensidemargin 0.54cm
+\sloppy
+
+
+%\maketitle
+
+
+
+\pagestyle{empty}
+\hfill SPhT-T07/021
+\addtolength{\baselineskip}{0.20\baselineskip}
+\begin{center}
+\vspace{26pt}
+{\large \bf {Invariants of algebraic curves and topological expansion}}
+\newline
+\vspace{26pt}
+
+
+{\sl B.\ Eynard}\hspace*{0.05cm}\footnote{ E-mail: eynard@spht.saclay.cea.fr }, {\sl N.\ Orantin}\hspace*{0.05cm}\footnote{ E-mail: orantin@spht.saclay.cea.fr }\\
+\vspace{6pt}
+Service de Physique Th\'{e}orique de Saclay,\\
+F-91191 Gif-sur-Yvette Cedex, France.\\
+\end{center}
+
+\vspace{20pt}
+\begin{center}
+{\bf Abstract}:
+\end{center}
+
+
+
+%-----------------------------ABSTRACT--------------------------------------
+%
+%Abstract
+
+%\begin{center}
+
+For any arbitrary algebraic curve, we define an infinite sequence of invariants.
+We study their properties, in particular their variation under a variation of the curve, and their modular properties. We also study their limits when the curve becomes singular.
+In addition we find that they can be used to define a formal series, which satisfies formally an Hirota equation, and we thus obtain a new way of constructing a tau function attached to an algebraic curve.
+
+These invariants are constructed in order to coincide with the topological expansion of a matrix formal integral, when the algebraic curve is chosen as the large $N$ limit of the matrix model's spectral curve.
+Surprisingly, we find that the same invariants also give the topological expansion of other models, in particular the matrix model with an external field, and the so-called double scaling limit of matrix models, i.e. the $(p,q)$ minimal models of conformal field theory.
+
+As an example to illustrate the efficiency of our method, we apply it to the Kontsevitch integral, and we give a new and extremely easy proof that Kontsevitch integral depends only on odd times, and that it is a KdV $\tau$-function.
+
+
+%\end{center}
+
+%\newpage
+%\pagestyle{empty}
+
+%\section*{}
+
+%\newpage
+\vspace{26pt}
+\pagestyle{plain}
+\setcounter{page}{1}
+
+%*********************************************************************
+%==================== ARTICLE =======================================%*********************************************************************
+
+\newpage
+
+\tableofcontents
+
+
+%\section{Introduction}
+\input{introalgebraic2.tex}
+
+
+%\section{Tau function of an algebraic curve}
+\input{taufctiondef2.tex}
+
+%\section{Variations of the curve}
+\input{invariance3.tex}
+
+%\section{Application: topological expansion of matrix models}
+\input{matrixmodels2.tex}
+
+%\section{Conclusion}
+\input{conclusion.tex}
+
+
+
+\vfill\eject
+%=================================================================
+%===============================  APPENDIX ===========================
+%=================================================================
+
+
+%\appendix{Properties of correlation functions}
+%----------------------------------------------------------------------
+\input{appproofproperties.tex}
+
+
+%\appendix{variation of the curve}
+%----------------------------------------------------------------------
+\input{appvariation.tex}
+
+
+%\appendix{symplectic invariance of F0 and F1}
+%----------------------------------------------------------------------
+\input{appsymplinvF0F1.tex}
+
+
+%\appendix{Matrix model with an external field}
+\input{appkontsevitch.tex}
+
+
+
+
+\vfill\eject
+
+
+
+
+%================================================
+%================================================
+%================================================
+\hrule
+
+
+\input{biblio2.tex}
+
+
+
+
+
+
+
+
+
+
+\end{document}

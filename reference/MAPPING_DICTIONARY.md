@@ -1,0 +1,300 @@
+# MAPPING DICTIONARY: Gauge-String-Matrix Triality
+
+This document correlates the core mapping rules across the Golden Corpus,
+organized by the three (plus one) pillars of the triality derivation.
+
+---
+
+## I. FEYNMAN GRAPH TOPOLOGY → STREBEL GEOMETRY
+
+**Source:** `2212.05999` (Gopakumar-Mazenc, Part I), Sections 5–5.3
+
+### The Master Bijection (Strebel's Theorem)
+
+```latex
+\text{pt} \in \mathcal{M}_{g,n} \times \mathbb{R}_{+}^{n}
+  \underset{\text{Strebel's Thm}}{\Longleftrightarrow}
+  \phi(z)\,dz^2
+  \underset{\text{V/H Trajectories}}{\Longleftrightarrow}
+  \text{Metrized ribbon graph w/ genus } g, \; n \text{ faces}
+```
+— `2212.05999`, unnumbered eq. near line 707
+
+### The Strebel Differential
+
+A meromorphic quadratic differential on $\Sigma_{g,n}$ with double poles at marked points:
+
+```latex
+q = \phi(z)\,dz^2, \qquad
+\phi(z)\,dz^2 \overset{\text{near } k\text{-th pole}}{=}
+  -\frac{L_k^2}{(2\pi)^2}\frac{dz^2}{z^2}
+```
+— `2212.05999`, Sec. 5.1 (eqs. near lines 719–734)
+
+The $L_k$ are the **perimeter lengths** — the circumferences of asymptotic closed strings.
+
+### The Strebel Metric
+
+Away from zeroes and poles, the differential defines a locally flat metric:
+
+```latex
+ds^2 = |\phi(z)|\,dz\,d\bar{z}
+```
+— `2212.05999`, Eq. near line 727 (labeled `eq:StrebelMetric`)
+
+### Vertical/Horizontal Trajectories
+
+Curves $z_V(t)$ and $z_H(t)$ satisfying:
+
+```latex
+\phi(z_V(t))\left(\frac{dz_V}{dt}\right)^2 < 0 \quad\text{(vertical)}, \qquad
+\phi(z_H(t))\left(\frac{dz_H}{dt}\right)^2 > 0 \quad\text{(horizontal)}
+```
+— `2212.05999`, Sec. 5.2 (lines 744–747)
+
+### Edge Metrization
+
+Each edge of the Strebel graph (connecting zeroes) acquires a length from the flat metric:
+
+```latex
+l_{ij} = \int_{\text{edge}} |dz|\sqrt{|\phi(z)|}
+```
+— `2212.05999`, Sec. 5.3 (described near line 841)
+
+### Euler Characteristic Constraint
+
+```latex
+\chi(\Sigma_{g,n}) = V - E + F = 2 - 2g - n
+```
+where $V$ = vertices (zeroes of $\phi$), $E$ = edges, $F$ = faces (poles).
+An $m$-th order zero gives a vertex of valency $(m+2)$; generically cubic ($m=1$).
+— `2212.05999`, line 841
+
+### Perimeter (Loop) Constraint
+
+Each face $I$ imposes:
+
+```latex
+\sum_{i \in \text{face } I} l_i = P_I \quad (= L_I)
+```
+The perimeter of each face equals the residue parameter $L_I$ of the Strebel differential.
+— `1512.09309`, Sec. 3.1, line 718–720
+
+---
+
+## II. SCHWINGER ↔ STREBEL LENGTH MAPPING
+
+**Source:** `2212.05999`, Sections 5.3–5.4
+
+### The Schwinger Parametrization
+
+```latex
+\frac{1}{p^2} = \int_0^\infty d\tau\, e^{-\tau p^2}
+```
+— `2212.05999`, Eq. `eq:Schwinger` (line 924)
+
+### V-Type Mapping (Schwinger → Strebel)
+
+Homotopically equivalent edges are bunched: inverse Schwinger times add like parallel resistors. The Strebel length is **inversely proportional** to the effective Schwinger time:
+
+```latex
+l_{ij} = \frac{1}{(\tau_{\text{eff}})_{ij}} \qquad \text{(V-type duality)}
+```
+— `2212.05999`, Eq. `eq:inverseSchwinger` (line 931–932)
+
+### F-Type Mapping (Direct identification)
+
+In F-type duality, the Strebel length **is** the open string worldsheet time:
+
+```latex
+(\tau_0)_{ij} = l_{ij} \qquad \text{(F-type)}
+```
+— `2212.05999`, eq. near line 1008
+
+### Integer Strebel Lengths (Matrix Models / Tensionless Limit)
+
+For zero-dimensional gauge theories (matrix integrals), the Schwinger time is absent.
+Instead, assign **integer** Strebel lengths:
+
+```latex
+l_{ij} = n_{ij}
+```
+
+where $n_{ij}$ is the number of homotopically equivalent Wick contractions ("string bits").
+This picks out **discrete points** on $\mathcal{M}_{g,n}$.
+— `2212.05999`, line 938; `1512.09309`, Sec. 3.2, lines 754–758
+
+---
+
+## III. TOPOLOGICAL RECURSION KERNELS
+
+**Source:** `1512.09309` (Andersen-Chekhov-Norbury-Penner), Sec. 4; `1412.3286` (Eynard)
+
+### The Spectral Curve (Gaussian means)
+
+```latex
+\Sigma: \quad yx - y^2 = 1, \qquad
+x = e^\lambda + e^{-\lambda}, \quad y = e^\lambda, \quad dx = (e^\lambda - e^{-\lambda})\,d\lambda
+```
+— `1512.09309`, Eq. near line 1543–1546
+
+### The Bergmann Kernel
+
+```latex
+B(p,q) = \frac{de^\lambda\, de^\mu}{(e^\lambda - e^\mu)^2}, \qquad
+E(p,q) = \frac{de^\lambda}{e^\lambda - e^\mu}
+```
+— `1512.09309`, Eq. near line 1556 (labeled `Bpq`)
+
+### The Recursion Kernel
+
+```latex
+K(p,q) = E(p,q) \cdot \frac{1}{(y(q) - \bar{y}(q))\,dx}
+= \frac{de^\lambda}{e^\lambda - e^\mu} \cdot \frac{1}{(e^\mu - e^{-\mu})^2\,d\mu}
+```
+— `1512.09309`, Eq. near line 1561–1567 (labeled `Kpq`)
+
+### The Eynard-Orantin Recursion
+
+Base cases:
+
+```latex
+W^{(0)}_3(p_1,p_2,p_3) = \sum_{\text{res}\,dx=0} K(p_1,q)
+  [B(p_2,q) + B(\bar{p}_2,q)][B(p_3,q) + B(\bar{p}_3,q)]
+```
+
+```latex
+W^{(1)}_1(p_1) = \sum_{\text{res}\,dx=0} K(p_1,q)\,B(q,\bar{q})
+```
+
+General recursion ($2g - 2 + s > 0$):
+
+```latex
+W^{(g)}_s(p_1,\ldots,p_s) = \sum_{\text{res}\,dx=0} K(p_1,q) \Bigl[
+  \sum_{k=2}^s [B(p_k,q) + B(\bar{p}_k,q)]\,W^{(g)}_{s-1}(q,\ldots,\hat{p}_k,\ldots)
+  + W^{(g-1)}_{s+1}(q,q,p_2,\ldots,p_s)
+  + \sum_{\substack{g_1+g_2=g \\ I \sqcup J = \{p_2,\ldots,p_s\}}}^{\prime}
+    W^{(g_1)}_{|I|+1}(q,I)\,W^{(g_2)}_{|J|+1}(q,J) \Bigr]
+```
+— `1512.09309`, Eqs. `W03`, `W11`, `recursion` (lines 1573–1589)
+
+The $\sum'$ excludes unstable terms ($2g-2+s \leq 0$).
+
+---
+
+## IV. KONTSEVICH-PENNER MODEL & INTERSECTION THEORY
+
+**Source:** `1512.09309`, Sec. 3; `math/0111082` (Fiorenza-Murri)
+
+### The Kontsevich Matrix Integral
+
+```latex
+e^{\sum_{g,s} N^{2-2g}\alpha^{2-2g-s}\mathcal{F}^{(g,s)}_K(\{\xi_k\})}
+= \frac{\int DX\, e^{-\alpha N\,\text{tr}[\frac{1}{2}X^2\Lambda + X^3/6]}}
+       {\int DX\, e^{-\alpha N\,\text{tr}[\frac{1}{2}X^2\Lambda]}}
+```
+— `1512.09309`, Eq. `Kont` (line 741–744)
+
+### Kontsevich Times
+
+```latex
+\xi_k = \frac{1}{N}\sum_{i=1}^N \frac{(2k)!}{\lambda_i^{2k+1}}
+```
+— `1512.09309`, Eq. `times-K` (line 748)
+
+### Intersection Numbers via Laplace Transform
+
+```latex
+\iint_0^\infty dP_1\cdots dP_s\, e^{-\sum_I P_I\lambda_I}
+\int_{\overline{\mathcal{M}}_{g,s}} \prod_{I=1}^s P_I^{2d_I}\psi_I^{d_I}
+= \langle\tau_{d_1}\cdots\tau_{d_s}\rangle_g \prod_I \frac{(2d_I)!}{\lambda_I^{2d_I+1}}
+```
+— `1512.09309`, Eq. `Kontsevich` (line 728–733)
+
+### Discrete Moduli (Integer Strebel Lengths)
+
+All edge lengths $l_i \in \mathbb{Z}_+$. Replace integration over $\mathcal{M}_{g,s}$ with **summation over integer points**. The perimeter constraint becomes:
+
+```latex
+\sum_{i \in \text{face } I} l_i = P_I \in 2\mathbb{Z}_+
+```
+— `1512.09309`, Sec. 3.2 (lines 754–762)
+
+---
+
+## V. LOCALIZATION & THE k=1 WORLDSHEET
+
+**Source:** `1812.01007` (Eberhardt-Gaberdiel-Gopakumar)
+
+### The Worldsheet Theory
+
+Superstring on $\text{AdS}_3 \times \text{S}^3 \times \mathbb{T}^4$ at $k=1$ (one unit of NS-NS flux) is described in the hybrid formalism by the $\mathfrak{psu}(1,1|2)_1$ WZW model.
+— `1812.01007`, Sec. 1 (abstract + line 42)
+
+### Key Result: No Long String Continuum
+
+At $k=1$, a null vector at $h=2$ removes continuous representations. The spectrum **exactly matches** $\text{Sym}^N(\mathbb{T}^4)$ — the free symmetric product orbifold.
+— `1812.01007`, line 84–89
+
+### Physical State Condition
+
+Physical states are the cohomology of the twisted $\mathcal{N}=4$ algebra. Only **short representations** of the worldsheet CFT contribute to the string spectrum — a signature that the theory is topological.
+— `1812.01007`, lines 106–108
+
+### String Coupling
+
+```latex
+g_s^2 \sim \frac{Q_5 \cdot \text{vol}(\mathbb{T}^4)}{Q_1} = \frac{\text{vol}(\mathbb{T}^4)}{N}
+```
+— `1812.01007`, eq. near line 93
+
+### Localization on Moduli Space
+
+The worldsheet partition function consists of delta function contributions from worldsheets admitting **holomorphic maps** (covering maps). These are discrete points on $\mathcal{M}_{g,n}$ — the same integer Strebel points that arise from gauge theory.
+— `1812.01007`, line 108; `2212.05999`, line 938
+
+### The $\mathfrak{psu}(1,1|2)_1$ Algebra
+
+```latex
+[J^+_m, J^-_n] = km\delta_{m+n,0} - 2J^3_{m+n}
+\{S^{\alpha\beta\gamma}_m, S^{\mu\nu\rho}_n\} = km\epsilon^{\alpha\mu}\epsilon^{\beta\nu}\epsilon^{\gamma\rho}\delta_{m+n,0}
+  - \epsilon^{\beta\nu}\epsilon^{\gamma\rho}c_a\sigma_a^{\alpha\mu}J^a_{m+n}
+  + \epsilon^{\alpha\mu}\epsilon^{\gamma\rho}\sigma_a^{\beta\nu}K^a_{m+n}
+```
+— `1812.01007`, Eqs. near lines 150–159
+
+---
+
+## VI. CROSS-PILLAR TRANSLATION TABLE
+
+| Gauge Theory (Pillar I) | String Theory (Pillar II) | Matrix Model (Pillar III) |
+|---|---|---|
+| Feynman diagram | Strebel skeleton on $\Sigma_{g,n}$ | Fat graph in cell decomposition of $\mathcal{M}_{g,s}$ |
+| Schwinger parameter $\tau$ | Strebel edge length $l$ | Edge length $l_i \in \mathbb{R}_+$ (or $\mathbb{Z}_+$) |
+| $1/N$ expansion at genus $g$ | Worldsheet of genus $g$ | $N^{2-2g}$ term in matrix model |
+| $n$-point correlator $\langle\text{Tr}M^{k_1}\cdots\rangle$ | $n$ punctures on $\Sigma_{g,n}$ with perimeters $L_i$ | $s$-point function in Kontsevich model |
+| Wick contraction count $n_{ij}$ | Integer Strebel length $l_{ij}$ | Integer edge in discrete moduli |
+| Euler char. $\chi = V - E + F$ | $\chi = 2 - 2g - n$ | Same combinatorial identity |
+| Face of ribbon graph | Pole of Strebel diff. / puncture | Face of fat graph |
+| Vertex of ribbon graph | Zero of Strebel diff. | Vertex of fat graph |
+| Loop constraint $\sum l_i = P_I$ | Perimeter of asymptotic closed string | Boundary of face in cell decomposition |
+| Free field ($k=1$) limit | Tensionless string / $\mathfrak{psu}(1,1|2)_1$ | Localization to integer Strebel points |
+| Genus $g=1$ non-planar diagrams | Torus worldsheet (Part II target) | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
+
+---
+
+## VII. KEY EQUATIONS FOR PART II (GENUS 1)
+
+The **immediate** targets for the non-planar extension:
+
+1. **Torus TR seed:** $W^{(1)}_1(p_1) = \sum_{\text{res}\,dx=0} K(p_1,q)\,B(q,\bar{q})$
+   — Source: `1512.09309`, Eq. `W11`
+
+2. **Non-planar Feynman diagrams:** Identify all $g=1$ ribbon graphs for $n$-point functions, verify $\chi = -n$ (for $g=1$, $V - E + F = -n$).
+   — Method: Enumerate via `2412.13397`
+
+3. **Integer Strebel check:** For each $g=1$ graph, verify that the integer Strebel lengths satisfy the perimeter constraints and that the mapping $l_i = n_i$ gives a valid point on $\mathcal{M}_{1,n}$.
+   — Cross-ref: `2510.17728` (discrete volumes)
+
+4. **Localization verification:** Confirm that the $k=1$ worldsheet localizes to the same discrete $g=1$ points.
+   — Cross-ref: `1812.01007`

@@ -1,0 +1,347 @@
+
+\appendix
+\section{}
+\section{Properties of correlation functions} 
+\label{appprop}
+%----------------------------------------------------------------------
+
+In this section we prove the theorems stated in section \ref{propcorrel}.
+
+
+We use very much the following obvious properties:
+
+\beq\label{sumBdxdx}
+\sum_i B(p^i,q) = {dx(p)dx(q)\over (x(p)-x(q))^2},
+\eeq
+\beq\label{eqsymdEom}
+{dE_{\qbar}(p)\over \om(\qbar)} = {dE_{q}(p)\over \om(q)},
+\eeq
+and
+\beq\label{eqdEtoB}
+\mathop{{\rm lim}}_{q\to a_i} {dE_{q}(p)\over \om(q)}\,dx(q) = - {1\over 2}\,\mathop{{\rm lim}}_{q\to a_i} {B(p,q)\over dy(q)}\,dx(q).
+\eeq
+The third one is nothing but De L'H\^opital's rule.
+
+\vs
+
+%---------------------------------thpolesW30------------------
+{\bf Theorem \ref{thW30} }\proof{
+From the definition \ref{defloopfctions}, we have:
+\bea
+W_{3}^{(0)}(p,p_1,p_2)
+&=&  \Res_{q\to \bfa} {dE_{q}(p)\over \om(q)}\,\Big(B(q,p_1)B(\qbar,p_2)+B(q,p_2)B(\qbar,p_1) \Big) \cr
+&=& 2 \Res_{q\to \bfa} {dE_{q}(p)\over \om(q)}\,B(q,p_1)B(\qbar,p_2) \cr
+&=& 2 \Res_{q\to \bfa} \Res_{r\to \overline{q}} {dE_{q}(p)\over (y(q)-y(\qbar))(x(r)-x(q))}\,B(q,p_1)B(r,p_2) \cr
+&=& - 2 \Res_{q\to \bfa} \Res_{r\to q} {dE_{q}(p)\over (y(q)-y(\qbar))(x(r)-x(q))}\,B(q,p_1)B(r,p_2) \cr
+&=& - 2 \Res_{q\to \bfa} {dE_{q}(p)\over \om(q)}\,B(q,p_1)B(q,p_2) \cr
+&=& \Res_{q\to \bfa} {B(q,p)B(q,p_1)B(q,p_2)\over dx(q) dy(q)}
+\eea
+where we have used \eq{eqsymdEom}, \eq{sumBdxdx} and \eq{eqdEtoB}.
+}
+
+\vs
+
+%---------------------------------thpolesWkgbp------------------
+{\bf Theorem \ref{thpolesWkgbp}} \proof{
+It is  obvious from the definition that if $p$ is away from branchpoints, the residues are finite integrals, and $W_{k+1}^{(g)}$ is finite.
+The only poles can be obtained when $p$ pinches an integration contour, i.e. at branch points.
+
+Then, it is easy to see by recursion on $k$ and $g$ that it holds for any $p_i$.
+
+}
+\vs
+
+%---------------------------------thWkcycle------------------
+{\bf Theorem \ref{thWkcycle}} \proof{The first one is a property of $dE_{q}(p)$, and the second one follows from recursion on $k$ and $g$, and it holds for $W_{2}^{(0)}=B$.}
+
+\vs
+
+%---------------------------------thsumWk------------------
+{\bf Theorem \ref{thsumWk}} \proof{
+The case $k=1,g=0$ comes from \eq{sumBdxdx}, and by integration:
+\beq
+\sum_i dE_{q}(p^i) = 0
+\eeq
+which proves equation \ref{thsumWk1}.
+Then, it is clear from the iterative definition of $W_{k+1}^{(g)}$ for $k\geq 1$,
+that the dependance of $W_{k+1}^{(g)}(p_1,p,p_2,\dots,p_k)$  in $p$ is a sum of integrals involving only the following quantities:
+\beq
+\sum_j \Res_{q\to a_j}\,{dE_{j,q}(q_1)\over \om_j(q)} B(q,p)\, W_{l+1}^{(g)}(q, q_2,\dots,q_l)
+\eeq
+for some $q_1,\dots,q_l$\footnote{Since it may not be clear which branch point $dE$ and $\omega$ refers to,
+one indicates it with an index.}.
+Using equation \ref{sumBdxdx} we have to compute:
+\bea
+&& \sum_i \sum_j \Res_{q\to a_j}\,{dE_{j,q}(q_1)\over \om_j(q)} B(q,p^i)\, W_{l+1}^{(g)}(q, q_2,\dots,q_l) \cr
+&=&  \sum_j \Res_{q\to a_j}\,{dE_{j,q}(q_1)\over \om_j(q)} {dx(q)dx(p)\over (x(q)-x(p))^2}\, W_{l+1}^{(g)}(q, q_2,\dots,q_l) \cr
+&=& {1\over 2}\, \sum_j \Res_{q\to a_j}\,{dE_{j,q}(q_1)\over \om_j(q)} {dx(q)dx(p)\over (x(q)-x(p))^2}\, \left( W_{l+1}^{(g)}(q, q_2,\dots,q_l)+W_{l+1}^{(g)}(\qbar, q_2,\dots,q_l)\right) \cr
+&=& - {1\over 2}\,\sum_{q^i\neq q,\qbar}\, \sum_j \Res_{q\to a_j}\,{dE_{j,q}(q_1)\over \om_j(q)} {dx(q)dx(p)\over (x(q)-x(p))^2}\,  W_{l+1}^{(g)}(q^i, q_2,\dots,q_l) \cr
+&=& 0
+\eea
+where the second equality holds due to \ref{eqsymdEom}, the third equality holds due to equation \ref{thsumWk1}, and the last equality holds because that last expression has no poles at the branchpoints.
+This proves equation \ref{thsumWk2}.
+}
+
+\vs
+
+%---------------------------------thPkpol------------------
+{\bf Theorem \ref{thPkpol}} \proof{
+It is clearly a rational function of $x(p)$ because it is a symmetric sum on all sheets.
+From theorem \ref{thpolesWkgbp}, the RHS may have poles at branch points, and/or at the poles of some $y(p^i)$, and/or when $x(p)=x(p_l)$ for some $l$.
+Let us prove that the poles at branch points actualy cancel.
+
+Let us denote in this section:
+\beq
+U_k^{(g)}(q,q',p_K) =
+\sum_{m=0}^g \sum_{J\subset K} W_{j+1}^{(m)}(q,p_J)W_{k-j+1}^{(g-m)}(q',p_{K/J})
++ W_{k+2}^{(g-1)}(q,q',p_K).
+\eeq
+From theorem \ref{thsumWk}, we have:
+\bea
+&& \sum_i U_k^{(g)}(q^i,q^i,p_K) \cr
+&=& -\sum_i\sum_{l\neq i} U_k^{(g)}(q^l,q^i,p_K) \cr
+&=& - U_k^{(g)}(q,\qbar,p_K) - U_k^{(g)}(\qbar,q,p_K) - \sum_{q^i\neq q,\qbar} (U_k^{(g)}(q,q^i,p_K)+U_k^{(g)}(\qbar,q^i,p_K)) \cr
+&& - \sum_{q^i\neq q,\qbar} (U_k^{(g)}(q^i,q,p_K)+U_k^{(g)}(q^i,\qbar,p_K))  - \sum_{q^i\neq q,\qbar\,}\,\, \sum_{l\neq i, q^l\neq, q,\qbar} U_k^{(g)}(q^l,q^i,p_K) \cr
+\eea
+and from theorem \ref{thsumWk} and theorem \ref{thpolesWkgbp}, only the first two terms have poles at branch points, and thus:
+\bea
+&& - \sum_i \sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, U_k^{(g)}(q^i,q^i,p_K) \cr
+&=&  \sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, \left(U_k^{(g)}(q,\qbar,p_K)+U_k^{(g)}(\qbar,q,p_K)\right) \cr
+&=&  2 \sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, U_k^{(g)}(q,\qbar,p_K) \cr
+&=& 2 W_{k+1}^{(g)}(p,p_K)
+\eea
+where the last equality holds from the definition of $W_{k+1}^{(g)}$.
+Thus we have:
+\bea
+W_{k+1}^{(g)}(p,p_K)
+&=& - {1\over 2}\,\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, \left( \sum_i U_k^{(g)}(q^i,q^i,p_K)  \right). \cr
+\eea
+Then we rewrite it in terms of $P_k^{(g)}$ above:
+\bea
+&& W_{k+1}^{(g)}(p,p_K) \cr
+&=& - {1\over 2}\,\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, \Big( P_k^{(g)}(x(q),p_K)\,dx(q)^2  \cr
+&& \qquad \quad \qquad + 2\sum_i y(q^i)dx(q)W_{k+1}^{(g)}(q^i,p_K)  \Big) \cr
+&=& - {1\over 2}\,\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, \Big( P_k^{(g)}(x(q),p_K)\,dx(q)^2  + 2y(q)dx(q)W_{k+1}^{(g)}(q,p_K) \cr
+&&  \qquad \quad \qquad + 2y(\qbar)dx(q)W_{k+1}^{(g)}(\qbar,p_K) \Big) \cr
+&=& - {1\over 2}\,\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\, \Big( P_k^{(g)}(x(q),p_K)\,dx(q)^2  \cr
+&& \qquad \quad \qquad + 2(y(q)-y(\qbar))dx(q)W_{k+1}^{(g)}(q,p_K) \Big) \cr
+\eea
+where we have used theorem \ref{thsumWk} again. That gives
+\bea
+&& W_{k+1}^{(g)}(p,p_K) \cr
+&=& - {1\over 2}\,\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\,  P_k^{(g)}(x(q),p_K)\,dx(q)^2 \cr
+&& \qquad \quad - \sum_j \Res_{q\to a_j} dE_{j,q}(p)\,W_{k+1}^{(g)}(q,p_K).  \cr
+\eea
+Let us compute that last integral:
+\bea\label{proofthPkpolRbilin}
+&& \sum_j \Res_{q\to a_j} dE_{j,q}(p)\,W_{k+1}^{(g)}(q,p_K)  \cr
+&=& - \Res_{q\to p} dE_{j,q}(p)\,W_{k+1}^{(g)}(q,p_K) + {1\over 2i\pi}\,\sum_i \oint_{q'\in\underline\bcycle_i}B(p,q')\, \oint_{\underline\acycle_i} W_{k+1}^{(g)}(q,p_K)  \cr
+&& -  {1\over 2i\pi}\,\sum_i \oint_{{q'\in\underline\acycle_i}}B(p,q')\, \oint_{\underline\bcycle_i} W_{k+1}^{(g)}(q,p_K)  \cr
+&=& - \Res_{q\to p} dE_{j,q}(p)\,W_{k+1}^{(g)}(q,p_K) + \sum_i  du_i(p)\, \oint_{\acycle_i} W_{k+1}^{(g)}(q,p_K)  \cr
+&=& - \Res_{q\to p} dE_{j,q}(p)\,W_{k+1}^{(g)}(q,p_K)   \cr
+&=& - W_{k+1}^{(g)}(p,p_K)
+\eea
+where we have deformed the contour of integration using Riemann bilinear identity, and then we have used theorem \ref{thWkcycle}.
+Thus we have:
+\beq
+\sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\,  P_k^{(g)}(x(q),p_K)\,dx(q)^2  = 0 .
+\eeq
+Since this holds for any $p$, we can write for any $m\geq 0$:
+\bea
+0
+&=& \Res_{p\to a_i} (y(p)-y(a_i))\,(x(p)-x(a_i))^m\, \sum_j \Res_{q\to a_j} {dE_{j,q}(p)\over \om_j(q)}\,  P_k^{(g)}(x(q),p_K)\,dx(q)^2  \cr
+&=& - \Res_{q\to a_i}   \Res_{p\to q,\qbar} {dE_{j,q}(p)\over \om_j(q)}\,  (y(p)-y(a_i))\,(x(p)-x(a_i))^m\,P_k^{(g)}(x(q),p_K)\,dx(q)^2  \cr
+&=& - \Res_{q\to a_i} dx(q)\,  (x(q)-x(a_i))^m\,P_k^{(g)}(x(q),p_K)  \cr
+\eea
+which proves that $P_k^{(g)}(x(q),p_K)$ can have no pole at $q=a_i$.
+
+}
+
+\vs
+
+%---------------------------------thsymWk------------------
+{\bf Theorem \ref{thsymWk}} \proof{
+Assume this is proved for $h<g$, and at $g$, it is proved for $l<k$.
+Then we have:
+\bea
+&& W_{2}^{(g)}(p_1,p_2) \cr
+&=&  \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\over \om(q)}\,\Big[2\sum_{m=0}^g  W_{2}^{(m)}(q,p_2)W_{1}^{(g-m)}(\qbar)
++ W_{3}^{(g-1)}(q,\qbar,p_2) \Big] \cr
+&=&  \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\over \om(q)}\,B(q,p_2)\,W_{1}^{(g)}(\qbar) \cr
+&& + \sum_i \Res_{q\to a_i} \sum_{i'} \Res_{q'\to a_{i'}} {dE_{q}(p_1)\over \om(q)}\,{dE_{i',q'}(p_2)\over \om_{i'}(q')}\,  \Big[ 2  \sum_{m'=0}^{g-1}  W_{2}^{(m')}(q',q)W_{2}^{(g-m'-1)}(\qbar',\qbar) \cr
+&& \quad + 2 \sum_{m=1}^g W_{1}^{(g-m)}(\qbar)W_{3}^{(m-1)}(q',\qbar',q)  +  2  \sum_{m'=0}^{g-1}  W_{3}^{(m')}(q',q,\qbar)W_{1}^{(g-m'-1)}(\qbar') \cr
+&& \qquad + 4\sum_{m=1}^g\sum_{m'=0}^m  W_{2}^{(m')}(q',q)W_{1}^{(m-m')}(\qbar')W_{1}^{(g-m)}(\qbar) + W_{4}^{(g-2)}(q,q',\qbar,\qbar') \Big] \cr
+\eea
+and $W_{2}^{(g)}(p_2,p_1)$ is given by the same integral except that the order for computing residues is reversed, the residue in $q$ is computed before $q'$.
+The difference is thus obtained by pushing the contour of $q'$ through the contour of $q$, and is obtained as the residue at $q=q'$.
+Notice that only $W_2^{(0)}(q,q')$ has a pole at $q=q'$, all the other $W_k^{(g)}$ have no poles at $q=q'$ from theorem \ref{thpolesWkgbp}. Thus we have:
+\beq
+\begin{array}{l}
+W_{2}^{(g)}(p_1,p_2)-W_{2}^{(g)}(p_2,p_1)
+- \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\,B(q,p_2)-dE_{q}(p_2)\,B(q,p_1)\over \om(q)}\,W_{1}^{(g)}(\qbar) \cr
+=  \sum_i \Res_{q\to a_i} \Res_{q'\to q} {dE_{q}(p_1)\over \om(q)}\,{dE_{q'}(p_2)\over \om_{i}(q')}\, B(q,q') \cr
+ \qquad \Big[4\sum_{m=0}^g  W_{1}^{(m)}(\qbar')W_{1}^{(g-m)}(\qbar)  + 2  W_{2}^{(g-1)}(\qbar',\qbar)  \Big] \cr
+= 2 \sum_i \Res_{q\to a_i} \Res_{q'\to q} {dE_{q}(p_1)\over \om(q)}\,{dE_{q'}(p_2)\over \om_{i}(q')}\, B(q,q')\, U_{0}^{(g)}(\qbar,\qbar') \cr
+=  \sum_i \Res_{q\to a_i} \Res_{q'\to q} {dE_{q}(p_1)\over \om(q)}\,{dE_{q'}(p_2)\over \om_{i}(q')}\, B(q,q')\, \left( U_{0}^{(g)}(q,q') + U_{0}^{(g)}(\qbar,\qbar')\right) \cr
+\end{array}\eeq
+where we have used the notation of theorem \ref{thPkpol}.
+
+Similarly, for higher values of $k$, we find:
+\bea
+&& W_{2+k}^{(g)}(p_1,p_2,p_K)-W_{2+k}^{(g)}(p_2,p_1,p_K) \cr
+&& \qquad - \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\,B(q,p_2)-dE_{q}(p_2)\,B(q,p_1)\over \om(q)}\,W_{k+1}^{(g)}(\qbar,p_K) \cr
+&=&  \sum_i \Res_{q\to a_i} \Res_{q'\to q} {dE_{q}(p_1)\over \om(q)}\,{dE_{q'}(p_2)\over \om_{i}(q')}\, B(q,q') \,\left(U_{k}^{(g)}(q,q',p_K)+U_{k}^{(g)}(\qbar,\qbar',p_K)\right) \cr
+\eea
+Then it gives:
+\bea
+&& W_{2+k}^{(g)}(p_1,p_2,p_K)-W_{2+k}^{(g)}(p_2,p_1,p_K) \cr
+&& \qquad - \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\,B(q,p_2)-dE_{q}(p_2)\,B(q,p_1)\over \om(q)}\,W_{k+1}^{(g)}(\qbar,p_K) \cr
+&=&  \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\over \om(q)}\,d_{q'}\left({dE_{q'}(p_2)\over \om_{i}(q')}\, \left(U_{k}^{(g)}(q,q',p_K)+U_{k}^{(g)}(\qbar,\qbar',p_K)\right)\right)_{q'=q} \cr
+\eea
+and by integrating half of it by parts we get:
+\beq
+\begin{array}{l}
+ W_{2+k}^{(g)}(p_1,p_2,p_K)-W_{2+k}^{(g)}(p_2,p_1,p_K) \cr
+= - \sum_i \Res_{q\to a_i} {B(q,p_1) dE_{q}(p_2)-B(q,p_2) dE_{q}(p_1)\over \om(q)^2}\, \left(U_{k}^{(g)}(q,q,p_K)+U_{k}^{(g)}(\qbar,\qbar,p_K)\right) \cr
+ +  \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\,B(q,p_2)-dE_{q}(p_2)\,B(q,p_1)\over \om(q)}\,W_{k+1}^{(g)}(\qbar,p_K) \cr
+\end{array}
+\eeq
+
+Now we use the following Lemma:
+\bl\label{LemmathsymWk}
+If $f(q,q')$ is localy a bilinear differential near a branchpoint $a_i$, with no poles, and symmetric in $q$ and $\qbar$, and in $q'$ and $\qbar'$, then:
+\beq
+\Res_{q\to a_i} {B(q,p_1) dE_{q}(p_2)-B(q,p_2) dE_{q}(p_1)\over \om(q)^2} f(q,q) =0.
+\eeq
+\el
+{\bf Proof of the Lemma:}
+
+The residue is a simple pole, and we can use formula \ref{eqdEtoB}, that gives:
+\bea
+&& \Res_{q\to a_i} {B(q,p_1) dE_{q}(p_2)-B(q,p_2) dE_{q}(p_1)\over \om(q)^2} f(q,q) \cr
+&=& \Res_{q\to a_i} {B(q,p_1) B(q,p_2)-B(q,p_2) B(q,p_1)\over \om(q) dy(q) dx(q)} f(q,q) \cr
+&=& 0
+\eea
+$\square$.
+\medskip
+
+Using this Lemma, as well as theorem \ref{thPkpol}, we get:
+\beq
+\begin{array}{l}
+W_{2+k}^{(g)}(p_1,p_2,p_K)-W_{2+k}^{(g)}(p_2,p_1,p_K) \cr
+= - \sum_i \Res_{q\to a_i} {B(q,p_1) dE_{q}(p_2)-B(q,p_2) dE_{q}(p_1)\over \om(q)^2}\, (y(q)-y(\qbar))dx(q)W_{k+1}^{(g)}(q,p_K) \cr
+ +  \sum_i \Res_{q\to a_i} {dE_{q}(p_1)\,B(q,p_2)-dE_{q}(p_2)\,B(q,p_1)\over \om(q)}\,W_{k+1}^{(g)}(\qbar,p_K) \cr
+= 0.\cr
+\end{array}
+\eeq
+
+}
+
+\vs
+
+{\bf Corollary \ref{corResxyWk}} \proof{
+
+For any rational function $R(x)$ with no pole at $x(a_i)$ we have:
+\bea
+&& \Res_{a_i} R(x(p)) W^{(g)}_{k+1}(p,p_1,\dots,p_k)  \cr
+&=& {1\over 2} \Res_{a_i} R(x(p)) \left(W^{(g)}_{k+1}(p,p_1,\dots,p_k)+W^{(g)}_{k+1}(\pbar,p_1,\dots,p_k)\right)  \cr
+&=& 0
+\eea
+due to theorem \ref{thsumWk}.
+
+\medskip
+
+For $m=0,1$ compute
+\bea
+&& \sum_\alpha \Res_{p\to \alpha} x(p)^m y(p) W^{(g)}_{k+1}(p,p_K) \cr
+&=& -{1\over 2}\sum_\alpha \Res_{p\to \alpha} {x(p)^m\over dx(p)}\, \Big( -2y(p)dx(p) W^{(g)}_{k+1}(p,p_K)+ \cr
+&& \qquad +\sum_{h=0}^g \sum_{I\subset K} W^{(h)}_{|I|+1}(p,p_I)W^{(g-h)}_{k-|I|+1}(p,p_{K/I})+W^{(g-1)}_{k+2}(p,p,p_K)\Big)\cr
+&=& {1\over 2} \Res_{p\to a_i,p_K} {x(p)^m\over dx(p)}\, \Big( -2y(p)dx(p) W^{(g)}_{k+1}(p,p_K)+ \cr
+&& \qquad +\sum_{h=0}^g \sum_{I\subset K} W^{(h)}_{|I|+1}(p,p_I)W^{(g-h)}_{k-|I|+1}(p,p_{K/I})+W^{(g-1)}_{k+2}(p,p,p_K)\Big)\cr
+&=& {1\over 2}\sum_{j=1}^k \Res_{p\to p_j} {x(p)^m\over dx(p)}\, \Big( B(p,p_j) W^{(g)}_{k}(p,p_{K/\{j\}})\Big)\cr
+&& +{1\over 2}\sum_i \Res_{p\to a_i} {x(p)^m\over dx(p)}\, \Big( -2y(p)dx(p) W^{(g)}_{k+1}(p,p_K)+ \cr
+&& \qquad +\sum_{h=0}^g \sum_{I\subset K} W^{(h)}_{|I|+1}(p,p_I)W^{(g-h)}_{k-|I|+1}(p,p_{K/I})+W^{(g-1)}_{k+2}(p,p,p_K)\Big)\cr
+&=& {1\over 2}\sum_{j=1}^k d_{p_j}\, \Big( {x(p_j)^m\,W^{(g)}_{k}(p_{K})\over dx(p_j)}  \Big)\cr
+&& +{1\over 4}\sum_i \Res_{p\to a_i} {x(p)^m\over dx(p)}\, \Big( -2y(p)dx(p) W^{(g)}_{k+1}(p,p_K)+ \cr
+&& \qquad +\sum_{h=0}^g \sum_{I\subset K} W^{(h)}_{|I|+1}(p,p_I)W^{(g-h)}_{k-|I|+1}(p,p_{K/I})+W^{(g-1)}_{k+2}(p,p,p_K)\Big)\cr
+&& +{1\over 4}\sum_i \Res_{p\to a_i} {x(p)^m\over dx(p)}\, \Big( -2y(\pbar)dx(p) W^{(g)}_{k+1}(\pbar,p_K)+ \cr
+&& \qquad +\sum_{h=0}^g \sum_{I\subset K} W^{(h)}_{|I|+1}(\pbar,p_I)W^{(g-h)}_{k-|I|+1}(\pbar,p_{K/I})+W^{(g-1)}_{k+2}(\pbar,\pbar,p_K)\Big)\cr
+&=& {1\over 2}\sum_{j=1}^k d_{p_j}\, \Big( {x(p_j)^m\,W^{(g)}_{k}(p_{K})\over dx(p_j)}  \Big)\cr
+&& +{1\over 4}\sum_i \Res_{p\to a_i} {x(p)^m\over dx(p)}\, \Big( P_k^{(g)}(x(p),p_K) dx^2(p) \Big) \cr
+&=& {1\over 2}\sum_{j=1}^k d_{p_j}\, \Big( {x(p_j)^m\,W^{(g)}_{k}(p_{K})\over dx(p_j)}  \Big)\cr
+\eea
+due to theorem \ref{thPkpol}.
+}
+
+\vs
+
+{\bf Theorem \ref{thintPhi}} \proof{
+The case $k=1$, $g=0$ is easy:
+\beq
+\Res_{p_2\to p_1} \Phi(p) B(p_1,p_2) = d\Phi(p_2) = y(p_1)dx(p_1).
+\eeq
+We prove the theorem by recursion on $g$ and $k$. Suppose it is proved for all $k'$ for $g'\leq g-1$, and for $k'\leq k-1$ if $g'=g$.
+We write $K=\{1,\dots,k\}$ and $K'=\{1,\dots,k-1\}$.
+Then we have from \eq{defWkgrecursive}:
+\bea
+&& \Res_{p_{k}\to \bfa} \Phi(p_{k}) W_{k+1}^{(g)}(p,p_1,\dots,p_k) \cr
+&=& \Res_{p_{k}\to \bfa} \Res_{q\to \bfa} \Phi(p_{k}) \,{dE_{q}(p)\over \om(q)}\,\Big(
+\qquad \sum_{m=0}^g \sum_{J\subset K'} W_{j+2}^{(m)}(q,p_J,p_k)W_{k-j}^{(g-m)}(\qbar,p_{K'/J})  \cr
+&& \qquad +\sum_{m=0}^g \sum_{J\subset K'} W_{j+1}^{(m)}(q,p_J)W_{k-j+1}^{(g-m)}(\qbar,p_{K'/J},p_k)
++ W_{k+2}^{(g-1)}(q,\qbar,p_{K'},p_k) \Big) .\cr
+\eea
+Then we exchange the contours of integration:
+\beq
+\Res_{p_{k}\to \bfa} \Res_{q\to \bfa} = \Res_{q\to \bfa} \Res_{p_{k}\to \bfa} + \Res_{q\to \bfa} \Res_{p_{k}\to q,\qbar}.
+\eeq
+Thus
+\bea
+&& \Res_{p_{k}\to \bfa} \Phi(p_{k}) W_{k+1}^{(g)}(p,p_1,\dots,p_k) \cr
+&=& \Res_{q\to \bfa} \Res_{p_{k}\to \bfa} \Phi(p_{k}) \,{dE_{q}(p)\over \om(q)}\,\Big(
+\qquad \sum_{m=0}^g \sum_{J\subset K'} W_{j+2}^{(m)}(q,p_J,p_k)W_{k-j}^{(g-m)}(\qbar,p_{K'/J})  \cr
+&& \qquad +\sum_{m=0}^g \sum_{J\subset K'} W_{j+1}^{(m)}(q,p_J)W_{k-j+1}^{(g-m)}(\qbar,p_{K'/J},p_k)
++ W_{k+2}^{(g-1)}(q,\qbar,p_{K'},p_k) \Big) \cr
+&& + \Res_{q\to \bfa} \Res_{p_{k}\to q,\qbar} \Phi(p_{k}) \,{dE_{q}(p)\over \om(q)}\,\Big(
+\qquad \sum_{m=0}^g \sum_{J\subset K'} W_{j+2}^{(m)}(q,p_J,p_k)W_{k-j}^{(g-m)}(\qbar,p_{K'/J})  \cr
+&& \qquad +\sum_{m=0}^g \sum_{J\subset K'} W_{j+1}^{(m)}(q,p_J)W_{k-j+1}^{(g-m)}(\qbar,p_{K'/J},p_k)
++ W_{k+2}^{(g-1)}(q,\qbar,p_{K'},p_k) \Big) .\cr
+\eea
+The first term is computed from the recursion hypothesis, and the second term can exist only if the correlation function containing $p_k$ has poles at $p_k=q$ or $p_k=\qbar$, and  from theorem \ref{thpolesWkgbp},
+this can happen only if the correlation function containing $p_k$  is a Bergmann kernel. That gives:
+\beq
+\begin{array}{l}
+ \Res_{p_{k}\to \bfa} \Phi(p_{k}) W_{k+1}^{(g)}(p,p_1,\dots,p_k) \cr
+=  \Res_{q\to \bfa} {dE_{q}(p)\over \om(q)}\,\Big(
+\qquad \sum_{m=0}^g \sum_{J\subset K'} (2m+(j+1)-2) W_{j+1}^{(m)}(q,p_J) W_{k-j}^{(g-m)}(\qbar,p_{K'/J})  \cr
+ \qquad +\sum_{m=0}^g \sum_{J\subset K'} (2(g-m)+(k-j)-2) W_{j+1}^{(m)}(q,p_J) W_{k-j}^{(g-m)}(\qbar,p_{K'/J}) \cr
+ \qquad + (2(g-1)+k+1-2) W_{k+1}^{(g-1)}(q,\qbar,p_{K'}) \Big) \cr
+ + \Res_{q\to \bfa} \Res_{p_{k}\to q,\qbar} \Phi(p_{k}) \,{dE_{q}(p)\over \om(q)}\,\Big(
+\qquad  B(q,p_k)W_{k+1}^{(g)}(\qbar,p_{K'})  +  W_{k}^{(g)}(q,p_{K'}) B(\qbar,p_k) \Big) \cr
+=  (2g+k-3)\, \Res_{q\to \bfa} {dE_{q}(p)\over \om(q)}\,\Big( \sum_{m=0}^g \sum_{J\subset K'}  W_{j+1}^{(m)}(q,p_J) W_{k-j}^{(g-m)}(\qbar,p_{K'/J})  \cr
+\qquad +  W_{k+1}^{(g-1)}(q,\qbar,p_{K'}) \Big) \cr
+ + \Res_{q\to \bfa} {dE_{q}(p)\over y(q)-y(\qbar)}\,\Big( y(q) W_{k+1}^{(g)}(\qbar,p_{K'})  +  y(\qbar) W_{k}^{(g)}(q,p_{K'})  \Big) \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1}) \cr
+ + \Res_{q\to \bfa} {dE_{q}(p)\over y(q)-y(\qbar)}\,\Big( y(q) (W_{k+1}^{(g)}(\qbar,p_{K'})+W_{k}^{(g)}(q,p_{K'}))  +  (y(\qbar)-y(q)) W_{k}^{(g)}(q,p_{K'})  \Big) \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1}) \cr
+ + \Res_{q\to \bfa} {dE_{q}(p)\over y(q)-y(\qbar)}\, (y(\qbar)-y(q)) W_{k}^{(g)}(q,p_{K'})   \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  - \Res_{q\to \bfa} dE_{q}(p)\, W_{k}^{(g)}(q,p_{K'})   \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  + {1\over 2}\,\Res_{q\to \bfa} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+ \qquad  -  {1\over 2}\,\Res_{q\to \bfa} dS_{\qbar,o}(p) \, W_{k}^{(g)}(q,p_{K'})  \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  + {1\over 2}\,\Res_{q\to \bfa} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+ \qquad -  {1\over 2}\,\Res_{q\to \bfa} dS_{q,o}(p) \, W_{k}^{(g)}(\qbar,p_{K'})  \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  + \Res_{q\to \bfa} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  - \Res_{q\to p} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+ -{1\over 2i\pi} \sum_j \left( \oint_{\underline{\bcycle}_j} B(q,p) \oint_{\underline{\acycle}_j} W_{k}^{(g)}(q,p_{K'}) - \oint_{\underline{\acycle}_j} B(q,p) \oint_{\underline{\bcycle}_j} W_{k}^{(g)}(q,p_{K'})\right) \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  - \Res_{q\to p} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+ - du^t(p)\,\left( (1+\kappa\tau) \oint_{\underline{\acycle}} W_{k}^{(g)}(q,p_{K'}) - \kappa \oint_{\underline{\bcycle}} W_{k}^{(g)}(q,p_{K'})\right) \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  - \Res_{q\to p} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'}) \cr
+ \qquad - du^t(p)\,\oint_{\acycle} W_{k}^{(g)}(q,p_{K'})  \cr
+=  (2g+k-3)\, W_k(p,p_1\dots,p_{k-1})  - \Res_{q\to p} dS_{q,o}(p) \, W_{k}^{(g)}(q,p_{K'})   \cr
+=  (2g+k-2)\, W_k(p,p_1\dots,p_{k-1})
+\end{array}
+\eeq
+
+}
+
+
+

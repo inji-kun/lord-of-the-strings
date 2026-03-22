@@ -1,0 +1,7 @@
+{
+  "systemMessage": "...",
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "..."
+  }
+}

@@ -12,9 +12,9 @@ Lord of the Strings is a Claude Code plugin that serves as a specialized Researc
 
 **Design principles:**
 - **Lightweight.** No MCP servers, no Docker, no managed venvs. Skills are markdown, hooks are shell scripts, corpus is `.tex` files on disk.
-- **Sharp, not broad.** 10 skills (8 domain, 2 infrastructure), not 61 general commands. A scalpel for the triality, not a Swiss army knife for all of physics.
+- **Sharp, not broad.** 12 skills (10 domain, 2 infrastructure), not 61 general commands. A scalpel for the triality, not a Swiss army knife for all of physics.
 - **Not overfit.** Every skill works in general-purpose mode. A configurable preset system narrows them to the triality when precision is needed, but Edward can edit the preset or turn it off.
-- **On-demand, not bulk.** The 14-paper corpus sits on disk. Claude reads specific equations via Read/Grep when a skill needs them. Nothing is bulk-loaded into context.
+- **On-demand, not bulk.** The 21-paper corpus sits on disk. Claude reads specific equations via Read/Grep when a skill needs them. Nothing is bulk-loaded into context.
 
 ---
 
@@ -24,7 +24,7 @@ Lord of the Strings is a Claude Code plugin that serves as a specialized Researc
 
 GitHub repo with a `.claude-plugin/marketplace.json` manifest. Users install via Claude Code's plugin system (settings.json `enabledPlugins` entry pointing at the repo) or by cloning locally.
 
-No npm bootstrap, no Python venv, no build step. The plugin is entirely static files (markdown skills, shell hooks, `.tex` corpus, config).
+No npm bootstrap, no Python venv, no build step. The plugin's own files are entirely static (markdown skills, shell hooks, `.tex` corpus, config). However, several skills depend on host tools at runtime — see the capability check in Section 4.1 for the full list and degraded modes.
 
 ### 2.2 Repo Structure
 
@@ -41,6 +41,8 @@ lord-of-the-strings/
 │   ├── formalize-lemma.md
 │   ├── inspire-search.md
 │   ├── add-reference.md
+│   ├── strebel-solver.md          # Strebel differential solving + Belyi permutations
+│   ├── discrete-volumes.md        # Norbury lattice-point / discrete Mirzakhani recursion
 │   ├── session-save.md            # Persist research state to disk
 │   └── preset.md                  # Switch active preset across all skills
 ├── hooks/
@@ -55,7 +57,7 @@ lord-of-the-strings/
 │   └── session-state.md          # Written by /session-save skill, read by hooks
 ├── reference/
 │   ├── MAPPING_DICTIONARY.md
-│   └── source_tex/               # 14-paper Golden Corpus
+│   └── source_tex/               # 21-paper Golden Corpus
 │       ├── 2212.05999/
 │       ├── 2412.13397/
 │       ├── 2510.17728/
@@ -69,11 +71,18 @@ lord-of-the-strings/
 │       ├── math-ph_0702045/
 │       ├── hep-th_0308184/
 │       ├── hep-th_0402063/
-│       └── hep-th_0504229/
+│       ├── hep-th_0504229/
+│       ├── hep-th_0001053/          # Maldacena-Ooguri Part 1
+│       ├── hep-th_0005183/          # Maldacena-Ooguri Part 2
+│       └── hep-th_0111180/          # Maldacena-Ooguri Part 3
 ├── SOUL.md                        # Persona & operational principles
 ├── CLAUDE.md                      # Claude Code project instructions
 ├── SPECS.md                       # Original functional spec
 ├── README.md                      # Comprehensive documentation
+├── tests/                         # Hook contract tests & fixtures
+│   ├── hooks/                     # Recorded payloads → expected outputs
+│   ├── presets/                   # Preset switching tests
+│   └── run-tests.sh              # Test runner
 └── docs/
     ├── onboarding.md              # Overleaf GitHub sync setup guide
     └── superpowers/specs/         # This file
@@ -98,15 +107,24 @@ Each skill is a markdown file with YAML frontmatter, following the GPD-establish
 ---
 name: skill-name
 description: One-line description
-preset: config/presets/triality.md   # or null for general mode
 ---
 
-<objective>...</objective>
-<process>...</process>
+<process>
+1. Read config/active-preset.txt to determine if a preset is active.
+2. If a preset path is specified, Read that file and apply its conventions.
+3. [skill-specific logic]
+</process>
+
+<preset>
+[Domain-specific narrowing, only applied when preset is active]
+</preset>
+
 <output>...</output>
 ```
 
-When `preset` points to a file, its contents are loaded as additional context. When `preset: null`, the skill runs general-purpose. Skills reference the corpus via explicit pointers ("Read MAPPING_DICTIONARY.md §III") rather than bulk-loading.
+**Preset resolution is runtime, not frontmatter.** Skills do NOT declare a `preset:` field in frontmatter. Instead, every skill's `<process>` section begins by reading `config/active-preset.txt`. This is the single source of truth for preset state. If the file is empty or missing, the skill runs in general-purpose mode. If it contains a path (e.g., `config/presets/triality.md`), the skill reads that file and activates its `<preset>` block.
+
+This design ensures that changing `active-preset.txt` (via the `/preset` command) switches all skills immediately without modifying any skill files. Skills reference the corpus via explicit pointers ("Read MAPPING_DICTIONARY.md §III") rather than bulk-loading.
 
 ### 3.2 Preset System
 
@@ -202,6 +220,18 @@ This avoids modifying skill frontmatter at runtime — the indirection through a
   5. Appends entry to a corpus index
 - **Constraint:** Always verify before download. Display title and authors for user confirmation.
 
+#### `strebel-solver`
+- **General:** Solve for the Strebel differential on a Riemann surface given face perimeters and graph topology. Compute edge lengths, verify the perimeter constraints, and enumerate valid metrized ribbon graphs.
+- **Preset narrows to:** Genus-one (torus) Strebel differentials with integer lengths. Includes Belyi map / covering-map permutation handling for the $k=1$ localization program. Handles the elliptic/modular geometry specific to $g=1$ (modular parameter $\tau$, theta functions).
+- **Method:** Claude writes a sage/sympy script to solve the constraint system $\sum_{i \in \text{face } I} l_i = P_I$ for given graph topologies, executes via Bash. For integer Strebel, enumerates solutions combinatorially.
+- **Corpus pointers:** MAPPING_DICTIONARY §I (Strebel geometry), §II (Schwinger-Strebel mapping), `2212.05999` §5 (Strebel construction), `0803.2681` (Razamat integer Strebel prescription).
+
+#### `discrete-volumes`
+- **General:** Compute discrete volumes $N_{g,s}(P_1,\ldots,P_s)$ — weighted counts of integer points in the moduli space of curves — using Norbury-style lattice-point recursion.
+- **Preset narrows to:** The specific discrete Mirzakhani-like recursion from `2510.17728` (Giacchetto-Maity-Mazenc). Uses the Kontsevich-Penner matrix model framework from `1512.09309`.
+- **Method:** Claude writes a sage/sympy script implementing the recursion relations, executes via Bash. For low $(g,s)$, can compute explicitly in-prompt using MAPPING_DICTIONARY §IV.
+- **Corpus pointers:** MAPPING_DICTIONARY §IV (Kontsevich-Penner), `2510.17728` (discrete volumes), `0801.4590` (Norbury lattice points), `1512.09309` §3 (discrete moduli).
+
 ---
 
 ## 4. Hooks
@@ -212,11 +242,18 @@ This avoids modifying skill frontmatter at runtime — the indirection through a
 **Purpose:** Initialize the RA persona and sync the working repo.
 
 **Actions:**
-1. **Background git pull** (detached process, following GPD's pattern — never blocks session start). Reports changes in `systemMessage` if any files were updated.
-2. **Inject persona context:** Reads SOUL.md (~100 lines), active preset (~30 lines), and session state from last session (~20 lines). Delivers as `additionalContext`.
-3. **Report research position:** If `config/session-state.md` exists, includes "Last session: working on §X, computing genus-g Y-point function, verified Z."
+1. **Background git fetch** (detached process, following GPD's pattern — never blocks session start). Does NOT auto-pull or mutate the working tree. Reports divergence status in `systemMessage`: "repo is N commits behind origin" or "up to date". Edward (or Claude) can then decide whether to pull.
+2. **Detect dirty tree:** If there are uncommitted changes, reports them in `systemMessage` so Claude doesn't accidentally clobber in-progress work.
+3. **Inject persona context:** Reads SOUL.md (~100 lines), active preset (~30 lines), and session state from last session (~20 lines). Delivers as `additionalContext`.
+4. **Validate session state freshness:** If `config/session-state.md` exists, parses its YAML frontmatter and checks `session_id` / `updated_at`. Reports "Last session: working on §X, computing genus-g Y-point function, verified Z." If stale or from a different session, notes this.
+5. **Capability check:** Detects available tools and reports degraded modes:
+   - `git` — required for sync (if missing: skip fetch, warn)
+   - `latexmk` / `pdflatex` — needed for latex-validate hook (if missing: hook skips, warn)
+   - `sage` / `wolframscript` / `python3+sympy` — needed for symbolic math skills (reports which engine is available)
+   - `lean` / `lake` — needed for formalize-lemma skill (if missing: skill reports unavailable)
+   - `curl` — needed for add-reference and inspire-search (if missing: skills report unavailable)
 
-**Output:** JSON with `systemMessage` (git status) and `hookSpecificOutput.additionalContext` (persona + state).
+**Output:** JSON with `systemMessage` (git status + capability report) and `hookSpecificOutput.additionalContext` (persona + state).
 
 ### 4.2 PostToolUse (Edit/Write `*.tex`) — `hooks/latex-validate.sh`
 
@@ -227,11 +264,13 @@ This avoids modifying skill frontmatter at runtime — the indirection through a
 **Actions:**
 1. Extract file path from stdin JSON (`tool_input.file_path` or `tool_response.filePath`)
 2. Check if it's a `.tex` file (skip otherwise)
-3. Run `latexmk -pdf -interaction=nonstopmode -halt-on-error` (or `pdflatex` fallback)
-4. If compilation fails: return errors in `hookSpecificOutput.additionalContext` so Claude can self-correct
-5. If compilation succeeds: silent (no output)
+3. **Determine the compile root:** Check for a `config/latex-root.txt` file listing the main `.tex` file(s) (e.g., `main.tex`). If present, compile that root — not the edited file directly (which may be an `\input{}`'d subfile). If no root file is configured, attempt to compile the edited file.
+4. **Debounce:** Track last-compile timestamp. Skip if less than 5 seconds since last validation (prevents re-compiling on every line edit in a batch of changes).
+5. Run `latexmk -pdf -interaction=nonstopmode -halt-on-error` on the compile root (or `pdflatex` fallback)
+6. If compilation fails: return errors in `hookSpecificOutput.additionalContext` so Claude can self-correct
+7. If compilation succeeds: silent (no output)
 
-**Constraint:** Non-blocking. Runs with a timeout (30s). If `latexmk` isn't installed, skip gracefully.
+**Constraint:** Non-blocking. Runs with a timeout (30s). If `latexmk` isn't installed, skip gracefully with a one-time warning. The hook handles multi-pass builds (latexmk manages this natively) and bibliography (bibtex/biber via latexmk). Shell escape is disabled by default for security.
 
 ### 4.3 Session State: `/session-save` Skill + PreCompact Hook
 
@@ -239,11 +278,33 @@ This avoids modifying skill frontmatter at runtime — the indirection through a
 
 **Solution: Two-part design.**
 
-**Part A: `/session-save` skill** — A skill that Claude invokes (or Edward invokes explicitly) to persist research state. Claude writes `config/session-state.md` with:
-- Current `.tex` file and section being edited
-- Active computation (genus, number of points, what's being verified)
-- Identities verified this session
-- Open questions / next steps
+**Part A: `/session-save` skill** — A skill that Claude invokes (or Edward invokes explicitly) to persist research state. Claude writes `config/session-state.md` with a **structured schema**:
+
+```yaml
+---
+schema_version: 1
+session_id: <from CLAUDE_CODE_SESSION env var>
+updated_at: <ISO 8601 timestamp>
+repo_head: <git rev-parse HEAD>
+active_preset: <contents of active-preset.txt>
+---
+
+## Current Work
+- **File:** main.tex §4.2
+- **Computation:** genus 1, 4-point function
+
+## Verified This Session
+- Euler characteristic for g=1 4-pt ribbon graphs
+- Strebel positivity for ...
+
+## Open Questions
+- Does the loop constraint hold for ...
+
+## Next Steps
+- Compute W^{(1)}_4 using TR skill
+```
+
+The YAML frontmatter enables hooks to validate freshness: compare `session_id` against the current session and `updated_at` against session start time. The markdown body provides the semantic content that Claude and Edward can read.
 
 Claude has full conversation context, so this state is semantically rich. The SOUL.md persona instructs Claude to invoke `/session-save` periodically during long sessions.
 
@@ -277,22 +338,27 @@ LOTS | triality | main.tex §4.2 | g=1, 4-pt | [████████░░ 6
 
 ### 5.1 The Golden Corpus
 
-14 papers stored as raw LaTeX in `reference/source_tex/`. Each paper in its own directory with the main file renamed to `[ID]_main.tex`. Supporting files (figures, `.bbl`, `.bst`, style files) preserved for local compilation.
+21 papers stored as raw LaTeX in `reference/source_tex/`. Each paper in its own directory with the main file renamed to `[ID]_main.tex`. Supporting files (figures, `.bbl`, `.bst`, style files) preserved for local compilation.
 
 | # | Role | arXiv ID | Short Title |
 |---|------|----------|-------------|
-| 1-3 | Genesis | `hep-th/0308184`, `0402063`, `0504229` | From Free Fields to AdS I–III |
-| 4 | The Program | `2212.05999` | Simplest Gauge-String Duality I |
-| 5 | Non-planar | `2412.13397` | Non-planar Correlators |
-| 6 | Discrete Volumes | `2510.17728` | Matrix Correlators as Discrete Volumes |
-| 7 | Stringy Limit | `1803.04423` | Tensionless String Spectra on AdS3 |
-| 8 | Worldsheet | `1812.01007` | Worldsheet Dual of Symmetric Product CFT |
-| 9 | Loop Equations | `1512.09309` | TR for Gaussian means / Kontsevich-Penner |
-| 10 | Primary Context | `2410.13273` | Les Houches notes on Moduli Spaces |
-| 11 | Clean Slate | `math/0111082` | Kontsevich Model via Feynman Diagrams |
-| 12 | Lean Bridge | `math/0101147` | GW theory, Hurwitz numbers, Matrix models |
-| 13 | TR Dictionary | `1412.3286` | Short Overview of Topological Recursion |
-| 14 | Foundational TR | `math-ph/0702045` | Invariants of Algebraic Curves |
+| 1-3 | Genesis | `hep-th/0308184`, `0402063`, `0504229` | From Free Fields to AdS I–III (Gopakumar) |
+| 4 | The Program | `2212.05999` | Simplest Gauge-String Duality I (Gopakumar-Mazenc) |
+| 5 | Non-planar | `2412.13397` | Non-planar Correlators (Gopakumar-Mazenc) |
+| 6 | Discrete Volumes | `2510.17728` | Matrix Correlators as Discrete Volumes (Giacchetto-Maity-Mazenc) |
+| 7 | Stringy Limit | `1803.04423` | Tensionless String Spectra on AdS3 (Gaberdiel-Gopakumar) |
+| 8 | Worldsheet | `1812.01007` | Worldsheet Dual of Symmetric Product CFT (Eberhardt-Gaberdiel-Gopakumar) |
+| 9 | AdS3 Foundation | `hep-th/0001053`, `0005183`, `0111180` | Strings in AdS3 and the SL(2,R) WZW Model Parts 1–3 (Maldacena-Ooguri) |
+| 10 | Loop Equations | `1512.09309` | TR for Gaussian means / Kontsevich-Penner (Andersen-Chekhov-Norbury-Penner) |
+| 11 | Primary Context | `2410.13273` | Les Houches notes on Moduli Spaces (Giacchetto-Lewanski) |
+| 12 | Clean Slate | `math/0111082` | Kontsevich Model via Feynman Diagrams (Fiorenza-Murri) |
+| 13 | Lean Bridge | `math/0101147` | GW theory, Hurwitz numbers, Matrix models (Okounkov-Pandharipande) |
+| 14 | TR Dictionary | `1412.3286` | Short Overview of Topological Recursion (Eynard) |
+| 15 | Foundational TR | `math-ph/0702045` | Invariants of Algebraic Curves (Eynard-Orantin) |
+| 16 | Localization Proof | `1911.00378` | Deriving the AdS3/CFT2 Correspondence (Eberhardt-Gaberdiel-Gopakumar) |
+| 17 | Integer Strebel | `0803.2681` | On a worldsheet dual of the Gaussian matrix model (Razamat) |
+| 18 | Free Field Correlators | `2009.11306` | Free field world-sheet correlators for AdS3 (Dei-Gaberdiel-Gopakumar-Knighton) |
+| 19 | Lattice Points | `0801.4590` | Counting lattice points in moduli space of curves (Norbury) |
 
 ### 5.2 Access Pattern
 
@@ -311,7 +377,7 @@ The cross-pillar equation index, organized by:
 - §II: Schwinger ↔ Strebel Length Mapping (from `2212.05999`)
 - §III: Topological Recursion Kernels (from `1512.09309`, `1412.3286`)
 - §IV: Kontsevich-Penner Model & Intersection Theory (from `1512.09309`, `math/0111082`)
-- §V: Localization & the $k=1$ Worldsheet (from `1812.01007`)
+- §V: Localization & the $k=1$ Worldsheet (from `1812.01007`, `1911.00378`, `2009.11306`)
 - §VI: Cross-Pillar Translation Table
 - §VII: Key Equations for Part II (genus 1)
 
@@ -342,7 +408,7 @@ The `latex-validate` hook catches compilation errors after every edit and feeds 
 
 **Fallback (no Premium):** Edward downloads `.tex` files from Overleaf, works locally with Claude, re-uploads manually.
 
-The SessionStart hook auto-pulls the latest from the GitHub remote so Claude always sees the most recent version.
+The SessionStart hook runs `git fetch` in the background and reports divergence status — it does NOT auto-pull. Edward (or Claude) decides whether to pull.
 
 ---
 
@@ -372,6 +438,18 @@ Claude reads stdout → interprets and presents result
 
 For small computations (e.g., Euler characteristic, simple combinatorial counts), Claude computes in-prompt without scripting.
 
+### 7.4 Security Controls
+
+The plugin involves Claude generating and executing code, downloading archives, and compiling LaTeX/Lean. These controls mitigate the attack surface:
+
+1. **Generated scripts run in temp directories:** All sympy/sage/mathematica scripts are written to a temporary working directory, not the project root. Claude cleans up after execution.
+2. **No `eval` or shell expansion:** Scripts are written to files and executed directly (`python3 script.py`), never passed through `eval` or backtick expansion.
+3. **Path quoting:** All file paths in hook scripts and skill-generated commands are double-quoted to prevent word splitting and glob expansion.
+4. **Archive extraction validation:** The `add-reference` skill extracts tarballs with `--strip-components` and validates that no extracted paths escape the target directory (no `../` traversal, no symlinks pointing outside).
+5. **LaTeX shell escape disabled:** The latex-validate hook uses `-no-shell-escape` to prevent TeX-based code execution.
+6. **Downloaded corpus is untrusted input:** Skills that read from `reference/source_tex/` treat the content as reference material only — they never execute code found in `.tex` files.
+7. **Claude Code sandboxing:** If enabled in the user's settings, all Bash execution respects the sandbox. The plugin does not require `dangerouslyDisableSandbox`.
+
 ---
 
 ## 8. Lean 4 Formalization
@@ -390,9 +468,65 @@ The `formalize-lemma` skill requires only a working Lean 4 + mathlib4 installati
 
 **No LeanAide dependency.** Claude is the translator; Lean is the verifier. Adding an intermediate LLM (LeanAide calls GPT) would add complexity without clear benefit.
 
+**Scope of formalization:** Lean 4 is realistic for: parity lemmas, Euler characteristic identities, finite graph combinatorics, recursion relation bookkeeping, automorphism factor computations, and perimeter constraint verification. It is NOT a realistic near-term path for: existence/uniqueness of Strebel differentials, genus-one moduli-space geometry, Eynard-Orantin recursion at the algebro-geometric level, or $\mathfrak{psu}(1,1|2)_1$ worldsheet representation theory. The skill should be used for the combinatorial/algebraic shell of the triality, not the analytic core.
+
 ---
 
-## 9. README Specification
+## 9. Testing
+
+### 9.1 Hook Contract Tests
+
+A `tests/` directory with recorded payloads and expected outputs for each hook:
+
+```
+tests/
+├── hooks/
+│   ├── session-start/
+│   │   ├── payload-clean-repo.json     # Input: clean repo, no divergence
+│   │   ├── expected-clean-repo.json    # Expected output
+│   │   ├── payload-behind-origin.json  # Input: repo is behind
+│   │   └── expected-behind-origin.json
+│   ├── latex-validate/
+│   │   ├── payload-tex-edit.json       # Input: Edit to a .tex file
+│   │   ├── payload-non-tex-edit.json   # Input: Edit to a .py file (should skip)
+│   │   └── expected-skip.json
+│   ├── pre-compact/
+│   │   ├── session-state-fresh.md      # Fixture: fresh state file
+│   │   ├── session-state-stale.md      # Fixture: stale state file
+│   │   └── expected-stale-warning.json
+│   └── statusline/
+│       ├── payload-with-state.json
+│       └── expected-output.txt         # Expected ANSI string
+├── presets/
+│   ├── test-active-preset.txt          # Fixture: preset path
+│   ├── test-empty-preset.txt           # Fixture: empty (general mode)
+│   └── test-preset-switch.sh           # Test: write, read, verify
+└── run-tests.sh                        # Pipe payloads into hooks, diff outputs
+```
+
+Tests are executed via `bash tests/run-tests.sh` — pipes recorded JSON into each hook script and asserts exact output via `diff`. No test framework dependencies.
+
+### 9.2 Capability Detection Tests
+
+The SessionStart hook's capability check is tested with mocked environments:
+- Missing `git` → verify graceful skip message
+- Missing `latexmk` → verify warning
+- Missing `sage`/`wolframscript`/`python3` → verify degraded mode report
+- Missing `lean`/`lake` → verify formalize-lemma unavailable message
+
+### 9.3 Skill Smoke Tests
+
+Manual test protocol (documented in `tests/MANUAL_TESTS.md`):
+1. Start Claude Code session with plugin loaded → verify persona injection
+2. Run `/preset triality` → verify `active-preset.txt` updated
+3. Run `/fatgraph 3` → verify TikZ output compiles
+4. Run `/inspire-search "tensionless string"` → verify results returned
+5. Run `/session-save` → verify `session-state.md` created with valid YAML frontmatter
+6. Run `/preset null` → verify general mode active
+
+---
+
+## 10. README Specification (see Section 9 of original spec for details)
 
 The README.md must comprehensively document:
 

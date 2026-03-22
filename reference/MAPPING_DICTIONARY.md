@@ -61,14 +61,23 @@ l_{ij} = \int_{\text{edge}} |dz|\sqrt{|\phi(z)|}
 ```
 — `2212.05999`, Sec. 5.3 (described near line 841)
 
-### Euler Characteristic Constraint
+### Euler Characteristic
+
+For a ribbon graph on a **closed** genus-$g$ surface with $n$ faces:
 
 ```latex
-\chi(\Sigma_{g,n}) = V - E + F = 2 - 2g - n
+V - E + F = 2 - 2g \quad \text{(graph Euler formula, with } F = n \text{)}
 ```
-where $V$ = vertices (zeroes of $\phi$), $E$ = edges, $F$ = faces (poles).
-An $m$-th order zero gives a vertex of valency $(m+2)$; generically cubic ($m=1$).
-— `2212.05999`, line 841
+
+This is distinct from the Euler characteristic of the **punctured** surface $\Sigma_{g,n}$:
+
+```latex
+\chi(\Sigma_{g,n}) = 2 - 2g - n
+```
+
+For a trivalent graph ($V = 2E/3$), these combine to give $E = 6g - 6 + 3n$ edges.
+An $m$-th order zero of $\phi$ gives a vertex of valency $(m+2)$; generically cubic ($m=1$).
+— `2212.05999`, line 850: "From $V-E+F = 2-2g$, a genus $g$ fatgraph with $n$ faces..."
 
 ### Perimeter (Loop) Constraint
 
@@ -132,11 +141,22 @@ This picks out **discrete points** on $\mathcal{M}_{g,n}$.
 
 ### The Spectral Curve (Gaussian means)
 
+**Convention A** (used in `1512.09309` §4, TR recursion kernel):
+
 ```latex
 \Sigma: \quad yx - y^2 = 1, \qquad
 x = e^\lambda + e^{-\lambda}, \quad y = e^\lambda, \quad dx = (e^\lambda - e^{-\lambda})\,d\lambda
 ```
 — `1512.09309`, Eq. near line 1543–1546
+
+**Convention B** (used in `1512.09309` §3, Gaussian means resolvent):
+
+```latex
+x = e^\lambda + e^{-\lambda}, \quad y = \tfrac{1}{2}(e^\lambda - e^{-\lambda})
+```
+— `1512.09309`, line 700–702
+
+These are related by the affine shift $y_B = y_A - x/2$. The algebraic curve is the same; the TR kernel $K(p,q)$ and Bergmann kernel $B(p,q)$ in §III above use **Convention A**. When comparing to resolvent-based formulas, use Convention B. Mixing conventions will produce incorrect normalizations.
 
 ### The Bergmann Kernel
 
@@ -216,15 +236,17 @@ e^{\sum_{g,s} N^{2-2g}\alpha^{2-2g-s}\mathcal{F}^{(g,s)}_K(\{\xi_k\})}
 All edge lengths $l_i \in \mathbb{Z}_+$. Replace integration over $\mathcal{M}_{g,s}$ with **summation over integer points**. The perimeter constraint becomes:
 
 ```latex
-\sum_{i \in \text{face } I} l_i = P_I \in 2\mathbb{Z}_+
+\sum_{i \in \text{face } I} l_i = P_I \in \mathbb{Z}_+
 ```
-— `1512.09309`, Sec. 3.2 (lines 754–762)
+
+**Parity note:** Each edge contributes to exactly two face perimeters, so the **total** $\sum_{I=1}^s P_I$ is always even. Individual perimeters $P_I$ can be odd.
+— `1512.09309`, Sec. 3.2 (lines 756–762)
 
 ---
 
 ## V. LOCALIZATION & THE k=1 WORLDSHEET
 
-**Source:** `1812.01007` (Eberhardt-Gaberdiel-Gopakumar)
+**Sources:** `1812.01007` (Eberhardt-Gaberdiel-Gopakumar) for the worldsheet theory and spectrum; `1911.00378` (Eberhardt-Gaberdiel-Gopakumar) for the localization/covering-map proof; `2009.11306` (Dei-Gaberdiel-Gopakumar-Knighton) for free field correlators
 
 ### The Worldsheet Theory
 
@@ -250,8 +272,10 @@ g_s^2 \sim \frac{Q_5 \cdot \text{vol}(\mathbb{T}^4)}{Q_1} = \frac{\text{vol}(\ma
 
 ### Localization on Moduli Space
 
-The worldsheet partition function consists of delta function contributions from worldsheets admitting **holomorphic maps** (covering maps). These are discrete points on $\mathcal{M}_{g,n}$ — the same integer Strebel points that arise from gauge theory.
-— `1812.01007`, line 108; `2212.05999`, line 938
+The worldsheet correlators are **delta-function-localised** in string moduli space to configurations that admit a holomorphic covering map from the worldsheet to the boundary $\mathbb{CP}^1$.
+— `1911.00378` (Eberhardt-Gaberdiel-Gopakumar, "Deriving the AdS3/CFT2 correspondence")
+
+**Connection to integer Strebel (conjectural for general genus):** For correlators with large twist (BMN-like limit), the covering-map localization points coincide with integer Strebel differentials, as shown explicitly for genus 0 in `2212.05999` (line 938) and Gaberdiel-Gopakumar-Knighton-Maity `2011.10038` ("From symmetric product CFTs to AdS3"). The identification at higher genus is a key target of Parts II and III — it should be treated as a conjecture to be verified, not an established theorem.
 
 ### The $\mathfrak{psu}(1,1|2)_1$ Algebra
 
@@ -270,15 +294,15 @@ The worldsheet partition function consists of delta function contributions from 
 | Gauge Theory (Pillar I) | String Theory (Pillar II) | Matrix Model (Pillar III) |
 |---|---|---|
 | Feynman diagram | Strebel skeleton on $\Sigma_{g,n}$ | Fat graph in cell decomposition of $\mathcal{M}_{g,s}$ |
-| Schwinger parameter $\tau$ | Strebel edge length $l$ | Edge length $l_i \in \mathbb{R}_+$ (or $\mathbb{Z}_+$) |
+| Schwinger parameter $\tau$ | Strebel edge length $l$ (V-type: $l = 1/\tau_{\text{eff}}$; F-type: $l = \tau$) | Edge length $l_i \in \mathbb{R}_+$ (or $\mathbb{Z}_+$) |
 | $1/N$ expansion at genus $g$ | Worldsheet of genus $g$ | $N^{2-2g}$ term in matrix model |
 | $n$-point correlator $\langle\text{Tr}M^{k_1}\cdots\rangle$ | $n$ punctures on $\Sigma_{g,n}$ with perimeters $L_i$ | $s$-point function in Kontsevich model |
 | Wick contraction count $n_{ij}$ | Integer Strebel length $l_{ij}$ | Integer edge in discrete moduli |
-| Euler char. $\chi = V - E + F$ | $\chi = 2 - 2g - n$ | Same combinatorial identity |
+| Graph: $V - E + F = 2 - 2g$ (with $F = n$) | Punctured surface: $\chi(\Sigma_{g,n}) = 2 - 2g - n$ | Same combinatorics; $F = n$ faces = $n$ punctures |
 | Face of ribbon graph | Pole of Strebel diff. / puncture | Face of fat graph |
 | Vertex of ribbon graph | Zero of Strebel diff. | Vertex of fat graph |
 | Loop constraint $\sum l_i = P_I$ | Perimeter of asymptotic closed string | Boundary of face in cell decomposition |
-| Free field ($k=1$) limit | Tensionless string / $\mathfrak{psu}(1,1|2)_1$ | Localization to integer Strebel points |
+| Free field ($k=1$) limit | Tensionless string / $\mathfrak{psu}(1,1|2)_1$ | Covering-map localization (`1911.00378`); integer Strebel identification conjectural at higher genus |
 | Genus $g=1$ non-planar diagrams | Torus worldsheet (Part II target) | $W^{(1)}_1 = \sum K(p_1,q)B(q,\bar{q})$ |
 
 ---
@@ -290,11 +314,11 @@ The **immediate** targets for the non-planar extension:
 1. **Torus TR seed:** $W^{(1)}_1(p_1) = \sum_{\text{res}\,dx=0} K(p_1,q)\,B(q,\bar{q})$
    — Source: `1512.09309`, Eq. `W11`
 
-2. **Non-planar Feynman diagrams:** Identify all $g=1$ ribbon graphs for $n$-point functions, verify $\chi = -n$ (for $g=1$, $V - E + F = -n$).
+2. **Non-planar Feynman diagrams:** Identify all $g=1$ ribbon graphs for $n$-point functions, verify $V - E + F = 2 - 2(1) = 0$ (i.e., $V - E + n = 0$, so $V - E = -n$).
    — Method: Enumerate via `2412.13397`
 
 3. **Integer Strebel check:** For each $g=1$ graph, verify that the integer Strebel lengths satisfy the perimeter constraints and that the mapping $l_i = n_i$ gives a valid point on $\mathcal{M}_{1,n}$.
    — Cross-ref: `2510.17728` (discrete volumes)
 
-4. **Localization verification:** Confirm that the $k=1$ worldsheet localizes to the same discrete $g=1$ points.
+4. **Localization verification:** Confirm that the $k=1$ worldsheet covering-map localization (`1911.00378`) produces the same discrete $g=1$ points as the integer Strebel construction. This is a key conjecture to verify, not an established result at $g=1$.
    — Cross-ref: `1812.01007`

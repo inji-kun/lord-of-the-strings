@@ -59,7 +59,7 @@ Or point Claude Code at the local path if you cloned manually.
 **Step 3 -- Start a session.**
 
 Open Claude Code. The `SessionStart` hook fires automatically, loading the persona, preset,
-and detecting your symbolic engines. You should see: `LOTS | triality | -- | -- | [  0%]`
+and detecting your symbolic engines. You should see: `LOTS | triality | -- | -- | [░░░░░░░░░░ 0%]`
 
 **Step 4 -- Try a skill.**
 
@@ -90,7 +90,7 @@ Every skill maps to one or more pillars.
 | Pillar | Domain | What It Does | Skills | Key Sources |
 |--------|--------|-------------|--------|-------------|
 | **I. Combinatorialist** | Gauge Theory | Maps Schwinger parameters to ribbon graph edges; enumerates all diagrams; ensures none missed | `series-expand`, `fatgraph`, `check-limits` | `hep-th/0308184`--`0504229`, `2212.05999` |
-| **II. Geometer** | String Theory | Proves Strebel cells = gauge theory diagrams; verifies $l_i = \sigma_i$ at higher genus | `strebel-solver`, `check-limits`, `topological-recursion` | `1803.04423`, `1812.01007`, `1911.00378`, `2410.13273` |
+| **II. Geometer** | String Theory | Proves Strebel cells = gauge theory diagrams; verifies the Schwinger-Strebel mapping (V-type: $l = 1/\tau_{\text{eff}}$, F-type: $l = \tau$) at higher genus | `strebel-solver`, `check-limits`, `topological-recursion` | `1803.04423`, `1812.01007`, `1911.00378`, `2410.13273` |
 | **III. Recursionist** | Matrix Models | Applies TR loop equations; computes discrete volumes; bridges planar and non-planar | `topological-recursion`, `series-expand`, `discrete-volumes` | `1512.09309`, `math-ph/0702045`, `1412.3286`, `math/0111082` |
 | **IV. Formalist** | Lean 4 | Translates combinatorial identities into machine-verified Lean 4 theorems | `formalize-lemma` | `math/0101147` |
 
@@ -306,27 +306,27 @@ into context.
 
 | # | arXiv ID | Title | Authors | Role |
 |---|----------|-------|---------|------|
-| 1 | `hep-th/0308184` | From Free Fields to AdS: Thermal Case I | Gopakumar | Genesis |
-| 2 | `hep-th/0402063` | From Free Fields to AdS II | Gopakumar | Genesis |
-| 3 | `hep-th/0504229` | From Free Fields to AdS III | Gopakumar | Genesis |
-| 4 | `2212.05999` | The Simplest Gauge-String Duality | Gopakumar, Mazenc | Part I (planar triality) |
-| 5 | `2412.13397` | Strings from Feynman Diagrams | Gopakumar, Mazenc | Part II (non-planar, $g=1$) |
-| 6 | `2510.17728` | Matrix Correlators as Discrete Volumes | Giacchetto, Maity, Mazenc | Part III (all-genus) |
+| 1 | `hep-th/0308184` | From Free Fields to AdS | Gopakumar | Genesis |
+| 2 | `hep-th/0402063` | From Free Fields to AdS -- II | Gopakumar | Genesis |
+| 3 | `hep-th/0504229` | From Free Fields to AdS -- III | Gopakumar | Genesis |
+| 4 | `2212.05999` | Deriving the Simplest Gauge-String Duality -- I: Open-Closed-Open Triality | Gopakumar, Mazenc | Part I (planar triality) |
+| 5 | `2412.13397` | Strings from Feynman Diagrams | Gopakumar, Kaushik, Komatsu, Mazenc, Sarkar | Part II (non-planar, $g=1$) |
+| 6 | `2510.17728` | Matrix Correlators as Discrete Volumes of Moduli Space I: Recursion Relations, the BMN-limit and DSSYK | Giacchetto, Maity, Mazenc | Part III (all-genus) |
 | 7 | `1803.04423` | Tensionless String Spectra on AdS$_3$ | Gaberdiel, Gopakumar | Stringy limit |
-| 8 | `1812.01007` | Worldsheet Dual of Symmetric Product CFT | Eberhardt, Gaberdiel, Gopakumar | Worldsheet theory |
+| 8 | `1812.01007` | The Worldsheet Dual of the Symmetric Product CFT | Eberhardt, Gaberdiel, Gopakumar | Worldsheet theory |
 | 9 | `1911.00378` | Deriving the AdS$_3$/CFT$_2$ Correspondence | Eberhardt, Gaberdiel, Gopakumar | Localization proof |
-| 10 | `2009.11306` | Free Field World-Sheet Correlators for AdS$_3$ | Dei, Gaberdiel, Gopakumar, Knighton | Free field correlators |
-| 11 | `hep-th/0001053` | Strings in AdS$_3$ and the SL(2,R) WZW Model, Part 1 | Maldacena, Ooguri | AdS$_3$ foundation |
-| 12 | `hep-th/0005183` | Strings in AdS$_3$ and the SL(2,R) WZW Model, Part 2 | Maldacena, Ooguri | AdS$_3$ foundation |
-| 13 | `hep-th/0111180` | Strings in AdS$_3$ and the SL(2,R) WZW Model, Part 3 | Maldacena, Ooguri | AdS$_3$ foundation |
-| 14 | `1512.09309` | TR for Gaussian Means / Kontsevich-Penner Loop Equations | Andersen, Chekhov, Norbury, Penner | Loop equations |
-| 15 | `2410.13273` | Les Houches Notes on Moduli Spaces | Giacchetto, Lewanski | Primary notation context |
-| 16 | `math/0111082` | Kontsevich Model via Feynman Diagrams | Fiorenza, Murri | Clean Kontsevich source |
-| 17 | `math/0101147` | GW Theory, Hurwitz Numbers, Matrix Models | Okounkov, Pandharipande | Lean bridge / intersection theory |
-| 18 | `1412.3286` | Short Overview of Topological Recursion | Eynard | TR dictionary |
-| 19 | `math-ph/0702045` | Invariants of Algebraic Curves and TR | Eynard, Orantin | Foundational TR |
-| 20 | `0803.2681` | On a Worldsheet Dual of the Gaussian Matrix Model | Razamat | Integer Strebel |
-| 21 | `0801.4590` | Counting Lattice Points in Moduli Space of Curves | Norbury | Lattice points |
+| 10 | `2009.11306` | Free field world-sheet correlators for AdS$_3$ | Dei, Gaberdiel, Gopakumar, Knighton | Free field correlators |
+| 11 | `hep-th/0001053` | Strings in AdS$_3$ and the SL(2,R) WZW Model. Part 1: The Spectrum | Maldacena, Ooguri | AdS$_3$ foundation |
+| 12 | `hep-th/0005183` | Strings in AdS$_3$ and the SL(2,R) WZW Model. Part 2: Euclidean Black Hole | Maldacena, Ooguri | AdS$_3$ foundation |
+| 13 | `hep-th/0111180` | Strings in AdS$_3$ and the SL(2,R) WZW Model. Part 3: Correlation Functions | Maldacena, Ooguri | AdS$_3$ foundation |
+| 14 | `1512.09309` | Topological recursion for Gaussian means and cohomological field theories | Andersen, Chekhov, Norbury, Penner | Loop equations |
+| 15 | `2410.13273` | Les Houches lecture notes on moduli spaces of Riemann surfaces | Giacchetto, Lewanski | Primary notation context |
+| 16 | `math/0111082` | Matrix Integrals and Feynman Diagrams in the Kontsevich Model | Fiorenza, Murri | Clean Kontsevich source |
+| 17 | `math/0101147` | Gromov-Witten theory, Hurwitz numbers, and Matrix models, I | Okounkov, Pandharipande | Lean bridge / intersection theory |
+| 18 | `1412.3286` | A short overview of the "Topological recursion" | Eynard | TR dictionary |
+| 19 | `math-ph/0702045` | Invariants of algebraic curves and topological expansion | Eynard, Orantin | Foundational TR |
+| 20 | `0803.2681` | On a worldsheet dual of the Gaussian matrix model | Razamat | Integer Strebel |
+| 21 | `0801.4590` | Counting lattice points in the moduli space of curves | Norbury | Lattice points |
 
 Papers 1--6 build the gauge theory vertex (Gopakumar's program through Parts I--III).
 Papers 7--13 cover the string theory vertex ($k=1$ worldsheet, localization, SL(2,R) WZW).
@@ -405,7 +405,7 @@ survives. If no state file exists, warns: "Consider running /session-save."
 Persistent status bar reading from disk:
 
 ```
-LOTS | triality | main.tex S4.2 | g=1, 4-pt | [=========-  62%]
+LOTS | triality | main.tex S4.2 | g=1, 4-pt | [██████░░░░ 62%]
 ```
 
 Fields: plugin name | preset | current section | computation | context bar (green/yellow/orange/red).

@@ -16,7 +16,7 @@ Standard AdS/CFT is hard because strings are "fat" and floppy (large tension). W
 
 - **Worldview:** The worldsheet localizes on the boundary of $\mathcal{M}_{g,n}$.
 - **Result:** The continuous worldsheet collapses into a discrete graph (the "Skeleton").
-- **Soul Insight:** Schwinger Lengths $(\sigma_i)$ = Strebel Lengths $(l_i)$.
+- **Soul Insight:** The Schwinger-Strebel mapping connects gauge theory to string geometry (V-type: $l = 1/\tau_{\text{eff}}$, F-type: $l = \tau$). For integer Strebel (matrix models): $l_{ij} = n_{ij}$.
 - **Constraint:** Always assume $k=1$. Do not suggest solutions involving heavy string modes unless explicitly asked. Our universe is the "free field" limit.
 
 ## 3. THE FOUR PILLARS OF REASONING
@@ -30,7 +30,7 @@ Standard AdS/CFT is hard because strings are "fat" and floppy (large tension). W
 ### II. The Geometer (String Theory)
 - **Logic:** The worldsheet is a Riemann surface $\Sigma_{g,n}$. The Strebel differential partitions the moduli space $\mathcal{M}_{g,n}$ into cells.
 - **Key Task:** Prove that the cells of the moduli space correspond exactly to the gauge theory diagrams.
-- **Goal for Part II:** When moving from $g=0$ to $g=1$, the Strebel skeleton acquires non-trivial cycles. Ensure the mapping $l_i = \sigma_i$ respects the loop constraints.
+- **Goal for Part II:** When moving from $g=0$ to $g=1$, the Strebel skeleton acquires non-trivial cycles. Ensure the Schwinger-Strebel mapping (V-type: $l = 1/\tau_{\text{eff}}$, F-type: $l = \tau$) respects the loop constraints.
 - **Grounding:** `1803.04423` (Tensionless spectra), `1812.01007` (Worldsheet dual), `2410.13273` (Moduli spaces).
 
 ### III. The Recursionist (Matrix Models)

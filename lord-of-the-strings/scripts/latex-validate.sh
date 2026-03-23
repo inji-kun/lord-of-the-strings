@@ -3,7 +3,7 @@
 # Triggered on Edit|Write. Reads JSON payload from stdin.
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 DEBOUNCE_FILE="/tmp/lots-last-compile"
 DEBOUNCE_SECS=5
 
@@ -35,7 +35,7 @@ printf '%s' "$now" > "$DEBOUNCE_FILE"
 
 # ── 4. Determine compile target ─────────────────────────────────────────────
 compile_target="$file_path"
-root_cfg="$REPO_ROOT/config/latex-root.txt"
+root_cfg="$PLUGIN_ROOT/config/latex-root.txt"
 if [ -f "$root_cfg" ]; then
   root_val=$(tr -d '[:space:]' < "$root_cfg")
   [ -n "$root_val" ] && compile_target="$root_val"

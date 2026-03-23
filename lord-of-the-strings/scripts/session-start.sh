@@ -3,7 +3,8 @@
 # Reads stdin (JSON payload) but does not parse it.
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+REPO_ROOT="$(cd "$PLUGIN_ROOT/.." && pwd)"
 
 # ── 1. Background git fetch & divergence check ──────────────────────────
 git_status_msg=""
@@ -36,11 +37,11 @@ fi
 
 # ── 3. Read active preset ───────────────────────────────────────────────
 preset=""
-preset_file="$REPO_ROOT/config/active-preset.txt"
+preset_file="$PLUGIN_ROOT/config/active-preset.txt"
 if [ -f "$preset_file" ]; then
   preset_path=$(cat "$preset_file" | tr -d '[:space:]')
-  if [ -n "$preset_path" ] && [ -f "$REPO_ROOT/$preset_path" ]; then
-    preset=$(cat "$REPO_ROOT/$preset_path")
+  if [ -n "$preset_path" ] && [ -f "$PLUGIN_ROOT/$preset_path" ]; then
+    preset=$(cat "$PLUGIN_ROOT/$preset_path")
   elif [ -n "$preset_path" ] && [ -f "$preset_path" ]; then
     preset=$(cat "$preset_path")
   fi
@@ -48,7 +49,7 @@ fi
 
 # ── 4. Read session state ───────────────────────────────────────────────
 session_state=""
-state_file="$REPO_ROOT/config/session-state.md"
+state_file="$PLUGIN_ROOT/config/session-state.md"
 if [ -f "$state_file" ]; then
   content=$(cat "$state_file")
   # Parse schema_version from YAML frontmatter

@@ -2,7 +2,8 @@
 # pre-compact.sh — PreCompact hook: inject session state into context before compaction
 set -euo pipefail
 
-STATE_FILE="config/session-state.md"
+PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+STATE_FILE="$PLUGIN_ROOT/config/session-state.md"
 
 emit_json() {
   local system_msg="$1"

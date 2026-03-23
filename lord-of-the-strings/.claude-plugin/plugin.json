@@ -1,0 +1,13 @@
+{
+  "name": "lord-of-the-strings",
+  "version": "0.1.0",
+  "description": "Research assistant for the Giacchetto-Mazenc Gauge-String-Matrix Triality program. Specialized skills for Strebel differentials, topological recursion, Lean 4 formalization, Belyi maps, and LaTeX editing in the tensionless (k=1) limit.",
+  "author": {
+    "name": "inji-kun",
+    "url": "https://github.com/inji-kun"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/inji-kun/lord-of-the-strings",
+  "repository": "https://github.com/inji-kun/lord-of-the-strings",
+  "keywords": ["string-theory", "AdS-CFT", "topological-recursion", "strebel", "gauge-string-duality", "physics"]
+}

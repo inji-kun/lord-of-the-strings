@@ -1,9 +1,14 @@
 {
-  "name": "lord-of-the-strings",
-  "version": "0.1.0",
-  "description": "Research assistant for the Gauge-String-Matrix Triality program. Specialized skills for Strebel differentials, topological recursion, Lean 4 formalization, and LaTeX editing in the tensionless (k=1) limit.",
-  "author": {
-    "name": "Bhasi",
-    "url": "https://github.com/inji-kun"
-  }
+  "name": "lord-of-the-strings-marketplace",
+  "owner": {
+    "name": "inji-kun"
+  },
+  "plugins": [
+    {
+      "name": "lord-of-the-strings",
+      "source": "./lord-of-the-strings",
+      "description": "Research assistant for the Giacchetto-Mazenc Gauge-String-Matrix Triality program",
+      "version": "0.1.0"
+    }
+  ]
 }

@@ -2,7 +2,7 @@
 # StatusLine hook — outputs a compact ANSI dashboard line.
 # Reads JSON from stdin; outputs a single ANSI-formatted line (no newline at end).
 
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 
 # ── 1. Read stdin JSON ──────────────────────────────────────────────────
 input=$(cat)
@@ -20,7 +20,7 @@ fi
 
 # ── 3. Preset name ──────────────────────────────────────────────────────
 preset_name="general"
-preset_file="$REPO_ROOT/config/active-preset.txt"
+preset_file="$PLUGIN_ROOT/config/active-preset.txt"
 if [ -f "$preset_file" ]; then
   preset_path=$(tr -d '[:space:]' < "$preset_file")
   if [ -n "$preset_path" ]; then
@@ -32,7 +32,7 @@ fi
 # ── 4. Current work & computation from session-state.md ────────────────
 current_work="—"
 computation="—"
-state_file="$REPO_ROOT/config/session-state.md"
+state_file="$PLUGIN_ROOT/config/session-state.md"
 if [ -f "$state_file" ]; then
   # Extract File: value from "- **File:** ..." format
   current_work=$(grep -m1 '\*\*File:\*\*' "$state_file" | sed 's/.*\*\*File:\*\* *//')

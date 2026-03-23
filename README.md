@@ -42,49 +42,17 @@ Five steps from zero to working.
 
 **Step 1 -- Add the marketplace.**
 
-Add to your Claude Code `settings.json` (user or project level):
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "lord-of-the-strings-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "inji-kun/lord-of-the-strings"
-      }
-    }
-  }
-}
+```
+/plugin marketplace add inji-kun/lord-of-the-strings
 ```
 
-**Step 2 -- Enable the plugin.**
+**Step 2 -- Install the plugin.**
 
-```json
-{
-  "enabledPlugins": {
-    "lord-of-the-strings@lord-of-the-strings-marketplace": true
-  }
-}
+```
+/plugin install lord-of-the-strings@lord-of-the-strings-marketplace
 ```
 
-Or if developing locally, clone and use a directory source:
-
-```bash
-git clone https://github.com/inji-kun/lord-of-the-strings.git
-```
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "lord-of-the-strings-marketplace": {
-      "source": {
-        "source": "directory",
-        "path": "/path/to/lord-of-the-strings"
-      }
-    }
-  }
-}
-```
+That's it. You're done.
 
 **Step 3 -- Start a session.**
 

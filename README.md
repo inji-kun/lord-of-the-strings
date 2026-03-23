@@ -32,7 +32,7 @@ localization program and the Kontsevich-Penner model that ties them together.
 11. [Configuration](#11-configuration)
 12. [Troubleshooting](#12-troubleshooting)
 13. [Architecture](#13-architecture)
-14. [Contributing](#14-contributing)
+14. [Making It Yours](#14-making-it-yours)
 
 ---
 
@@ -570,7 +570,7 @@ Full design spec: `docs/superpowers/specs/2026-03-22-lord-of-the-strings-design.
 
 ---
 
-## 14. Contributing
+## 14. Making It Yours
 
 ### Adding Papers to the Corpus
 

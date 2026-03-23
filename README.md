@@ -40,23 +40,51 @@ localization program and the Kontsevich-Penner model that ties them together.
 
 Five steps from zero to working.
 
-**Step 1 -- Clone the plugin.**
+**Step 1 -- Add the marketplace.**
 
-```bash
-git clone https://github.com/inji-kun/lord_of_the_strings.git
-```
-
-**Step 2 -- Register with Claude Code.**
-
-Add to your Claude Code `settings.json`:
+Add to your Claude Code `settings.json` (user or project level):
 
 ```json
 {
-  "enabledPlugins": ["lord-of-the-strings"]
+  "extraKnownMarketplaces": {
+    "lord-of-the-strings-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "inji-kun/lord-of-the-strings"
+      }
+    }
+  }
 }
 ```
 
-Or point Claude Code at the local path if you cloned manually.
+**Step 2 -- Enable the plugin.**
+
+```json
+{
+  "enabledPlugins": {
+    "lord-of-the-strings@lord-of-the-strings-marketplace": true
+  }
+}
+```
+
+Or if developing locally, clone and use a directory source:
+
+```bash
+git clone https://github.com/inji-kun/lord-of-the-strings.git
+```
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "lord-of-the-strings-marketplace": {
+      "source": {
+        "source": "directory",
+        "path": "/path/to/lord-of-the-strings"
+      }
+    }
+  }
+}
+```
 
 **Step 3 -- Start a session.**
 
@@ -527,7 +555,7 @@ See [Section 4](#4-preset-system) for the full preset contents.
 | Context running out | Run `/session-save`; PreCompact hook preserves state automatically |
 | StatusLine shows `--` | Run `/session-save` to populate fields |
 | Preset not applying | Run `/preset triality`; check `config/active-preset.txt` |
-| Skills not loading | Verify `.md` files in `skills/`; check `settings.json` |
+| Skills not loading | Verify `lord-of-the-strings/skills/*/SKILL.md` exists; check `enabledPlugins` in `settings.json` |
 | Wrong normalizations | Convention A: $y = e^\lambda$. Convention B: $y = (e^\lambda - e^{-\lambda})/2$. Do not mix. |
 | Euler char mismatch | Graph: $V - E + F = 2 - 2g$. Surface: $\chi = 2 - 2g - n$. Different formulas. |
 
@@ -600,7 +628,7 @@ preset), and a `<preset>` block (domain narrowing when preset is active).
 
 ### Reporting Issues
 
-Open an issue on [GitHub](https://github.com/inji-kun/lord_of_the_strings) or tell Claude
+Open an issue on [GitHub](https://github.com/inji-kun/lord-of-the-strings) or tell Claude
 directly -- it can file issues via `gh`.
 
 ### Updating the Mapping Dictionary

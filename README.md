@@ -220,7 +220,7 @@ active_preset: config/presets/triality.md
 The PreCompact hook reinjects this when the context compacts.
 
 **preset** (`/preset`) -- Switches the active preset. One write to `config/active-preset.txt`
-switches all 12 skills:
+switches all 14 skills:
 
 ```
 /preset triality     # activate triality conventions
@@ -535,7 +535,7 @@ See [Section 4](#4-preset-system) for the full preset contents.
 
 - **No MCP servers.** No Docker, no managed venvs, no external services. Skills are
   markdown files, hooks are shell scripts, the corpus is `.tex` files on disk.
-- **Sharp, not broad.** 12 skills (10 domain, 2 infrastructure), not a general-purpose
+- **Sharp, not broad.** 14 skills (12 domain, 2 infrastructure), not a general-purpose
   physics toolkit. A scalpel for the triality.
 - **Not overfit.** Every skill works in general mode. The preset narrows them when precision
   is needed. Edward can edit the preset or turn it off.
